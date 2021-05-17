@@ -9,6 +9,11 @@ const fs = require("mz/fs")
 // pismeno_:  [a-zA-Z_],
 // jmeno:     {pismeno_}({pismeno_}|{cislice})*,
 
+const caseInsensitiveKeywords = (defs) => {
+    const keywords = moo.keywords(defs)
+    return value => keywords(value.toLowerCase())
+}
+
 const lexer = moo.compile({
     WS:         /[ \t]+/,
     bool:       ['false', 'true'],
@@ -21,13 +26,39 @@ const lexer = moo.compile({
     inlComment: /{(?:\\["\\]|[^\n"\\])*}/,
     lparen:     '(',
     rparen:     ')',
-    operator:   ['not', '<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/', 'mod', 'or', 'xor', 'and'],
-    keyword:    ['for', 'if', 'else', 'then', 'begin', 'end.', 'do', 'downto', 'while', 'repeat', 'until'],
-    symbol:     /[a-zA-Z][a-zA-Z_0-9]*/,
+    operator:   ['<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/'],
+    symbol:     {
+        match: /[a-zA-Z][a-zA-Z_0-9].*/, value: (s) => s.toLowerCase(),
+        type: caseInsensitiveKeywords({
+            'kw-begin': 'begin',
+            'kw-end': 'end.',
+            'kw-for': 'for',
+            'kw-if': 'if',
+            'kw-else': 'else',
+            'kw-not': 'not',
+            'kw-or': 'or',
+            'kw-mod': 'mod',
+            'kw-xor': 'xor',
+            'kw-and': 'and',
+            'kw-downto': 'downto',
+            'kw-do': 'do',
+            'kw-while': 'while',
+            'kw-repeat': 'repeat',
+            'kw-until': 'until'
+        }),
+    },
     assign:     ':=',
     colon:      ':',
     NL:         { match: /\n/, lineBreaks: true },
-})
+}, {case: false})
+
+
+// operator:   ['not', '<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/', 'mod', 'or', 'xor', 'and'],
+// keyword:    {
+//     match: ['FOR', 'IF', 'else', 'then', 'begin', 'end.', 'do', 'downto', 'while', 'repeat', 'until'],
+//     value: (i => i.toUpperCase())
+// },
+
 
 // lte: '<=',
 // gte: '>=',
@@ -38,9 +69,17 @@ const lexer = moo.compile({
 
 const main = async () => {
 
-    // const input = (await fs.readFile("tests/first.mP")).toString()
-    
-    const input = (await fs.readFile("tests/ASCII.mP")).toString()
+    const input = (await fs.readFile("tests/first.mP")).toString()
+    // const input = (await fs.readFile("tests/ASCII.mP")).toString()
+    // const input = (await fs.readFile("tests/Dekadicke na binarni.mP")).toString()
+    // const input = (await fs.readFile("tests/Fibonacci.mP")).toString()
+    // const input = (await fs.readFile("tests/Grayuv kod.mP")).toString()
+    // const input = (await fs.readFile("tests/Test.mP")).toString()
+    // const input = (await fs.readFile("tests/Test.mP")).toString()
+    // const input = (await fs.readFile("tests/Test.mP")).toString()
+    // const input = (await fs.readFile("tests/Test.mP")).toString()
+    // const input = (await fs.readFile("tests/Test.mP")).toString()
+
     // const input = (await fs.readFile("tests/Test.mP")).toString()
 
     lexer.reset(input)

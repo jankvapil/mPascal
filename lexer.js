@@ -10,21 +10,23 @@ const fs = require("mz/fs")
 // jmeno:     {pismeno_}({pismeno_}|{cislice})*,
 
 const lexer = moo.compile({
-    WS:      /[ \t]+/,
-    bool: ['false', 'true'],
-    number:  /0|[1-9][0-9]*/,
-    hexNum: /\$[0-9a-fA-F]+/,
-    binNum:   /\%[01]+/,
-    semicolon: ';',
-    string:  /'(?:\\["\\]|[^\n"\\])*'/,
-    inlineComment:  /{(?:\\["\\]|[^\n"\\])*}/,
-    lparen:  '(',
-    rparen:  ')',
-    operator: ['not', '<=', '>=', '=', '<>', '<', '>'],
-    keyword: ['for', 'if', 'else', 'then', 'begin', 'end.', 'do', 'downto', 'while'],
-    symbol: /[a-zA-Z][a-zA-Z_0-9]*/,
-    assign: ':=',
-    NL:      { match: /\n/, lineBreaks: true },
+    WS:         /[ \t]+/,
+    bool:       ['false', 'true'],
+    number:     /0|[1-9][0-9]*/,
+    hexNum:     /\$[0-9a-fA-F]+/,
+    binNum:     /\%[01]+/,
+    semicolon:  ';',
+    string:     /'(?:\\['\\]|[^\n'\\])*'/,
+    comment:    /\/\/.*?$/,
+    inlComment: /{(?:\\["\\]|[^\n"\\])*}/,
+    lparen:     '(',
+    rparen:     ')',
+    operator:   ['not', '<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/', 'mod', 'or', 'xor', 'and'],
+    keyword:    ['for', 'if', 'else', 'then', 'begin', 'end.', 'do', 'downto', 'while', 'repeat', 'until'],
+    symbol:     /[a-zA-Z][a-zA-Z_0-9]*/,
+    assign:     ':=',
+    colon:      ':',
+    NL:         { match: /\n/, lineBreaks: true },
 })
 
 // lte: '<=',
@@ -36,8 +38,9 @@ const lexer = moo.compile({
 
 const main = async () => {
 
-    const input = (await fs.readFile("tests/first.mP")).toString()
+    // const input = (await fs.readFile("tests/first.mP")).toString()
     
+    const input = (await fs.readFile("tests/ASCII.mP")).toString()
     // const input = (await fs.readFile("tests/Test.mP")).toString()
 
     lexer.reset(input)

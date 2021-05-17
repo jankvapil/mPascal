@@ -1,1 +1,6 @@
-begin not false downto <> <= = > >;
+begin not false downto <> <= = > 
+
+   // poznamka BLDDFASF
+
+>
+;

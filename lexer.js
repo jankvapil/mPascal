@@ -1,5 +1,6 @@
 
 const moo = require("moo")
+const fs = require("mz/fs")
 
 // cislice:   [0-9],
 // dekadic:   {cislice}+,
@@ -10,28 +11,45 @@ const moo = require("moo")
 
 const lexer = moo.compile({
     WS:      /[ \t]+/,
+    bool: ['false', 'true'],
     number:  /0|[1-9][0-9]*/,
-    hexnum: /\$[0-9a-fA-F]+/,
-    binnum:   /\%[01]+/,
+    hexNum: /\$[0-9a-fA-F]+/,
+    binNum:   /\%[01]+/,
+    semicolon: ';',
     string:  /'(?:\\["\\]|[^\n"\\])*'/,
     inlineComment:  /{(?:\\["\\]|[^\n"\\])*}/,
     lparen:  '(',
     rparen:  ')',
-    identifier: /[a-zA-Z][a-zA-Z_0-9]*/,
+    operator: ['not', '<=', '>=', '=', '<>', '<', '>'],
+    keyword: ['for', 'if', 'else', 'then', 'begin', 'end.', 'do', 'downto', 'while'],
+    symbol: /[a-zA-Z][a-zA-Z_0-9]*/,
     assign: ':=',
     NL:      { match: /\n/, lineBreaks: true },
 })
 
-// const input = `123 ('ABC') {apple } as452fs`
+// lte: '<=',
+// gte: '>=',
+// eqv: '=',
+// diff: '<>',
+// gt: '>',
+// lt: '<',
 
-// const input = `$FG23`
-const input = `01 `
+const main = async () => {
 
-lexer.reset(input);
-while (true) {
-    const token = lexer.next();
-    if (!token) {
-        break;
+    const input = (await fs.readFile("tests/first.mP")).toString()
+    
+    // const input = (await fs.readFile("tests/Test.mP")).toString()
+
+    lexer.reset(input)
+    while (true) {
+        const token = lexer.next()
+        if (!token) {
+            break
+        }
+        console.log(token)
     }
-    console.log(token);
 }
+
+main().catch(e => {
+    console.error(e)
+})

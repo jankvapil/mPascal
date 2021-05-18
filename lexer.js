@@ -11,7 +11,7 @@ const fs = require("mz/fs")
 
 const caseInsensitiveKeywords = (defs) => {
     const keywords = moo.keywords(defs)
-    return value => keywords(value.toLowerCase())
+    return (value) => keywords(value.toLowerCase())
 }
 
 const lexer = moo.compile({
@@ -49,7 +49,7 @@ const lexer = moo.compile({
     },
     assign:     ':=',
     colon:      ':',
-    NL:         { match: /\n/, lineBreaks: true },
+    NL:         { match: /\n|\r/, lineBreaks: true },
 }, {case: false})
 
 
@@ -70,6 +70,7 @@ const lexer = moo.compile({
 const main = async () => {
 
     const input = (await fs.readFile("tests/first.mP")).toString()
+    console.log(input)
     // const input = (await fs.readFile("tests/ASCII.mP")).toString()
     // const input = (await fs.readFile("tests/Dekadicke na binarni.mP")).toString()
     // const input = (await fs.readFile("tests/Fibonacci.mP")).toString()

@@ -2,10 +2,12 @@
   "name": "mpascal",
   "version": "0.0.1",
   "description": "mPascal interpreter",
-  "repository": {"url": "https://github.com/jkvapil6/mPascal"},
+  "repository": {
+    "url": "https://github.com/jkvapil6/mPascal"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "make-parser": "nearleyc mPascal.ne -o mPascal.js"
   },
   "keywords": [
     "mPascal"

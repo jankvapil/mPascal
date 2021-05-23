@@ -1,6 +1,1 @@
-begin not false downto <> <= = > 
-
-   // poznamka BLDDFASF
-
->
-end.;
+print('fsafa');

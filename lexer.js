@@ -28,7 +28,7 @@ const lexer = moo.compile({
     rparen:     ')',
     operator:   ['<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/'],
     symbol:     {
-        match: /[a-zA-Z][a-zA-Z_0-9].*/, value: (s) => s.toLowerCase(),
+        match: /[a-zA-Z][a-zA-Z_0-9]*/, value: (s) => s.toLowerCase(),
         type: caseInsensitiveKeywords({
             'kw-begin': 'begin',
             'kw-end': 'end.',
@@ -53,46 +53,50 @@ const lexer = moo.compile({
 }, {case: false})
 
 
-// operator:   ['not', '<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/', 'mod', 'or', 'xor', 'and'],
-// keyword:    {
-//     match: ['FOR', 'IF', 'else', 'then', 'begin', 'end.', 'do', 'downto', 'while', 'repeat', 'until'],
-//     value: (i => i.toUpperCase())
-// },
+module.exports = lexer
+
+// // operator:   ['not', '<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/', 'mod', 'or', 'xor', 'and'],
+// // keyword:    {
+// //     match: ['FOR', 'IF', 'else', 'then', 'begin', 'end.', 'do', 'downto', 'while', 'repeat', 'until'],
+// //     value: (i => i.toUpperCase())
+// // },
 
 
-// lte: '<=',
-// gte: '>=',
-// eqv: '=',
-// diff: '<>',
-// gt: '>',
-// lt: '<',
+// // lte: '<=',
+// // gte: '>=',
+// // eqv: '=',
+// // diff: '<>',
+// // gt: '>',
+// // lt: '<',
 
-const main = async () => {
+// const main = async () => {
 
-    const input = (await fs.readFile("tests/first.mP")).toString()
-    console.log(input)
-    // const input = (await fs.readFile("tests/ASCII.mP")).toString()
-    // const input = (await fs.readFile("tests/Dekadicke na binarni.mP")).toString()
-    // const input = (await fs.readFile("tests/Fibonacci.mP")).toString()
-    // const input = (await fs.readFile("tests/Grayuv kod.mP")).toString()
-    // const input = (await fs.readFile("tests/Test.mP")).toString()
-    // const input = (await fs.readFile("tests/Test.mP")).toString()
-    // const input = (await fs.readFile("tests/Test.mP")).toString()
-    // const input = (await fs.readFile("tests/Test.mP")).toString()
-    // const input = (await fs.readFile("tests/Test.mP")).toString()
+//     const input = (await fs.readFile("tests/first.mP")).toString()
+    
+//     // console.log(input)
+    
+//     // const input = (await fs.readFile("tests/ASCII.mP")).toString()
+//     // const input = (await fs.readFile("tests/Dekadicke na binarni.mP")).toString()
+//     // const input = (await fs.readFile("tests/Fibonacci.mP")).toString()
+//     // const input = (await fs.readFile("tests/Grayuv kod.mP")).toString()
+//     // const input = (await fs.readFile("tests/Test.mP")).toString()
+//     // const input = (await fs.readFile("tests/Test.mP")).toString()
+//     // const input = (await fs.readFile("tests/Test.mP")).toString()
+//     // const input = (await fs.readFile("tests/Test.mP")).toString()
+//     // const input = (await fs.readFile("tests/Test.mP")).toString()
 
-    // const input = (await fs.readFile("tests/Test.mP")).toString()
+//     // const input = (await fs.readFile("tests/Test.mP")).toString()
 
-    lexer.reset(input)
-    while (true) {
-        const token = lexer.next()
-        if (!token) {
-            break
-        }
-        console.log(token)
-    }
-}
+//     lexer.reset(input)
+//     while (true) {
+//         const token = lexer.next()
+//         if (!token) {
+//             break
+//         }
+//         // console.log(token)
+//     }
+// }
 
-main().catch(e => {
-    console.error(e)
-})
+// main().catch(e => {
+//     console.error(e)
+// })

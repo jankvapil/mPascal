@@ -1,0 +1,15 @@
+{
+ "type": "fn_call",
+ "fnName": {
+  "type": "symbol",
+  "value": "print",
+  "text": "print",
+  "offset": 0,
+  "lineBreaks": 0,
+  "line": 1,
+  "col": 1
+ },
+ "args": [
+  []
+ ]
+}

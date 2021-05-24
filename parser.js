@@ -28,7 +28,7 @@ const main = async () => {
         console.error("Ambigous grammar!")
     } else if (parser.results.length == 1) {
         const ast = parser.results[0]
-        const outFilename = inFilename.replace(".mp", ".ast")
+        const outFilename = inFilename.replace(".mP", ".ast")
         await fs.writeFile(outFilename, JSON.stringify(ast, null, " "))
     } else {
         console.error("Parsing error!")

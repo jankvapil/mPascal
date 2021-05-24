@@ -7,22 +7,25 @@ const myLexer  = require("./lexer")
 var grammar = {
     Lexer: myLexer,
     ParserRules: [
+    {"name": "statements", "symbols": ["statement"], "postprocess": 
+        (data) => {  return [data[0]] }
+                },
+    {"name": "statements", "symbols": ["statements", (myLexer.has("NL") ? {type: "NL"} : NL), "statement"], "postprocess": 
+        (data) => {  return [...data[0], data[2]] }
+                },
     {"name": "statement", "symbols": ["assignment"], "postprocess": id},
     {"name": "statement", "symbols": ["fn_call"], "postprocess": id},
-    {"name": "fn_call", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol), "_", {"literal":"("}, "_", "fn_args", "_", {"literal":")"}, "_", {"literal":";"}], "postprocess": 
+    {"name": "fn_call", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol), "_", {"literal":"("}, "_", "fn_arg", "_", {"literal":")"}, "_", {"literal":";"}], "postprocess": 
         (data) => {
             return {
                 type: "fn_call",
                 fnName: data[0],
-                args: data[5]
+                arg: data[4]
             }
         }
                 },
-    {"name": "fn_args", "symbols": ["expr"], "postprocess": 
-        (data) => {  return [data[0]]; }
-                },
-    {"name": "fn_args", "symbols": ["fn_args", "__", "expr"], "postprocess": 
-        (data) => { return [...data[0], data[2]]; }
+    {"name": "fn_arg", "symbols": ["expr"], "postprocess": 
+        (data) => {  return [data[0]] }
                 },
     {"name": "assignment", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol), "_", {"literal":":="}, "_", "expr"], "postprocess": 
         (data) => {
@@ -33,6 +36,7 @@ var grammar = {
             }
         }
                 },
+    {"name": "expr", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol)], "postprocess": id},
     {"name": "expr", "symbols": [(myLexer.has("string") ? {type: "string"} : string)], "postprocess": id},
     {"name": "expr", "symbols": [(myLexer.has("number") ? {type: "number"} : number)], "postprocess": id},
     {"name": "_$ebnf$1", "symbols": []},
@@ -42,7 +46,7 @@ var grammar = {
     {"name": "__$ebnf$1", "symbols": ["__$ebnf$1", (myLexer.has("WS") ? {type: "WS"} : WS)], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
     {"name": "__", "symbols": ["__$ebnf$1"]}
 ]
-  , ParserStart: "statement"
+  , ParserStart: "statements"
 }
 if (typeof module !== 'undefined'&& typeof module.exports !== 'undefined') {
    module.exports = grammar;

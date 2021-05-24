@@ -1,15 +1,46 @@
-{
- "type": "fn_call",
- "fnName": {
-  "type": "symbol",
-  "value": "print",
-  "text": "print",
-  "offset": 0,
-  "lineBreaks": 0,
-  "line": 1,
-  "col": 1
+[
+ {
+  "type": "assignment",
+  "symbol": {
+   "type": "symbol",
+   "value": "test",
+   "text": "test",
+   "offset": 0,
+   "lineBreaks": 0,
+   "line": 1,
+   "col": 1
+  },
+  "value": {
+   "type": "number",
+   "value": "42",
+   "text": "42",
+   "offset": 6,
+   "lineBreaks": 0,
+   "line": 1,
+   "col": 7
+  }
  },
- "args": [
-  []
- ]
-}
+ {
+  "type": "fn_call",
+  "fnName": {
+   "type": "symbol",
+   "value": "prrint",
+   "text": "prRInt",
+   "offset": 10,
+   "lineBreaks": 0,
+   "line": 2,
+   "col": 1
+  },
+  "arg": [
+   {
+    "type": "string",
+    "value": "'fsaFFsa'",
+    "text": "'fsaFFsa'",
+    "offset": 18,
+    "lineBreaks": 0,
+    "line": 2,
+    "col": 9
+   }
+  ]
+ }
+]

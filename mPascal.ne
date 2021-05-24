@@ -6,33 +6,46 @@ const myLexer  = require("./lexer")
 
 ####################
 
+statements
+    ->  statement
+        {%
+            (data) => {  return [data[0]] }
+        %}
+    |   statements %NL statement
+        {%
+            (data) => {  return [...data[0], data[2]] }
+        %}
+
+        
 statement
     ->  assignment  {% id %}
     |   fn_call     {% id %}
 
 
 fn_call
-    ->  %symbol _ "(" _ fn_args _ ")" _ ";" 
+    ->  %symbol _ "(" _ fn_arg _ ")" _ ";" 
         {%
             (data) => {
                 return {
                     type: "fn_call",
                     fnName: data[0],
-                    args: data[5]
+                    arg: data[4]
                 }
             }
         %}
 
 
-fn_args
+                    # arg: data[4] ? data[4][0] : []
+
+fn_arg
     ->  expr
         {%
-            (data) => {  return [data[0]]; }
+            (data) => {  return [data[0]] }
         %}
-    |   fn_args __ expr
-        {%
-            (data) => { return [...data[0], data[2]]; }
-        %}
+    # |   fn_args __ expr
+    #     {%
+    #         (data) => { return [...data[0], data[2]]; }
+    #     %}
 
 
 assignment
@@ -49,7 +62,8 @@ assignment
 
 
 expr 
-    ->  %string {% id %}
+    ->  %symbol {% id %}
+    |   %string {% id %}
     |   %number {% id %}
 
 

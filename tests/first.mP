@@ -1,1 +1,2 @@
-print('fsafa');
+test:=42
+prRInt( 'fsaFFsa' ) ;

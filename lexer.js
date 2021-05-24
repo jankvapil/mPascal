@@ -9,6 +9,20 @@ const fs = require("mz/fs")
 // pismeno_:  [a-zA-Z_],
 // jmeno:     {pismeno_}({pismeno_}|{cislice})*,
 
+// // operator:   ['not', '<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/', 'mod', 'or', 'xor', 'and'],
+// // keyword:    {
+// //     match: ['FOR', 'IF', 'else', 'then', 'begin', 'end.', 'do', 'downto', 'while', 'repeat', 'until'],
+// //     value: (i => i.toUpperCase())
+// // },
+
+
+// // lte: '<=',
+// // gte: '>=',
+// // eqv: '=',
+// // diff: '<>',
+// // gt: '>',
+// // lt: '<',
+
 const caseInsensitiveKeywords = (defs) => {
     const keywords = moo.keywords(defs)
     return (value) => keywords(value.toLowerCase())
@@ -49,25 +63,13 @@ const lexer = moo.compile({
     },
     assign:     ':=',
     colon:      ':',
-    NL:         { match: /\n|\r/, lineBreaks: true },
+    NL:         { match: /\n|\r\n/, lineBreaks: true },
 }, {case: false})
 
 
 module.exports = lexer
 
-// // operator:   ['not', '<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/', 'mod', 'or', 'xor', 'and'],
-// // keyword:    {
-// //     match: ['FOR', 'IF', 'else', 'then', 'begin', 'end.', 'do', 'downto', 'while', 'repeat', 'until'],
-// //     value: (i => i.toUpperCase())
-// // },
-
-
-// // lte: '<=',
-// // gte: '>=',
-// // eqv: '=',
-// // diff: '<>',
-// // gt: '>',
-// // lt: '<',
+///////////////// LEXING TEST /////////////////////
 
 // const main = async () => {
 
@@ -93,7 +95,7 @@ module.exports = lexer
 //         if (!token) {
 //             break
 //         }
-//         // console.log(token)
+//         console.log(token)
 //     }
 // }
 

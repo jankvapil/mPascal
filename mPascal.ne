@@ -65,6 +65,7 @@ expr
     ->  %symbol {% id %}
     |   %string {% id %}
     |   %number {% id %}
+    |   fn_call {% id %}
 
 
 ## Zero or more whitespaces

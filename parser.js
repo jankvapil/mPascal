@@ -10,7 +10,6 @@ const main = async () => {
         return
     }
 
-    // console.log(inFilename)
 
     const srcCode = (await fs.readFile(inFilename)).toString()
     // console.log(srcCode)
@@ -29,6 +28,8 @@ const main = async () => {
     } else if (parser.results.length == 1) {
         const ast = parser.results[0]
         const outFilename = inFilename.replace(".mP", ".ast")
+        
+        console.log(`Generating ${outFilename}...`)
         await fs.writeFile(outFilename, JSON.stringify(ast, null, " "))
     } else {
         console.error("Parsing error!")

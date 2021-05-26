@@ -1,2 +1,5 @@
-test:=42
-pRInt( 'fsaFFsa' ) ;
+begin
+    test:=42 ; 
+    pRInt( test ) ;
+    pRInt( 'fsaFFsa' ) ;
+end.

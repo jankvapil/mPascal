@@ -6,24 +6,39 @@ const myLexer  = require("./lexer")
 
 ####################
 
+block
+    ->  %begin __ statements _ %end
+        {%
+            (data) => {
+                return {
+                    type: "block",
+                    fnName: data[0],
+                    arg: data[4]
+                }
+            }
+        %}
+
+
 statements
-    ->  statement
+    ->  _ statement _
         {%
             (data) => {  return [data[0]] }
         %}
-    |   statements %NL statement
+    |   statements __ statement
         {%
-            (data) => {  return [...data[0], data[2]] }
+            (data) => { return [...data[0], data[2]] }
         %}
 
-        
+
 statement
-    ->  assignment  {% id %}
-    |   fn_call     {% id %}
+    -> _ expr _ ";" _
+        {%
+            (data) => {  return [data[0]] }
+        %}
 
 
 fn_call
-    ->  %symbol _ "(" _ fn_arg _ ")" _ ";" 
+    ->  %symbol _ "(" _ fn_arg _ ")"
         {%
             (data) => {
                 return {
@@ -35,17 +50,11 @@ fn_call
         %}
 
 
-                    # arg: data[4] ? data[4][0] : []
-
 fn_arg
     ->  expr
         {%
             (data) => {  return [data[0]] }
         %}
-    # |   fn_args __ expr
-    #     {%
-    #         (data) => { return [...data[0], data[2]]; }
-    #     %}
 
 
 assignment
@@ -62,15 +71,17 @@ assignment
 
 
 expr 
-    ->  %symbol {% id %}
-    |   %string {% id %}
-    |   %number {% id %}
-    |   fn_call {% id %}
+    ->  %symbol     {% id %}
+    |   %string     {% id %}
+    |   assignment  {% id %}
+    |   fn_call     {% id %}
+    |   %number     {% id %}
+    |   fn_call     {% id %}
 
 
 ## Zero or more whitespaces
-_   -> %WS:*
+_   -> %WS:* | %NL:*
 
 
 ## One or more whitespaces
-__   -> %WS:+
+__   -> %WS:+ | %NL:+

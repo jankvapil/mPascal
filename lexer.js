@@ -40,12 +40,12 @@ const lexer = moo.compile({
     inlComment: /{(?:\\["\\]|[^\n"\\])*}/,
     lparen:     '(',
     rparen:     ')',
+    begin:      'begin',
+    end:        'end.',
     operator:   ['<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/'],
     symbol:     {
         match: /[a-zA-Z][a-zA-Z_0-9]*/, value: (s) => s.toLowerCase(),
         type: caseInsensitiveKeywords({
-            'kw-begin': 'begin',
-            'kw-end': 'end.',
             'kw-for': 'for',
             'kw-if': 'if',
             'kw-else': 'else',

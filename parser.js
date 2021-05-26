@@ -2,6 +2,10 @@ const nearley = require("nearley")
 const grammar = require("./mPascal.js")
 const fs = require("mz/fs")
 
+///
+/// Parses .mP file and checks if it is correct MicroPascal source code
+/// If syntax is correct, abstract syntax tree is created at same place as .mP file is located
+///
 const main = async () => {
     const inFilename = process.argv[2]
 
@@ -10,21 +14,14 @@ const main = async () => {
         return
     }
 
-
     const srcCode = (await fs.readFile(inFilename)).toString()
-    // console.log(srcCode)
-
-    // Create a Parser object from our grammar.
     const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
-
-    // Parse something!
     parser.feed(srcCode)
-
-    // parser.results is an array of possible parsings.
-    // console.log(parser.results) // [[[[ "foo" ],"\n" ]]]
     
     if (parser.results.length > 1) {
         console.error("Ambigous grammar!")
+        
+        await fs.writeFile("error_log.json", JSON.stringify(parser.results, null, " "))
     } else if (parser.results.length == 1) {
         const ast = parser.results[0]
         const outFilename = inFilename.replace(".mP", ".ast")

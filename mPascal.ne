@@ -10,10 +10,10 @@ program
     ->  %begin statements _ml %end
         {%
            (data) => {  
-                return [{
+                return {
                     type: "program",
                     statements: data[1] 
-                }]
+                }
             }
         %}
 

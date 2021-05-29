@@ -9,10 +9,10 @@ var grammar = {
     ParserRules: [
     {"name": "program", "symbols": [(myLexer.has("begin") ? {type: "begin"} : begin), "statements", "_ml", (myLexer.has("end") ? {type: "end"} : end)], "postprocess": 
         (data) => {  
-             return [{
+             return {
                  type: "program",
                  statements: data[1] 
-             }]
+             }
          }
                 },
     {"name": "statements$ebnf$1", "symbols": []},

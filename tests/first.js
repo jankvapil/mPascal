@@ -1,7 +1,12 @@
 
 ///
-/// Prints arguments to stdout
+/// Prints argument to stdout
 ///
-const print = (...args) => {
-    process.stdout.write(...args)
+function write(arg) {
+    const retyped = new String(arg)
+    process.stdout.write(retyped.toString())
 }
+var test = 42;
+write('hua');
+
+var test = 42;

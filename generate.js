@@ -19,13 +19,20 @@ const generateJSExpr = (node) => {
         return `${fnName}(${arg});`
     } else if (node.type === "program") {
         
+        const tmp = []
         console.log(node)
+        node.statements.forEach(s => {
+            console.log(s)
+            const res = generateJSExpr(s)
+            console.log(res)
+        })
         // const fnName = node.fnName.value
+
 
         // // dont need more args at this time...
         // const arg = generateJSExpr(node.arg[0])
         
-        // return `${fnName}(${arg});`
+        // return `${res};`
     } else if (node.type === "number") {
         return node.value
     } else if (node.type === "string") {
@@ -41,11 +48,20 @@ const generateJSExpr = (node) => {
 ///
 const generateJS = (ast) => {
     const res = []
-    ast.forEach(node => {
-        const jsExpr = generateJSExpr(node)
-        res.push(jsExpr)
-    })
+    if (ast.type === "program") {
+        ast.statements.forEach(s => {
+            const jsExpr = generateJSExpr(s)
+            res.push(jsExpr)
+        })
+    }
     return res.join("\n")
+    // console.log(ast)
+    // const res = []
+    // ast.forEach(node => {
+    //     const jsExpr = generateJSExpr(node)
+    //     res.push(jsExpr)
+    // })
+    // return res.join("\n")
 }
 
 

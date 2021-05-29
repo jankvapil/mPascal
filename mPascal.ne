@@ -30,9 +30,22 @@ statements
 
 
 statement
-    ->  assignment _ ";" {% id %}
-    |   fn_call _ ";"    {% id %}
-    |   program          {% id %} 
+    ->  assignment _ ";"        {% id %}
+    |   fn_call _ ";"           {% id %}
+    |   fn_call_no_args _ ";"   {% id %}
+    |   program                 {% id %} 
+
+
+fn_call_no_args
+    -> %symbol 
+        {% 
+            (data) => {
+                return {
+                    type: "fn_call_no_args",
+                    fnName: data[0]
+                }   
+            }
+        %}
 
 
 fn_call

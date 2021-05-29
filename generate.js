@@ -17,22 +17,16 @@ const generateJSExpr = (node) => {
         const arg = generateJSExpr(node.arg[0])
         
         return `${fnName}(${arg});`
+    } else if (node.type === "fn_call_no_args") {
+        const fnName = node.fnName.value        
+        return `${fnName}();`
     } else if (node.type === "program") {
-        
-        const tmp = []
-        console.log(node)
+        const res = []
         node.statements.forEach(s => {
-            console.log(s)
-            const res = generateJSExpr(s)
-            console.log(res)
+            const jsExpr = generateJSExpr(s)
+            res.push(jsExpr) 
         })
-        // const fnName = node.fnName.value
-
-
-        // // dont need more args at this time...
-        // const arg = generateJSExpr(node.arg[0])
-        
-        // return `${res};`
+        return res.join("\n")
     } else if (node.type === "number") {
         return node.value
     } else if (node.type === "string") {

@@ -27,7 +27,16 @@ var grammar = {
                 },
     {"name": "statement", "symbols": ["assignment", "_", {"literal":";"}], "postprocess": id},
     {"name": "statement", "symbols": ["fn_call", "_", {"literal":";"}], "postprocess": id},
+    {"name": "statement", "symbols": ["fn_call_no_args", "_", {"literal":";"}], "postprocess": id},
     {"name": "statement", "symbols": ["program"], "postprocess": id},
+    {"name": "fn_call_no_args", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol)], "postprocess":  
+        (data) => {
+            return {
+                type: "fn_call_no_args",
+                fnName: data[0]
+            }   
+        }
+                },
     {"name": "fn_call", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol), "_", {"literal":"("}, "_", "fn_arg", "_", {"literal":")"}], "postprocess": 
         (data) => {
             return {

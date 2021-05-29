@@ -23,24 +23,36 @@
    }
   },
   {
+   "type": "fn_call_no_args",
+   "fnName": {
+    "type": "symbol",
+    "value": "writeln",
+    "text": "writeln",
+    "offset": 28,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 5
+   }
+  },
+  {
    "type": "fn_call",
    "fnName": {
     "type": "symbol",
     "value": "write",
     "text": "write",
-    "offset": 28,
+    "offset": 42,
     "lineBreaks": 0,
-    "line": 3,
+    "line": 4,
     "col": 5
    },
    "arg": [
     {
-     "type": "string",
-     "value": "'hua'",
-     "text": "'hua'",
-     "offset": 34,
+     "type": "number",
+     "value": "42",
+     "text": "42",
+     "offset": 48,
      "lineBreaks": 0,
-     "line": 3,
+     "line": 4,
      "col": 11
     }
    ]
@@ -54,18 +66,18 @@
       "type": "symbol",
       "value": "test",
       "text": "test",
-      "offset": 62,
+      "offset": 74,
       "lineBreaks": 0,
-      "line": 5,
+      "line": 6,
       "col": 9
      },
      "value": {
       "type": "number",
       "value": "42",
       "text": "42",
-      "offset": 68,
+      "offset": 80,
       "lineBreaks": 0,
-      "line": 5,
+      "line": 6,
       "col": 15
      }
     },
@@ -75,20 +87,67 @@
       "type": "symbol",
       "value": "test",
       "text": "test",
-      "offset": 83,
+      "offset": 95,
       "lineBreaks": 0,
-      "line": 6,
+      "line": 7,
       "col": 9
      },
      "value": {
       "type": "number",
       "value": "42",
       "text": "42",
-      "offset": 89,
+      "offset": 101,
       "lineBreaks": 0,
-      "line": 6,
+      "line": 7,
       "col": 15
      }
+    },
+    {
+     "type": "program",
+     "statements": [
+      {
+       "type": "assignment",
+       "symbol": {
+        "type": "symbol",
+        "value": "test",
+        "text": "test",
+        "offset": 135,
+        "lineBreaks": 0,
+        "line": 9,
+        "col": 13
+       },
+       "value": {
+        "type": "number",
+        "value": "66",
+        "text": "66",
+        "offset": 141,
+        "lineBreaks": 0,
+        "line": 9,
+        "col": 19
+       }
+      },
+      {
+       "type": "assignment",
+       "symbol": {
+        "type": "symbol",
+        "value": "test",
+        "text": "test",
+        "offset": 160,
+        "lineBreaks": 0,
+        "line": 10,
+        "col": 13
+       },
+       "value": {
+        "type": "number",
+        "value": "42",
+        "text": "42",
+        "offset": 166,
+        "lineBreaks": 0,
+        "line": 10,
+        "col": 19
+       }
+      }
+     ]
     }
    ]
   },
@@ -98,18 +157,18 @@
     "type": "symbol",
     "value": "test",
     "text": "test",
-    "offset": 110,
+    "offset": 201,
     "lineBreaks": 0,
-    "line": 8,
+    "line": 13,
     "col": 5
    },
    "value": {
     "type": "number",
     "value": "42",
     "text": "42",
-    "offset": 116,
+    "offset": 207,
     "lineBreaks": 0,
-    "line": 8,
+    "line": 13,
     "col": 11
    }
   }

@@ -1,9 +1,14 @@
 begin
     test:=42 ; 
-    write(42.2);
+    writeln;
+    write(42) ;
     begin
         test:=42 ; 
         test:=42 ; 
+        begin
+            test:=66 ; 
+            test:=42 ; 
+        end.
     end.
     test:=42 ; 
 end.

@@ -1,8 +1,9 @@
 
-///
-/// Prints argument to stdout
-///
 function write(arg) {
-    const retyped = new String(arg)
-    process.stdout.write(retyped.toString())
+    var retyped = new String(arg);
+    process.stdout.write(retyped.toString());
+}
+
+function writeln() {
+    process.stdout.write("\n");
 }

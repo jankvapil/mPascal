@@ -1,5 +1,8 @@
 begin
     test:=42 ; 
-    pRInt( test ) ;
-    pRInt( 'fsaFFsa' ) ;
+    begin
+        test:=42 ; 
+        test:=42 ; 
+    end.
+    test:=42 ; 
 end.

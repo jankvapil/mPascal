@@ -1,45 +1,97 @@
 [
  {
-  "type": "assignment",
-  "symbol": {
-   "type": "symbol",
-   "value": "test",
-   "text": "test",
-   "offset": 0,
-   "lineBreaks": 0,
-   "line": 1,
-   "col": 1
-  },
-  "value": {
-   "type": "number",
-   "value": "42",
-   "text": "42",
-   "offset": 6,
-   "lineBreaks": 0,
-   "line": 1,
-   "col": 7
-  }
- },
- {
-  "type": "fn_call",
-  "fnName": {
-   "type": "symbol",
-   "value": "print",
-   "text": "pRInt",
-   "offset": 10,
-   "lineBreaks": 0,
-   "line": 2,
-   "col": 1
-  },
-  "arg": [
+  "type": "program",
+  "statements": [
    {
-    "type": "string",
-    "value": "'fsaFFsa'",
-    "text": "'fsaFFsa'",
-    "offset": 17,
-    "lineBreaks": 0,
-    "line": 2,
-    "col": 8
+    "type": "assignment",
+    "symbol": {
+     "type": "symbol",
+     "value": "test",
+     "text": "test",
+     "offset": 11,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 5
+    },
+    "value": {
+     "type": "number",
+     "value": "42",
+     "text": "42",
+     "offset": 17,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 11
+    }
+   },
+   [
+    {
+     "type": "program",
+     "statements": [
+      {
+       "type": "assignment",
+       "symbol": {
+        "type": "symbol",
+        "value": "test",
+        "text": "test",
+        "offset": 43,
+        "lineBreaks": 0,
+        "line": 4,
+        "col": 9
+       },
+       "value": {
+        "type": "number",
+        "value": "42",
+        "text": "42",
+        "offset": 49,
+        "lineBreaks": 0,
+        "line": 4,
+        "col": 15
+       }
+      },
+      {
+       "type": "assignment",
+       "symbol": {
+        "type": "symbol",
+        "value": "test",
+        "text": "test",
+        "offset": 64,
+        "lineBreaks": 0,
+        "line": 5,
+        "col": 9
+       },
+       "value": {
+        "type": "number",
+        "value": "42",
+        "text": "42",
+        "offset": 70,
+        "lineBreaks": 0,
+        "line": 5,
+        "col": 15
+       }
+      }
+     ]
+    }
+   ],
+   {
+    "type": "assignment",
+    "symbol": {
+     "type": "symbol",
+     "value": "test",
+     "text": "test",
+     "offset": 91,
+     "lineBreaks": 0,
+     "line": 7,
+     "col": 5
+    },
+    "value": {
+     "type": "number",
+     "value": "42",
+     "text": "42",
+     "offset": 97,
+     "lineBreaks": 0,
+     "line": 7,
+     "col": 11
+    }
    }
   ]
  }

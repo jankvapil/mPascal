@@ -17,6 +17,15 @@ const generateJSExpr = (node) => {
         const arg = generateJSExpr(node.arg[0])
         
         return `${fnName}(${arg});`
+    } else if (node.type === "program") {
+        
+        console.log(node)
+        // const fnName = node.fnName.value
+
+        // // dont need more args at this time...
+        // const arg = generateJSExpr(node.arg[0])
+        
+        // return `${fnName}(${arg});`
     } else if (node.type === "number") {
         return node.value
     } else if (node.type === "string") {

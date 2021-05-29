@@ -1,40 +1,38 @@
 @{%
-const myLexer  = require("./lexer")
+    const myLexer = require("./lexer")
 %}
 
 @lexer myLexer 
 
 ####################
 
-block
-    ->  %begin __ statements _ %end
+program
+    ->  %begin statements _ml %end
         {%
-            (data) => {
-                return {
-                    type: "block",
-                    fnName: data[0],
-                    arg: data[4]
-                }
+           (data) => {  
+                return [{
+                    type: "program",
+                    statements: data[1] 
+                }]
             }
         %}
 
 
 statements
-    ->  _ statement _
+    ->  _ml statement ( _ml statement):*
         {%
-            (data) => {  return [data[0]] }
-        %}
-    |   statements __ statement
-        {%
-            (data) => { return [...data[0], data[2]] }
+            (data) => {
+                const repeated = data[2]
+                const rest = repeated.map(s => s[1])
+                return [data[1], ...rest]
+            }
         %}
 
 
 statement
-    -> _ expr _ ";" _
-        {%
-            (data) => {  return [data[0]] }
-        %}
+    ->  assignment _ ";" {% id %}
+    |   fn_call _ ";"    {% id %}
+    |   program          {% id %} 
 
 
 fn_call
@@ -73,15 +71,17 @@ assignment
 expr 
     ->  %symbol     {% id %}
     |   %string     {% id %}
-    |   assignment  {% id %}
-    |   fn_call     {% id %}
     |   %number     {% id %}
-    |   fn_call     {% id %}
 
+
+## Zero or more multiline whitespaces
+_ml   -> (%WS | %NL):*
+
+## One or more multiline whitespaces
+__ml   -> (%WS | %NL):+ 
 
 ## Zero or more whitespaces
-_   -> %WS:* | %NL:*
-
+_   -> %WS:*
 
 ## One or more whitespaces
-__   -> %WS:+ | %NL:+
+__   -> %WS:+

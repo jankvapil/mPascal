@@ -82,9 +82,10 @@ assignment
 
 
 expr 
-    ->  %symbol     {% id %}
-    |   %string     {% id %}
-    |   %number     {% id %}
+    ->  %symbol {% id %}
+    |   %string {% id %}
+    |   %number {% id %}
+    |   fn_call {% id %}
 
 
 ## Zero or more multiline whitespaces

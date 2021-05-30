@@ -8,11 +8,9 @@ function writeln() {
     process.stdout.write("\n");
 }
 
-var test = 42;
-writeln();
-write(42);
-var test = 42;
-var test = 42;
-var test = 66;
-var test = 42;
-var test = 42;
+function ord(str) {
+    console.log(str.charCodeAt(0))
+}
+
+var test = ord('s');
+write(test);

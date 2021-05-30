@@ -8,8 +8,14 @@ const fs = require("mz/fs")
 const generateJSExpr = (node) => {
     if (node.type === "assignment") {
         const symbolName = node.symbol.value
-        const value = node.value.value
-        return `var ${symbolName} = ${value};`
+        if (node.value.type === "fn_call") {
+            const value = generateJSExpr(node.value.arg[0])
+            const fnName = node.value.fnName.value
+            return `var ${symbolName} = ${fnName}(${value});`
+        } else {
+            const value = node.value.value
+            return `var ${symbolName} = ${value};`
+        }
     } else if (node.type === "fn_call") {
         const fnName = node.fnName.value
 

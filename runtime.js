@@ -7,3 +7,7 @@ function write(arg) {
 function writeln() {
     process.stdout.write("\n");
 }
+
+function ord(str) {
+    console.log(str.charCodeAt(0))
+}

@@ -1,32 +1,40 @@
 
 const fs = require("mz/fs")
 
-
 ///
 /// Generete JS expression from AST node
 ///
 const generateJSExpr = (node) => {
-    if (node.type === "assignment") {
+    // console.log(node)
+    if (node.type === "operation") {
+        return `${node.left.value}${node.operator.value}${node.right.value}`
+    }
+    else if (node.type === "assignment") {
         const symbolName = node.symbol.value
         if (node.value.type === "fn_call") {
             const value = generateJSExpr(node.value.arg[0])
             const fnName = node.value.fnName.value
             return `var ${symbolName} = ${fnName}(${value});`
-        } else {
+        } 
+        else if (node.value.type === "operation") {
+            const value = generateJSExpr(node.value)
+            return `var ${symbolName} = ${value};`
+        } 
+        else {
             const value = node.value.value
             return `var ${symbolName} = ${value};`
         }
-    } else if (node.type === "fn_call") {
+    } 
+    else if (node.type === "fn_call") {
         const fnName = node.fnName.value
-
-        // dont need more args at this time...
         const arg = generateJSExpr(node.arg[0])
-        
         return `${fnName}(${arg});`
-    } else if (node.type === "fn_call_no_args") {
+    } 
+    else if (node.type === "fn_call_no_args") {
         const fnName = node.fnName.value        
         return `${fnName}();`
-    } else if (node.type === "program") {
+    } 
+    else if (node.type === "program") {
         const res = []
         node.statements.forEach(s => {
             const jsExpr = generateJSExpr(s)
@@ -53,15 +61,8 @@ const generateJS = (ast) => {
             const jsExpr = generateJSExpr(s)
             res.push(jsExpr)
         })
-    }
+    } 
     return res.join("\n")
-    // console.log(ast)
-    // const res = []
-    // ast.forEach(node => {
-    //     const jsExpr = generateJSExpr(node)
-    //     res.push(jsExpr)
-    // })
-    // return res.join("\n")
 }
 
 

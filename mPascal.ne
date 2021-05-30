@@ -7,7 +7,7 @@
 ####################
 
 program
-    ->  %begin statements _ml %end
+    ->  %begin statements _ml %end _ml
         {%
            (data) => {  
                 return {
@@ -34,6 +34,7 @@ statement
     |   fn_call _ ";"           {% id %}
     |   fn_call_no_args _ ";"   {% id %}
     |   program                 {% id %} 
+    |   for_to_do               {% id %}
 
 
 fn_call_no_args
@@ -81,12 +82,40 @@ assignment
         %}
 
 
+for_to_do
+    ->  "for" __ assignment __ "to" __ expr __ "do" __ statement
+        {%
+            (data) => {
+                return {
+                    type: "forToDo",
+                    assignment: data[2],
+                    to: data[7],
+                    statement: data[11]
+                }
+            }
+        %}
+
+
 expr 
     ->  %symbol {% id %}
     |   %string {% id %}
     |   %number {% id %}
     |   fn_call {% id %}
+    |   operation {% id %}
 
+
+operation 
+    ->  expr _ %operator _ expr
+        {%
+            (data) => {
+                return {
+                    type: "operation",
+                    left: data[0],
+                    operator: data[2],
+                    right: data[4]
+                }
+            }
+        %}
 
 ## Zero or more multiline whitespaces
 _ml   -> (%WS | %NL):*

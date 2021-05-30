@@ -38,6 +38,13 @@ const main = async () => {
     
     // executes .js file
     await execWithOutput(`node ${outJSFilename}`)
+
+    // // clean temporary files..
+    // if (fs.exists(outAstFilename))
+    //     fs.rmSync(outAstFilename)
+    // if (fs.exists(outJSFilename))
+    //     fs.rmSync(outJSFilename)
+
 }
 
 main().catch(e => console.error(e))

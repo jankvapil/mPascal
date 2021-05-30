@@ -9,8 +9,18 @@ function writeln() {
 }
 
 function ord(str) {
-    console.log(str.charCodeAt(0))
+    return str.charCodeAt(0);
 }
 
+function hex(num) {
+    return num.toString(16);
+}
+
+function bin(num) {
+    return num.toString(2);
+}
 var test = ord('s');
+write(test);
+var test = ord('s');
+writeln();
 write(test);

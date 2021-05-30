@@ -7,7 +7,7 @@ function id(x) { return x[0]; }
 var grammar = {
     Lexer: myLexer,
     ParserRules: [
-    {"name": "program", "symbols": [(myLexer.has("begin") ? {type: "begin"} : begin), "statements", "_ml", (myLexer.has("end") ? {type: "end"} : end)], "postprocess": 
+    {"name": "program", "symbols": [(myLexer.has("begin") ? {type: "begin"} : begin), "statements", "_ml", (myLexer.has("end") ? {type: "end"} : end), "_ml"], "postprocess": 
         (data) => {  
              return {
                  type: "program",
@@ -29,6 +29,7 @@ var grammar = {
     {"name": "statement", "symbols": ["fn_call", "_", {"literal":";"}], "postprocess": id},
     {"name": "statement", "symbols": ["fn_call_no_args", "_", {"literal":";"}], "postprocess": id},
     {"name": "statement", "symbols": ["program"], "postprocess": id},
+    {"name": "statement", "symbols": ["for_to_do"], "postprocess": id},
     {"name": "fn_call_no_args", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol)], "postprocess":  
         (data) => {
             return {
@@ -58,10 +59,31 @@ var grammar = {
             }
         }
                 },
+    {"name": "for_to_do", "symbols": [{"literal":"for"}, "__", "assignment", "__", {"literal":"to"}, "__", "expr", "__", {"literal":"do"}, "__", "statement"], "postprocess": 
+        (data) => {
+            return {
+                type: "forToDo",
+                assignment: data[2],
+                to: data[7],
+                statement: data[11]
+            }
+        }
+                },
     {"name": "expr", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol)], "postprocess": id},
     {"name": "expr", "symbols": [(myLexer.has("string") ? {type: "string"} : string)], "postprocess": id},
     {"name": "expr", "symbols": [(myLexer.has("number") ? {type: "number"} : number)], "postprocess": id},
     {"name": "expr", "symbols": ["fn_call"], "postprocess": id},
+    {"name": "expr", "symbols": ["operation"], "postprocess": id},
+    {"name": "operation", "symbols": ["expr", "_", (myLexer.has("operator") ? {type: "operator"} : operator), "_", "expr"], "postprocess": 
+        (data) => {
+            return {
+                type: "operation",
+                left: data[0],
+                operator: data[2],
+                right: data[4]
+            }
+        }
+                },
     {"name": "_ml$ebnf$1", "symbols": []},
     {"name": "_ml$ebnf$1$subexpression$1", "symbols": [(myLexer.has("WS") ? {type: "WS"} : WS)]},
     {"name": "_ml$ebnf$1$subexpression$1", "symbols": [(myLexer.has("NL") ? {type: "NL"} : NL)]},

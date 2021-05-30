@@ -83,14 +83,14 @@ assignment
 
 
 for_to_do
-    ->  "for" __ assignment __ "to" __ expr __ "do" __ statement
+    ->  "for" __ assignment __ "to" __ expr __ "do" __ statements
         {%
             (data) => {
                 return {
-                    type: "forToDo",
+                    type: "for_to_do",
                     assignment: data[2],
-                    to: data[7],
-                    statement: data[11]
+                    to: data[6],
+                    statements: data[10]
                 }
             }
         %}

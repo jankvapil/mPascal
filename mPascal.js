@@ -59,13 +59,13 @@ var grammar = {
             }
         }
                 },
-    {"name": "for_to_do", "symbols": [{"literal":"for"}, "__", "assignment", "__", {"literal":"to"}, "__", "expr", "__", {"literal":"do"}, "__", "statement"], "postprocess": 
+    {"name": "for_to_do", "symbols": [{"literal":"for"}, "__", "assignment", "__", {"literal":"to"}, "__", "expr", "__", {"literal":"do"}, "__", "statements"], "postprocess": 
         (data) => {
             return {
-                type: "forToDo",
+                type: "for_to_do",
                 assignment: data[2],
-                to: data[7],
-                statement: data[11]
+                to: data[6],
+                statements: data[10]
             }
         }
                 },

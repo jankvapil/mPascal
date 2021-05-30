@@ -6,7 +6,18 @@ const fs = require("mz/fs")
 ///
 const generateJSExpr = (node) => {
     // console.log(node)
-    if (node.type === "operation") {
+    if (node.type === "for_to_do") {
+        const symbol = node.assignment.symbol.value;
+        const assignment = generateJSExpr(node.assignment)
+        const to = generateJSExpr(node.to)
+        const statements = []
+        node.statements.forEach(s => {
+            const tmp = generateJSExpr(s)
+            statements.push(tmp)
+        })
+        return `for(${assignment}${symbol}<${to};${symbol}++){${statements.join("\n")}}`
+    }
+    else if (node.type === "operation") {
         return `${node.left.value}${node.operator.value}${node.right.value}`
     }
     else if (node.type === "assignment") {

@@ -23,36 +23,71 @@
    }
   },
   {
-   "type": "for_to_do",
+   "type": "fn_call",
+   "fnName": {
+    "type": "symbol",
+    "value": "write",
+    "text": "write",
+    "offset": 22,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 5
+   },
+   "arg": [
+    {
+     "type": "symbol",
+     "value": "s",
+     "text": "s",
+     "offset": 28,
+     "lineBreaks": 0,
+     "line": 3,
+     "col": 11
+    }
+   ]
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": {
+    "type": "symbol",
+    "value": "writeln",
+    "text": "writeln",
+    "offset": 37,
+    "lineBreaks": 0,
+    "line": 4,
+    "col": 5
+   }
+  },
+  {
+   "type": "for_loop",
    "assignment": {
     "type": "assignment",
     "symbol": {
      "type": "symbol",
      "value": "i",
      "text": "i",
-     "offset": 26,
+     "offset": 55,
      "lineBreaks": 0,
-     "line": 3,
+     "line": 5,
      "col": 9
     },
     "value": {
      "type": "number",
-     "value": "1",
-     "text": "1",
-     "offset": 29,
+     "value": "10",
+     "text": "10",
+     "offset": 58,
      "lineBreaks": 0,
-     "line": 3,
+     "line": 5,
      "col": 12
     }
    },
-   "to": {
+   "downto": {
     "type": "number",
-    "value": "10",
-    "text": "10",
-    "offset": 34,
+    "value": "0",
+    "text": "0",
+    "offset": 68,
     "lineBreaks": 0,
-    "line": 3,
-    "col": 17
+    "line": 5,
+    "col": 22
    },
    "statements": [
     {
@@ -64,20 +99,20 @@
         "type": "symbol",
         "value": "write",
         "text": "write",
-        "offset": 46,
+        "offset": 79,
         "lineBreaks": 0,
-        "line": 3,
-        "col": 29
+        "line": 5,
+        "col": 33
        },
        "arg": [
         {
          "type": "symbol",
          "value": "i",
          "text": "i",
-         "offset": 52,
+         "offset": 85,
          "lineBreaks": 0,
-         "line": 3,
-         "col": 35
+         "line": 5,
+         "col": 39
         }
        ]
       },
@@ -87,20 +122,20 @@
         "type": "symbol",
         "value": "write",
         "text": "write",
-        "offset": 56,
+        "offset": 89,
         "lineBreaks": 0,
-        "line": 3,
-        "col": 39
+        "line": 5,
+        "col": 43
        },
        "arg": [
         {
          "type": "symbol",
          "value": "i",
          "text": "i",
-         "offset": 62,
+         "offset": 95,
          "lineBreaks": 0,
-         "line": 3,
-         "col": 45
+         "line": 5,
+         "col": 49
         }
        ]
       }

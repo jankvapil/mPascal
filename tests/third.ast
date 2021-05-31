@@ -1,0 +1,126 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "x",
+    "text": "x",
+    "offset": 11,
+    "lineBreaks": 0,
+    "line": 2,
+    "col": 5
+   },
+   "value": {
+    "type": "number",
+    "value": "1",
+    "text": "1",
+    "offset": 14,
+    "lineBreaks": 0,
+    "line": 2,
+    "col": 8
+   }
+  },
+  {
+   "type": "dowhile_loop",
+   "expr": {
+    "type": "operation",
+    "left": {
+     "type": "symbol",
+     "value": "x",
+     "text": "x",
+     "offset": 59,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 11
+    },
+    "operator": {
+     "type": "operator",
+     "value": "<",
+     "text": "<",
+     "offset": 60,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 12
+    },
+    "right": {
+     "type": "number",
+     "value": "10",
+     "text": "10",
+     "offset": 61,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 13
+    }
+   },
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": {
+      "type": "symbol",
+      "value": "write",
+      "text": "write",
+      "offset": 29,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 12
+     },
+     "arg": [
+      {
+       "type": "symbol",
+       "value": "x",
+       "text": "x",
+       "offset": 35,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 18
+      }
+     ]
+    },
+    {
+     "type": "assignment",
+     "symbol": {
+      "type": "symbol",
+      "value": "x",
+      "text": "x",
+      "offset": 39,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 22
+     },
+     "value": {
+      "type": "operation",
+      "left": {
+       "type": "symbol",
+       "value": "x",
+       "text": "x",
+       "offset": 42,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 25
+      },
+      "operator": {
+       "type": "operator",
+       "value": "+",
+       "text": "+",
+       "offset": 43,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 26
+      },
+      "right": {
+       "type": "number",
+       "value": "1",
+       "text": "1",
+       "offset": 44,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 27
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

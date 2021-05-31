@@ -30,7 +30,8 @@ var grammar = {
     {"name": "statement", "symbols": ["assignment", "_", {"literal":";"}], "postprocess": id},
     {"name": "statement", "symbols": ["fn_call", "_", {"literal":";"}], "postprocess": id},
     {"name": "statement", "symbols": ["fn_call_no_args", "_", {"literal":";"}], "postprocess": id},
-    {"name": "statement", "symbols": ["for_to_do"], "postprocess": id},
+    {"name": "statement", "symbols": ["for_loop"], "postprocess": id},
+    {"name": "statement", "symbols": ["while_loop"], "postprocess": id},
     {"name": "fn_call_no_args", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol)], "postprocess":  
         (data) => {
             return {
@@ -60,12 +61,40 @@ var grammar = {
             }
         }
                 },
-    {"name": "for_to_do", "symbols": [{"literal":"for"}, "__", "assignment", "__", {"literal":"to"}, "__", "expr", "__", {"literal":"do"}, "__ml", "subprogram"], "postprocess": 
+    {"name": "while_loop", "symbols": [(myLexer.has("kw_while") ? {type: "kw_while"} : kw_while), "__", "expr", "__", (myLexer.has("kw_do") ? {type: "kw_do"} : kw_do), "__", "subprogram"], "postprocess": 
         (data) => {
             return {
-                type: "for_to_do",
+                type: "while_loop",
+                expr: data[2],
+                statements: data[6]
+            }
+        }
+                },
+    {"name": "while_loop", "symbols": [(myLexer.has("kw_repeat") ? {type: "kw_repeat"} : kw_repeat), "__ml", "statements", "__ml", (myLexer.has("kw_until") ? {type: "kw_until"} : kw_until), "__", "expr", "_", {"literal":";"}], "postprocess": 
+        (data) => {
+            return {
+                type: "dowhile_loop",
+                expr: data[6],
+                statements: data[2]
+            }
+        }
+                },
+    {"name": "for_loop", "symbols": [(myLexer.has("kw_for") ? {type: "kw_for"} : kw_for), "__", "assignment", "__", (myLexer.has("kw_to") ? {type: "kw_to"} : kw_to), "__", "expr", "__", (myLexer.has("kw_do") ? {type: "kw_do"} : kw_do), "__ml", "subprogram"], "postprocess": 
+        (data) => {
+            return {
+                type: "for_loop",
                 assignment: data[2],
                 to: data[6],
+                statements: data[10]
+            }
+        }
+                },
+    {"name": "for_loop", "symbols": [(myLexer.has("kw_for") ? {type: "kw_for"} : kw_for), "__", "assignment", "__", (myLexer.has("kw_downto") ? {type: "kw_downto"} : kw_downto), "__", "expr", "__", (myLexer.has("kw_do") ? {type: "kw_do"} : kw_do), "__ml", "subprogram"], "postprocess": 
+        (data) => {
+            return {
+                type: "for_loop",
+                assignment: data[2],
+                downto: data[6],
                 statements: data[10]
             }
         }

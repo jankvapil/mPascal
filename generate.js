@@ -6,16 +6,39 @@ const fs = require("mz/fs")
 ///
 const generateJSExpr = (node) => {
     // console.log(node)
-    if (node.type === "for_to_do") {
-        const symbol = node.assignment.symbol.value;
-        const assignment = generateJSExpr(node.assignment)
-        const to = generateJSExpr(node.to)
+    if (node.type === "dowhile_loop") {
+        const expr = generateJSExpr(node.expr)
         const statements = []
         node.statements.forEach(s => {
             const tmp = generateJSExpr(s)
             statements.push(tmp)
         })
-        return `for(${assignment} ${symbol}<${to}; ${symbol}++){${statements.join("\n")}}`
+        return `do {\n${statements.join("\n")}}\nwhile(${expr});\n`
+    }
+    else if (node.type === "while_loop") {
+        const expr = generateJSExpr(node.expr)
+        const statements = []
+        node.statements.forEach(s => {
+            const tmp = generateJSExpr(s)
+            statements.push(tmp)
+        })
+        return `while(${expr}){\n${statements.join("\n")}\n}`
+    }
+    else if (node.type === "for_loop") {
+        const symbol = node.assignment.symbol.value;
+        const assignment = generateJSExpr(node.assignment)
+        const statements = []
+        node.statements.forEach(s => {
+            const tmp = generateJSExpr(s)
+            statements.push(tmp)
+        })
+        if (node.to) {
+            const to = generateJSExpr(node.to)
+            return `for(${assignment} ${symbol}<=${to}; ${symbol}++){${statements.join("\n")}}`
+        } else if (node.downto) {
+            const downto = generateJSExpr(node.downto)
+            return `for(${assignment} ${symbol}>=${downto}; ${symbol}--){${statements.join("\n")}}`
+        }
     }
     else if (node.type === "operation") {
         return `${node.left.value}${node.operator.value}${node.right.value}`

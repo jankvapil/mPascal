@@ -17,9 +17,11 @@ program
             }
         %}
 
+
 subprogram
     ->  program
     |   statement
+
 
 statements
     ->  _ml statement ( _ml statement):*
@@ -36,7 +38,8 @@ statement
     ->  assignment _ ";"        {% id %}
     |   fn_call _ ";"           {% id %}
     |   fn_call_no_args _ ";"   {% id %}
-    |   for_to_do               {% id %}
+    |   for_loop                {% id %}
+    |   while_loop              {% id %}
 
 
 fn_call_no_args
@@ -84,14 +87,48 @@ assignment
         %}
 
 
-for_to_do
-    ->  "for" __ assignment __ "to" __ expr __ "do" __ml subprogram
+while_loop
+    ->  %kw_while __ expr __ %kw_do __ subprogram 
         {%
             (data) => {
                 return {
-                    type: "for_to_do",
+                    type: "while_loop",
+                    expr: data[2],
+                    statements: data[6]
+                }
+            }
+        %}
+    |  %kw_repeat __ml statements __ml %kw_until __ expr _ ";"
+        {%
+            (data) => {
+                return {
+                    type: "dowhile_loop",
+                    expr: data[6],
+                    statements: data[2]
+                }
+            }
+        %}
+
+
+for_loop
+    ->  %kw_for __ assignment __ %kw_to __ expr __ %kw_do __ml subprogram
+        {%
+            (data) => {
+                return {
+                    type: "for_loop",
                     assignment: data[2],
                     to: data[6],
+                    statements: data[10]
+                }
+            }
+        %}
+    |   %kw_for __ assignment __ %kw_downto __ expr __ %kw_do __ml subprogram
+        {%
+            (data) => {
+                return {
+                    type: "for_loop",
+                    assignment: data[2],
+                    downto: data[6],
                     statements: data[10]
                 }
             }

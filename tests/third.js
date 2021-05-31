@@ -20,8 +20,8 @@ function bin(num) {
     return num.toString(2);
 }
 
-var s = 0;
-write(s);
-writeln();
-for(var i = 10; i>=0; i--){write(i);
-write(i);}
+var x = 1;
+do {
+write(x);
+var x = x+1;}
+while(x<10);

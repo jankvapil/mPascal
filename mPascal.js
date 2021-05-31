@@ -7,7 +7,7 @@ function id(x) { return x[0]; }
 var grammar = {
     Lexer: myLexer,
     ParserRules: [
-    {"name": "program", "symbols": [(myLexer.has("begin") ? {type: "begin"} : begin), "statements", "_ml", (myLexer.has("end") ? {type: "end"} : end)], "postprocess": 
+    {"name": "program", "symbols": [(myLexer.has("begin") ? {type: "begin"} : begin), "statements", "_ml", (myLexer.has("end") ? {type: "end"} : end), "_ml"], "postprocess": 
         (data) => {  
              return {
                  type: "program",
@@ -27,11 +27,16 @@ var grammar = {
             return [data[1], ...rest]
         }
                 },
-    {"name": "statement", "symbols": ["assignment", "_", {"literal":";"}], "postprocess": id},
-    {"name": "statement", "symbols": ["fn_call", "_", {"literal":";"}], "postprocess": id},
+    {"name": "statement$ebnf$1", "symbols": []},
+    {"name": "statement$ebnf$1", "symbols": ["statement$ebnf$1", {"literal":";"}], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+    {"name": "statement", "symbols": ["assignment", "_", "statement$ebnf$1"], "postprocess": id},
+    {"name": "statement$ebnf$2", "symbols": []},
+    {"name": "statement$ebnf$2", "symbols": ["statement$ebnf$2", {"literal":";"}], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+    {"name": "statement", "symbols": ["fn_call", "_", "statement$ebnf$2"], "postprocess": id},
     {"name": "statement", "symbols": ["fn_call_no_args", "_", {"literal":";"}], "postprocess": id},
     {"name": "statement", "symbols": ["for_loop"], "postprocess": id},
     {"name": "statement", "symbols": ["while_loop"], "postprocess": id},
+    {"name": "statement", "symbols": ["cond"], "postprocess": id},
     {"name": "fn_call_no_args", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol)], "postprocess":  
         (data) => {
             return {
@@ -99,9 +104,29 @@ var grammar = {
             }
         }
                 },
+    {"name": "cond", "symbols": [(myLexer.has("kw_if") ? {type: "kw_if"} : kw_if), "__", "expr", "__", (myLexer.has("kw_then") ? {type: "kw_then"} : kw_then), "__ml", "subprogram"], "postprocess": 
+        (data) => {
+            return {
+                type: "cond",
+                expr: data[2],
+                statements: data[6]
+            }
+        }
+                },
+    {"name": "cond", "symbols": [(myLexer.has("kw_if") ? {type: "kw_if"} : kw_if), "__", "expr", "__", (myLexer.has("kw_then") ? {type: "kw_then"} : kw_then), "__ml", "subprogram", (myLexer.has("kw_else") ? {type: "kw_else"} : kw_else), "__ml", "subprogram"], "postprocess": 
+        (data) => {
+            return {
+                type: "cond",
+                expr: data[2],
+                statements: data[6],
+                else_statements: data[9]
+            }
+        }
+                },
     {"name": "expr", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol)], "postprocess": id},
     {"name": "expr", "symbols": [(myLexer.has("string") ? {type: "string"} : string)], "postprocess": id},
     {"name": "expr", "symbols": [(myLexer.has("number") ? {type: "number"} : number)], "postprocess": id},
+    {"name": "expr", "symbols": [(myLexer.has("bool") ? {type: "bool"} : bool)], "postprocess": id},
     {"name": "expr", "symbols": ["fn_call"], "postprocess": id},
     {"name": "expr", "symbols": ["operation"], "postprocess": id},
     {"name": "operation", "symbols": ["expr", "_", (myLexer.has("operator") ? {type: "operator"} : operator), "_", "expr"], "postprocess": 

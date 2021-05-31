@@ -7,7 +7,7 @@
 ####################
 
 program
-    ->  %begin statements _ml %end
+    ->  %begin statements _ml %end _ml
         {%
            (data) => {  
                 return {
@@ -35,11 +35,12 @@ statements
 
 
 statement
-    ->  assignment _ ";"        {% id %}
-    |   fn_call _ ";"           {% id %}
+    ->  assignment _ ";":*        {% id %}
+    |   fn_call _ ";":*           {% id %}
     |   fn_call_no_args _ ";"   {% id %}
     |   for_loop                {% id %}
     |   while_loop              {% id %}
+    |   cond                    {% id %}
 
 
 fn_call_no_args
@@ -135,10 +136,34 @@ for_loop
         %}
 
 
+cond 
+    ->  %kw_if __ expr __ %kw_then __ml subprogram
+        {%
+            (data) => {
+                return {
+                    type: "cond",
+                    expr: data[2],
+                    statements: data[6]
+                }
+            }
+        %}    
+    |   %kw_if __ expr __ %kw_then __ml subprogram %kw_else __ml subprogram
+        {%
+            (data) => {
+                return {
+                    type: "cond",
+                    expr: data[2],
+                    statements: data[6],
+                    else_statements: data[9]
+                }
+            }
+        %}
+
 expr 
     ->  %symbol {% id %}
     |   %string {% id %}
     |   %number {% id %}
+    |   %bool   {% id %}
     |   fn_call {% id %}
     |   operation {% id %}
 

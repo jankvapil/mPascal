@@ -6,7 +6,26 @@ const fs = require("mz/fs")
 ///
 const generateJSExpr = (node) => {
     // console.log(node)
-    if (node.type === "dowhile_loop") {
+    if (node.type === "cond") {
+        const expr = generateJSExpr(node.expr)
+        const statements = []
+        node.statements.forEach(s => {
+            const tmp = generateJSExpr(s)
+            statements.push(tmp)
+        })
+        
+        if (node.else_statements) {
+            const else_statements = []
+            node.else_statements.forEach(s => {
+                const tmp = generateJSExpr(s)
+                else_statements.push(tmp)
+            })
+            return `if(${expr}) {\n${statements.join("\n")}} else {\n${else_statements.join("\n")}}`
+        } else {
+            return `if(${expr}) {\n${statements.join("\n")}}`
+        }
+    }
+    else if (node.type === "dowhile_loop") {
         const expr = generateJSExpr(node.expr)
         const statements = []
         node.statements.forEach(s => {
@@ -78,6 +97,8 @@ const generateJSExpr = (node) => {
     } else if (node.type === "number") {
         return node.value
     } else if (node.type === "string") {
+        return node.value
+    } else if (node.type === "bool") {
         return node.value
     } else if (node.type === "symbol") {
         return node.value

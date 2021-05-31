@@ -26,6 +26,7 @@ const lexer = moo.compile({
         type: caseInsensitiveKeywords({
             'kw_for': 'for',
             'kw_if': 'if',
+            'kw_then': 'then',
             'kw_else': 'else',
             'kw_not': 'not',
             'kw_or': 'or',

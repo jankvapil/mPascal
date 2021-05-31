@@ -7,7 +7,7 @@ function id(x) { return x[0]; }
 var grammar = {
     Lexer: myLexer,
     ParserRules: [
-    {"name": "program", "symbols": [(myLexer.has("begin") ? {type: "begin"} : begin), "statements", "_ml", (myLexer.has("end") ? {type: "end"} : end), "_ml"], "postprocess": 
+    {"name": "program", "symbols": [(myLexer.has("begin") ? {type: "begin"} : begin), "statements", "_ml", (myLexer.has("end") ? {type: "end"} : end)], "postprocess": 
         (data) => {  
              return {
                  type: "program",
@@ -15,6 +15,8 @@ var grammar = {
              }
          }
                 },
+    {"name": "subprogram", "symbols": ["program"]},
+    {"name": "subprogram", "symbols": ["statement"]},
     {"name": "statements$ebnf$1", "symbols": []},
     {"name": "statements$ebnf$1$subexpression$1", "symbols": ["_ml", "statement"]},
     {"name": "statements$ebnf$1", "symbols": ["statements$ebnf$1", "statements$ebnf$1$subexpression$1"], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
@@ -28,7 +30,6 @@ var grammar = {
     {"name": "statement", "symbols": ["assignment", "_", {"literal":";"}], "postprocess": id},
     {"name": "statement", "symbols": ["fn_call", "_", {"literal":";"}], "postprocess": id},
     {"name": "statement", "symbols": ["fn_call_no_args", "_", {"literal":";"}], "postprocess": id},
-    {"name": "statement", "symbols": ["program"], "postprocess": id},
     {"name": "statement", "symbols": ["for_to_do"], "postprocess": id},
     {"name": "fn_call_no_args", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol)], "postprocess":  
         (data) => {
@@ -48,7 +49,7 @@ var grammar = {
         }
                 },
     {"name": "fn_arg", "symbols": ["expr"], "postprocess": 
-        (data) => {  return [data[0]] }
+        (data) => { return [data[0]] }
                 },
     {"name": "assignment", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol), "_", {"literal":":="}, "_", "expr"], "postprocess": 
         (data) => {
@@ -59,7 +60,7 @@ var grammar = {
             }
         }
                 },
-    {"name": "for_to_do", "symbols": [{"literal":"for"}, "__", "assignment", "__", {"literal":"to"}, "__", "expr", "__", {"literal":"do"}, "__", "statements"], "postprocess": 
+    {"name": "for_to_do", "symbols": [{"literal":"for"}, "__", "assignment", "__", {"literal":"to"}, "__", "expr", "__", {"literal":"do"}, "__ml", "subprogram"], "postprocess": 
         (data) => {
             return {
                 type: "for_to_do",

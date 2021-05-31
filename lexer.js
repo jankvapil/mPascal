@@ -1,27 +1,5 @@
 
 const moo = require("moo")
-const fs = require("mz/fs")
-
-// cislice:   [0-9],
-// dekadic:   {cislice}+,
-// hexadecim: "$"[0-9a-fA-F]+,
-// binarni:   "%"[01]+,
-// pismeno_:  [a-zA-Z_],
-// jmeno:     {pismeno_}({pismeno_}|{cislice})*,
-
-// // operator:   ['not', '<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/', 'mod', 'or', 'xor', 'and'],
-// // keyword:    {
-// //     match: ['FOR', 'IF', 'else', 'then', 'begin', 'end.', 'do', 'downto', 'while', 'repeat', 'until'],
-// //     value: (i => i.toUpperCase())
-// // },
-
-
-// // lte: '<=',
-// // gte: '>=',
-// // eqv: '=',
-// // diff: '<>',
-// // gt: '>',
-// // lt: '<',
 
 const caseInsensitiveKeywords = (defs) => {
     const keywords = moo.keywords(defs)
@@ -41,7 +19,7 @@ const lexer = moo.compile({
     lparen:     '(',
     rparen:     ')',
     begin:      'begin',
-    end:        'end.',
+    end:        ['end;', 'end.'],
     operator:   ['<=', '>=', '=', '<>', '<', '>', '+', '-', '*', '/'],
     symbol:     {
         match: /[a-zA-Z][a-zA-Z_0-9]*/, value: (s) => s.toLowerCase(),
@@ -66,39 +44,4 @@ const lexer = moo.compile({
     NL:         { match: /\n|\r\n/, lineBreaks: true },
 }, {case: false})
 
-
 module.exports = lexer
-
-///////////////// LEXING TEST /////////////////////
-
-// const main = async () => {
-
-//     const input = (await fs.readFile("tests/first.mP")).toString()
-    
-//     // console.log(input)
-    
-//     // const input = (await fs.readFile("tests/ASCII.mP")).toString()
-//     // const input = (await fs.readFile("tests/Dekadicke na binarni.mP")).toString()
-//     // const input = (await fs.readFile("tests/Fibonacci.mP")).toString()
-//     // const input = (await fs.readFile("tests/Grayuv kod.mP")).toString()
-//     // const input = (await fs.readFile("tests/Test.mP")).toString()
-//     // const input = (await fs.readFile("tests/Test.mP")).toString()
-//     // const input = (await fs.readFile("tests/Test.mP")).toString()
-//     // const input = (await fs.readFile("tests/Test.mP")).toString()
-//     // const input = (await fs.readFile("tests/Test.mP")).toString()
-
-//     // const input = (await fs.readFile("tests/Test.mP")).toString()
-
-//     lexer.reset(input)
-//     while (true) {
-//         const token = lexer.next()
-//         if (!token) {
-//             break
-//         }
-//         console.log(token)
-//     }
-// }
-
-// main().catch(e => {
-//     console.error(e)
-// })

@@ -7,7 +7,7 @@
 ####################
 
 program
-    ->  %begin statements _ml %end _ml
+    ->  %begin statements _ml %end
         {%
            (data) => {  
                 return {
@@ -17,6 +17,9 @@ program
             }
         %}
 
+subprogram
+    ->  program
+    |   statement
 
 statements
     ->  _ml statement ( _ml statement):*
@@ -33,7 +36,6 @@ statement
     ->  assignment _ ";"        {% id %}
     |   fn_call _ ";"           {% id %}
     |   fn_call_no_args _ ";"   {% id %}
-    |   program                 {% id %} 
     |   for_to_do               {% id %}
 
 
@@ -65,7 +67,7 @@ fn_call
 fn_arg
     ->  expr
         {%
-            (data) => {  return [data[0]] }
+            (data) => { return [data[0]] }
         %}
 
 
@@ -83,7 +85,7 @@ assignment
 
 
 for_to_do
-    ->  "for" __ assignment __ "to" __ expr __ "do" __ statements
+    ->  "for" __ assignment __ "to" __ expr __ "do" __ml subprogram
         {%
             (data) => {
                 return {

@@ -7,7 +7,7 @@
     "type": "symbol",
     "value": "s",
     "text": "s",
-    "offset": 10,
+    "offset": 11,
     "lineBreaks": 0,
     "line": 2,
     "col": 5
@@ -16,7 +16,7 @@
     "type": "number",
     "value": "0",
     "text": "0",
-    "offset": 13,
+    "offset": 14,
     "lineBreaks": 0,
     "line": 2,
     "col": 8
@@ -30,7 +30,7 @@
      "type": "symbol",
      "value": "i",
      "text": "i",
-     "offset": 24,
+     "offset": 26,
      "lineBreaks": 0,
      "line": 3,
      "col": 9
@@ -39,7 +39,7 @@
      "type": "number",
      "value": "1",
      "text": "1",
-     "offset": 27,
+     "offset": 29,
      "lineBreaks": 0,
      "line": 3,
      "col": 12
@@ -49,53 +49,62 @@
     "type": "number",
     "value": "10",
     "text": "10",
-    "offset": 32,
+    "offset": 34,
     "lineBreaks": 0,
     "line": 3,
     "col": 17
    },
    "statements": [
     {
-     "type": "assignment",
-     "symbol": {
-      "type": "symbol",
-      "value": "s",
-      "text": "s",
-      "offset": 38,
-      "lineBreaks": 0,
-      "line": 3,
-      "col": 23
-     },
-     "value": {
-      "type": "operation",
-      "left": {
-       "type": "symbol",
-       "value": "s",
-       "text": "s",
-       "offset": 41,
-       "lineBreaks": 0,
-       "line": 3,
-       "col": 26
+     "type": "program",
+     "statements": [
+      {
+       "type": "fn_call",
+       "fnName": {
+        "type": "symbol",
+        "value": "write",
+        "text": "write",
+        "offset": 46,
+        "lineBreaks": 0,
+        "line": 3,
+        "col": 29
+       },
+       "arg": [
+        {
+         "type": "symbol",
+         "value": "i",
+         "text": "i",
+         "offset": 52,
+         "lineBreaks": 0,
+         "line": 3,
+         "col": 35
+        }
+       ]
       },
-      "operator": {
-       "type": "operator",
-       "value": "+",
-       "text": "+",
-       "offset": 42,
-       "lineBreaks": 0,
-       "line": 3,
-       "col": 27
-      },
-      "right": {
-       "type": "symbol",
-       "value": "i",
-       "text": "i",
-       "offset": 43,
-       "lineBreaks": 0,
-       "line": 3,
-       "col": 28
+      {
+       "type": "fn_call",
+       "fnName": {
+        "type": "symbol",
+        "value": "write",
+        "text": "write",
+        "offset": 56,
+        "lineBreaks": 0,
+        "line": 3,
+        "col": 39
+       },
+       "arg": [
+        {
+         "type": "symbol",
+         "value": "i",
+         "text": "i",
+         "offset": 62,
+         "lineBreaks": 0,
+         "line": 3,
+         "col": 45
+        }
+       ]
       }
-     }
+     ]
     }
    ]
   }

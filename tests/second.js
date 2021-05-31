@@ -21,4 +21,5 @@ function bin(num) {
 }
 
 var s = 0;
-for(var i = 1;i<10;i++){var s = s+i;}
+for(var i = 1; i<10; i++){write(i);
+write(i);}

@@ -15,7 +15,7 @@ const generateJSExpr = (node) => {
             const tmp = generateJSExpr(s)
             statements.push(tmp)
         })
-        return `for(${assignment}${symbol}<${to};${symbol}++){${statements.join("\n")}}`
+        return `for(${assignment} ${symbol}<${to}; ${symbol}++){${statements.join("\n")}}`
     }
     else if (node.type === "operation") {
         return `${node.left.value}${node.operator.value}${node.right.value}`

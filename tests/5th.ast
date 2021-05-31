@@ -1,0 +1,130 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "n",
+    "text": "n",
+    "offset": 11,
+    "lineBreaks": 0,
+    "line": 2,
+    "col": 5
+   },
+   "value": {
+    "type": "operation",
+    "left": {
+     "type": "number",
+     "value": "8",
+     "text": "8",
+     "offset": 14,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 8
+    },
+    "operator": {
+     "type": "operator",
+     "value": "%",
+     "text": "mod",
+     "offset": 16,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 10
+    },
+    "right": {
+     "type": "number",
+     "value": "2",
+     "text": "2",
+     "offset": 20,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 14
+    }
+   }
+  },
+  {
+   "type": "cond",
+   "expr": {
+    "type": "operation",
+    "left": {
+     "type": "symbol",
+     "value": "n",
+     "text": "n",
+     "offset": 31,
+     "lineBreaks": 0,
+     "line": 3,
+     "col": 8
+    },
+    "operator": {
+     "type": "operator",
+     "value": "==",
+     "text": "=",
+     "offset": 33,
+     "lineBreaks": 0,
+     "line": 3,
+     "col": 10
+    },
+    "right": {
+     "type": "number",
+     "value": "0",
+     "text": "0",
+     "offset": 35,
+     "lineBreaks": 0,
+     "line": 3,
+     "col": 12
+    }
+   },
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": {
+      "type": "symbol",
+      "value": "writeln",
+      "text": "writeln",
+      "offset": 42,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 19
+     },
+     "arg": [
+      {
+       "type": "string",
+       "value": "'ano'",
+       "text": "'ano'",
+       "offset": 50,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 27
+      }
+     ]
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "fn_call",
+     "fnName": {
+      "type": "symbol",
+      "value": "writeln",
+      "text": "writeln",
+      "offset": 62,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 39
+     },
+     "arg": [
+      {
+       "type": "string",
+       "value": "'ne'",
+       "text": "'ne'",
+       "offset": 70,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 47
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

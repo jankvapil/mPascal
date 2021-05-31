@@ -168,8 +168,13 @@ expr
     |   operation {% id %}
 
 
+operator
+    ->  %operator   {% id %}
+    |   %kw_mod     {% id %}
+
+
 operation 
-    ->  expr _ %operator _ expr
+    ->  expr _ operator _ expr
         {%
             (data) => {
                 return {

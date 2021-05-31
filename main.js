@@ -34,7 +34,7 @@ const main = async () => {
     await execWithOutput(`node parser.js ${inFilename}`)
 
     // generates .js file
-    await execWithOutput(`node generate.js ${outAstFilename}`)
+    await execWithOutput(`node generator.js ${outAstFilename}`)
     
     // executes .js file
     await execWithOutput(`node ${outJSFilename}`)

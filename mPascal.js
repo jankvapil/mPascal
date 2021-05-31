@@ -129,7 +129,9 @@ var grammar = {
     {"name": "expr", "symbols": [(myLexer.has("bool") ? {type: "bool"} : bool)], "postprocess": id},
     {"name": "expr", "symbols": ["fn_call"], "postprocess": id},
     {"name": "expr", "symbols": ["operation"], "postprocess": id},
-    {"name": "operation", "symbols": ["expr", "_", (myLexer.has("operator") ? {type: "operator"} : operator), "_", "expr"], "postprocess": 
+    {"name": "operator", "symbols": [(myLexer.has("operator") ? {type: "operator"} : operator)], "postprocess": id},
+    {"name": "operator", "symbols": [(myLexer.has("kw_mod") ? {type: "kw_mod"} : kw_mod)], "postprocess": id},
+    {"name": "operation", "symbols": ["expr", "_", "operator", "_", "expr"], "postprocess": 
         (data) => {
             return {
                 type: "operation",

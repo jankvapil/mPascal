@@ -28,9 +28,7 @@ function bin(num) {
     return num.toString(2);
 }
 
-write('print before');
-writeln();
-if(1>2) {
-writeln('true');} else {
-writeln('false');}
-writeln('print always');
+var n = 8%2;
+if(n==0) {
+writeln('ano');} else {
+writeln('ne');}

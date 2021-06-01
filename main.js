@@ -30,21 +30,28 @@ const main = async () => {
     const outAstFilename = inFilename.replace(".mP", ".ast")
     const outJSFilename = outAstFilename.replace(".ast", ".js")
 
+    console.log(inFilename)
     // generates .ast file
-    await execWithOutput(`node parser.js ${inFilename}`)
+    await execWithOutput(`node parser ${inFilename}`)
 
     // generates .js file
-    await execWithOutput(`node generator.js ${outAstFilename}`)
+    if (fs.exists(outAstFilename)) { 
+        console.log(outAstFilename)
+        await execWithOutput(`node generator ${outAstFilename}`)
+    }
     
     // executes .js file
-    await execWithOutput(`node ${outJSFilename}`)
+    if (fs.exists(outJSFilename)) {
+        await execWithOutput(`node ${outJSFilename}`)
+    }
 
-    // // clean temporary files..
-    // if (fs.exists(outAstFilename))
+    // clean temporary files..
+    // if (fs.exists(outAstFilename)) {
     //     fs.rmSync(outAstFilename)
-    // if (fs.exists(outJSFilename))
+    // }
+    // if (fs.exists(outJSFilename)) {
     //     fs.rmSync(outJSFilename)
-
+    // }
 }
 
 main().catch(e => console.error(e))

@@ -12,7 +12,6 @@ const lexer = moo.compile({
     number:     /0|[1-9][0-9]*/,
     hexNum:     /\$[0-9a-fA-F]+/,
     binNum:     /\%[01]+/,
-    semicolon:  ';',
     string:     /'(?:\\['\\]|[^\n'\\])*'/,
     comment:    /\/\/.*?$/,
     inlComment: /{(?:\\["\\]|[^\n"\\])*}/,
@@ -20,13 +19,6 @@ const lexer = moo.compile({
     rparen:     ')',
     begin:      'begin',
     end:        ['end;', 'end.'],
-    operator:   ['<=', '>=', 
-        { match: '=', value: (e) => '==' }, 
-        { match: 'mod', value: (e) => '%' }, 
-        { match: 'xor', value: (e) => '^' }, 
-        { match: 'or', value: (e) => '||' }, 
-        { match: 'and', value: (e) => '&&' }, 
-                '<>', '<', '>', '+', '-', '*', '/'],
     symbol:     {
         match: /[a-zA-Z][a-zA-Z_0-9]*/, value: (s) => s.toLowerCase(),
         type: caseInsensitiveKeywords({
@@ -40,11 +32,20 @@ const lexer = moo.compile({
             'kw_do': 'do',
             'kw_while': 'while',
             'kw_repeat': 'repeat',
-            'kw_until': 'until'
+            'kw_until': 'until',
+            'symbol': 'ord'
         }),
     },
+    operator:   ['<=', '>=', 
+        { match: '=', value: (e) => '==' }, 
+        { match: 'mod', value: (e) => '%' }, 
+        { match: 'xor', value: (e) => '^' }, 
+        { match: 'or', value: (e) => '||' }, 
+        { match: 'and', value: (e) => '&&' }, 
+                '<>', '<', '>', '+', '-', '*', '/'],
     assign:     ':=',
     colon:      ':',
+    semicolon:  ';',
     NL:         { match: /\n|\r\n/, lineBreaks: true },
 }, {case: false})
 

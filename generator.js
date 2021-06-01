@@ -5,7 +5,6 @@ const fs = require("mz/fs")
 /// Generete JS expression from AST node
 ///
 const generateJSExpr = (node) => {
-    // console.log(node)
     if (node.type === "cond") {
         const expr = generateJSExpr(node.expr)
         const statements = []
@@ -32,7 +31,7 @@ const generateJSExpr = (node) => {
             const tmp = generateJSExpr(s)
             statements.push(tmp)
         })
-        return `do {\n${statements.join("\n")}}\nwhile(${expr});\n`
+        return `do {\n${statements.join("\n")}}\nwhile(!(${expr}));\n`
     }
     else if (node.type === "while_loop") {
         const expr = generateJSExpr(node.expr)

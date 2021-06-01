@@ -1,7 +1,7 @@
 
 function write(arg) {
-    var retyped = new String(arg);
-    process.stdout.write(retyped.toString());
+  var retyped = new String(arg);
+  process.stdout.write(retyped.toString());
 }
 
 function writeln(...args) {
@@ -26,4 +26,8 @@ function hex(num) {
 
 function bin(num) {
   return num.toString(2);
+}
+
+function chr(num) {
+  return num.toString();
 }

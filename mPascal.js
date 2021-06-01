@@ -7,7 +7,7 @@ function id(x) { return x[0]; }
 var grammar = {
     Lexer: myLexer,
     ParserRules: [
-    {"name": "program", "symbols": [(myLexer.has("begin") ? {type: "begin"} : begin), "statements", "_ml", (myLexer.has("end") ? {type: "end"} : end), "_ml"], "postprocess": 
+    {"name": "program", "symbols": [(myLexer.has("begin") ? {type: "begin"} : begin), "statements", (myLexer.has("end") ? {type: "end"} : end), "_ml"], "postprocess": 
         (data) => {  
              return {
                  type: "program",
@@ -20,7 +20,7 @@ var grammar = {
     {"name": "statements$ebnf$1", "symbols": []},
     {"name": "statements$ebnf$1$subexpression$1", "symbols": ["_ml", "statement"]},
     {"name": "statements$ebnf$1", "symbols": ["statements$ebnf$1", "statements$ebnf$1$subexpression$1"], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
-    {"name": "statements", "symbols": ["_ml", "statement", "statements$ebnf$1"], "postprocess": 
+    {"name": "statements", "symbols": ["_ml", "statement", "statements$ebnf$1", "_ml"], "postprocess": 
         (data) => {
             const repeated = data[2]
             const rest = repeated.map(s => s[1])
@@ -84,7 +84,7 @@ var grammar = {
             }
         }
                 },
-    {"name": "for_loop", "symbols": [(myLexer.has("kw_for") ? {type: "kw_for"} : kw_for), "__", "assignment", "__", (myLexer.has("kw_to") ? {type: "kw_to"} : kw_to), "__", "expr", "__", (myLexer.has("kw_do") ? {type: "kw_do"} : kw_do), "__ml", "subprogram"], "postprocess": 
+    {"name": "for_loop", "symbols": [(myLexer.has("kw_for") ? {type: "kw_for"} : kw_for), "__", "assignment", "__", (myLexer.has("kw_to") ? {type: "kw_to"} : kw_to), "__", "expr", "__", (myLexer.has("kw_do") ? {type: "kw_do"} : kw_do), "__", "subprogram"], "postprocess": 
         (data) => {
             return {
                 type: "for_loop",
@@ -94,7 +94,7 @@ var grammar = {
             }
         }
                 },
-    {"name": "for_loop", "symbols": [(myLexer.has("kw_for") ? {type: "kw_for"} : kw_for), "__", "assignment", "__", (myLexer.has("kw_downto") ? {type: "kw_downto"} : kw_downto), "__", "expr", "__", (myLexer.has("kw_do") ? {type: "kw_do"} : kw_do), "__ml", "subprogram"], "postprocess": 
+    {"name": "for_loop", "symbols": [(myLexer.has("kw_for") ? {type: "kw_for"} : kw_for), "__", "assignment", "__", (myLexer.has("kw_downto") ? {type: "kw_downto"} : kw_downto), "__", "expr", "__", (myLexer.has("kw_do") ? {type: "kw_do"} : kw_do), "__", "subprogram"], "postprocess": 
         (data) => {
             return {
                 type: "for_loop",

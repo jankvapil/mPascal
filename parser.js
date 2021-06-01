@@ -21,6 +21,10 @@ const main = async () => {
     if (parser.results.length > 1) {
         console.error("Ambigous grammar!")
         
+        // for (let i = 0; i < parser.results.length; i++) {
+        //     console.log(i)
+        // }
+
         await fs.writeFile("error_log.json", JSON.stringify(parser.results, null, " "))
     } else if (parser.results.length == 1) {
         const ast = parser.results[0]

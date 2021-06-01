@@ -7,7 +7,7 @@
 ####################
 
 program
-    ->  %begin statements _ml %end _ml
+    ->  %begin statements %end _ml
         {%
            (data) => {  
                 return {
@@ -24,7 +24,7 @@ subprogram
 
 
 statements
-    ->  _ml statement ( _ml statement):*
+    ->  _ml statement ( _ml statement):* _ml
         {%
             (data) => {
                 const repeated = data[2]
@@ -35,8 +35,8 @@ statements
 
 
 statement
-    ->  assignment _ ";":*        {% id %}
-    |   fn_call _ ";":*           {% id %}
+    ->  assignment _ ";":*      {% id %}
+    |   fn_call _ ";":*         {% id %}
     |   fn_call_no_args _ ";"   {% id %}
     |   for_loop                {% id %}
     |   while_loop              {% id %}
@@ -112,7 +112,7 @@ while_loop
 
 
 for_loop
-    ->  %kw_for __ assignment __ %kw_to __ expr __ %kw_do __ml subprogram
+    ->  %kw_for __ assignment __ %kw_to __ expr __ %kw_do __ subprogram
         {%
             (data) => {
                 return {
@@ -123,7 +123,7 @@ for_loop
                 }
             }
         %}
-    |   %kw_for __ assignment __ %kw_downto __ expr __ %kw_do __ml subprogram
+    |   %kw_for __ assignment __ %kw_downto __ expr __ %kw_do __ subprogram
         {%
             (data) => {
                 return {

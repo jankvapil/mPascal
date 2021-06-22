@@ -41,6 +41,8 @@ statement
     |   for_loop                {% id %}
     |   while_loop              {% id %}
     |   cond                    {% id %}
+    |   %inlComment                 
+    |   %comment
 
 
 fn_call_no_args

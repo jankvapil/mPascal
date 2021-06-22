@@ -26,7 +26,7 @@ const generateJSExpr = (node) => {
         }
     }
     else if (node.type === "dowhile_loop") {
-        const expr = generateJSExpr(node.expr)
+        const expr = generateJSExpr(node.expr[0])
         const statements = []
         node.statements.forEach(s => {
             const tmp = generateJSExpr(s)
@@ -35,7 +35,7 @@ const generateJSExpr = (node) => {
         return `do {\n${statements.join("\n")}}\nwhile(!(${expr}));\n`
     }
     else if (node.type === "while_loop") {
-        const expr = generateJSExpr(node.expr)
+        const expr = generateJSExpr(node.expr[0])
         const statements = []
         node.statements.forEach(s => {
             const tmp = generateJSExpr(s)

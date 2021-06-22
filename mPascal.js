@@ -37,6 +37,8 @@ var grammar = {
     {"name": "statement", "symbols": ["for_loop"], "postprocess": id},
     {"name": "statement", "symbols": ["while_loop"], "postprocess": id},
     {"name": "statement", "symbols": ["cond"], "postprocess": id},
+    {"name": "statement", "symbols": [(myLexer.has("inlComment") ? {type: "inlComment"} : inlComment)]},
+    {"name": "statement", "symbols": [(myLexer.has("comment") ? {type: "comment"} : comment)]},
     {"name": "fn_call_no_args", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol)], "postprocess":  
         (data) => {
             return {

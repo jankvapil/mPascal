@@ -5,6 +5,7 @@ const fs = require("mz/fs")
 /// Generete JS expression from AST node
 ///
 const generateJSExpr = (node) => {
+    // console.log(node)
     if (node.type === "cond") {
         const expr = generateJSExpr(node.expr)
         const statements = []
@@ -51,15 +52,15 @@ const generateJSExpr = (node) => {
             statements.push(tmp)
         })
         if (node.to) {
-            const to = generateJSExpr(node.to)
+            const to = generateJSExpr(node.to[0])
             return `for(${assignment} ${symbol}<=${to}; ${symbol}++){${statements.join("\n")}}`
         } else if (node.downto) {
-            const downto = generateJSExpr(node.downto)
+            const downto = generateJSExpr(node.downto[0])
             return `for(${assignment} ${symbol}>=${downto}; ${symbol}--){${statements.join("\n")}}`
         }
     }
     else if (node.type === "operation") {
-        console.log(node)
+        // console.log(node)
         const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
         const operator = generateJSExpr(node.operator)
         const left = generateJSExpr(node.left)

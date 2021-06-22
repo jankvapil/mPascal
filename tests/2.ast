@@ -14,25 +14,29 @@
      "line": 2,
      "col": 9
     },
-    "value": {
+    "value": [
+     {
+      "type": "number",
+      "value": "10",
+      "text": "10",
+      "offset": 18,
+      "lineBreaks": 0,
+      "line": 2,
+      "col": 12
+     }
+    ]
+   },
+   "downto": [
+    {
      "type": "number",
-     "value": "10",
-     "text": "10",
-     "offset": 18,
+     "value": "0",
+     "text": "0",
+     "offset": 28,
      "lineBreaks": 0,
      "line": 2,
-     "col": 12
+     "col": 22
     }
-   },
-   "downto": {
-    "type": "number",
-    "value": "0",
-    "text": "0",
-    "offset": 28,
-    "lineBreaks": 0,
-    "line": 2,
-    "col": 22
-   },
+   ],
    "statements": [
     {
      "type": "fn_call",

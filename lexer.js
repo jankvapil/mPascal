@@ -19,6 +19,13 @@ const lexer = moo.compile({
     rparen:     ')',
     begin:      'begin',
     end:        ['end;', 'end.'],
+    operator:   ['<=', '>=', 
+        { match: '=', value: (e) => '==' }, 
+        { match: 'mod', value: (e) => '%' }, 
+        { match: 'xor', value: (e) => '^' }, 
+        { match: 'or', value: (e) => '||' }, 
+        { match: 'and', value: (e) => '&&' }, 
+                '<>', '<', '>', '+', '-', '*', '/'],
     symbol:     {
         match: /[a-zA-Z][a-zA-Z_0-9]*/, value: (s) => s.toLowerCase(),
         type: caseInsensitiveKeywords({
@@ -36,13 +43,6 @@ const lexer = moo.compile({
             'symbol': 'ord'
         }),
     },
-    operator:   ['<=', '>=', 
-        { match: '=', value: (e) => '==' }, 
-        { match: 'mod', value: (e) => '%' }, 
-        { match: 'xor', value: (e) => '^' }, 
-        { match: 'or', value: (e) => '||' }, 
-        { match: 'and', value: (e) => '&&' }, 
-                '<>', '<', '>', '+', '-', '*', '/'],
     assign:     ':=',
     colon:      ':',
     semicolon:  ';',

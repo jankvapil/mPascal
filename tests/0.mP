@@ -1,11 +1,12 @@
 begin
   
-
-
-  x:=1+2;
-  y:=x+2;
+  x:=4 / 2;
+  y:=x mod 2;
   z:=x+y;
-  write(z);
+  writeln(z);
   c:=42;
-  write(c);
+
+  writeln(c);
+  x:=y+z+ c;
+  writeln(x);
 end.

@@ -7,9 +7,9 @@
     "type": "symbol",
     "value": "x",
     "text": "x",
-    "offset": 17,
+    "offset": 13,
     "lineBreaks": 0,
-    "line": 5,
+    "line": 3,
     "col": 3
    },
    "value": [
@@ -17,31 +17,31 @@
      "type": "operation",
      "left": {
       "type": "number",
-      "value": "1",
-      "text": "1",
-      "offset": 20,
+      "value": "4",
+      "text": "4",
+      "offset": 16,
       "lineBreaks": 0,
-      "line": 5,
+      "line": 3,
       "col": 6
      },
      "operator": {
       "type": "operator",
-      "value": "+",
-      "text": "+",
-      "offset": 21,
+      "value": "/",
+      "text": "/",
+      "offset": 18,
       "lineBreaks": 0,
-      "line": 5,
-      "col": 7
+      "line": 3,
+      "col": 8
      },
      "right": [
       {
        "type": "number",
        "value": "2",
        "text": "2",
-       "offset": 22,
+       "offset": 20,
        "lineBreaks": 0,
-       "line": 5,
-       "col": 8
+       "line": 3,
+       "col": 10
       }
      ]
     }
@@ -53,9 +53,9 @@
     "type": "symbol",
     "value": "y",
     "text": "y",
-    "offset": 28,
+    "offset": 26,
     "lineBreaks": 0,
-    "line": 6,
+    "line": 4,
     "col": 3
    },
    "value": [
@@ -65,29 +65,29 @@
       "type": "symbol",
       "value": "x",
       "text": "x",
-      "offset": 31,
+      "offset": 29,
       "lineBreaks": 0,
-      "line": 6,
+      "line": 4,
       "col": 6
      },
      "operator": {
       "type": "operator",
-      "value": "+",
-      "text": "+",
-      "offset": 32,
+      "value": "%",
+      "text": "mod",
+      "offset": 31,
       "lineBreaks": 0,
-      "line": 6,
-      "col": 7
+      "line": 4,
+      "col": 8
      },
      "right": [
       {
        "type": "number",
        "value": "2",
        "text": "2",
-       "offset": 33,
+       "offset": 35,
        "lineBreaks": 0,
-       "line": 6,
-       "col": 8
+       "line": 4,
+       "col": 12
       }
      ]
     }
@@ -99,9 +99,9 @@
     "type": "symbol",
     "value": "z",
     "text": "z",
-    "offset": 39,
+    "offset": 41,
     "lineBreaks": 0,
-    "line": 7,
+    "line": 5,
     "col": 3
    },
    "value": [
@@ -111,27 +111,27 @@
       "type": "symbol",
       "value": "x",
       "text": "x",
-      "offset": 42,
+      "offset": 44,
       "lineBreaks": 0,
-      "line": 7,
+      "line": 5,
       "col": 6
      },
      "operator": {
       "type": "operator",
       "value": "+",
       "text": "+",
-      "offset": 43,
+      "offset": 45,
       "lineBreaks": 0,
-      "line": 7,
+      "line": 5,
       "col": 7
      },
      "right": {
       "type": "symbol",
       "value": "y",
       "text": "y",
-      "offset": 44,
+      "offset": 46,
       "lineBreaks": 0,
-      "line": 7,
+      "line": 5,
       "col": 8
      }
     }
@@ -141,11 +141,11 @@
    "type": "fn_call",
    "fnName": {
     "type": "symbol",
-    "value": "write",
-    "text": "write",
-    "offset": 50,
+    "value": "writeln",
+    "text": "writeln",
+    "offset": 52,
     "lineBreaks": 0,
-    "line": 8,
+    "line": 6,
     "col": 3
    },
    "arg": [
@@ -153,10 +153,10 @@
      "type": "symbol",
      "value": "z",
      "text": "z",
-     "offset": 56,
+     "offset": 60,
      "lineBreaks": 0,
-     "line": 8,
-     "col": 9
+     "line": 6,
+     "col": 11
     }
    ]
   },
@@ -166,9 +166,9 @@
     "type": "symbol",
     "value": "c",
     "text": "c",
-    "offset": 63,
+    "offset": 67,
     "lineBreaks": 0,
-    "line": 9,
+    "line": 7,
     "col": 3
    },
    "value": [
@@ -176,9 +176,9 @@
      "type": "number",
      "value": "42",
      "text": "42",
-     "offset": 66,
+     "offset": 70,
      "lineBreaks": 0,
-     "line": 9,
+     "line": 7,
      "col": 6
     }
    ]
@@ -187,11 +187,11 @@
    "type": "fn_call",
    "fnName": {
     "type": "symbol",
-    "value": "write",
-    "text": "write",
-    "offset": 73,
+    "value": "writeln",
+    "text": "writeln",
+    "offset": 79,
     "lineBreaks": 0,
-    "line": 10,
+    "line": 9,
     "col": 3
    },
    "arg": [
@@ -199,10 +199,100 @@
      "type": "symbol",
      "value": "c",
      "text": "c",
-     "offset": 79,
+     "offset": 87,
      "lineBreaks": 0,
-     "line": 10,
-     "col": 9
+     "line": 9,
+     "col": 11
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "x",
+    "text": "x",
+    "offset": 94,
+    "lineBreaks": 0,
+    "line": 10,
+    "col": 3
+   },
+   "value": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "y",
+      "text": "y",
+      "offset": 97,
+      "lineBreaks": 0,
+      "line": 10,
+      "col": 6
+     },
+     "operator": {
+      "type": "operator",
+      "value": "+",
+      "text": "+",
+      "offset": 98,
+      "lineBreaks": 0,
+      "line": 10,
+      "col": 7
+     },
+     "right": [
+      {
+       "type": "operation",
+       "left": {
+        "type": "symbol",
+        "value": "z",
+        "text": "z",
+        "offset": 99,
+        "lineBreaks": 0,
+        "line": 10,
+        "col": 8
+       },
+       "operator": {
+        "type": "operator",
+        "value": "+",
+        "text": "+",
+        "offset": 100,
+        "lineBreaks": 0,
+        "line": 10,
+        "col": 9
+       },
+       "right": {
+        "type": "symbol",
+        "value": "c",
+        "text": "c",
+        "offset": 102,
+        "lineBreaks": 0,
+        "line": 10,
+        "col": 11
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": {
+    "type": "symbol",
+    "value": "writeln",
+    "text": "writeln",
+    "offset": 108,
+    "lineBreaks": 0,
+    "line": 11,
+    "col": 3
+   },
+   "arg": [
+    {
+     "type": "symbol",
+     "value": "x",
+     "text": "x",
+     "offset": 116,
+     "lineBreaks": 0,
+     "line": 11,
+     "col": 11
     }
    ]
   }

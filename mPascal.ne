@@ -162,29 +162,53 @@ cond
 expr 
     ->  %symbol {% id %}
     |   %string {% id %}
-    |   %number {% id %}
+    # |   %number {% id %}
+    |   num
     |   %bool   {% id %}
     |   fn_call {% id %}
-    |   operation {% id %}
+    # |   operation {% id %}
 
 
-operator
-    ->  %operator   {% id %}
-    |   %kw_mod     {% id %}
-
-
-operation 
-    ->  expr _ operator _ expr
-        {%
-            (data) => {
-                return {
-                    type: "operation",
-                    left: data[0],
-                    operator: data[2],
-                    right: data[4]
-                }
+num 
+    ->  %number {% id %}
+    |   %number _ %operator _ expr
+    {%             
+        (data) => {
+            return {
+                type: "operation",
+                left: data[0],
+                operator: data[2],
+                right: data[4]
             }
-        %}
+        } %}
+    |   %symbol _ %operator _ expr
+    {%             
+        (data) => {
+            return {
+                type: "operation",
+                left: data[0],
+                operator: data[2],
+                right: data[4]
+            }
+        } %}
+
+# operator
+#     ->  %operator   {% id %}
+#     |   %kw_mod     {% id %}
+
+
+# operation 
+#     ->  expr _ operator _ expr
+#         {%
+#             (data) => {
+#                 return {
+#                     type: "operation",
+#                     left: data[0],
+#                     operator: data[2],
+#                     right: data[4]
+#                 }
+#             }
+#         %}
 
 ## Zero or more multiline whitespaces
 _ml   -> (%WS | %NL):*

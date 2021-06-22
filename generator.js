@@ -59,21 +59,29 @@ const generateJSExpr = (node) => {
         }
     }
     else if (node.type === "operation") {
-        return `${node.left.value}${node.operator.value}${node.right.value}`
+        console.log(node)
+        const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
+        const operator = generateJSExpr(node.operator)
+        const left = generateJSExpr(node.left)
+        return `${right}${operator}${left}`
     }
     else if (node.type === "assignment") {
+        // console.log(node)
         const symbolName = node.symbol.value
+        // console.log(symbolName)
         if (node.value.type === "fn_call") {
             const value = generateJSExpr(node.value.arg[0])
             const fnName = node.value.fnName.value
             return `var ${symbolName} = ${fnName}(${value});`
         } 
-        else if (node.value.type === "operation") {
-            const value = generateJSExpr(node.value)
+        else if (node.value[0].type === "operation") {
+            // console.log(node)
+            const value = generateJSExpr(node.value[0])
             return `var ${symbolName} = ${value};`
         } 
         else {
-            const value = node.value.value
+            const value = node.value[0].value
+            // console.log(symbolName)
             return `var ${symbolName} = ${value};`
         }
     } 
@@ -100,6 +108,8 @@ const generateJSExpr = (node) => {
     } else if (node.type === "bool") {
         return node.value
     } else if (node.type === "symbol") {
+        return node.value
+    } else if (node.type === "operator") {
         return node.value
     }
 }

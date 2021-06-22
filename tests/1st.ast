@@ -1,0 +1,67 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "cond",
+   "expr": {
+    "type": "bool",
+    "value": "true",
+    "text": "true",
+    "offset": 16,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 6
+   },
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": {
+      "type": "symbol",
+      "value": "writeln",
+      "text": "writeln",
+      "offset": 26,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 16
+     },
+     "arg": [
+      {
+       "type": "string",
+       "value": "'true'",
+       "text": "'true'",
+       "offset": 34,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 24
+      }
+     ]
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "fn_call",
+     "fnName": {
+      "type": "symbol",
+      "value": "writeln",
+      "text": "writeln",
+      "offset": 47,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 37
+     },
+     "arg": [
+      {
+       "type": "string",
+       "value": "'false'",
+       "text": "'false'",
+       "offset": 55,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 45
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

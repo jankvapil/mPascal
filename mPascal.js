@@ -125,13 +125,11 @@ var grammar = {
                 },
     {"name": "expr", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol)], "postprocess": id},
     {"name": "expr", "symbols": [(myLexer.has("string") ? {type: "string"} : string)], "postprocess": id},
-    {"name": "expr", "symbols": [(myLexer.has("number") ? {type: "number"} : number)], "postprocess": id},
+    {"name": "expr", "symbols": ["num"]},
     {"name": "expr", "symbols": [(myLexer.has("bool") ? {type: "bool"} : bool)], "postprocess": id},
     {"name": "expr", "symbols": ["fn_call"], "postprocess": id},
-    {"name": "expr", "symbols": ["operation"], "postprocess": id},
-    {"name": "operator", "symbols": [(myLexer.has("operator") ? {type: "operator"} : operator)], "postprocess": id},
-    {"name": "operator", "symbols": [(myLexer.has("kw_mod") ? {type: "kw_mod"} : kw_mod)], "postprocess": id},
-    {"name": "operation", "symbols": ["expr", "_", "operator", "_", "expr"], "postprocess": 
+    {"name": "num", "symbols": [(myLexer.has("number") ? {type: "number"} : number)], "postprocess": id},
+    {"name": "num", "symbols": [(myLexer.has("number") ? {type: "number"} : number), "_", (myLexer.has("operator") ? {type: "operator"} : operator), "_", "expr"], "postprocess":      
         (data) => {
             return {
                 type: "operation",
@@ -139,8 +137,16 @@ var grammar = {
                 operator: data[2],
                 right: data[4]
             }
-        }
-                },
+        } },
+    {"name": "num", "symbols": [(myLexer.has("symbol") ? {type: "symbol"} : symbol), "_", (myLexer.has("operator") ? {type: "operator"} : operator), "_", "expr"], "postprocess":      
+        (data) => {
+            return {
+                type: "operation",
+                left: data[0],
+                operator: data[2],
+                right: data[4]
+            }
+        } },
     {"name": "_ml$ebnf$1", "symbols": []},
     {"name": "_ml$ebnf$1$subexpression$1", "symbols": [(myLexer.has("WS") ? {type: "WS"} : WS)]},
     {"name": "_ml$ebnf$1$subexpression$1", "symbols": [(myLexer.has("NL") ? {type: "NL"} : NL)]},

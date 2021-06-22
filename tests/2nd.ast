@@ -1,0 +1,86 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "for_loop",
+   "assignment": {
+    "type": "assignment",
+    "symbol": {
+     "type": "symbol",
+     "value": "i",
+     "text": "i",
+     "offset": 15,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 9
+    },
+    "value": {
+     "type": "number",
+     "value": "10",
+     "text": "10",
+     "offset": 18,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 12
+    }
+   },
+   "downto": {
+    "type": "number",
+    "value": "0",
+    "text": "0",
+    "offset": 28,
+    "lineBreaks": 0,
+    "line": 2,
+    "col": 22
+   },
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": {
+      "type": "symbol",
+      "value": "write",
+      "text": "write",
+      "offset": 33,
+      "lineBreaks": 0,
+      "line": 2,
+      "col": 27
+     },
+     "arg": [
+      {
+       "type": "symbol",
+       "value": "i",
+       "text": "i",
+       "offset": 39,
+       "lineBreaks": 0,
+       "line": 2,
+       "col": 33
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": {
+    "type": "symbol",
+    "value": "write",
+    "text": "write",
+    "offset": 43,
+    "lineBreaks": 0,
+    "line": 2,
+    "col": 37
+   },
+   "arg": [
+    {
+     "type": "string",
+     "value": "'.'",
+     "text": "'.'",
+     "offset": 49,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 43
+    }
+   ]
+  }
+ ]
+}

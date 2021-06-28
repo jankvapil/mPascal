@@ -7,7 +7,8 @@ const fs = require("mz/fs")
 const generateJSExpr = (node) => {
     // console.log(node)
     if (node.type === "cond") {
-        const expr = generateJSExpr(node.expr)
+        console.log(node)
+        const expr = generateJSExpr(node.expr[0] ? node.expr[0] : node.expr)
         const statements = []
         node.statements.forEach(s => {
             const tmp = generateJSExpr(s)
@@ -64,7 +65,7 @@ const generateJSExpr = (node) => {
         const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
         const operator = generateJSExpr(node.operator)
         const left = generateJSExpr(node.left)
-        return `${right}${operator}${left}`
+        return `${left}${operator}${right}`
     }
     else if (node.type === "assignment") {
         // console.log(node)

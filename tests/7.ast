@@ -1,0 +1,193 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "fn_call",
+   "fnName": {
+    "type": "symbol",
+    "value": "write",
+    "text": "write",
+    "offset": 13,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 5
+   },
+   "arg": [
+    {
+     "type": "string",
+     "value": "'Zadej 2 prirozena cisla: '",
+     "text": "'Zadej 2 prirozena cisla: '",
+     "offset": 19,
+     "lineBreaks": 0,
+     "line": 3,
+     "col": 11
+    }
+   ]
+  },
+  [
+   {
+    "type": "comment",
+    "value": "// read(a); read(b);",
+    "text": "// read(a); read(b);",
+    "offset": 54,
+    "lineBreaks": 0,
+    "line": 4,
+    "col": 5
+   }
+  ],
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "a",
+    "text": "a",
+    "offset": 80,
+    "lineBreaks": 0,
+    "line": 5,
+    "col": 5
+   },
+   "value": [
+    {
+     "type": "number",
+     "value": "4",
+     "text": "4",
+     "offset": 83,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 8
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "b",
+    "text": "b",
+    "offset": 91,
+    "lineBreaks": 0,
+    "line": 6,
+    "col": 5
+   },
+   "value": [
+    {
+     "type": "number",
+     "value": "2",
+     "text": "2",
+     "offset": 94,
+     "lineBreaks": 0,
+     "line": 6,
+     "col": 8
+    }
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 107,
+      "lineBreaks": 0,
+      "line": 8,
+      "col": 6
+     },
+     "operator": {
+      "type": "operator",
+      "value": "<",
+      "text": "<",
+      "offset": 108,
+      "lineBreaks": 0,
+      "line": 8,
+      "col": 7
+     },
+     "right": [
+      {
+       "type": "operation",
+       "left": {
+        "type": "number",
+        "value": "1",
+        "text": "1",
+        "offset": 109,
+        "lineBreaks": 0,
+        "line": 8,
+        "col": 8
+       },
+       "operator": {
+        "type": "operator",
+        "value": "||",
+        "text": "or",
+        "offset": 111,
+        "lineBreaks": 0,
+        "line": 8,
+        "col": 10
+       },
+       "right": [
+        {
+         "type": "operation",
+         "left": {
+          "type": "symbol",
+          "value": "b",
+          "text": "b",
+          "offset": 114,
+          "lineBreaks": 0,
+          "line": 8,
+          "col": 13
+         },
+         "operator": {
+          "type": "operator",
+          "value": "<",
+          "text": "<",
+          "offset": 115,
+          "lineBreaks": 0,
+          "line": 8,
+          "col": 14
+         },
+         "right": [
+          {
+           "type": "number",
+           "value": "1",
+           "text": "1",
+           "offset": 116,
+           "lineBreaks": 0,
+           "line": 8,
+           "col": 15
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": {
+      "type": "symbol",
+      "value": "writeln",
+      "text": "writeln",
+      "offset": 123,
+      "lineBreaks": 0,
+      "line": 8,
+      "col": 22
+     },
+     "arg": [
+      {
+       "type": "string",
+       "value": "'  Chybna cisla'",
+       "text": "'  Chybna cisla'",
+       "offset": 131,
+       "lineBreaks": 0,
+       "line": 8,
+       "col": 30
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

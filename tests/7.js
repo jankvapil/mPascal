@@ -32,8 +32,9 @@ function chr(num) {
   return num.toString();
 }
 
-var n = 2&&8;
-writeln(n);
-if(8==n) {
-writeln('ano');} else {
-writeln('ne');}
+write('Zadej 2 prirozena cisla: ');
+
+var a = 4;
+var b = 2;
+if(a<1||b<1) {
+writeln('  Chybna cisla');}

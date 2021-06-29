@@ -67,7 +67,6 @@ const generateJSExpr = (node) => {
     }
 
     else if (node.type === "operation") {
-        // console.log(node)
         const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
         const operator = generateJSExpr(node.operator)
         const left = generateJSExpr(node.left)
@@ -75,26 +74,30 @@ const generateJSExpr = (node) => {
     }
 
     else if (node.type === "assignment") {
-        // console.log(node)
+        console.log(node)
+        console.log(".....\n")
         const symbolName = node.symbol.value
+
+        let value
         // console.log(symbolName)
         
         if (node.value.type === "fn_call") {
-            const value = generateJSExpr(node.value.arg[0])
+            value = generateJSExpr(node.value.arg[0])
             const fnName = node.value.fnName.value
             return `var ${symbolName} = ${fnName}(${value});`
         } 
-        else if (node.value.type === "operation" || node.value[0].type === "operation") {
-            // console.log(node)
-            const value = generateJSExpr(node.value[0] ? node.value[0] : node.value)
+        else if (node.value?.type === "operation" || node.value[0]?.type === "operation") {
+            value = generateJSExpr(node.value[0] ? node.value[0] : node.value)
             return `var ${symbolName} = ${value};`
         } 
         else {
-            // console.log(node)
-            const value = node.value[0].value
-            // console.log(symbolName)
-            return `var ${symbolName} = ${value};`
+            console.log("simple value")
+            console.log(node.value)
+            console.log("--------------")
+            value = node.value[0]?.value ? node.value[0].value : node.value.value
         }
+        
+        return `var ${symbolName} = ${value};`
     } 
 
     else if (node.type === "fn_call") {

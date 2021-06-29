@@ -1,0 +1,336 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "fn_call",
+   "fnName": {
+    "type": "symbol",
+    "value": "write",
+    "text": "write",
+    "offset": 13,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 5
+   },
+   "arg": [
+    {
+     "type": "string",
+     "value": "'Zadej 2 prirozena cisla: '",
+     "text": "'Zadej 2 prirozena cisla: '",
+     "offset": 19,
+     "lineBreaks": 0,
+     "line": 3,
+     "col": 11
+    }
+   ]
+  },
+  [
+   {
+    "type": "comment",
+    "value": "// read(a); read(b);",
+    "text": "// read(a); read(b);",
+    "offset": 54,
+    "lineBreaks": 0,
+    "line": 4,
+    "col": 5
+   }
+  ],
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "a",
+    "text": "a",
+    "offset": 80,
+    "lineBreaks": 0,
+    "line": 5,
+    "col": 5
+   },
+   "value": [
+    {
+     "type": "number",
+     "value": "4",
+     "text": "4",
+     "offset": 83,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 8
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "b",
+    "text": "b",
+    "offset": 91,
+    "lineBreaks": 0,
+    "line": 6,
+    "col": 5
+   },
+   "value": [
+    {
+     "type": "number",
+     "value": "2",
+     "text": "2",
+     "offset": 94,
+     "lineBreaks": 0,
+     "line": 6,
+     "col": 8
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "x",
+    "text": "x",
+    "offset": 102,
+    "lineBreaks": 0,
+    "line": 7,
+    "col": 5
+   },
+   "value": [
+    {
+     "type": "number",
+     "value": "0",
+     "text": "0",
+     "offset": 105,
+     "lineBreaks": 0,
+     "line": 7,
+     "col": 8
+    }
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 118,
+      "lineBreaks": 0,
+      "line": 9,
+      "col": 6
+     },
+     "operator": {
+      "type": "operator",
+      "value": ">",
+      "text": ">",
+      "offset": 119,
+      "lineBreaks": 0,
+      "line": 9,
+      "col": 7
+     },
+     "right": [
+      {
+       "type": "operation",
+       "left": {
+        "type": "number",
+        "value": "1",
+        "text": "1",
+        "offset": 120,
+        "lineBreaks": 0,
+        "line": 9,
+        "col": 8
+       },
+       "operator": {
+        "type": "operator",
+        "value": "||",
+        "text": "or",
+        "offset": 122,
+        "lineBreaks": 0,
+        "line": 9,
+        "col": 10
+       },
+       "right": [
+        {
+         "type": "operation",
+         "left": {
+          "type": "symbol",
+          "value": "b",
+          "text": "b",
+          "offset": 125,
+          "lineBreaks": 0,
+          "line": 9,
+          "col": 13
+         },
+         "operator": {
+          "type": "operator",
+          "value": ">",
+          "text": ">",
+          "offset": 126,
+          "lineBreaks": 0,
+          "line": 9,
+          "col": 14
+         },
+         "right": [
+          {
+           "type": "number",
+           "value": "1",
+           "text": "1",
+           "offset": 127,
+           "lineBreaks": 0,
+           "line": 9,
+           "col": 15
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "statements": [
+    {
+     "type": "program",
+     "statements": [
+      {
+       "type": "dowhile_loop",
+       "expr": [
+        {
+         "type": "operation",
+         "left": {
+          "type": "symbol",
+          "value": "x",
+          "text": "x",
+          "offset": 181,
+          "lineBreaks": 0,
+          "line": 11,
+          "col": 36
+         },
+         "operator": {
+          "type": "operator",
+          "value": "==",
+          "text": "=",
+          "offset": 182,
+          "lineBreaks": 0,
+          "line": 11,
+          "col": 37
+         },
+         "right": [
+          {
+           "type": "number",
+           "value": "10",
+           "text": "10",
+           "offset": 183,
+           "lineBreaks": 0,
+           "line": 11,
+           "col": 38
+          }
+         ]
+        }
+       ],
+       "statements": [
+        {
+         "type": "fn_call",
+         "fnName": {
+          "type": "symbol",
+          "value": "write",
+          "text": "write",
+          "offset": 157,
+          "lineBreaks": 0,
+          "line": 11,
+          "col": 12
+         },
+         "arg": [
+          {
+           "type": "symbol",
+           "value": "x",
+           "text": "x",
+           "offset": 163,
+           "lineBreaks": 0,
+           "line": 11,
+           "col": 18
+          }
+         ]
+        },
+        {
+         "type": "assignment",
+         "symbol": {
+          "type": "symbol",
+          "value": "x",
+          "text": "x",
+          "offset": 167,
+          "lineBreaks": 0,
+          "line": 11,
+          "col": 22
+         },
+         "value": [
+          {
+           "type": "operation",
+           "left": {
+            "type": "symbol",
+            "value": "x",
+            "text": "x",
+            "offset": 170,
+            "lineBreaks": 0,
+            "line": 11,
+            "col": 25
+           },
+           "operator": {
+            "type": "operator",
+            "value": "+",
+            "text": "+",
+            "offset": 171,
+            "lineBreaks": 0,
+            "line": 11,
+            "col": 26
+           },
+           "right": [
+            {
+             "type": "number",
+             "value": "1",
+             "text": "1",
+             "offset": 172,
+             "lineBreaks": 0,
+             "line": 11,
+             "col": 27
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "program",
+     "statements": [
+      {
+       "type": "fn_call",
+       "fnName": {
+        "type": "symbol",
+        "value": "writeln",
+        "text": "writeln",
+        "offset": 206,
+        "lineBreaks": 0,
+        "line": 12,
+        "col": 14
+       },
+       "arg": [
+        {
+         "type": "string",
+         "value": "' Funguju'",
+         "text": "' Funguju'",
+         "offset": 214,
+         "lineBreaks": 0,
+         "line": 12,
+         "col": 22
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

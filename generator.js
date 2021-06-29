@@ -74,12 +74,8 @@ const generateJSExpr = (node) => {
     }
 
     else if (node.type === "assignment") {
-        console.log(node)
-        console.log(".....\n")
         const symbolName = node.symbol.value
-
         let value
-        // console.log(symbolName)
         
         if (node.value.type === "fn_call") {
             value = generateJSExpr(node.value.arg[0])
@@ -91,13 +87,9 @@ const generateJSExpr = (node) => {
             return `var ${symbolName} = ${value};`
         } 
         else {
-            console.log("simple value")
-            console.log(node.value)
-            console.log("--------------")
             value = node.value[0]?.value ? node.value[0].value : node.value.value
+            return `var ${symbolName} = ${value};`
         }
-        
-        return `var ${symbolName} = ${value};`
     } 
 
     else if (node.type === "fn_call") {

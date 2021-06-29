@@ -47,12 +47,254 @@
     }
    ]
   },
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-  null
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "y",
+    "text": "y",
+    "offset": 23,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 3
+   },
+   "value": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "x",
+      "text": "x",
+      "offset": 26,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 6
+     },
+     "operator": {
+      "type": "operator",
+      "value": "%",
+      "text": "mod",
+      "offset": 28,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 8
+     },
+     "right": [
+      {
+       "type": "number",
+       "value": "2",
+       "text": "2",
+       "offset": 32,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 12
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "z",
+    "text": "z",
+    "offset": 38,
+    "lineBreaks": 0,
+    "line": 4,
+    "col": 3
+   },
+   "value": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "x",
+      "text": "x",
+      "offset": 41,
+      "lineBreaks": 0,
+      "line": 4,
+      "col": 6
+     },
+     "operator": {
+      "type": "operator",
+      "value": "+",
+      "text": "+",
+      "offset": 42,
+      "lineBreaks": 0,
+      "line": 4,
+      "col": 7
+     },
+     "right": {
+      "type": "symbol",
+      "value": "y",
+      "text": "y",
+      "offset": 43,
+      "lineBreaks": 0,
+      "line": 4,
+      "col": 8
+     }
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": {
+    "type": "symbol",
+    "value": "writeln",
+    "text": "writeln",
+    "offset": 49,
+    "lineBreaks": 0,
+    "line": 5,
+    "col": 3
+   },
+   "arg": [
+    {
+     "type": "symbol",
+     "value": "z",
+     "text": "z",
+     "offset": 57,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 11
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "c",
+    "text": "c",
+    "offset": 64,
+    "lineBreaks": 0,
+    "line": 6,
+    "col": 3
+   },
+   "value": [
+    {
+     "type": "number",
+     "value": "42",
+     "text": "42",
+     "offset": 67,
+     "lineBreaks": 0,
+     "line": 6,
+     "col": 6
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": {
+    "type": "symbol",
+    "value": "writeln",
+    "text": "writeln",
+    "offset": 74,
+    "lineBreaks": 0,
+    "line": 7,
+    "col": 3
+   },
+   "arg": [
+    {
+     "type": "symbol",
+     "value": "c",
+     "text": "c",
+     "offset": 82,
+     "lineBreaks": 0,
+     "line": 7,
+     "col": 11
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "x",
+    "text": "x",
+    "offset": 89,
+    "lineBreaks": 0,
+    "line": 8,
+    "col": 3
+   },
+   "value": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "y",
+      "text": "y",
+      "offset": 92,
+      "lineBreaks": 0,
+      "line": 8,
+      "col": 6
+     },
+     "operator": {
+      "type": "operator",
+      "value": "+",
+      "text": "+",
+      "offset": 93,
+      "lineBreaks": 0,
+      "line": 8,
+      "col": 7
+     },
+     "right": [
+      {
+       "type": "operation",
+       "left": {
+        "type": "symbol",
+        "value": "z",
+        "text": "z",
+        "offset": 94,
+        "lineBreaks": 0,
+        "line": 8,
+        "col": 8
+       },
+       "operator": {
+        "type": "operator",
+        "value": "+",
+        "text": "+",
+        "offset": 95,
+        "lineBreaks": 0,
+        "line": 8,
+        "col": 9
+       },
+       "right": {
+        "type": "symbol",
+        "value": "c",
+        "text": "c",
+        "offset": 97,
+        "lineBreaks": 0,
+        "line": 8,
+        "col": 11
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": {
+    "type": "symbol",
+    "value": "writeln",
+    "text": "writeln",
+    "offset": 103,
+    "lineBreaks": 0,
+    "line": 9,
+    "col": 3
+   },
+   "arg": [
+    {
+     "type": "symbol",
+     "value": "x",
+     "text": "x",
+     "offset": 111,
+     "lineBreaks": 0,
+     "line": 9,
+     "col": 11
+    }
+   ]
+  }
  ]
 }

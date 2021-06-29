@@ -138,20 +138,20 @@
       "type": "symbol",
       "value": "writeln",
       "text": "writeln",
-      "offset": 85,
+      "offset": 86,
       "lineBreaks": 0,
       "line": 5,
-      "col": 39
+      "col": 40
      },
      "arg": [
       {
        "type": "string",
        "value": "'ne'",
        "text": "'ne'",
-       "offset": 93,
+       "offset": 94,
        "lineBreaks": 0,
        "line": 5,
-       "col": 47
+       "col": 48
       }
      ]
     }

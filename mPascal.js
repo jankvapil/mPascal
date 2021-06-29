@@ -7,7 +7,7 @@ function id(x) { return x[0]; }
 var grammar = {
     Lexer: l,
     ParserRules: [
-    {"name": "program", "symbols": [(l.has("begin") ? {type: "begin"} : begin), "_", "statements", "_", (l.has("end") ? {type: "end"} : end), "_"], "postprocess": 
+    {"name": "program", "symbols": [(l.has("begin") ? {type: "begin"} : begin), "__", "statements", "__", (l.has("end") ? {type: "end"} : end), "_"], "postprocess": 
         (data) => {  
              return {
                  type: "program",
@@ -23,7 +23,7 @@ var grammar = {
     {"name": "statements", "symbols": ["statement", "statements$ebnf$1"], "postprocess": 
         (data) => {
             const repeated = data[1]
-            const rest = repeated.map(s => s[0])
+            const rest = repeated.map(s => s[1])
             return [data[0], ...rest]
         }
                 },
@@ -106,13 +106,13 @@ var grammar = {
             }
         }
                 },
-    {"name": "cond", "symbols": [(l.has("kw_if") ? {type: "kw_if"} : kw_if), "__", "expr", "__", (l.has("kw_then") ? {type: "kw_then"} : kw_then), "__", "subprogram", (l.has("kw_else") ? {type: "kw_else"} : kw_else), "subprogram"], "postprocess": 
+    {"name": "cond", "symbols": [(l.has("kw_if") ? {type: "kw_if"} : kw_if), "__", "expr", "__", (l.has("kw_then") ? {type: "kw_then"} : kw_then), "__", "subprogram", "__", (l.has("kw_else") ? {type: "kw_else"} : kw_else), "__", "subprogram"], "postprocess": 
         (data) => {
             return {
                 type: "cond",
                 expr: data[2],
                 statements: data[6],
-                else_statements: data[9]
+                else_statements: data[10]
             }
         }
                 },
@@ -121,7 +121,7 @@ var grammar = {
             return {
                 type: "cond",
                 expr: data[2],
-                statements: data[5]
+                statements: data[6]
             }
         }
                 },
@@ -149,10 +149,18 @@ var grammar = {
                 right: data[4]
             }
         } },
-    {"name": "_", "symbols": []},
-    {"name": "_", "symbols": ["_", /[\s]/], "postprocess": () => null},
-    {"name": "__", "symbols": [/[\s]/]},
-    {"name": "__", "symbols": ["__", /[\s]/], "postprocess": () => null}
+    {"name": "_$ebnf$1", "symbols": []},
+    {"name": "_$ebnf$1$subexpression$1", "symbols": [(l.has("WS") ? {type: "WS"} : WS)]},
+    {"name": "_$ebnf$1$subexpression$1", "symbols": [(l.has("NL") ? {type: "NL"} : NL)]},
+    {"name": "_$ebnf$1", "symbols": ["_$ebnf$1", "_$ebnf$1$subexpression$1"], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+    {"name": "_", "symbols": ["_$ebnf$1"], "postprocess": () => { }},
+    {"name": "__$ebnf$1$subexpression$1", "symbols": [(l.has("WS") ? {type: "WS"} : WS)]},
+    {"name": "__$ebnf$1$subexpression$1", "symbols": [(l.has("NL") ? {type: "NL"} : NL)]},
+    {"name": "__$ebnf$1", "symbols": ["__$ebnf$1$subexpression$1"]},
+    {"name": "__$ebnf$1$subexpression$2", "symbols": [(l.has("WS") ? {type: "WS"} : WS)]},
+    {"name": "__$ebnf$1$subexpression$2", "symbols": [(l.has("NL") ? {type: "NL"} : NL)]},
+    {"name": "__$ebnf$1", "symbols": ["__$ebnf$1", "__$ebnf$1$subexpression$2"], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+    {"name": "__", "symbols": ["__$ebnf$1"], "postprocess": () => { }}
 ]
   , ParserStart: "program"
 }

@@ -33,5 +33,4 @@ function chr(num) {
 }
 
 if(true) {
-writeln('true');} else {
-writeln('false');}
+writeln('true');}

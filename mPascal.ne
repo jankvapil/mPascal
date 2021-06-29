@@ -4,10 +4,12 @@
 
 @lexer l 
 
+# @builtin "whitespace.ne"
+
 ####################
 
 program
-    ->  %begin _ statements _ %end _
+    ->  %begin __ statements __ %end _
         {%
            (data) => {  
                 return {
@@ -28,7 +30,7 @@ statements
         {%
             (data) => {
                 const repeated = data[1]
-                const rest = repeated.map(s => s[0])
+                const rest = repeated.map(s => s[1])
                 return [data[0], ...rest]
             }
         %}
@@ -141,14 +143,14 @@ for_loop
 
 
 cond 
-    ->  %kw_if __ expr __ %kw_then __ subprogram %kw_else subprogram
+    ->  %kw_if __ expr __ %kw_then __ subprogram __ %kw_else __ subprogram
         {%
             (data) => {
                 return {
                     type: "cond",
                     expr: data[2],
                     statements: data[6],
-                    else_statements: data[9]
+                    else_statements: data[10]
                 }
             }
         %}    
@@ -158,7 +160,7 @@ cond
                 return {
                     type: "cond",
                     expr: data[2],
-                    statements: data[5]
+                    statements: data[6]
                 }
             }
         %}
@@ -219,11 +221,11 @@ num
 
 # _ -> (_ %NL):+ _
 
-# ## Zero or more multiline whitespaces
-# _   -> (%WS | %NL):*
+## Zero or more multiline whitespaces
+_   -> (%WS | %NL):* {% () => { } %}
 
-# ## One or more multiline whitespaces
-# __   -> (%WS | %NL):+ 
+## One or more multiline whitespaces
+__   -> (%WS | %NL):+  {% () => { } %}
 
 # ## Zero or more whitespaces
 # _   -> %WS:*
@@ -231,7 +233,7 @@ num
 # ## One or more whitespaces
 # __   -> %WS:+
 
- 
-# Whitespace
-_ -> null | _ [\s] {% () => null %}
-__ -> [\s] | __ [\s] {% () => null %}
+  
+# # Whitespace
+# _ -> null | _ [\n|\r\n|\s|\t] {% () => null %}
+# __ -> [\s] | __ [\s] {% () => null %}

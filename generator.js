@@ -5,7 +5,7 @@ const fs = require("mz/fs")
 /// Generete JS expression from AST node
 ///
 const generateJSExpr = (node) => {
-    console.log(node)
+    // console.log(node)
     
     if (node.type === "cond") {
         // console.log(node)

@@ -7,7 +7,7 @@
     "type": "bool",
     "value": "true",
     "text": "true",
-    "offset": 15,
+    "offset": 16,
     "lineBreaks": 0,
     "line": 3,
     "col": 6
@@ -19,7 +19,7 @@
       "type": "symbol",
       "value": "writeln",
       "text": "writeln",
-      "offset": 25,
+      "offset": 26,
       "lineBreaks": 0,
       "line": 3,
       "col": 16
@@ -29,35 +29,10 @@
        "type": "string",
        "value": "'true'",
        "text": "'true'",
-       "offset": 33,
+       "offset": 34,
        "lineBreaks": 0,
        "line": 3,
        "col": 24
-      }
-     ]
-    }
-   ],
-   "else_statements": [
-    {
-     "type": "fn_call",
-     "fnName": {
-      "type": "symbol",
-      "value": "writeln",
-      "text": "writeln",
-      "offset": 46,
-      "lineBreaks": 0,
-      "line": 3,
-      "col": 37
-     },
-     "arg": [
-      {
-       "type": "string",
-       "value": "'false'",
-       "text": "'false'",
-       "offset": 54,
-       "lineBreaks": 0,
-       "line": 3,
-       "col": 45
       }
      ]
     }

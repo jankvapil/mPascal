@@ -32,8 +32,8 @@ function chr(num) {
   return num.toString();
 }
 
-var n = 2&&8;
+var n = 8&&2;
 writeln(n);
-if(8==n) {
+if(n==8) {
 writeln('ano');} else {
 writeln('ne');}

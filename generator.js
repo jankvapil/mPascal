@@ -5,7 +5,8 @@ const fs = require("mz/fs")
 /// Generete JS expression from AST node
 ///
 const generateJSExpr = (node) => {
-    // console.log(node)
+    console.log(node)
+    
     if (node.type === "cond") {
         // console.log(node)
         const expr = generateJSExpr(node.expr[0] ? node.expr[0] : node.expr)
@@ -26,6 +27,7 @@ const generateJSExpr = (node) => {
             return `if(${expr}) {\n${statements.join("\n")}}`
         }
     }
+
     else if (node.type === "dowhile_loop") {
         // console.log(node)
         const expr = generateJSExpr(node.expr[0])
@@ -36,6 +38,7 @@ const generateJSExpr = (node) => {
         })
         return `do {\n${statements.join("\n")}}\nwhile(!(${expr}));\n`
     }
+    
     else if (node.type === "while_loop") {
         const expr = generateJSExpr(node.expr[0])
         const statements = []
@@ -45,6 +48,7 @@ const generateJSExpr = (node) => {
         })
         return `while(${expr}){\n${statements.join("\n")}\n}`
     }
+
     else if (node.type === "for_loop") {
         const symbol = node.assignment.symbol.value;
         const assignment = generateJSExpr(node.assignment)
@@ -61,6 +65,7 @@ const generateJSExpr = (node) => {
             return `for(${assignment} ${symbol}>=${downto}; ${symbol}--){${statements.join("\n")}}`
         }
     }
+
     else if (node.type === "operation") {
         // console.log(node)
         const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
@@ -68,10 +73,12 @@ const generateJSExpr = (node) => {
         const left = generateJSExpr(node.left)
         return `${left}${operator}${right}`
     }
+
     else if (node.type === "assignment") {
-        console.log(node)
+        // console.log(node)
         const symbolName = node.symbol.value
         // console.log(symbolName)
+        
         if (node.value.type === "fn_call") {
             const value = generateJSExpr(node.value.arg[0])
             const fnName = node.value.fnName.value
@@ -83,21 +90,24 @@ const generateJSExpr = (node) => {
             return `var ${symbolName} = ${value};`
         } 
         else {
-            console.log(node)
+            // console.log(node)
             const value = node.value[0].value
             // console.log(symbolName)
             return `var ${symbolName} = ${value};`
         }
     } 
+
     else if (node.type === "fn_call") {
         const fnName = node.fnName.value
         const arg = generateJSExpr(node.arg[0])
         return `${fnName}(${arg});`
     } 
+
     else if (node.type === "fn_call_no_args") {
         const fnName = node.fnName.value        
         return `${fnName}();`
     } 
+
     else if (node.type === "program") {
         const res = []
         node.statements.forEach(s => {
@@ -105,6 +115,7 @@ const generateJSExpr = (node) => {
             res.push(jsExpr) 
         })
         return res.join("\n")
+
     } else if (node.type === "number") {
         return node.value
     } else if (node.type === "string") {

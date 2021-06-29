@@ -34,7 +34,7 @@ function chr(num) {
 
 write('print before');
 writeln();
-if(undefined) {
+if(1>2) {
 writeln('true');} else {
 writeln('false');}
 writeln('print always');

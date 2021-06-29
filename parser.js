@@ -29,14 +29,14 @@ const main = async () => {
     //     // await fs.writeFile("error_log.json", JSON.stringify(parser.results, null, " "))
     // } else if (parser.results.length == 1) {
         
-    if (parser.results.length < 10) {
+    if (parser.results.length == 1) {
         const ast = parser.results[0]
         const outFilename = inFilename.replace(".mP", ".ast")
         
         console.log(`Generating ${outFilename}...`)
         await fs.writeFile(outFilename, JSON.stringify(ast, null, " "))
     } else {
-        console.error("Parsing error!")
+        console.error(`Parsing error! ${parser.results.length} possible interpretations of program.`)
     }
 }
 

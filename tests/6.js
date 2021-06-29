@@ -34,9 +34,9 @@ function chr(num) {
 
 var c = 0;
 do {
-var c = 1+c;
-var x = 1+c;
+var c = c+1;
+var x = c+1;
 write(c);}
-while(!(5==c));
+while(!(c==5));
 
 writeln();

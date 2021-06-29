@@ -32,11 +32,11 @@ function chr(num) {
   return num.toString();
 }
 
-var x = 2/4;
-var y = 2%x;
-var z = y+x;
+var x = 4/2;
+var y = x%2;
+var z = x+y;
 writeln(z);
 var c = 42;
 writeln(c);
-var x = c+z+y;
+var x = y+z+c;
 writeln(x);

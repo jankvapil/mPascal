@@ -7,7 +7,7 @@
     "type": "bool",
     "value": "true",
     "text": "true",
-    "offset": 16,
+    "offset": 15,
     "lineBreaks": 0,
     "line": 3,
     "col": 6
@@ -19,7 +19,7 @@
       "type": "symbol",
       "value": "writeln",
       "text": "writeln",
-      "offset": 26,
+      "offset": 25,
       "lineBreaks": 0,
       "line": 3,
       "col": 16
@@ -29,7 +29,7 @@
        "type": "string",
        "value": "'true'",
        "text": "'true'",
-       "offset": 34,
+       "offset": 33,
        "lineBreaks": 0,
        "line": 3,
        "col": 24
@@ -44,7 +44,7 @@
       "type": "symbol",
       "value": "writeln",
       "text": "writeln",
-      "offset": 47,
+      "offset": 46,
       "lineBreaks": 0,
       "line": 3,
       "col": 37
@@ -54,7 +54,7 @@
        "type": "string",
        "value": "'false'",
        "text": "'false'",
-       "offset": 55,
+       "offset": 54,
        "lineBreaks": 0,
        "line": 3,
        "col": 45

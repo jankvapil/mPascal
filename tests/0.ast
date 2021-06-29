@@ -7,9 +7,9 @@
     "type": "symbol",
     "value": "x",
     "text": "x",
-    "offset": 13,
+    "offset": 10,
     "lineBreaks": 0,
-    "line": 3,
+    "line": 2,
     "col": 3
    },
    "value": [
@@ -19,18 +19,18 @@
       "type": "number",
       "value": "4",
       "text": "4",
-      "offset": 16,
+      "offset": 13,
       "lineBreaks": 0,
-      "line": 3,
+      "line": 2,
       "col": 6
      },
      "operator": {
       "type": "operator",
       "value": "/",
       "text": "/",
-      "offset": 18,
+      "offset": 15,
       "lineBreaks": 0,
-      "line": 3,
+      "line": 2,
       "col": 8
      },
      "right": [
@@ -38,263 +38,21 @@
        "type": "number",
        "value": "2",
        "text": "2",
-       "offset": 20,
+       "offset": 17,
        "lineBreaks": 0,
-       "line": 3,
+       "line": 2,
        "col": 10
       }
      ]
     }
    ]
   },
-  {
-   "type": "assignment",
-   "symbol": {
-    "type": "symbol",
-    "value": "y",
-    "text": "y",
-    "offset": 26,
-    "lineBreaks": 0,
-    "line": 4,
-    "col": 3
-   },
-   "value": [
-    {
-     "type": "operation",
-     "left": {
-      "type": "symbol",
-      "value": "x",
-      "text": "x",
-      "offset": 29,
-      "lineBreaks": 0,
-      "line": 4,
-      "col": 6
-     },
-     "operator": {
-      "type": "operator",
-      "value": "%",
-      "text": "mod",
-      "offset": 31,
-      "lineBreaks": 0,
-      "line": 4,
-      "col": 8
-     },
-     "right": [
-      {
-       "type": "number",
-       "value": "2",
-       "text": "2",
-       "offset": 35,
-       "lineBreaks": 0,
-       "line": 4,
-       "col": 12
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "type": "assignment",
-   "symbol": {
-    "type": "symbol",
-    "value": "z",
-    "text": "z",
-    "offset": 41,
-    "lineBreaks": 0,
-    "line": 5,
-    "col": 3
-   },
-   "value": [
-    {
-     "type": "operation",
-     "left": {
-      "type": "symbol",
-      "value": "x",
-      "text": "x",
-      "offset": 44,
-      "lineBreaks": 0,
-      "line": 5,
-      "col": 6
-     },
-     "operator": {
-      "type": "operator",
-      "value": "+",
-      "text": "+",
-      "offset": 45,
-      "lineBreaks": 0,
-      "line": 5,
-      "col": 7
-     },
-     "right": {
-      "type": "symbol",
-      "value": "y",
-      "text": "y",
-      "offset": 46,
-      "lineBreaks": 0,
-      "line": 5,
-      "col": 8
-     }
-    }
-   ]
-  },
-  {
-   "type": "fn_call",
-   "fnName": {
-    "type": "symbol",
-    "value": "writeln",
-    "text": "writeln",
-    "offset": 52,
-    "lineBreaks": 0,
-    "line": 6,
-    "col": 3
-   },
-   "arg": [
-    {
-     "type": "symbol",
-     "value": "z",
-     "text": "z",
-     "offset": 60,
-     "lineBreaks": 0,
-     "line": 6,
-     "col": 11
-    }
-   ]
-  },
-  {
-   "type": "assignment",
-   "symbol": {
-    "type": "symbol",
-    "value": "c",
-    "text": "c",
-    "offset": 67,
-    "lineBreaks": 0,
-    "line": 7,
-    "col": 3
-   },
-   "value": [
-    {
-     "type": "number",
-     "value": "42",
-     "text": "42",
-     "offset": 70,
-     "lineBreaks": 0,
-     "line": 7,
-     "col": 6
-    }
-   ]
-  },
-  {
-   "type": "fn_call",
-   "fnName": {
-    "type": "symbol",
-    "value": "writeln",
-    "text": "writeln",
-    "offset": 79,
-    "lineBreaks": 0,
-    "line": 9,
-    "col": 3
-   },
-   "arg": [
-    {
-     "type": "symbol",
-     "value": "c",
-     "text": "c",
-     "offset": 87,
-     "lineBreaks": 0,
-     "line": 9,
-     "col": 11
-    }
-   ]
-  },
-  {
-   "type": "assignment",
-   "symbol": {
-    "type": "symbol",
-    "value": "x",
-    "text": "x",
-    "offset": 94,
-    "lineBreaks": 0,
-    "line": 10,
-    "col": 3
-   },
-   "value": [
-    {
-     "type": "operation",
-     "left": {
-      "type": "symbol",
-      "value": "y",
-      "text": "y",
-      "offset": 97,
-      "lineBreaks": 0,
-      "line": 10,
-      "col": 6
-     },
-     "operator": {
-      "type": "operator",
-      "value": "+",
-      "text": "+",
-      "offset": 98,
-      "lineBreaks": 0,
-      "line": 10,
-      "col": 7
-     },
-     "right": [
-      {
-       "type": "operation",
-       "left": {
-        "type": "symbol",
-        "value": "z",
-        "text": "z",
-        "offset": 99,
-        "lineBreaks": 0,
-        "line": 10,
-        "col": 8
-       },
-       "operator": {
-        "type": "operator",
-        "value": "+",
-        "text": "+",
-        "offset": 100,
-        "lineBreaks": 0,
-        "line": 10,
-        "col": 9
-       },
-       "right": {
-        "type": "symbol",
-        "value": "c",
-        "text": "c",
-        "offset": 102,
-        "lineBreaks": 0,
-        "line": 10,
-        "col": 11
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "type": "fn_call",
-   "fnName": {
-    "type": "symbol",
-    "value": "writeln",
-    "text": "writeln",
-    "offset": 108,
-    "lineBreaks": 0,
-    "line": 11,
-    "col": 3
-   },
-   "arg": [
-    {
-     "type": "symbol",
-     "value": "x",
-     "text": "x",
-     "offset": 116,
-     "lineBreaks": 0,
-     "line": 11,
-     "col": 11
-    }
-   ]
-  }
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null
  ]
 }

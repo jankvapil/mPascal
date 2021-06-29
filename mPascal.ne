@@ -1,42 +1,44 @@
 @{%
-    const myLexer = require("./lexer")
+    const l = require("./lexer")
 %}
 
-@lexer myLexer 
+@lexer l 
 
 ####################
 
 program
-    ->  %begin statements %end _ml
+    ->  %begin _ statements _ %end _
         {%
            (data) => {  
                 return {
                     type: "program",
-                    statements: data[1] 
+                    statements: data[2] 
                 }
             }
         %}
 
 
 subprogram
-    ->  program
-    |   statement
+    ->  statement
+    |   program
 
 
 statements
-    ->  _ml statement ( _ml statement):* _ml
+    ->  statement ( __ statement):*
         {%
             (data) => {
-                const repeated = data[2]
-                const rest = repeated.map(s => s[1])
-                return [data[1], ...rest]
+                const repeated = data[1]
+                const rest = repeated.map(s => s[0])
+                return [data[0], ...rest]
             }
         %}
 
+# ws_statement 
+#     ->  __ statement __
 
 statement
-    ->  assignment _ ";":*      {% id %}
-    |   fn_call _ ";":*         {% id %}
+    ->  assignment ";":?        {% id %}
+    |   fn_call ";":?           {% id %}
     |   fn_call_no_args _ ";"   {% id %}
     |   for_loop                {% id %}
     |   while_loop              {% id %}
@@ -91,7 +93,7 @@ assignment
 
 
 while_loop
-    ->  %kw_while __ expr __ %kw_do __ subprogram 
+    ->  %kw_while _ expr _ %kw_do _ subprogram 
         {%
             (data) => {
                 return {
@@ -101,7 +103,7 @@ while_loop
                 }
             }
         %}
-    |  %kw_repeat __ml statements __ml %kw_until __ expr _ ";"
+    |  %kw_repeat __ statements __ %kw_until __ expr _ ";"
         {%
             (data) => {
                 return {
@@ -139,27 +141,28 @@ for_loop
 
 
 cond 
-    ->  %kw_if __ expr __ %kw_then __ml subprogram __ml %kw_else __ml subprogram
+    ->  %kw_if __ expr __ %kw_then __ subprogram %kw_else subprogram
         {%
             (data) => {
                 return {
                     type: "cond",
                     expr: data[2],
                     statements: data[6],
-                    else_statements: data[10]
+                    else_statements: data[9]
                 }
             }
         %}    
-    |   %kw_if __ expr __ %kw_then __ml subprogram
+    |   %kw_if __ expr __ %kw_then __ subprogram
         {%
             (data) => {
                 return {
                     type: "cond",
                     expr: data[2],
-                    statements: data[6]
+                    statements: data[5]
                 }
             }
         %}
+
 
 expr 
     ->  %symbol {% id %}
@@ -194,6 +197,7 @@ num
             }
         } %}
 
+
 # operator
 #     ->  %operator   {% id %}
 #     |   %kw_mod     {% id %}
@@ -212,14 +216,22 @@ num
 #             }
 #         %}
 
-## Zero or more multiline whitespaces
-_ml   -> (%WS | %NL):*
 
-## One or more multiline whitespaces
-__ml   -> (%WS | %NL):+ 
+# _ -> (_ %NL):+ _
 
-## Zero or more whitespaces
-_   -> %WS:*
+# ## Zero or more multiline whitespaces
+# _   -> (%WS | %NL):*
 
-## One or more whitespaces
-__   -> %WS:+
+# ## One or more multiline whitespaces
+# __   -> (%WS | %NL):+ 
+
+# ## Zero or more whitespaces
+# _   -> %WS:*
+
+# ## One or more whitespaces
+# __   -> %WS:+
+
+ 
+# Whitespace
+_ -> null | _ [\s] {% () => null %}
+__ -> [\s] | __ [\s] {% () => null %}

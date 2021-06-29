@@ -187,6 +187,36 @@
       }
      ]
     }
+   ],
+   "else_statements": [
+    {
+     "type": "program",
+     "statements": [
+      {
+       "type": "fn_call",
+       "fnName": {
+        "type": "symbol",
+        "value": "writeln",
+        "text": "writeln",
+        "offset": 164,
+        "lineBreaks": 0,
+        "line": 9,
+        "col": 14
+       },
+       "arg": [
+        {
+         "type": "string",
+         "value": "' Funguju'",
+         "text": "' Funguju'",
+         "offset": 172,
+         "lineBreaks": 0,
+         "line": 9,
+         "col": 22
+        }
+       ]
+      }
+     ]
+    }
    ]
   }
  ]

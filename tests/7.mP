@@ -5,6 +5,6 @@ begin
     a:=4;
     b:=2;
   
-  if a<1 or b<1 then writeln('  Chybna cisla')
+  if a<1 or b<1 then writeln('  Chybna cisla') 
   else begin writeln(' Funguju') end;
 end.

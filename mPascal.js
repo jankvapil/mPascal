@@ -106,13 +106,13 @@ var grammar = {
             }
         }
                 },
-    {"name": "cond", "symbols": [(myLexer.has("kw_if") ? {type: "kw_if"} : kw_if), "__", "expr", "__", (myLexer.has("kw_then") ? {type: "kw_then"} : kw_then), "__ml", "subprogram", (myLexer.has("kw_else") ? {type: "kw_else"} : kw_else), "__ml", "subprogram"], "postprocess": 
+    {"name": "cond", "symbols": [(myLexer.has("kw_if") ? {type: "kw_if"} : kw_if), "__", "expr", "__", (myLexer.has("kw_then") ? {type: "kw_then"} : kw_then), "__ml", "subprogram", "__ml", (myLexer.has("kw_else") ? {type: "kw_else"} : kw_else), "__ml", "subprogram"], "postprocess": 
         (data) => {
             return {
                 type: "cond",
                 expr: data[2],
                 statements: data[6],
-                else_statements: data[9]
+                else_statements: data[10]
             }
         }
                 },

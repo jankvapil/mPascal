@@ -139,14 +139,14 @@ for_loop
 
 
 cond 
-    ->  %kw_if __ expr __ %kw_then __ml subprogram %kw_else __ml subprogram
+    ->  %kw_if __ expr __ %kw_then __ml subprogram __ml %kw_else __ml subprogram
         {%
             (data) => {
                 return {
                     type: "cond",
                     expr: data[2],
                     statements: data[6],
-                    else_statements: data[9]
+                    else_statements: data[10]
                 }
             }
         %}    

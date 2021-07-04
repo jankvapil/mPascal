@@ -39,23 +39,28 @@ function chr(num) {
   return String.fromCharCode(num);
 }
 
-write('Zadej cislo: ')
-
-var a = 4;
-var p = 0;
-var b = a;
+writeln()
+writeln('        Vypis ASCII tabulky')
+writeln()
+write('    ')
+for(var i = 0; i<=15; i++){write(' ')
+write(hex(i))}
+writeln()
+write('   ')
+for(var i = 0; i<=34; i++){write('-')}
+var znak = ord(' ');
 do {
-if(b%2) {
-var p = p^1;}
-var b = b/2;}
-while(!(b==0));
+writeln()
+write(' ')
+write(hex(znak), 2)
+write('|')
+for(var j = 0; j<=15; j++){write(chr(znak+j), 2)}
+write(' |')
+var znak = znak+16;}
+while(!(znak>255));
 
 writeln()
-write('  ')
-write(a)
-write(' ')
-write(bin(a))
-if(p) {
-writeln('  licha parita')} else {
-writeln('  suda parita')}
+write('   ')
+for(var i = 0; i<=34; i++){write('-')}
+writeln()
 writeln()

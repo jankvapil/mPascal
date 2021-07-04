@@ -14,5 +14,5 @@ begin
             write('   '); write(bin(ii):5); write(' '); write(bin(b):5); writeln(b:4);
  end;
 
-  writeln
+  writeln;
 end.

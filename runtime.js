@@ -1,7 +1,11 @@
 
-function write(arg) {
+function write(arg, n) {
   var retyped = new String(arg);
-  process.stdout.write(retyped.toString());
+  if (n) {
+    process.stdout.write(`${Array(n).join(' ')}${retyped}`);
+  } else {
+    process.stdout.write(retyped.toString());
+  }
 }
 
 function writeln(...args) {
@@ -32,5 +36,5 @@ function bin(num) {
 }
 
 function chr(num) {
-  return num.toString();
+  return String.fromCharCode(num);
 }

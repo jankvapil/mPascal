@@ -39,23 +39,21 @@ function chr(num) {
   return String.fromCharCode(num);
 }
 
-write('Zadej cislo: ')
-
-var a = 4;
-var p = 0;
-var b = a;
+writeln()
+var b = 0;
+var a = 1;
+write(b, 10)
+write(a, 10)
+var n = 2;
 do {
-if(b%2) {
-var p = p^1;}
-var b = b/2;}
-while(!(b==0));
+var c = a+b;
+var b = a;
+var a = c;
+if(n%10==0) {
+writeln()}
+write(a, 10)
+var n = n+1;}
+while(!(n==45));
 
 writeln()
-write('  ')
-write(a)
-write(' ')
-write(bin(a))
-if(p) {
-writeln('  licha parita')} else {
-writeln('  suda parita')}
 writeln()

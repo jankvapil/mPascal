@@ -85,8 +85,9 @@ const generateJSExpr = (node) => {
         let value
         
         if (node.value.type === "fn_call") {
+            // console.log(node)
             value = generateJSExpr(node.value.arg[0])
-            const fnName = node.value.fnName.value
+            const fnName = node.value.fnName.value ? node.value.fnName.value : node.value.fnName[0].value
             return `var ${symbolName} = ${fnName}(${value});`
         } 
         else if (node.value?.type === "operation" || node.value[0]?.type === "operation") {
@@ -100,9 +101,9 @@ const generateJSExpr = (node) => {
     } 
 
     else if (node.type === "fn_call") {
-        // console.log(node)
+        // console.log(node.arg[0][0] ? node.arg[0][0] : node.arg[0])
         const fnName = node.fnName[0].value
-        const arg = generateJSExpr(node.arg[0])
+        const arg = generateJSExpr(node.arg[0][0] ? node.arg[0][0] : node.arg[0])
         if (node.specifier) {
             // console.log(node.specifier[1].value)
             const spec = node.specifier[1].value

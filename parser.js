@@ -29,7 +29,7 @@ const main = async () => {
     //     // await fs.writeFile("error_log.json", JSON.stringify(parser.results, null, " "))
     // } else if (parser.results.length == 1) {
         
-    if (parser.results.length < 10) {
+    if (parser.results.length < 100) {
         const ast = parser.results[0]
         const outFilename = inFilename.replace(".mP", ".ast")
         

@@ -1,0 +1,837 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 9,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 3
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 18,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 12
+    }
+   ],
+   "arg": [
+    {
+     "type": "string",
+     "value": "'        Vypis ASCII tabulky'",
+     "text": "'        Vypis ASCII tabulky'",
+     "offset": 26,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 20
+    }
+   ],
+   "specifier": null
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 58,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 52
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "write",
+     "text": "write",
+     "offset": 72,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 3
+    }
+   ],
+   "arg": [
+    {
+     "type": "string",
+     "value": "'    '",
+     "text": "'    '",
+     "offset": 78,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 9
+    }
+   ],
+   "specifier": null
+  },
+  {
+   "type": "for_loop",
+   "assignment": {
+    "type": "assignment",
+    "symbol": {
+     "type": "symbol",
+     "value": "i",
+     "text": "i",
+     "offset": 91,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 22
+    },
+    "value": [
+     {
+      "type": "number",
+      "value": "0",
+      "text": "0",
+      "offset": 94,
+      "lineBreaks": 0,
+      "line": 4,
+      "col": 25
+     }
+    ]
+   },
+   "to": [
+    {
+     "type": "number",
+     "value": "15",
+     "text": "15",
+     "offset": 99,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 30
+    }
+   ],
+   "statements": [
+    {
+     "type": "program",
+     "statements": [
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 111,
+         "lineBreaks": 0,
+         "line": 4,
+         "col": 42
+        }
+       ],
+       "arg": [
+        {
+         "type": "string",
+         "value": "' '",
+         "text": "' '",
+         "offset": 117,
+         "lineBreaks": 0,
+         "line": 4,
+         "col": 48
+        }
+       ],
+       "specifier": null
+      },
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 123,
+         "lineBreaks": 0,
+         "line": 4,
+         "col": 54
+        }
+       ],
+       "arg": [
+        {
+         "type": "fn_call",
+         "fnName": [
+          {
+           "type": "symbol",
+           "value": "hex",
+           "text": "hex",
+           "offset": 129,
+           "lineBreaks": 0,
+           "line": 4,
+           "col": 60
+          }
+         ],
+         "arg": [
+          {
+           "type": "symbol",
+           "value": "i",
+           "text": "i",
+           "offset": 133,
+           "lineBreaks": 0,
+           "line": 4,
+           "col": 64
+          }
+         ],
+         "specifier": null
+        }
+       ],
+       "specifier": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 142,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 73
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "write",
+     "text": "write",
+     "offset": 154,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 3
+    }
+   ],
+   "arg": [
+    {
+     "type": "string",
+     "value": "'   '",
+     "text": "'   '",
+     "offset": 160,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 9
+    }
+   ],
+   "specifier": null
+  },
+  {
+   "type": "for_loop",
+   "assignment": {
+    "type": "assignment",
+    "symbol": {
+     "type": "symbol",
+     "value": "i",
+     "text": "i",
+     "offset": 172,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 21
+    },
+    "value": [
+     {
+      "type": "number",
+      "value": "0",
+      "text": "0",
+      "offset": 175,
+      "lineBreaks": 0,
+      "line": 5,
+      "col": 24
+     }
+    ]
+   },
+   "to": [
+    {
+     "type": "number",
+     "value": "34",
+     "text": "34",
+     "offset": 180,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 29
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "write",
+       "text": "write",
+       "offset": 186,
+       "lineBreaks": 0,
+       "line": 5,
+       "col": 35
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'-'",
+       "text": "'-'",
+       "offset": 192,
+       "lineBreaks": 0,
+       "line": 5,
+       "col": 41
+      }
+     ],
+     "specifier": null
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "znak",
+    "text": "znak",
+    "offset": 203,
+    "lineBreaks": 0,
+    "line": 7,
+    "col": 3
+   },
+   "value": {
+    "type": "fn_call",
+    "fnName": [
+     {
+      "type": "specFn",
+      "value": "ord",
+      "text": "ord",
+      "offset": 209,
+      "lineBreaks": 0,
+      "line": 7,
+      "col": 9
+     }
+    ],
+    "arg": [
+     {
+      "type": "string",
+      "value": "' '",
+      "text": "' '",
+      "offset": 213,
+      "lineBreaks": 0,
+      "line": 7,
+      "col": 13
+     }
+    ],
+    "specifier": null
+   }
+  },
+  {
+   "type": "dowhile_loop",
+   "expr": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "znak",
+      "text": "znak",
+      "offset": 379,
+      "lineBreaks": 0,
+      "line": 13,
+      "col": 9
+     },
+     "operator": {
+      "type": "operator",
+      "value": ">",
+      "text": ">",
+      "offset": 383,
+      "lineBreaks": 0,
+      "line": 13,
+      "col": 13
+     },
+     "right": [
+      {
+       "type": "number",
+       "value": "255",
+       "text": "255",
+       "offset": 384,
+       "lineBreaks": 0,
+       "line": 13,
+       "col": 14
+      }
+     ]
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call_no_args",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 234,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "write",
+       "text": "write",
+       "offset": 243,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 14
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "' '",
+       "text": "' '",
+       "offset": 249,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 20
+      }
+     ],
+     "specifier": null
+    },
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "write",
+       "text": "write",
+       "offset": 255,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 26
+      }
+     ],
+     "arg": [
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "hex",
+         "text": "hex",
+         "offset": 261,
+         "lineBreaks": 0,
+         "line": 9,
+         "col": 32
+        }
+       ],
+       "arg": [
+        {
+         "type": "symbol",
+         "value": "znak",
+         "text": "znak",
+         "offset": 265,
+         "lineBreaks": 0,
+         "line": 9,
+         "col": 36
+        }
+       ],
+       "specifier": null
+      }
+     ],
+     "specifier": [
+      {
+       "type": "colon",
+       "value": ":",
+       "text": ":",
+       "offset": 270,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 41
+      },
+      {
+       "type": "number",
+       "value": "2",
+       "text": "2",
+       "offset": 271,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 42
+      }
+     ]
+    },
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "write",
+       "text": "write",
+       "offset": 275,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 46
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'|'",
+       "text": "'|'",
+       "offset": 281,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 52
+      }
+     ],
+     "specifier": null
+    },
+    {
+     "type": "for_loop",
+     "assignment": {
+      "type": "assignment",
+      "symbol": {
+       "type": "symbol",
+       "value": "j",
+       "text": "j",
+       "offset": 296,
+       "lineBreaks": 0,
+       "line": 10,
+       "col": 9
+      },
+      "value": [
+       {
+        "type": "number",
+        "value": "0",
+        "text": "0",
+        "offset": 299,
+        "lineBreaks": 0,
+        "line": 10,
+        "col": 12
+       }
+      ]
+     },
+     "to": [
+      {
+       "type": "number",
+       "value": "15",
+       "text": "15",
+       "offset": 304,
+       "lineBreaks": 0,
+       "line": 10,
+       "col": 17
+      }
+     ],
+     "statements": [
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 310,
+         "lineBreaks": 0,
+         "line": 10,
+         "col": 23
+        }
+       ],
+       "arg": [
+        {
+         "type": "fn_call",
+         "fnName": [
+          {
+           "type": "symbol",
+           "value": "chr",
+           "text": "chr",
+           "offset": 316,
+           "lineBreaks": 0,
+           "line": 10,
+           "col": 29
+          }
+         ],
+         "arg": [
+          [
+           {
+            "type": "operation",
+            "left": {
+             "type": "symbol",
+             "value": "znak",
+             "text": "znak",
+             "offset": 320,
+             "lineBreaks": 0,
+             "line": 10,
+             "col": 33
+            },
+            "operator": {
+             "type": "operator",
+             "value": "+",
+             "text": "+",
+             "offset": 324,
+             "lineBreaks": 0,
+             "line": 10,
+             "col": 37
+            },
+            "right": {
+             "type": "symbol",
+             "value": "j",
+             "text": "j",
+             "offset": 325,
+             "lineBreaks": 0,
+             "line": 10,
+             "col": 38
+            }
+           }
+          ]
+         ],
+         "specifier": null
+        }
+       ],
+       "specifier": [
+        {
+         "type": "colon",
+         "value": ":",
+         "text": ":",
+         "offset": 327,
+         "lineBreaks": 0,
+         "line": 10,
+         "col": 40
+        },
+        {
+         "type": "number",
+         "value": "2",
+         "text": "2",
+         "offset": 328,
+         "lineBreaks": 0,
+         "line": 10,
+         "col": 41
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "write",
+       "text": "write",
+       "offset": 337,
+       "lineBreaks": 0,
+       "line": 11,
+       "col": 5
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "' |'",
+       "text": "' |'",
+       "offset": 343,
+       "lineBreaks": 0,
+       "line": 11,
+       "col": 11
+      }
+     ],
+     "specifier": null
+    },
+    {
+     "type": "assignment",
+     "symbol": {
+      "type": "symbol",
+      "value": "znak",
+      "text": "znak",
+      "offset": 355,
+      "lineBreaks": 0,
+      "line": 12,
+      "col": 5
+     },
+     "value": [
+      {
+       "type": "operation",
+       "left": {
+        "type": "symbol",
+        "value": "znak",
+        "text": "znak",
+        "offset": 361,
+        "lineBreaks": 0,
+        "line": 12,
+        "col": 11
+       },
+       "operator": {
+        "type": "operator",
+        "value": "+",
+        "text": "+",
+        "offset": 365,
+        "lineBreaks": 0,
+        "line": 12,
+        "col": 15
+       },
+       "right": [
+        {
+         "type": "number",
+         "value": "16",
+         "text": "16",
+         "offset": 366,
+         "lineBreaks": 0,
+         "line": 12,
+         "col": 16
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 394,
+     "lineBreaks": 0,
+     "line": 15,
+     "col": 3
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "write",
+     "text": "write",
+     "offset": 403,
+     "lineBreaks": 0,
+     "line": 15,
+     "col": 12
+    }
+   ],
+   "arg": [
+    {
+     "type": "string",
+     "value": "'   '",
+     "text": "'   '",
+     "offset": 409,
+     "lineBreaks": 0,
+     "line": 15,
+     "col": 18
+    }
+   ],
+   "specifier": null
+  },
+  {
+   "type": "for_loop",
+   "assignment": {
+    "type": "assignment",
+    "symbol": {
+     "type": "symbol",
+     "value": "i",
+     "text": "i",
+     "offset": 421,
+     "lineBreaks": 0,
+     "line": 15,
+     "col": 30
+    },
+    "value": [
+     {
+      "type": "number",
+      "value": "0",
+      "text": "0",
+      "offset": 424,
+      "lineBreaks": 0,
+      "line": 15,
+      "col": 33
+     }
+    ]
+   },
+   "to": [
+    {
+     "type": "number",
+     "value": "34",
+     "text": "34",
+     "offset": 429,
+     "lineBreaks": 0,
+     "line": 15,
+     "col": 38
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "write",
+       "text": "write",
+       "offset": 435,
+       "lineBreaks": 0,
+       "line": 15,
+       "col": 44
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'-'",
+       "text": "'-'",
+       "offset": 441,
+       "lineBreaks": 0,
+       "line": 15,
+       "col": 50
+      }
+     ],
+     "specifier": null
+    }
+   ]
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 452,
+     "lineBreaks": 0,
+     "line": 17,
+     "col": 3
+    }
+   ]
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 461,
+     "lineBreaks": 0,
+     "line": 17,
+     "col": 12
+    }
+   ]
+  }
+ ]
+}

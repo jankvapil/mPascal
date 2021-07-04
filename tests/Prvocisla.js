@@ -1,11 +1,7 @@
 
-function write(arg, n) {
+function write(arg) {
   var retyped = new String(arg);
-  if (n) {
-    process.stdout.write(`${Array(n).join(' ')}${retyped}`);
-  } else {
-    process.stdout.write(retyped.toString());
-  }
+  process.stdout.write(retyped.toString());
 }
 
 function writeln(...args) {
@@ -36,26 +32,30 @@ function bin(num) {
 }
 
 function chr(num) {
-  return String.fromCharCode(num);
+  return num.toString();
 }
 
-write('Zadej cislo: ')
-
-var a = 4;
-var p = 0;
-var b = a;
+writeln()
+writeln('    Prvocisla do 1000')
+writeln()
+write(2, 5)
+var n = 1;
+var cislo = 3;
 do {
-if(b%2) {
-var p = p^1;}
-var b = b/2;}
-while(!(b==0));
+var prvocislo = true;
+var delitel = 3;
+while(prvocislo&&delitel*delitel<=cislo){
+if(cislo%delitel==0) {
+var prvocislo = false;} else {
+var delitel = delitel+2;}
+}
+if(prvocislo) {
+if(n%10==0) {
+writeln()}
+write(cislo, 5)
+var n = n+1;}
+var cislo = cislo+2;}
+while(!(cislo>1000));
 
 writeln()
-write('  ')
-write(a)
-write(' ')
-write(bin(a))
-if(p) {
-writeln('  licha parita')} else {
-writeln('  suda parita')}
 writeln()

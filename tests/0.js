@@ -43,3 +43,5 @@ var c = 42;
 writeln(c)
 var x = y+z+c;
 writeln(x)
+var znak = ord(' ');
+writeln(znak)

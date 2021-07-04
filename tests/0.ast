@@ -323,6 +323,70 @@
     }
    ],
    "specifier": null
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "znak",
+    "text": "znak",
+    "offset": 120,
+    "lineBreaks": 0,
+    "line": 10,
+    "col": 3
+   },
+   "value": {
+    "type": "fn_call",
+    "fnName": [
+     {
+      "type": "specFn",
+      "value": "ord",
+      "text": "ord",
+      "offset": 126,
+      "lineBreaks": 0,
+      "line": 10,
+      "col": 9
+     }
+    ],
+    "arg": [
+     {
+      "type": "string",
+      "value": "' '",
+      "text": "' '",
+      "offset": 130,
+      "lineBreaks": 0,
+      "line": 10,
+      "col": 13
+     }
+    ],
+    "specifier": null
+   }
+  },
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 139,
+     "lineBreaks": 0,
+     "line": 11,
+     "col": 3
+    }
+   ],
+   "arg": [
+    {
+     "type": "symbol",
+     "value": "znak",
+     "text": "znak",
+     "offset": 147,
+     "lineBreaks": 0,
+     "line": 11,
+     "col": 11
+    }
+   ],
+   "specifier": null
   }
  ]
 }

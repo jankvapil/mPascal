@@ -7,4 +7,6 @@ begin
   writeln(c);
   x:=y+z+ c;
   writeln(x);
+  znak:=ord(' ');
+  writeln(znak);
 end.

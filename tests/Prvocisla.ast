@@ -1,0 +1,714 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 9,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 3
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 18,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 12
+    }
+   ],
+   "arg": [
+    {
+     "type": "string",
+     "value": "'    Prvocisla do 1000'",
+     "text": "'    Prvocisla do 1000'",
+     "offset": 26,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 20
+    }
+   ],
+   "specifier": null
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 59,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 3
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "write",
+     "text": "write",
+     "offset": 68,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 12
+    }
+   ],
+   "arg": [
+    [
+     {
+      "type": "number",
+      "value": "2",
+      "text": "2",
+      "offset": 74,
+      "lineBreaks": 0,
+      "line": 4,
+      "col": 18
+     }
+    ]
+   ],
+   "specifier": [
+    {
+     "type": "colon",
+     "value": ":",
+     "text": ":",
+     "offset": 75,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 19
+    },
+    {
+     "type": "number",
+     "value": "5",
+     "text": "5",
+     "offset": 76,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 20
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "n",
+    "text": "n",
+    "offset": 80,
+    "lineBreaks": 0,
+    "line": 4,
+    "col": 24
+   },
+   "value": [
+    {
+     "type": "number",
+     "value": "1",
+     "text": "1",
+     "offset": 83,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 27
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "cislo",
+    "text": "cislo",
+    "offset": 91,
+    "lineBreaks": 0,
+    "line": 6,
+    "col": 3
+   },
+   "value": [
+    {
+     "type": "number",
+     "value": "3",
+     "text": "3",
+     "offset": 98,
+     "lineBreaks": 0,
+     "line": 6,
+     "col": 10
+    }
+   ]
+  },
+  {
+   "type": "dowhile_loop",
+   "expr": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "cislo",
+      "text": "cislo",
+      "offset": 460,
+      "lineBreaks": 0,
+      "line": 14,
+      "col": 9
+     },
+     "operator": {
+      "type": "operator",
+      "value": ">",
+      "text": ">",
+      "offset": 465,
+      "lineBreaks": 0,
+      "line": 14,
+      "col": 14
+     },
+     "right": [
+      {
+       "type": "number",
+       "value": "1000",
+       "text": "1000",
+       "offset": 466,
+       "lineBreaks": 0,
+       "line": 14,
+       "col": 15
+      }
+     ]
+    }
+   ],
+   "statements": [
+    {
+     "type": "assignment",
+     "symbol": {
+      "type": "symbol",
+      "value": "prvocislo",
+      "text": "prvocislo",
+      "offset": 111,
+      "lineBreaks": 0,
+      "line": 7,
+      "col": 10
+     },
+     "value": {
+      "type": "bool",
+      "value": "true",
+      "text": "true",
+      "offset": 122,
+      "lineBreaks": 0,
+      "line": 7,
+      "col": 21
+     }
+    },
+    {
+     "type": "assignment",
+     "symbol": {
+      "type": "symbol",
+      "value": "delitel",
+      "text": "delitel",
+      "offset": 138,
+      "lineBreaks": 0,
+      "line": 8,
+      "col": 10
+     },
+     "value": [
+      {
+       "type": "number",
+       "value": "3",
+       "text": "3",
+       "offset": 147,
+       "lineBreaks": 0,
+       "line": 8,
+       "col": 19
+      }
+     ]
+    },
+    {
+     "type": "while_loop",
+     "expr": [
+      {
+       "type": "operation",
+       "left": {
+        "type": "symbol",
+        "value": "prvocislo",
+        "text": "prvocislo",
+        "offset": 166,
+        "lineBreaks": 0,
+        "line": 9,
+        "col": 16
+       },
+       "operator": {
+        "type": "operator",
+        "value": "&&",
+        "text": "and",
+        "offset": 176,
+        "lineBreaks": 0,
+        "line": 9,
+        "col": 26
+       },
+       "right": [
+        {
+         "type": "operation",
+         "left": {
+          "type": "symbol",
+          "value": "delitel",
+          "text": "delitel",
+          "offset": 180,
+          "lineBreaks": 0,
+          "line": 9,
+          "col": 30
+         },
+         "operator": {
+          "type": "operator",
+          "value": "*",
+          "text": "*",
+          "offset": 187,
+          "lineBreaks": 0,
+          "line": 9,
+          "col": 37
+         },
+         "right": [
+          {
+           "type": "operation",
+           "left": {
+            "type": "symbol",
+            "value": "delitel",
+            "text": "delitel",
+            "offset": 188,
+            "lineBreaks": 0,
+            "line": 9,
+            "col": 38
+           },
+           "operator": {
+            "type": "operator",
+            "value": "<=",
+            "text": "<=",
+            "offset": 195,
+            "lineBreaks": 0,
+            "line": 9,
+            "col": 45
+           },
+           "right": {
+            "type": "symbol",
+            "value": "cislo",
+            "text": "cislo",
+            "offset": 197,
+            "lineBreaks": 0,
+            "line": 9,
+            "col": 47
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "statements": [
+      {
+       "type": "program",
+       "statements": [
+        {
+         "type": "cond",
+         "expr": [
+          {
+           "type": "operation",
+           "left": {
+            "type": "symbol",
+            "value": "cislo",
+            "text": "cislo",
+            "offset": 227,
+            "lineBreaks": 0,
+            "line": 10,
+            "col": 21
+           },
+           "operator": {
+            "type": "operator",
+            "value": "%",
+            "text": "mod",
+            "offset": 233,
+            "lineBreaks": 0,
+            "line": 10,
+            "col": 27
+           },
+           "right": [
+            {
+             "type": "operation",
+             "left": {
+              "type": "symbol",
+              "value": "delitel",
+              "text": "delitel",
+              "offset": 237,
+              "lineBreaks": 0,
+              "line": 10,
+              "col": 31
+             },
+             "operator": {
+              "type": "operator",
+              "value": "==",
+              "text": "=",
+              "offset": 245,
+              "lineBreaks": 0,
+              "line": 10,
+              "col": 39
+             },
+             "right": [
+              {
+               "type": "number",
+               "value": "0",
+               "text": "0",
+               "offset": 247,
+               "lineBreaks": 0,
+               "line": 10,
+               "col": 41
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "statements": [
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "prvocislo",
+            "text": "prvocislo",
+            "offset": 254,
+            "lineBreaks": 0,
+            "line": 10,
+            "col": 48
+           },
+           "value": {
+            "type": "bool",
+            "value": "false",
+            "text": "false",
+            "offset": 265,
+            "lineBreaks": 0,
+            "line": 10,
+            "col": 59
+           }
+          }
+         ],
+         "else_statements": [
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "delitel",
+            "text": "delitel",
+            "offset": 276,
+            "lineBreaks": 0,
+            "line": 10,
+            "col": 70
+           },
+           "value": [
+            {
+             "type": "operation",
+             "left": {
+              "type": "symbol",
+              "value": "delitel",
+              "text": "delitel",
+              "offset": 285,
+              "lineBreaks": 0,
+              "line": 10,
+              "col": 79
+             },
+             "operator": {
+              "type": "operator",
+              "value": "+",
+              "text": "+",
+              "offset": 292,
+              "lineBreaks": 0,
+              "line": 10,
+              "col": 86
+             },
+             "right": [
+              {
+               "type": "number",
+               "value": "2",
+               "text": "2",
+               "offset": 293,
+               "lineBreaks": 0,
+               "line": 10,
+               "col": 87
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "cond",
+     "expr": {
+      "type": "symbol",
+      "value": "prvocislo",
+      "text": "prvocislo",
+      "offset": 313,
+      "lineBreaks": 0,
+      "line": 11,
+      "col": 13
+     },
+     "statements": [
+      {
+       "type": "program",
+       "statements": [
+        {
+         "type": "cond",
+         "expr": [
+          {
+           "type": "operation",
+           "left": {
+            "type": "symbol",
+            "value": "n",
+            "text": "n",
+            "offset": 337,
+            "lineBreaks": 0,
+            "line": 11,
+            "col": 37
+           },
+           "operator": {
+            "type": "operator",
+            "value": "%",
+            "text": "mod",
+            "offset": 339,
+            "lineBreaks": 0,
+            "line": 11,
+            "col": 39
+           },
+           "right": [
+            {
+             "type": "operation",
+             "left": {
+              "type": "number",
+              "value": "10",
+              "text": "10",
+              "offset": 343,
+              "lineBreaks": 0,
+              "line": 11,
+              "col": 43
+             },
+             "operator": {
+              "type": "operator",
+              "value": "==",
+              "text": "=",
+              "offset": 346,
+              "lineBreaks": 0,
+              "line": 11,
+              "col": 46
+             },
+             "right": [
+              {
+               "type": "number",
+               "value": "0",
+               "text": "0",
+               "offset": 347,
+               "lineBreaks": 0,
+               "line": 11,
+               "col": 47
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "statements": [
+          {
+           "type": "fn_call_no_args",
+           "fnName": [
+            {
+             "type": "symbol",
+             "value": "writeln",
+             "text": "writeln",
+             "offset": 354,
+             "lineBreaks": 0,
+             "line": 11,
+             "col": 54
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "fn_call",
+         "fnName": [
+          {
+           "type": "symbol",
+           "value": "write",
+           "text": "write",
+           "offset": 397,
+           "lineBreaks": 0,
+           "line": 12,
+           "col": 34
+          }
+         ],
+         "arg": [
+          {
+           "type": "symbol",
+           "value": "cislo",
+           "text": "cislo",
+           "offset": 403,
+           "lineBreaks": 0,
+           "line": 12,
+           "col": 40
+          }
+         ],
+         "specifier": [
+          {
+           "type": "colon",
+           "value": ":",
+           "text": ":",
+           "offset": 408,
+           "lineBreaks": 0,
+           "line": 12,
+           "col": 45
+          },
+          {
+           "type": "number",
+           "value": "5",
+           "text": "5",
+           "offset": 409,
+           "lineBreaks": 0,
+           "line": 12,
+           "col": 46
+          }
+         ]
+        },
+        {
+         "type": "assignment",
+         "symbol": {
+          "type": "symbol",
+          "value": "n",
+          "text": "n",
+          "offset": 413,
+          "lineBreaks": 0,
+          "line": 12,
+          "col": 50
+         },
+         "value": [
+          {
+           "type": "operation",
+           "left": {
+            "type": "symbol",
+            "value": "n",
+            "text": "n",
+            "offset": 416,
+            "lineBreaks": 0,
+            "line": 12,
+            "col": 53
+           },
+           "operator": {
+            "type": "operator",
+            "value": "+",
+            "text": "+",
+            "offset": 417,
+            "lineBreaks": 0,
+            "line": 12,
+            "col": 54
+           },
+           "right": [
+            {
+             "type": "number",
+             "value": "1",
+             "text": "1",
+             "offset": 418,
+             "lineBreaks": 0,
+             "line": 12,
+             "col": 55
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "assignment",
+     "symbol": {
+      "type": "symbol",
+      "value": "cislo",
+      "text": "cislo",
+      "offset": 435,
+      "lineBreaks": 0,
+      "line": 13,
+      "col": 10
+     },
+     "value": [
+      {
+       "type": "operation",
+       "left": {
+        "type": "symbol",
+        "value": "cislo",
+        "text": "cislo",
+        "offset": 442,
+        "lineBreaks": 0,
+        "line": 13,
+        "col": 17
+       },
+       "operator": {
+        "type": "operator",
+        "value": "+",
+        "text": "+",
+        "offset": 447,
+        "lineBreaks": 0,
+        "line": 13,
+        "col": 22
+       },
+       "right": [
+        {
+         "type": "number",
+         "value": "2",
+         "text": "2",
+         "offset": 448,
+         "lineBreaks": 0,
+         "line": 13,
+         "col": 23
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 477,
+     "lineBreaks": 0,
+     "line": 16,
+     "col": 3
+    }
+   ]
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 486,
+     "lineBreaks": 0,
+     "line": 16,
+     "col": 12
+    }
+   ]
+  }
+ ]
+}

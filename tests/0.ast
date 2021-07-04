@@ -139,15 +139,17 @@
   },
   {
    "type": "fn_call",
-   "fnName": {
-    "type": "symbol",
-    "value": "writeln",
-    "text": "writeln",
-    "offset": 49,
-    "lineBreaks": 0,
-    "line": 5,
-    "col": 3
-   },
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 49,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 3
+    }
+   ],
    "arg": [
     {
      "type": "symbol",
@@ -158,6 +160,26 @@
      "line": 5,
      "col": 11
     }
+   ],
+   "specifier": [
+    {
+     "type": "colon",
+     "value": ":",
+     "text": ":",
+     "offset": 58,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 12
+    },
+    {
+     "type": "number",
+     "value": "6",
+     "text": "6",
+     "offset": 59,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 13
+    }
    ]
   },
   {
@@ -166,7 +188,7 @@
     "type": "symbol",
     "value": "c",
     "text": "c",
-    "offset": 64,
+    "offset": 66,
     "lineBreaks": 0,
     "line": 6,
     "col": 3
@@ -176,7 +198,7 @@
      "type": "number",
      "value": "42",
      "text": "42",
-     "offset": 67,
+     "offset": 69,
      "lineBreaks": 0,
      "line": 6,
      "col": 6
@@ -185,26 +207,29 @@
   },
   {
    "type": "fn_call",
-   "fnName": {
-    "type": "symbol",
-    "value": "writeln",
-    "text": "writeln",
-    "offset": 74,
-    "lineBreaks": 0,
-    "line": 7,
-    "col": 3
-   },
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 76,
+     "lineBreaks": 0,
+     "line": 7,
+     "col": 3
+    }
+   ],
    "arg": [
     {
      "type": "symbol",
      "value": "c",
      "text": "c",
-     "offset": 82,
+     "offset": 84,
      "lineBreaks": 0,
      "line": 7,
      "col": 11
     }
-   ]
+   ],
+   "specifier": null
   },
   {
    "type": "assignment",
@@ -212,7 +237,7 @@
     "type": "symbol",
     "value": "x",
     "text": "x",
-    "offset": 89,
+    "offset": 91,
     "lineBreaks": 0,
     "line": 8,
     "col": 3
@@ -224,7 +249,7 @@
       "type": "symbol",
       "value": "y",
       "text": "y",
-      "offset": 92,
+      "offset": 94,
       "lineBreaks": 0,
       "line": 8,
       "col": 6
@@ -233,7 +258,7 @@
       "type": "operator",
       "value": "+",
       "text": "+",
-      "offset": 93,
+      "offset": 95,
       "lineBreaks": 0,
       "line": 8,
       "col": 7
@@ -245,7 +270,7 @@
         "type": "symbol",
         "value": "z",
         "text": "z",
-        "offset": 94,
+        "offset": 96,
         "lineBreaks": 0,
         "line": 8,
         "col": 8
@@ -254,7 +279,7 @@
         "type": "operator",
         "value": "+",
         "text": "+",
-        "offset": 95,
+        "offset": 97,
         "lineBreaks": 0,
         "line": 8,
         "col": 9
@@ -263,7 +288,7 @@
         "type": "symbol",
         "value": "c",
         "text": "c",
-        "offset": 97,
+        "offset": 99,
         "lineBreaks": 0,
         "line": 8,
         "col": 11
@@ -275,26 +300,29 @@
   },
   {
    "type": "fn_call",
-   "fnName": {
-    "type": "symbol",
-    "value": "writeln",
-    "text": "writeln",
-    "offset": 103,
-    "lineBreaks": 0,
-    "line": 9,
-    "col": 3
-   },
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 105,
+     "lineBreaks": 0,
+     "line": 9,
+     "col": 3
+    }
+   ],
    "arg": [
     {
      "type": "symbol",
      "value": "x",
      "text": "x",
-     "offset": 111,
+     "offset": 113,
      "lineBreaks": 0,
      "line": 9,
      "col": 11
     }
-   ]
+   ],
+   "specifier": null
   }
  ]
 }

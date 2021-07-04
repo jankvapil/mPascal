@@ -35,5 +35,23 @@ function chr(num) {
   return num.toString();
 }
 
-if(false) {
-writeln('true')}
+write('Zadej cislo: ')
+
+var a = 4;
+var p = 0;
+var b = a;
+do {
+if(b%2) {
+var p = p^1;}
+var b = b/2;}
+while(!(b==0));
+
+writeln()
+write('  ')
+write(a)
+write(' ')
+write(bin(a))
+if(p) {
+writeln('  licha parita')} else {
+writeln('  suda parita')}
+writeln()

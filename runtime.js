@@ -7,8 +7,11 @@ function write(arg) {
 function writeln(...args) {
   if (args.length == 0) {
     process.stdout.write("\n");
-  } else {
-    process.stdout.write(`${args}\n`);
+  } else if (args.length == 1){
+    process.stdout.write(`${args[0]}\n`);
+  } else if (args.length == 2) {
+    var n = args[1] - new String(args[0]).length
+    process.stdout.write(`${Array(n).join(' ')}${args[0]}\n`);
   }
 }
 

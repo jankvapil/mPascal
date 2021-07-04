@@ -3,15 +3,17 @@
  "statements": [
   {
    "type": "fn_call",
-   "fnName": {
-    "type": "symbol",
-    "value": "write",
-    "text": "write",
-    "offset": 9,
-    "lineBreaks": 0,
-    "line": 2,
-    "col": 3
-   },
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "write",
+     "text": "write",
+     "offset": 9,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 3
+    }
+   ],
    "arg": [
     {
      "type": "string",
@@ -22,19 +24,22 @@
      "line": 2,
      "col": 9
     }
-   ]
+   ],
+   "specifier": null
   },
   {
    "type": "fn_call_no_args",
-   "fnName": {
-    "type": "symbol",
-    "value": "writeln",
-    "text": "writeln",
-    "offset": 35,
-    "lineBreaks": 0,
-    "line": 3,
-    "col": 3
-   }
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 35,
+     "lineBreaks": 0,
+     "line": 3,
+     "col": 3
+    }
+   ]
   },
   {
    "type": "cond",
@@ -75,15 +80,17 @@
    "statements": [
     {
      "type": "fn_call",
-     "fnName": {
-      "type": "symbol",
-      "value": "writeln",
-      "text": "writeln",
-      "offset": 59,
-      "lineBreaks": 0,
-      "line": 4,
-      "col": 15
-     },
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 59,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 15
+      }
+     ],
      "arg": [
       {
        "type": "string",
@@ -94,21 +101,24 @@
        "line": 4,
        "col": 23
       }
-     ]
+     ],
+     "specifier": null
     }
    ],
    "else_statements": [
     {
      "type": "fn_call",
-     "fnName": {
-      "type": "symbol",
-      "value": "writeln",
-      "text": "writeln",
-      "offset": 80,
-      "lineBreaks": 0,
-      "line": 4,
-      "col": 36
-     },
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 80,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 36
+      }
+     ],
      "arg": [
       {
        "type": "string",
@@ -119,21 +129,24 @@
        "line": 4,
        "col": 44
       }
-     ]
+     ],
+     "specifier": null
     }
    ]
   },
   {
    "type": "fn_call",
-   "fnName": {
-    "type": "symbol",
-    "value": "writeln",
-    "text": "writeln",
-    "offset": 101,
-    "lineBreaks": 0,
-    "line": 5,
-    "col": 3
-   },
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 101,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 3
+    }
+   ],
    "arg": [
     {
      "type": "string",
@@ -144,7 +157,8 @@
      "line": 5,
      "col": 11
     }
-   ]
+   ],
+   "specifier": null
   }
  ]
 }

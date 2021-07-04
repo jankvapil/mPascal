@@ -155,15 +155,17 @@
     },
     {
      "type": "fn_call",
-     "fnName": {
-      "type": "symbol",
-      "value": "write",
-      "text": "write",
-      "offset": 45,
-      "lineBreaks": 0,
-      "line": 5,
-      "col": 5
-     },
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "write",
+       "text": "write",
+       "offset": 45,
+       "lineBreaks": 0,
+       "line": 5,
+       "col": 5
+      }
+     ],
      "arg": [
       {
        "type": "symbol",
@@ -174,21 +176,24 @@
        "line": 5,
        "col": 11
       }
-     ]
+     ],
+     "specifier": null
     }
    ]
   },
   {
    "type": "fn_call_no_args",
-   "fnName": {
-    "type": "symbol",
-    "value": "writeln",
-    "text": "writeln",
-    "offset": 74,
-    "lineBreaks": 0,
-    "line": 8,
-    "col": 3
-   }
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 74,
+     "lineBreaks": 0,
+     "line": 8,
+     "col": 3
+    }
+   ]
   }
  ]
 }

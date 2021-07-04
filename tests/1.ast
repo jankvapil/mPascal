@@ -5,36 +5,35 @@
    "type": "cond",
    "expr": {
     "type": "bool",
-    "value": "true",
-    "text": "true",
-    "offset": 16,
-    "lineBreaks": 0,
-    "line": 3,
-    "col": 6
+    "value": false,
+    "text": "false"
    },
    "statements": [
     {
      "type": "fn_call",
-     "fnName": {
-      "type": "symbol",
-      "value": "writeln",
-      "text": "writeln",
-      "offset": 26,
-      "lineBreaks": 0,
-      "line": 3,
-      "col": 16
-     },
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 30,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 20
+      }
+     ],
      "arg": [
       {
        "type": "string",
        "value": "'true'",
        "text": "'true'",
-       "offset": 34,
+       "offset": 38,
        "lineBreaks": 0,
        "line": 3,
-       "col": 24
+       "col": 28
       }
-     ]
+     ],
+     "specifier": null
     }
    ]
   }

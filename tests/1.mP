@@ -1,5 +1,5 @@
 begin
   
-  if true then writeln('true') 
+  if not true then writeln('true') 
    
 end.

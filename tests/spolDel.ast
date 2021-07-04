@@ -3,15 +3,17 @@
  "statements": [
   {
    "type": "fn_call",
-   "fnName": {
-    "type": "symbol",
-    "value": "write",
-    "text": "write",
-    "offset": 9,
-    "lineBreaks": 0,
-    "line": 2,
-    "col": 3
-   },
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "write",
+     "text": "write",
+     "offset": 9,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 3
+    }
+   ],
    "arg": [
     {
      "type": "string",
@@ -22,7 +24,8 @@
      "line": 2,
      "col": 9
     }
-   ]
+   ],
+   "specifier": null
   },
   [
    {
@@ -166,15 +169,17 @@
    "statements": [
     {
      "type": "fn_call",
-     "fnName": {
-      "type": "symbol",
-      "value": "writeln",
-      "text": "writeln",
-      "offset": 113,
-      "lineBreaks": 0,
-      "line": 7,
-      "col": 22
-     },
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 113,
+       "lineBreaks": 0,
+       "line": 7,
+       "col": 22
+      }
+     ],
      "arg": [
       {
        "type": "string",
@@ -185,7 +190,8 @@
        "line": 7,
        "col": 30
       }
-     ]
+     ],
+     "specifier": null
     }
    ],
    "else_statements": [
@@ -319,27 +325,31 @@
       },
       {
        "type": "fn_call_no_args",
-       "fnName": {
-        "type": "symbol",
-        "value": "writeln",
-        "text": "writeln",
-        "offset": 227,
-        "lineBreaks": 0,
-        "line": 10,
-        "col": 14
-       }
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "writeln",
+         "text": "writeln",
+         "offset": 227,
+         "lineBreaks": 0,
+         "line": 10,
+         "col": 14
+        }
+       ]
       },
       {
        "type": "fn_call",
-       "fnName": {
-        "type": "symbol",
-        "value": "write",
-        "text": "write",
-        "offset": 236,
-        "lineBreaks": 0,
-        "line": 10,
-        "col": 23
-       },
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 236,
+         "lineBreaks": 0,
+         "line": 10,
+         "col": 23
+        }
+       ],
        "arg": [
         {
          "type": "string",
@@ -350,19 +360,22 @@
          "line": 10,
          "col": 29
         }
-       ]
+       ],
+       "specifier": null
       },
       {
        "type": "fn_call",
-       "fnName": {
-        "type": "symbol",
-        "value": "writeln",
-        "text": "writeln",
-        "offset": 276,
-        "lineBreaks": 0,
-        "line": 10,
-        "col": 63
-       },
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "writeln",
+         "text": "writeln",
+         "offset": 276,
+         "lineBreaks": 0,
+         "line": 10,
+         "col": 63
+        }
+       ],
        "arg": [
         {
          "type": "symbol",
@@ -373,7 +386,8 @@
          "line": 10,
          "col": 71
         }
-       ]
+       ],
+       "specifier": null
       }
      ]
     }
@@ -381,15 +395,17 @@
   },
   {
    "type": "fn_call_no_args",
-   "fnName": {
-    "type": "symbol",
-    "value": "writeln",
-    "text": "writeln",
-    "offset": 296,
-    "lineBreaks": 0,
-    "line": 11,
-    "col": 3
-   }
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 296,
+     "lineBreaks": 0,
+     "line": 11,
+     "col": 3
+    }
+   ]
   }
  ]
 }

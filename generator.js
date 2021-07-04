@@ -66,6 +66,13 @@ const generateJSExpr = (node) => {
         }
     }
 
+    else if (node.type === "notOperation") {
+        const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
+        const operator = generateJSExpr(node.operator)
+        const left = generateJSExpr(node.left)
+        return `!${left}${operator}${right}`
+    }
+
     else if (node.type === "operation") {
         const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
         const operator = generateJSExpr(node.operator)
@@ -93,14 +100,19 @@ const generateJSExpr = (node) => {
     } 
 
     else if (node.type === "fn_call") {
-        const fnName = node.fnName.value
+        // console.log(node)
+        const fnName = node.fnName[0].value
         const arg = generateJSExpr(node.arg[0])
-        return `${fnName}(${arg});`
+        if (node.specifier) {
+            // console.log(node.specifier[1].value)
+            const spec = node.specifier[1].value
+            return `${fnName}(${arg}, ${spec})`
+        } else return `${fnName}(${arg})`
     } 
 
     else if (node.type === "fn_call_no_args") {
-        const fnName = node.fnName.value        
-        return `${fnName}();`
+        const fnName = node.fnName[0].value        
+        return `${fnName}()`
     } 
 
     else if (node.type === "program") {
@@ -116,8 +128,10 @@ const generateJSExpr = (node) => {
     } else if (node.type === "string") {
         return node.value
     } else if (node.type === "bool") {
+        // console.log(node)
         return node.value
     } else if (node.type === "symbol") {
+        // console.log(node)
         return node.value
     } else if (node.type === "operator") {
         return node.value

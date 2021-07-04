@@ -63,15 +63,17 @@
    "statements": [
     {
      "type": "fn_call",
-     "fnName": {
-      "type": "symbol",
-      "value": "write",
-      "text": "write",
-      "offset": 29,
-      "lineBreaks": 0,
-      "line": 3,
-      "col": 12
-     },
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "write",
+       "text": "write",
+       "offset": 29,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 12
+      }
+     ],
      "arg": [
       {
        "type": "symbol",
@@ -82,7 +84,8 @@
        "line": 3,
        "col": 18
       }
-     ]
+     ],
+     "specifier": null
     },
     {
      "type": "assignment",

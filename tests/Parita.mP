@@ -1,6 +1,7 @@
 begin
   write('Zadej cislo: ');
-  read(a);
+  // read(a);
+  a:=4
   p:=0; b:=a;
    
   repeat if b mod 2 then p:=p xor 1; b:=b/2; until b=0;

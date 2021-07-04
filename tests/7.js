@@ -7,8 +7,11 @@ function write(arg) {
 function writeln(...args) {
   if (args.length == 0) {
     process.stdout.write("\n");
-  } else {
-    process.stdout.write(`${args}\n`);
+  } else if (args.length == 1){
+    process.stdout.write(`${args[0]}\n`);
+  } else if (args.length == 2) {
+    var n = args[1] - new String(args[0]).length
+    process.stdout.write(`${Array(n).join(' ')}${args[0]}\n`);
   }
 }
 
@@ -32,15 +35,15 @@ function chr(num) {
   return num.toString();
 }
 
-write('Zadej 2 prirozena cisla: ');
+write('Zadej 2 prirozena cisla: ')
 
-var a = 4;
-var b = 2;
+var a = 1;
+var b = 1;
 var x = 0;
 if(a>1||b>1) {
 do {
-write(x);
+write(x)
 var x = x+1;}
 while(!(x==10));
 } else {
-writeln(' Funguju');}
+writeln(' Funguju')}

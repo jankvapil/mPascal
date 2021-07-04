@@ -35,5 +35,28 @@ function chr(num) {
   return num.toString();
 }
 
-if(false) {
-writeln('true')}
+var a = 1;
+if(a^a) {
+writeln('chybne')} else {
+writeln('spravne')}
+if(!a^false) {
+writeln('chybne')} else {
+writeln('spravne')}
+if(a^false) {
+writeln('spravne')} else {
+writeln('chybne')}
+if(!a^a) {
+writeln('spravne')} else {
+writeln('chybne')}
+if(a||a) {
+writeln('spravne')} else {
+writeln('chybne')}
+if(!a||false) {
+writeln('chybne')} else {
+writeln('spravne')}
+if(a||false) {
+writeln('spravne')} else {
+writeln('chybne')}
+if(!a||a) {
+writeln('spravne')} else {
+writeln('chybne')}

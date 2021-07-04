@@ -50,7 +50,7 @@ statement
 
 
 fn_call_no_args
-    -> %symbol 
+    -> (%symbol|%specFn) 
         {% 
             (data) => {
                 return {
@@ -62,13 +62,14 @@ fn_call_no_args
 
 
 fn_call
-    ->  %symbol _ "(" _ fn_arg _ ")"
+    ->  (%symbol|%specFn) _ "(" _ fn_arg _ (":" %number):? ")"
         {%
             (data) => {
                 return {
                     type: "fn_call",
                     fnName: data[0],
-                    arg: data[4]
+                    arg: data[4],
+                    specifier: data[6]
                 }
             }
         %}
@@ -167,13 +168,31 @@ cond
 
 
 expr 
-    ->  %symbol {% id %}
+    ->  %not _ %symbol 
+        {% (data => {
+            return {
+                type: "symbol",
+                value: !data[2],
+                text: `${!data[2]}`
+            }
+        }) %}
+    |   %not _ %bool 
+        {% (data => {
+            return {
+                type: "bool",
+                value: !data[2],
+                text: `${!data[2]}`
+            }
+        }) %}
+    |   %symbol {% id %}
     |   %string {% id %}
     # |   %number {% id %}
     |   num
+   
     |   %bool   {% id %}
     |   fn_call {% id %}
     # |   operation {% id %}
+    
 
 
 num 
@@ -198,7 +217,16 @@ num
                 right: data[4]
             }
         } %}
-
+    |   %not _ %symbol _ %operator _ expr
+    {%             
+        (data) => {
+            return {
+                type: "notOperation",
+                left: data[2],
+                operator: data[4],
+                right: data[6]
+            }
+        } %}
 
 # operator
 #     ->  %operator   {% id %}

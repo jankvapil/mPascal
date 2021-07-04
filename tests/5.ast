@@ -49,15 +49,17 @@
   },
   {
    "type": "fn_call",
-   "fnName": {
-    "type": "symbol",
-    "value": "writeln",
-    "text": "writeln",
-    "offset": 28,
-    "lineBreaks": 0,
-    "line": 3,
-    "col": 5
-   },
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 28,
+     "lineBreaks": 0,
+     "line": 3,
+     "col": 5
+    }
+   ],
    "arg": [
     {
      "type": "symbol",
@@ -68,7 +70,8 @@
      "line": 3,
      "col": 13
     }
-   ]
+   ],
+   "specifier": null
   },
   {
    "type": "cond",
@@ -109,15 +112,17 @@
    "statements": [
     {
      "type": "fn_call",
-     "fnName": {
-      "type": "symbol",
-      "value": "writeln",
-      "text": "writeln",
-      "offset": 65,
-      "lineBreaks": 0,
-      "line": 5,
-      "col": 19
-     },
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 65,
+       "lineBreaks": 0,
+       "line": 5,
+       "col": 19
+      }
+     ],
      "arg": [
       {
        "type": "string",
@@ -128,21 +133,24 @@
        "line": 5,
        "col": 27
       }
-     ]
+     ],
+     "specifier": null
     }
    ],
    "else_statements": [
     {
      "type": "fn_call",
-     "fnName": {
-      "type": "symbol",
-      "value": "writeln",
-      "text": "writeln",
-      "offset": 86,
-      "lineBreaks": 0,
-      "line": 5,
-      "col": 40
-     },
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 86,
+       "lineBreaks": 0,
+       "line": 5,
+       "col": 40
+      }
+     ],
      "arg": [
       {
        "type": "string",
@@ -153,7 +161,8 @@
        "line": 5,
        "col": 48
       }
-     ]
+     ],
+     "specifier": null
     }
    ]
   }

@@ -9,6 +9,7 @@ const caseInsensitiveKeywords = (defs) => {
 const lexer = moo.compile({
     WS:         /[ \t]+/,
     bool:       ['false', 'true'],
+    not:        'not',
     number:     /0|[1-9][0-9]*/,
     hexNum:     /\$[0-9a-fA-F]+/,
     binNum:     /\%[01]+/,
@@ -19,6 +20,7 @@ const lexer = moo.compile({
     rparen:     ')',
     begin:      'begin',
     end:        ['end;', 'end.'],
+    specFn:     ['ord'],
     operator:   ['<=', '>=', 
         { match: '=', value: (e) => '==' }, 
         { match: 'mod', value: (e) => '%' }, 
@@ -40,7 +42,6 @@ const lexer = moo.compile({
             'kw_while': 'while',
             'kw_repeat': 'repeat',
             'kw_until': 'until',
-            'symbol': 'ord'
         }),
     },
     assign:     ':=',

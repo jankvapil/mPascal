@@ -15,15 +15,17 @@
    "statements": [
     {
      "type": "fn_call",
-     "fnName": {
-      "type": "symbol",
-      "value": "writeln",
-      "text": "writeln",
-      "offset": 26,
-      "lineBreaks": 0,
-      "line": 3,
-      "col": 16
-     },
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 26,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 16
+      }
+     ],
      "arg": [
       {
        "type": "string",
@@ -34,21 +36,24 @@
        "line": 3,
        "col": 24
       }
-     ]
+     ],
+     "specifier": null
     }
    ],
    "else_statements": [
     {
      "type": "fn_call",
-     "fnName": {
-      "type": "symbol",
-      "value": "writeln",
-      "text": "writeln",
-      "offset": 47,
-      "lineBreaks": 0,
-      "line": 3,
-      "col": 37
-     },
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 47,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 37
+      }
+     ],
      "arg": [
       {
        "type": "string",
@@ -59,7 +64,8 @@
        "line": 3,
        "col": 45
       }
-     ]
+     ],
+     "specifier": null
     }
    ]
   },

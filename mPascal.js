@@ -39,7 +39,9 @@ var grammar = {
     {"name": "statement", "symbols": ["cond"], "postprocess": id},
     {"name": "statement", "symbols": [(l.has("inlComment") ? {type: "inlComment"} : inlComment)]},
     {"name": "statement", "symbols": [(l.has("comment") ? {type: "comment"} : comment)]},
-    {"name": "fn_call_no_args", "symbols": [(l.has("symbol") ? {type: "symbol"} : symbol)], "postprocess":  
+    {"name": "fn_call_no_args$subexpression$1", "symbols": [(l.has("symbol") ? {type: "symbol"} : symbol)]},
+    {"name": "fn_call_no_args$subexpression$1", "symbols": [(l.has("specFn") ? {type: "specFn"} : specFn)]},
+    {"name": "fn_call_no_args", "symbols": ["fn_call_no_args$subexpression$1"], "postprocess":  
         (data) => {
             return {
                 type: "fn_call_no_args",
@@ -47,12 +49,18 @@ var grammar = {
             }   
         }
                 },
-    {"name": "fn_call", "symbols": [(l.has("symbol") ? {type: "symbol"} : symbol), "_", {"literal":"("}, "_", "fn_arg", "_", {"literal":")"}], "postprocess": 
+    {"name": "fn_call$subexpression$1", "symbols": [(l.has("symbol") ? {type: "symbol"} : symbol)]},
+    {"name": "fn_call$subexpression$1", "symbols": [(l.has("specFn") ? {type: "specFn"} : specFn)]},
+    {"name": "fn_call$ebnf$1$subexpression$1", "symbols": [{"literal":":"}, (l.has("number") ? {type: "number"} : number)]},
+    {"name": "fn_call$ebnf$1", "symbols": ["fn_call$ebnf$1$subexpression$1"], "postprocess": id},
+    {"name": "fn_call$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "fn_call", "symbols": ["fn_call$subexpression$1", "_", {"literal":"("}, "_", "fn_arg", "_", "fn_call$ebnf$1", {"literal":")"}], "postprocess": 
         (data) => {
             return {
                 type: "fn_call",
                 fnName: data[0],
-                arg: data[4]
+                arg: data[4],
+                specifier: data[6]
             }
         }
                 },
@@ -125,6 +133,20 @@ var grammar = {
             }
         }
                 },
+    {"name": "expr", "symbols": [(l.has("not") ? {type: "not"} : not), "_", (l.has("symbol") ? {type: "symbol"} : symbol)], "postprocess":  (data => {
+            return {
+                type: "symbol",
+                value: !data[2],
+                text: `${!data[2]}`
+            }
+        }) },
+    {"name": "expr", "symbols": [(l.has("not") ? {type: "not"} : not), "_", (l.has("bool") ? {type: "bool"} : bool)], "postprocess":  (data => {
+            return {
+                type: "bool",
+                value: !data[2],
+                text: `${!data[2]}`
+            }
+        }) },
     {"name": "expr", "symbols": [(l.has("symbol") ? {type: "symbol"} : symbol)], "postprocess": id},
     {"name": "expr", "symbols": [(l.has("string") ? {type: "string"} : string)], "postprocess": id},
     {"name": "expr", "symbols": ["num"]},
@@ -147,6 +169,15 @@ var grammar = {
                 left: data[0],
                 operator: data[2],
                 right: data[4]
+            }
+        } },
+    {"name": "num", "symbols": [(l.has("not") ? {type: "not"} : not), "_", (l.has("symbol") ? {type: "symbol"} : symbol), "_", (l.has("operator") ? {type: "operator"} : operator), "_", "expr"], "postprocess":      
+        (data) => {
+            return {
+                type: "notOperation",
+                left: data[2],
+                operator: data[4],
+                right: data[6]
             }
         } },
     {"name": "_$ebnf$1", "symbols": []},

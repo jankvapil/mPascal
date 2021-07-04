@@ -35,5 +35,15 @@ function chr(num) {
   return num.toString();
 }
 
-if(false) {
-writeln('true')}
+write(' Zadej nezaporne cislo: ')
+
+var a = 42;
+writeln()
+if(a<0) {
+writeln('  Chybne cislo')} else {
+write(' binarni: ')
+writeln(bin(a), 12)
+writeln()
+write(' hexadecimalni: ')
+writeln(hex(a))}
+writeln()

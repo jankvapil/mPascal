@@ -1,0 +1,740 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "a",
+    "text": "a",
+    "offset": 9,
+    "lineBreaks": 0,
+    "line": 2,
+    "col": 3
+   },
+   "value": [
+    {
+     "type": "number",
+     "value": "1",
+     "text": "1",
+     "offset": 12,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 6
+    }
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 21,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 6
+     },
+     "operator": {
+      "type": "operator",
+      "value": "^",
+      "text": "xor",
+      "offset": 23,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 8
+     },
+     "right": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 27,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 12
+     }
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 34,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 19
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'chybne'",
+       "text": "'chybne'",
+       "offset": 42,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 27
+      }
+     ],
+     "specifier": null
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 57,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 42
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'spravne'",
+       "text": "'spravne'",
+       "offset": 65,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 50
+      }
+     ],
+     "specifier": null
+    }
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    {
+     "type": "notOperation",
+     "left": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 87,
+      "lineBreaks": 0,
+      "line": 4,
+      "col": 10
+     },
+     "operator": {
+      "type": "operator",
+      "value": "^",
+      "text": "xor",
+      "offset": 89,
+      "lineBreaks": 0,
+      "line": 4,
+      "col": 12
+     },
+     "right": {
+      "type": "symbol",
+      "value": false,
+      "text": "false"
+     }
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 104,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 27
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'chybne'",
+       "text": "'chybne'",
+       "offset": 112,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 35
+      }
+     ],
+     "specifier": null
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 127,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 50
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'spravne'",
+       "text": "'spravne'",
+       "offset": 135,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 58
+      }
+     ],
+     "specifier": null
+    }
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 153,
+      "lineBreaks": 0,
+      "line": 5,
+      "col": 6
+     },
+     "operator": {
+      "type": "operator",
+      "value": "^",
+      "text": "xor",
+      "offset": 155,
+      "lineBreaks": 0,
+      "line": 5,
+      "col": 8
+     },
+     "right": {
+      "type": "symbol",
+      "value": false,
+      "text": "false"
+     }
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 170,
+       "lineBreaks": 0,
+       "line": 5,
+       "col": 23
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'spravne'",
+       "text": "'spravne'",
+       "offset": 178,
+       "lineBreaks": 0,
+       "line": 5,
+       "col": 31
+      }
+     ],
+     "specifier": null
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 194,
+       "lineBreaks": 0,
+       "line": 5,
+       "col": 47
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'chybne'",
+       "text": "'chybne'",
+       "offset": 202,
+       "lineBreaks": 0,
+       "line": 5,
+       "col": 55
+      }
+     ],
+     "specifier": null
+    }
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    {
+     "type": "notOperation",
+     "left": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 223,
+      "lineBreaks": 0,
+      "line": 6,
+      "col": 10
+     },
+     "operator": {
+      "type": "operator",
+      "value": "^",
+      "text": "xor",
+      "offset": 225,
+      "lineBreaks": 0,
+      "line": 6,
+      "col": 12
+     },
+     "right": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 229,
+      "lineBreaks": 0,
+      "line": 6,
+      "col": 16
+     }
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 236,
+       "lineBreaks": 0,
+       "line": 6,
+       "col": 23
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'spravne'",
+       "text": "'spravne'",
+       "offset": 244,
+       "lineBreaks": 0,
+       "line": 6,
+       "col": 31
+      }
+     ],
+     "specifier": null
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 260,
+       "lineBreaks": 0,
+       "line": 6,
+       "col": 47
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'chybne'",
+       "text": "'chybne'",
+       "offset": 268,
+       "lineBreaks": 0,
+       "line": 6,
+       "col": 55
+      }
+     ],
+     "specifier": null
+    }
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 287,
+      "lineBreaks": 0,
+      "line": 8,
+      "col": 6
+     },
+     "operator": {
+      "type": "operator",
+      "value": "||",
+      "text": "or",
+      "offset": 289,
+      "lineBreaks": 0,
+      "line": 8,
+      "col": 8
+     },
+     "right": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 292,
+      "lineBreaks": 0,
+      "line": 8,
+      "col": 11
+     }
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 299,
+       "lineBreaks": 0,
+       "line": 8,
+       "col": 18
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'spravne'",
+       "text": "'spravne'",
+       "offset": 307,
+       "lineBreaks": 0,
+       "line": 8,
+       "col": 26
+      }
+     ],
+     "specifier": null
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 323,
+       "lineBreaks": 0,
+       "line": 8,
+       "col": 42
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'chybne'",
+       "text": "'chybne'",
+       "offset": 331,
+       "lineBreaks": 0,
+       "line": 8,
+       "col": 50
+      }
+     ],
+     "specifier": null
+    }
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    {
+     "type": "notOperation",
+     "left": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 352,
+      "lineBreaks": 0,
+      "line": 9,
+      "col": 10
+     },
+     "operator": {
+      "type": "operator",
+      "value": "||",
+      "text": "or",
+      "offset": 354,
+      "lineBreaks": 0,
+      "line": 9,
+      "col": 12
+     },
+     "right": {
+      "type": "symbol",
+      "value": false,
+      "text": "false"
+     }
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 368,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 26
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'chybne'",
+       "text": "'chybne'",
+       "offset": 376,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 34
+      }
+     ],
+     "specifier": null
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 391,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 49
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'spravne'",
+       "text": "'spravne'",
+       "offset": 399,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 57
+      }
+     ],
+     "specifier": null
+    }
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 417,
+      "lineBreaks": 0,
+      "line": 10,
+      "col": 6
+     },
+     "operator": {
+      "type": "operator",
+      "value": "||",
+      "text": "or",
+      "offset": 419,
+      "lineBreaks": 0,
+      "line": 10,
+      "col": 8
+     },
+     "right": {
+      "type": "symbol",
+      "value": false,
+      "text": "false"
+     }
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 433,
+       "lineBreaks": 0,
+       "line": 10,
+       "col": 22
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'spravne'",
+       "text": "'spravne'",
+       "offset": 441,
+       "lineBreaks": 0,
+       "line": 10,
+       "col": 30
+      }
+     ],
+     "specifier": null
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 457,
+       "lineBreaks": 0,
+       "line": 10,
+       "col": 46
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'chybne'",
+       "text": "'chybne'",
+       "offset": 465,
+       "lineBreaks": 0,
+       "line": 10,
+       "col": 54
+      }
+     ],
+     "specifier": null
+    }
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    {
+     "type": "notOperation",
+     "left": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 486,
+      "lineBreaks": 0,
+      "line": 11,
+      "col": 10
+     },
+     "operator": {
+      "type": "operator",
+      "value": "||",
+      "text": "or",
+      "offset": 488,
+      "lineBreaks": 0,
+      "line": 11,
+      "col": 12
+     },
+     "right": {
+      "type": "symbol",
+      "value": "a",
+      "text": "a",
+      "offset": 491,
+      "lineBreaks": 0,
+      "line": 11,
+      "col": 15
+     }
+    }
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 498,
+       "lineBreaks": 0,
+       "line": 11,
+       "col": 22
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'spravne'",
+       "text": "'spravne'",
+       "offset": 506,
+       "lineBreaks": 0,
+       "line": 11,
+       "col": 30
+      }
+     ],
+     "specifier": null
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 522,
+       "lineBreaks": 0,
+       "line": 11,
+       "col": 46
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'chybne'",
+       "text": "'chybne'",
+       "offset": 530,
+       "lineBreaks": 0,
+       "line": 11,
+       "col": 54
+      }
+     ],
+     "specifier": null
+    }
+   ]
+  }
+ ]
+}

@@ -39,28 +39,39 @@ function chr(num) {
   return String.fromCharCode(num);
 }
 
-var a = 1;
-if(a^a) {
-writeln('chybne')} else {
-writeln('spravne')}
-if(!a^false) {
-writeln('chybne')} else {
-writeln('spravne')}
-if(a^false) {
-writeln('spravne')} else {
-writeln('chybne')}
-if(!a^a) {
-writeln('spravne')} else {
-writeln('chybne')}
-if(a||a) {
-writeln('spravne')} else {
-writeln('chybne')}
-if(!a||false) {
-writeln('chybne')} else {
-writeln('spravne')}
-if(a||false) {
-writeln('spravne')} else {
-writeln('chybne')}
-if(!a||a) {
-writeln('spravne')} else {
-writeln('chybne')}
+writeln()
+for(var i = 0; i<=15; i++){var a = i;
+var b = i/2;
+var c = 1;
+var g = 0;
+while(a){
+if(a%2^b%2) {
+var g = g+c;}
+var a = b;
+var b = b/2;
+var c = 2*c;
+}
+write(' ')
+write(i, 4)
+write(' ')
+write(bin(i), 4)
+write('  ')
+write(bin(g), 4)
+var j = 16+i;
+var a = j;
+var b = j/2;
+var c = 1;
+var g = 0;
+while(a){
+if(a%2^b%2) {
+var g = g+c;}
+var a = b;
+var b = b/2;
+var c = 2*c;
+}
+write(j, 5)
+write(' ')
+write(bin(j), 5)
+write(' ')
+writeln(bin(g), 5)}
+writeln()

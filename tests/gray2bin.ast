@@ -1,0 +1,1571 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 9,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 3
+    }
+   ]
+  },
+  {
+   "type": "for_loop",
+   "assignment": {
+    "type": "assignment",
+    "symbol": {
+     "type": "symbol",
+     "value": "i",
+     "text": "i",
+     "offset": 27,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 7
+    },
+    "value": [
+     {
+      "type": "number",
+      "value": "0",
+      "text": "0",
+      "offset": 30,
+      "lineBreaks": 0,
+      "line": 4,
+      "col": 10
+     }
+    ]
+   },
+   "to": [
+    {
+     "type": "number",
+     "value": "15",
+     "text": "15",
+     "offset": 35,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 15
+    }
+   ],
+   "statements": [
+    {
+     "type": "program",
+     "statements": [
+      {
+       "type": "assignment",
+       "symbol": {
+        "type": "symbol",
+        "value": "b",
+        "text": "b",
+        "offset": 47,
+        "lineBreaks": 0,
+        "line": 4,
+        "col": 27
+       },
+       "value": {
+        "type": "symbol",
+        "value": "i",
+        "text": "i",
+        "offset": 50,
+        "lineBreaks": 0,
+        "line": 4,
+        "col": 30
+       }
+      },
+      {
+       "type": "assignment",
+       "symbol": {
+        "type": "symbol",
+        "value": "a",
+        "text": "a",
+        "offset": 53,
+        "lineBreaks": 0,
+        "line": 4,
+        "col": 33
+       },
+       "value": [
+        {
+         "type": "operation",
+         "left": {
+          "type": "symbol",
+          "value": "i",
+          "text": "i",
+          "offset": 56,
+          "lineBreaks": 0,
+          "line": 4,
+          "col": 36
+         },
+         "operator": {
+          "type": "operator",
+          "value": "/",
+          "text": "/",
+          "offset": 57,
+          "lineBreaks": 0,
+          "line": 4,
+          "col": 37
+         },
+         "right": [
+          {
+           "type": "number",
+           "value": "2",
+           "text": "2",
+           "offset": 58,
+           "lineBreaks": 0,
+           "line": 4,
+           "col": 38
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "while_loop",
+       "expr": {
+        "type": "symbol",
+        "value": "a",
+        "text": "a",
+        "offset": 94,
+        "lineBreaks": 0,
+        "line": 5,
+        "col": 33
+       },
+       "statements": [
+        {
+         "type": "program",
+         "statements": [
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "c",
+            "text": "c",
+            "offset": 105,
+            "lineBreaks": 0,
+            "line": 5,
+            "col": 44
+           },
+           "value": {
+            "type": "symbol",
+            "value": "b",
+            "text": "b",
+            "offset": 108,
+            "lineBreaks": 0,
+            "line": 5,
+            "col": 47
+           }
+          },
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "d",
+            "text": "d",
+            "offset": 111,
+            "lineBreaks": 0,
+            "line": 5,
+            "col": 50
+           },
+           "value": {
+            "type": "symbol",
+            "value": "a",
+            "text": "a",
+            "offset": 114,
+            "lineBreaks": 0,
+            "line": 5,
+            "col": 53
+           }
+          },
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "e",
+            "text": "e",
+            "offset": 117,
+            "lineBreaks": 0,
+            "line": 5,
+            "col": 56
+           },
+           "value": [
+            {
+             "type": "number",
+             "value": "1",
+             "text": "1",
+             "offset": 120,
+             "lineBreaks": 0,
+             "line": 5,
+             "col": 59
+            }
+           ]
+          },
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "b",
+            "text": "b",
+            "offset": 123,
+            "lineBreaks": 0,
+            "line": 5,
+            "col": 62
+           },
+           "value": [
+            {
+             "type": "number",
+             "value": "0",
+             "text": "0",
+             "offset": 126,
+             "lineBreaks": 0,
+             "line": 5,
+             "col": 65
+            }
+           ]
+          },
+          {
+           "type": "while_loop",
+           "expr": {
+            "type": "symbol",
+            "value": "c",
+            "text": "c",
+            "offset": 165,
+            "lineBreaks": 0,
+            "line": 6,
+            "col": 35
+           },
+           "statements": [
+            {
+             "type": "program",
+             "statements": [
+              {
+               "type": "cond",
+               "expr": [
+                {
+                 "type": "operation",
+                 "left": {
+                  "type": "symbol",
+                  "value": "c",
+                  "text": "c",
+                  "offset": 179,
+                  "lineBreaks": 0,
+                  "line": 6,
+                  "col": 49
+                 },
+                 "operator": {
+                  "type": "operator",
+                  "value": "%",
+                  "text": "mod",
+                  "offset": 181,
+                  "lineBreaks": 0,
+                  "line": 6,
+                  "col": 51
+                 },
+                 "right": [
+                  {
+                   "type": "operation",
+                   "left": {
+                    "type": "number",
+                    "value": "2",
+                    "text": "2",
+                    "offset": 185,
+                    "lineBreaks": 0,
+                    "line": 6,
+                    "col": 55
+                   },
+                   "operator": {
+                    "type": "operator",
+                    "value": "^",
+                    "text": "xor",
+                    "offset": 187,
+                    "lineBreaks": 0,
+                    "line": 6,
+                    "col": 57
+                   },
+                   "right": [
+                    {
+                     "type": "operation",
+                     "left": {
+                      "type": "symbol",
+                      "value": "d",
+                      "text": "d",
+                      "offset": 191,
+                      "lineBreaks": 0,
+                      "line": 6,
+                      "col": 61
+                     },
+                     "operator": {
+                      "type": "operator",
+                      "value": "%",
+                      "text": "mod",
+                      "offset": 193,
+                      "lineBreaks": 0,
+                      "line": 6,
+                      "col": 63
+                     },
+                     "right": [
+                      {
+                       "type": "number",
+                       "value": "2",
+                       "text": "2",
+                       "offset": 197,
+                       "lineBreaks": 0,
+                       "line": 6,
+                       "col": 67
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ],
+               "statements": [
+                {
+                 "type": "assignment",
+                 "symbol": {
+                  "type": "symbol",
+                  "value": "b",
+                  "text": "b",
+                  "offset": 204,
+                  "lineBreaks": 0,
+                  "line": 6,
+                  "col": 74
+                 },
+                 "value": [
+                  {
+                   "type": "operation",
+                   "left": {
+                    "type": "symbol",
+                    "value": "b",
+                    "text": "b",
+                    "offset": 207,
+                    "lineBreaks": 0,
+                    "line": 6,
+                    "col": 77
+                   },
+                   "operator": {
+                    "type": "operator",
+                    "value": "+",
+                    "text": "+",
+                    "offset": 208,
+                    "lineBreaks": 0,
+                    "line": 6,
+                    "col": 78
+                   },
+                   "right": {
+                    "type": "symbol",
+                    "value": "e",
+                    "text": "e",
+                    "offset": 209,
+                    "lineBreaks": 0,
+                    "line": 6,
+                    "col": 79
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "assignment",
+               "symbol": {
+                "type": "symbol",
+                "value": "c",
+                "text": "c",
+                "offset": 212,
+                "lineBreaks": 0,
+                "line": 6,
+                "col": 82
+               },
+               "value": [
+                {
+                 "type": "operation",
+                 "left": {
+                  "type": "symbol",
+                  "value": "c",
+                  "text": "c",
+                  "offset": 215,
+                  "lineBreaks": 0,
+                  "line": 6,
+                  "col": 85
+                 },
+                 "operator": {
+                  "type": "operator",
+                  "value": "/",
+                  "text": "/",
+                  "offset": 216,
+                  "lineBreaks": 0,
+                  "line": 6,
+                  "col": 86
+                 },
+                 "right": [
+                  {
+                   "type": "number",
+                   "value": "2",
+                   "text": "2",
+                   "offset": 217,
+                   "lineBreaks": 0,
+                   "line": 6,
+                   "col": 87
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "assignment",
+               "symbol": {
+                "type": "symbol",
+                "value": "d",
+                "text": "d",
+                "offset": 220,
+                "lineBreaks": 0,
+                "line": 6,
+                "col": 90
+               },
+               "value": [
+                {
+                 "type": "operation",
+                 "left": {
+                  "type": "symbol",
+                  "value": "d",
+                  "text": "d",
+                  "offset": 223,
+                  "lineBreaks": 0,
+                  "line": 6,
+                  "col": 93
+                 },
+                 "operator": {
+                  "type": "operator",
+                  "value": "/",
+                  "text": "/",
+                  "offset": 224,
+                  "lineBreaks": 0,
+                  "line": 6,
+                  "col": 94
+                 },
+                 "right": [
+                  {
+                   "type": "number",
+                   "value": "2",
+                   "text": "2",
+                   "offset": 225,
+                   "lineBreaks": 0,
+                   "line": 6,
+                   "col": 95
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "assignment",
+               "symbol": {
+                "type": "symbol",
+                "value": "e",
+                "text": "e",
+                "offset": 228,
+                "lineBreaks": 0,
+                "line": 6,
+                "col": 98
+               },
+               "value": [
+                {
+                 "type": "operation",
+                 "left": {
+                  "type": "number",
+                  "value": "2",
+                  "text": "2",
+                  "offset": 231,
+                  "lineBreaks": 0,
+                  "line": 6,
+                  "col": 101
+                 },
+                 "operator": {
+                  "type": "operator",
+                  "value": "*",
+                  "text": "*",
+                  "offset": 232,
+                  "lineBreaks": 0,
+                  "line": 6,
+                  "col": 102
+                 },
+                 "right": {
+                  "type": "symbol",
+                  "value": "e",
+                  "text": "e",
+                  "offset": 233,
+                  "lineBreaks": 0,
+                  "line": 6,
+                  "col": 103
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "a",
+            "text": "a",
+            "offset": 240,
+            "lineBreaks": 0,
+            "line": 6,
+            "col": 110
+           },
+           "value": [
+            {
+             "type": "operation",
+             "left": {
+              "type": "symbol",
+              "value": "a",
+              "text": "a",
+              "offset": 243,
+              "lineBreaks": 0,
+              "line": 6,
+              "col": 113
+             },
+             "operator": {
+              "type": "operator",
+              "value": "/",
+              "text": "/",
+              "offset": 244,
+              "lineBreaks": 0,
+              "line": 6,
+              "col": 114
+             },
+             "right": [
+              {
+               "type": "number",
+               "value": "2",
+               "text": "2",
+               "offset": 245,
+               "lineBreaks": 0,
+               "line": 6,
+               "col": 115
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 290,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 17
+        }
+       ],
+       "arg": [
+        {
+         "type": "string",
+         "value": "'  '",
+         "text": "'  '",
+         "offset": 296,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 23
+        }
+       ],
+       "specifier": null
+      },
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 303,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 30
+        }
+       ],
+       "arg": [
+        {
+         "type": "fn_call",
+         "fnName": [
+          {
+           "type": "symbol",
+           "value": "bin",
+           "text": "bin",
+           "offset": 309,
+           "lineBreaks": 0,
+           "line": 8,
+           "col": 36
+          }
+         ],
+         "arg": [
+          {
+           "type": "symbol",
+           "value": "i",
+           "text": "i",
+           "offset": 313,
+           "lineBreaks": 0,
+           "line": 8,
+           "col": 40
+          }
+         ],
+         "specifier": null
+        }
+       ],
+       "specifier": [
+        {
+         "type": "colon",
+         "value": ":",
+         "text": ":",
+         "offset": 315,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 42
+        },
+        {
+         "type": "number",
+         "value": "5",
+         "text": "5",
+         "offset": 316,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 43
+        }
+       ]
+      },
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 320,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 47
+        }
+       ],
+       "arg": [
+        {
+         "type": "string",
+         "value": "' '",
+         "text": "' '",
+         "offset": 326,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 53
+        }
+       ],
+       "specifier": null
+      },
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 332,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 59
+        }
+       ],
+       "arg": [
+        {
+         "type": "fn_call",
+         "fnName": [
+          {
+           "type": "symbol",
+           "value": "bin",
+           "text": "bin",
+           "offset": 338,
+           "lineBreaks": 0,
+           "line": 8,
+           "col": 65
+          }
+         ],
+         "arg": [
+          {
+           "type": "symbol",
+           "value": "b",
+           "text": "b",
+           "offset": 342,
+           "lineBreaks": 0,
+           "line": 8,
+           "col": 69
+          }
+         ],
+         "specifier": null
+        }
+       ],
+       "specifier": [
+        {
+         "type": "colon",
+         "value": ":",
+         "text": ":",
+         "offset": 344,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 71
+        },
+        {
+         "type": "number",
+         "value": "5",
+         "text": "5",
+         "offset": 345,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 72
+        }
+       ]
+      },
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 349,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 76
+        }
+       ],
+       "arg": [
+        {
+         "type": "symbol",
+         "value": "b",
+         "text": "b",
+         "offset": 355,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 82
+        }
+       ],
+       "specifier": [
+        {
+         "type": "colon",
+         "value": ":",
+         "text": ":",
+         "offset": 356,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 83
+        },
+        {
+         "type": "number",
+         "value": "4",
+         "text": "4",
+         "offset": 357,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 84
+        }
+       ]
+      },
+      {
+       "type": "assignment",
+       "symbol": {
+        "type": "symbol",
+        "value": "ii",
+        "text": "ii",
+        "offset": 373,
+        "lineBreaks": 0,
+        "line": 10,
+        "col": 10
+       },
+       "value": [
+        {
+         "type": "operation",
+         "left": {
+          "type": "number",
+          "value": "16",
+          "text": "16",
+          "offset": 377,
+          "lineBreaks": 0,
+          "line": 10,
+          "col": 14
+         },
+         "operator": {
+          "type": "operator",
+          "value": "+",
+          "text": "+",
+          "offset": 379,
+          "lineBreaks": 0,
+          "line": 10,
+          "col": 16
+         },
+         "right": {
+          "type": "symbol",
+          "value": "i",
+          "text": "i",
+          "offset": 380,
+          "lineBreaks": 0,
+          "line": 10,
+          "col": 17
+         }
+        }
+       ]
+      },
+      {
+       "type": "assignment",
+       "symbol": {
+        "type": "symbol",
+        "value": "b",
+        "text": "b",
+        "offset": 383,
+        "lineBreaks": 0,
+        "line": 10,
+        "col": 20
+       },
+       "value": {
+        "type": "symbol",
+        "value": "ii",
+        "text": "ii",
+        "offset": 386,
+        "lineBreaks": 0,
+        "line": 10,
+        "col": 23
+       }
+      },
+      {
+       "type": "assignment",
+       "symbol": {
+        "type": "symbol",
+        "value": "a",
+        "text": "a",
+        "offset": 390,
+        "lineBreaks": 0,
+        "line": 10,
+        "col": 27
+       },
+       "value": [
+        {
+         "type": "operation",
+         "left": {
+          "type": "symbol",
+          "value": "ii",
+          "text": "ii",
+          "offset": 393,
+          "lineBreaks": 0,
+          "line": 10,
+          "col": 30
+         },
+         "operator": {
+          "type": "operator",
+          "value": "/",
+          "text": "/",
+          "offset": 395,
+          "lineBreaks": 0,
+          "line": 10,
+          "col": 32
+         },
+         "right": [
+          {
+           "type": "number",
+           "value": "2",
+           "text": "2",
+           "offset": 396,
+           "lineBreaks": 0,
+           "line": 10,
+           "col": 33
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "while_loop",
+       "expr": {
+        "type": "symbol",
+        "value": "a",
+        "text": "a",
+        "offset": 415,
+        "lineBreaks": 0,
+        "line": 11,
+        "col": 16
+       },
+       "statements": [
+        {
+         "type": "program",
+         "statements": [
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "c",
+            "text": "c",
+            "offset": 426,
+            "lineBreaks": 0,
+            "line": 11,
+            "col": 27
+           },
+           "value": {
+            "type": "symbol",
+            "value": "b",
+            "text": "b",
+            "offset": 429,
+            "lineBreaks": 0,
+            "line": 11,
+            "col": 30
+           }
+          },
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "d",
+            "text": "d",
+            "offset": 432,
+            "lineBreaks": 0,
+            "line": 11,
+            "col": 33
+           },
+           "value": {
+            "type": "symbol",
+            "value": "a",
+            "text": "a",
+            "offset": 435,
+            "lineBreaks": 0,
+            "line": 11,
+            "col": 36
+           }
+          },
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "e",
+            "text": "e",
+            "offset": 438,
+            "lineBreaks": 0,
+            "line": 11,
+            "col": 39
+           },
+           "value": [
+            {
+             "type": "number",
+             "value": "1",
+             "text": "1",
+             "offset": 441,
+             "lineBreaks": 0,
+             "line": 11,
+             "col": 42
+            }
+           ]
+          },
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "b",
+            "text": "b",
+            "offset": 444,
+            "lineBreaks": 0,
+            "line": 11,
+            "col": 45
+           },
+           "value": [
+            {
+             "type": "number",
+             "value": "0",
+             "text": "0",
+             "offset": 447,
+             "lineBreaks": 0,
+             "line": 11,
+             "col": 48
+            }
+           ]
+          },
+          {
+           "type": "while_loop",
+           "expr": {
+            "type": "symbol",
+            "value": "c",
+            "text": "c",
+            "offset": 484,
+            "lineBreaks": 0,
+            "line": 12,
+            "col": 33
+           },
+           "statements": [
+            {
+             "type": "program",
+             "statements": [
+              {
+               "type": "cond",
+               "expr": [
+                {
+                 "type": "operation",
+                 "left": {
+                  "type": "symbol",
+                  "value": "c",
+                  "text": "c",
+                  "offset": 498,
+                  "lineBreaks": 0,
+                  "line": 12,
+                  "col": 47
+                 },
+                 "operator": {
+                  "type": "operator",
+                  "value": "%",
+                  "text": "mod",
+                  "offset": 500,
+                  "lineBreaks": 0,
+                  "line": 12,
+                  "col": 49
+                 },
+                 "right": [
+                  {
+                   "type": "operation",
+                   "left": {
+                    "type": "number",
+                    "value": "2",
+                    "text": "2",
+                    "offset": 504,
+                    "lineBreaks": 0,
+                    "line": 12,
+                    "col": 53
+                   },
+                   "operator": {
+                    "type": "operator",
+                    "value": "^",
+                    "text": "xor",
+                    "offset": 506,
+                    "lineBreaks": 0,
+                    "line": 12,
+                    "col": 55
+                   },
+                   "right": [
+                    {
+                     "type": "operation",
+                     "left": {
+                      "type": "symbol",
+                      "value": "d",
+                      "text": "d",
+                      "offset": 510,
+                      "lineBreaks": 0,
+                      "line": 12,
+                      "col": 59
+                     },
+                     "operator": {
+                      "type": "operator",
+                      "value": "%",
+                      "text": "mod",
+                      "offset": 512,
+                      "lineBreaks": 0,
+                      "line": 12,
+                      "col": 61
+                     },
+                     "right": [
+                      {
+                       "type": "number",
+                       "value": "2",
+                       "text": "2",
+                       "offset": 516,
+                       "lineBreaks": 0,
+                       "line": 12,
+                       "col": 65
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ],
+               "statements": [
+                {
+                 "type": "assignment",
+                 "symbol": {
+                  "type": "symbol",
+                  "value": "b",
+                  "text": "b",
+                  "offset": 523,
+                  "lineBreaks": 0,
+                  "line": 12,
+                  "col": 72
+                 },
+                 "value": [
+                  {
+                   "type": "operation",
+                   "left": {
+                    "type": "symbol",
+                    "value": "b",
+                    "text": "b",
+                    "offset": 526,
+                    "lineBreaks": 0,
+                    "line": 12,
+                    "col": 75
+                   },
+                   "operator": {
+                    "type": "operator",
+                    "value": "+",
+                    "text": "+",
+                    "offset": 527,
+                    "lineBreaks": 0,
+                    "line": 12,
+                    "col": 76
+                   },
+                   "right": {
+                    "type": "symbol",
+                    "value": "e",
+                    "text": "e",
+                    "offset": 528,
+                    "lineBreaks": 0,
+                    "line": 12,
+                    "col": 77
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "assignment",
+               "symbol": {
+                "type": "symbol",
+                "value": "c",
+                "text": "c",
+                "offset": 531,
+                "lineBreaks": 0,
+                "line": 12,
+                "col": 80
+               },
+               "value": [
+                {
+                 "type": "operation",
+                 "left": {
+                  "type": "symbol",
+                  "value": "c",
+                  "text": "c",
+                  "offset": 534,
+                  "lineBreaks": 0,
+                  "line": 12,
+                  "col": 83
+                 },
+                 "operator": {
+                  "type": "operator",
+                  "value": "/",
+                  "text": "/",
+                  "offset": 535,
+                  "lineBreaks": 0,
+                  "line": 12,
+                  "col": 84
+                 },
+                 "right": [
+                  {
+                   "type": "number",
+                   "value": "2",
+                   "text": "2",
+                   "offset": 536,
+                   "lineBreaks": 0,
+                   "line": 12,
+                   "col": 85
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "assignment",
+               "symbol": {
+                "type": "symbol",
+                "value": "d",
+                "text": "d",
+                "offset": 539,
+                "lineBreaks": 0,
+                "line": 12,
+                "col": 88
+               },
+               "value": [
+                {
+                 "type": "operation",
+                 "left": {
+                  "type": "symbol",
+                  "value": "d",
+                  "text": "d",
+                  "offset": 542,
+                  "lineBreaks": 0,
+                  "line": 12,
+                  "col": 91
+                 },
+                 "operator": {
+                  "type": "operator",
+                  "value": "/",
+                  "text": "/",
+                  "offset": 543,
+                  "lineBreaks": 0,
+                  "line": 12,
+                  "col": 92
+                 },
+                 "right": [
+                  {
+                   "type": "number",
+                   "value": "2",
+                   "text": "2",
+                   "offset": 544,
+                   "lineBreaks": 0,
+                   "line": 12,
+                   "col": 93
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "assignment",
+               "symbol": {
+                "type": "symbol",
+                "value": "e",
+                "text": "e",
+                "offset": 547,
+                "lineBreaks": 0,
+                "line": 12,
+                "col": 96
+               },
+               "value": [
+                {
+                 "type": "operation",
+                 "left": {
+                  "type": "number",
+                  "value": "2",
+                  "text": "2",
+                  "offset": 550,
+                  "lineBreaks": 0,
+                  "line": 12,
+                  "col": 99
+                 },
+                 "operator": {
+                  "type": "operator",
+                  "value": "*",
+                  "text": "*",
+                  "offset": 551,
+                  "lineBreaks": 0,
+                  "line": 12,
+                  "col": 100
+                 },
+                 "right": {
+                  "type": "symbol",
+                  "value": "e",
+                  "text": "e",
+                  "offset": 552,
+                  "lineBreaks": 0,
+                  "line": 12,
+                  "col": 101
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "assignment",
+           "symbol": {
+            "type": "symbol",
+            "value": "a",
+            "text": "a",
+            "offset": 559,
+            "lineBreaks": 0,
+            "line": 12,
+            "col": 108
+           },
+           "value": [
+            {
+             "type": "operation",
+             "left": {
+              "type": "symbol",
+              "value": "a",
+              "text": "a",
+              "offset": 562,
+              "lineBreaks": 0,
+              "line": 12,
+              "col": 111
+             },
+             "operator": {
+              "type": "operator",
+              "value": "/",
+              "text": "/",
+              "offset": 563,
+              "lineBreaks": 0,
+              "line": 12,
+              "col": 112
+             },
+             "right": [
+              {
+               "type": "number",
+               "value": "2",
+               "text": "2",
+               "offset": 564,
+               "lineBreaks": 0,
+               "line": 12,
+               "col": 113
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 605,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 13
+        }
+       ],
+       "arg": [
+        {
+         "type": "string",
+         "value": "'   '",
+         "text": "'   '",
+         "offset": 611,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 19
+        }
+       ],
+       "specifier": null
+      },
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 619,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 27
+        }
+       ],
+       "arg": [
+        {
+         "type": "fn_call",
+         "fnName": [
+          {
+           "type": "symbol",
+           "value": "bin",
+           "text": "bin",
+           "offset": 625,
+           "lineBreaks": 0,
+           "line": 14,
+           "col": 33
+          }
+         ],
+         "arg": [
+          {
+           "type": "symbol",
+           "value": "ii",
+           "text": "ii",
+           "offset": 629,
+           "lineBreaks": 0,
+           "line": 14,
+           "col": 37
+          }
+         ],
+         "specifier": null
+        }
+       ],
+       "specifier": [
+        {
+         "type": "colon",
+         "value": ":",
+         "text": ":",
+         "offset": 632,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 40
+        },
+        {
+         "type": "number",
+         "value": "5",
+         "text": "5",
+         "offset": 633,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 41
+        }
+       ]
+      },
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 637,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 45
+        }
+       ],
+       "arg": [
+        {
+         "type": "string",
+         "value": "' '",
+         "text": "' '",
+         "offset": 643,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 51
+        }
+       ],
+       "specifier": null
+      },
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "write",
+         "text": "write",
+         "offset": 649,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 57
+        }
+       ],
+       "arg": [
+        {
+         "type": "fn_call",
+         "fnName": [
+          {
+           "type": "symbol",
+           "value": "bin",
+           "text": "bin",
+           "offset": 655,
+           "lineBreaks": 0,
+           "line": 14,
+           "col": 63
+          }
+         ],
+         "arg": [
+          {
+           "type": "symbol",
+           "value": "b",
+           "text": "b",
+           "offset": 659,
+           "lineBreaks": 0,
+           "line": 14,
+           "col": 67
+          }
+         ],
+         "specifier": null
+        }
+       ],
+       "specifier": [
+        {
+         "type": "colon",
+         "value": ":",
+         "text": ":",
+         "offset": 661,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 69
+        },
+        {
+         "type": "number",
+         "value": "5",
+         "text": "5",
+         "offset": 662,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 70
+        }
+       ]
+      },
+      {
+       "type": "fn_call",
+       "fnName": [
+        {
+         "type": "symbol",
+         "value": "writeln",
+         "text": "writeln",
+         "offset": 666,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 74
+        }
+       ],
+       "arg": [
+        {
+         "type": "symbol",
+         "value": "b",
+         "text": "b",
+         "offset": 674,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 82
+        }
+       ],
+       "specifier": [
+        {
+         "type": "colon",
+         "value": ":",
+         "text": ":",
+         "offset": 675,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 83
+        },
+        {
+         "type": "number",
+         "value": "4",
+         "text": "4",
+         "offset": 676,
+         "lineBreaks": 0,
+         "line": 14,
+         "col": 84
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 692,
+     "lineBreaks": 0,
+     "line": 17,
+     "col": 3
+    }
+   ]
+  }
+ ]
+}

@@ -39,28 +39,48 @@ function chr(num) {
   return String.fromCharCode(num);
 }
 
-var a = 1;
-if(a^a) {
-writeln('chybne')} else {
-writeln('spravne')}
-if(!a^false) {
-writeln('chybne')} else {
-writeln('spravne')}
-if(a^false) {
-writeln('spravne')} else {
-writeln('chybne')}
-if(!a^a) {
-writeln('spravne')} else {
-writeln('chybne')}
-if(a||a) {
-writeln('spravne')} else {
-writeln('chybne')}
-if(!a||false) {
-writeln('chybne')} else {
-writeln('spravne')}
-if(a||false) {
-writeln('spravne')} else {
-writeln('chybne')}
-if(!a||a) {
-writeln('spravne')} else {
-writeln('chybne')}
+writeln()
+for(var i = 0; i<=15; i++){var b = i;
+var a = i/2;
+while(a){
+var c = b;
+var d = a;
+var e = 1;
+var b = 0;
+while(c){
+if(c%2^d%2) {
+var b = b+e;}
+var c = c/2;
+var d = d/2;
+var e = 2*e;
+}
+var a = a/2;
+}
+write('  ')
+write(bin(i), 5)
+write(' ')
+write(bin(b), 5)
+write(b, 4)
+var ii = 16+i;
+var b = ii;
+var a = ii/2;
+while(a){
+var c = b;
+var d = a;
+var e = 1;
+var b = 0;
+while(c){
+if(c%2^d%2) {
+var b = b+e;}
+var c = c/2;
+var d = d/2;
+var e = 2*e;
+}
+var a = a/2;
+}
+write('   ')
+write(bin(ii), 5)
+write(' ')
+write(bin(b), 5)
+writeln(b, 4)}
+writeln()

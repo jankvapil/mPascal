@@ -7,7 +7,7 @@
     "type": "bool",
     "value": "true",
     "text": "true",
-    "offset": 16,
+    "offset": 14,
     "lineBreaks": 0,
     "line": 3,
     "col": 6
@@ -20,7 +20,7 @@
        "type": "symbol",
        "value": "writeln",
        "text": "writeln",
-       "offset": 26,
+       "offset": 24,
        "lineBreaks": 0,
        "line": 3,
        "col": 16
@@ -31,7 +31,7 @@
        "type": "string",
        "value": "'true'",
        "text": "'true'",
-       "offset": 34,
+       "offset": 32,
        "lineBreaks": 0,
        "line": 3,
        "col": 24
@@ -48,7 +48,7 @@
        "type": "symbol",
        "value": "writeln",
        "text": "writeln",
-       "offset": 47,
+       "offset": 45,
        "lineBreaks": 0,
        "line": 3,
        "col": 37
@@ -59,7 +59,7 @@
        "type": "string",
        "value": "'false'",
        "text": "'false'",
-       "offset": 55,
+       "offset": 53,
        "lineBreaks": 0,
        "line": 3,
        "col": 45
@@ -74,7 +74,7 @@
     "type": "inlComment",
     "value": "{  poznamka }",
     "text": "{  poznamka }",
-    "offset": 73,
+    "offset": 69,
     "lineBreaks": 0,
     "line": 5,
     "col": 4
@@ -85,7 +85,7 @@
     "type": "comment",
     "value": "// poznamka",
     "text": "// poznamka",
-    "offset": 91,
+    "offset": 86,
     "lineBreaks": 0,
     "line": 6,
     "col": 4

@@ -1,7 +1,6 @@
 begin
   write(' Zadej nezaporne cislo: ');
-  // read(a);
-  a:=42
+  a:=42;
   writeln;
 
   if a<0 then writeln('  Chybne cislo')

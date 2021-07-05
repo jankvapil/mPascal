@@ -8,7 +8,7 @@
      "type": "symbol",
      "value": "write",
      "text": "write",
-     "offset": 9,
+     "offset": 8,
      "lineBreaks": 0,
      "line": 2,
      "col": 3
@@ -19,7 +19,7 @@
      "type": "string",
      "value": "'Zadej 2 prirozena cisla: '",
      "text": "'Zadej 2 prirozena cisla: '",
-     "offset": 15,
+     "offset": 14,
      "lineBreaks": 0,
      "line": 2,
      "col": 9
@@ -32,7 +32,7 @@
     "type": "comment",
     "value": "// read(a); read(b);",
     "text": "// read(a); read(b);",
-    "offset": 48,
+    "offset": 46,
     "lineBreaks": 0,
     "line": 3,
     "col": 3
@@ -44,7 +44,7 @@
     "type": "symbol",
     "value": "a",
     "text": "a",
-    "offset": 72,
+    "offset": 69,
     "lineBreaks": 0,
     "line": 4,
     "col": 3
@@ -52,9 +52,9 @@
    "value": [
     {
      "type": "number",
-     "value": "4",
-     "text": "4",
-     "offset": 75,
+     "value": "16",
+     "text": "16",
+     "offset": 72,
      "lineBreaks": 0,
      "line": 4,
      "col": 6
@@ -67,7 +67,7 @@
     "type": "symbol",
     "value": "b",
     "text": "b",
-    "offset": 81,
+    "offset": 78,
     "lineBreaks": 0,
     "line": 5,
     "col": 3
@@ -75,9 +75,9 @@
    "value": [
     {
      "type": "number",
-     "value": "2",
-     "text": "2",
-     "offset": 84,
+     "value": "4",
+     "text": "4",
+     "offset": 81,
      "lineBreaks": 0,
      "line": 5,
      "col": 6
@@ -93,7 +93,7 @@
       "type": "symbol",
       "value": "a",
       "text": "a",
-      "offset": 97,
+      "offset": 92,
       "lineBreaks": 0,
       "line": 7,
       "col": 6
@@ -102,7 +102,7 @@
       "type": "operator",
       "value": "<",
       "text": "<",
-      "offset": 98,
+      "offset": 93,
       "lineBreaks": 0,
       "line": 7,
       "col": 7
@@ -114,7 +114,7 @@
         "type": "number",
         "value": "1",
         "text": "1",
-        "offset": 99,
+        "offset": 94,
         "lineBreaks": 0,
         "line": 7,
         "col": 8
@@ -123,7 +123,7 @@
         "type": "operator",
         "value": "||",
         "text": "or",
-        "offset": 101,
+        "offset": 96,
         "lineBreaks": 0,
         "line": 7,
         "col": 10
@@ -135,7 +135,7 @@
           "type": "symbol",
           "value": "b",
           "text": "b",
-          "offset": 104,
+          "offset": 99,
           "lineBreaks": 0,
           "line": 7,
           "col": 13
@@ -144,7 +144,7 @@
           "type": "operator",
           "value": "<",
           "text": "<",
-          "offset": 105,
+          "offset": 100,
           "lineBreaks": 0,
           "line": 7,
           "col": 14
@@ -154,7 +154,7 @@
            "type": "number",
            "value": "1",
            "text": "1",
-           "offset": 106,
+           "offset": 101,
            "lineBreaks": 0,
            "line": 7,
            "col": 15
@@ -174,7 +174,7 @@
        "type": "symbol",
        "value": "writeln",
        "text": "writeln",
-       "offset": 113,
+       "offset": 108,
        "lineBreaks": 0,
        "line": 7,
        "col": 22
@@ -185,7 +185,7 @@
        "type": "string",
        "value": "'  Chybna cisla'",
        "text": "'  Chybna cisla'",
-       "offset": 121,
+       "offset": 116,
        "lineBreaks": 0,
        "line": 7,
        "col": 30
@@ -207,7 +207,7 @@
           "type": "symbol",
           "value": "zbytek",
           "text": "zbytek",
-          "offset": 203,
+          "offset": 196,
           "lineBreaks": 0,
           "line": 9,
           "col": 61
@@ -216,7 +216,7 @@
           "type": "operator",
           "value": "==",
           "text": "=",
-          "offset": 209,
+          "offset": 202,
           "lineBreaks": 0,
           "line": 9,
           "col": 67
@@ -226,7 +226,7 @@
            "type": "number",
            "value": "0",
            "text": "0",
-           "offset": 210,
+           "offset": 203,
            "lineBreaks": 0,
            "line": 9,
            "col": 68
@@ -241,7 +241,7 @@
           "type": "symbol",
           "value": "zbytek",
           "text": "zbytek",
-          "offset": 163,
+          "offset": 156,
           "lineBreaks": 0,
           "line": 9,
           "col": 21
@@ -253,7 +253,7 @@
             "type": "symbol",
             "value": "a",
             "text": "a",
-            "offset": 171,
+            "offset": 164,
             "lineBreaks": 0,
             "line": 9,
             "col": 29
@@ -262,7 +262,7 @@
             "type": "operator",
             "value": "%",
             "text": "mod",
-            "offset": 173,
+            "offset": 166,
             "lineBreaks": 0,
             "line": 9,
             "col": 31
@@ -271,7 +271,7 @@
             "type": "symbol",
             "value": "b",
             "text": "b",
-            "offset": 177,
+            "offset": 170,
             "lineBreaks": 0,
             "line": 9,
             "col": 35
@@ -285,7 +285,7 @@
           "type": "symbol",
           "value": "a",
           "text": "a",
-          "offset": 180,
+          "offset": 173,
           "lineBreaks": 0,
           "line": 9,
           "col": 38
@@ -294,7 +294,7 @@
           "type": "symbol",
           "value": "b",
           "text": "b",
-          "offset": 183,
+          "offset": 176,
           "lineBreaks": 0,
           "line": 9,
           "col": 41
@@ -306,7 +306,7 @@
           "type": "symbol",
           "value": "b",
           "text": "b",
-          "offset": 186,
+          "offset": 179,
           "lineBreaks": 0,
           "line": 9,
           "col": 44
@@ -315,7 +315,7 @@
           "type": "symbol",
           "value": "zbytek",
           "text": "zbytek",
-          "offset": 189,
+          "offset": 182,
           "lineBreaks": 0,
           "line": 9,
           "col": 47
@@ -330,7 +330,7 @@
          "type": "symbol",
          "value": "writeln",
          "text": "writeln",
-         "offset": 227,
+         "offset": 219,
          "lineBreaks": 0,
          "line": 10,
          "col": 14
@@ -344,7 +344,7 @@
          "type": "symbol",
          "value": "write",
          "text": "write",
-         "offset": 236,
+         "offset": 228,
          "lineBreaks": 0,
          "line": 10,
          "col": 23
@@ -355,7 +355,7 @@
          "type": "string",
          "value": "'  Nejvetsi spolecny delitel: '",
          "text": "'  Nejvetsi spolecny delitel: '",
-         "offset": 242,
+         "offset": 234,
          "lineBreaks": 0,
          "line": 10,
          "col": 29
@@ -370,7 +370,7 @@
          "type": "symbol",
          "value": "writeln",
          "text": "writeln",
-         "offset": 276,
+         "offset": 268,
          "lineBreaks": 0,
          "line": 10,
          "col": 63
@@ -381,7 +381,7 @@
          "type": "symbol",
          "value": "a",
          "text": "a",
-         "offset": 284,
+         "offset": 276,
          "lineBreaks": 0,
          "line": 10,
          "col": 71
@@ -400,7 +400,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 296,
+     "offset": 287,
      "lineBreaks": 0,
      "line": 11,
      "col": 3

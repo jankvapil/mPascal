@@ -84,18 +84,26 @@ const generateJSExpr = (node) => {
         const symbolName = node.symbol.value
         let value
         
+        // console.log(node)
         if (node.value.type === "fn_call") {
             // console.log(node)
             value = generateJSExpr(node.value.arg[0])
             const fnName = node.value.fnName.value ? node.value.fnName.value : node.value.fnName[0].value
             return `var ${symbolName} = ${fnName}(${value});`
         } 
-        else if (node.value?.type === "operation" || node.value[0]?.type === "operation") {
+        else if ((
+          node.value && node.value.type === "operation") 
+          || (node.value[0] && node.value[0].type && node.value[0].type === "operation")) {
             value = generateJSExpr(node.value[0] ? node.value[0] : node.value)
             return `var ${symbolName} = ${value};`
         } 
         else {
-            value = node.value[0]?.value ? node.value[0].value : node.value.value
+            if (node.value[0]) {
+              value = node.value[0].value
+            } else {
+              value = node.value.value
+            }
+            // value = node.value[0].value ? node.value[0].value : node.value.value
             return `var ${symbolName} = ${value};`
         }
     } 
@@ -172,7 +180,7 @@ const main = async () => {
     const jsCode = runtime + "\n" + generateJS(ast)
     const outFilename = inFilename.replace(".ast", ".js")
     
-    console.log(`Generating ${outFilename}...`)
+    // console.log(`Generating ${outFilename}...`)
     await fs.writeFile(outFilename, jsCode)
 }
 

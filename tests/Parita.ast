@@ -1,0 +1,496 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "write",
+     "text": "write",
+     "offset": 8,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 3
+    }
+   ],
+   "arg": [
+    {
+     "type": "string",
+     "value": "'Zadej cislo: '",
+     "text": "'Zadej cislo: '",
+     "offset": 14,
+     "lineBreaks": 0,
+     "line": 2,
+     "col": 9
+    }
+   ],
+   "specifier": null
+  },
+  [
+   {
+    "type": "comment",
+    "value": "// read(a);",
+    "text": "// read(a);",
+    "offset": 34,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 3
+   }
+  ],
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "a",
+    "text": "a",
+    "offset": 48,
+    "lineBreaks": 0,
+    "line": 4,
+    "col": 3
+   },
+   "value": [
+    {
+     "type": "number",
+     "value": "4",
+     "text": "4",
+     "offset": 51,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 6
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "p",
+    "text": "p",
+    "offset": 55,
+    "lineBreaks": 0,
+    "line": 5,
+    "col": 3
+   },
+   "value": [
+    {
+     "type": "number",
+     "value": "0",
+     "text": "0",
+     "offset": 58,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 6
+    }
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "b",
+    "text": "b",
+    "offset": 61,
+    "lineBreaks": 0,
+    "line": 5,
+    "col": 9
+   },
+   "value": {
+    "type": "symbol",
+    "value": "a",
+    "text": "a",
+    "offset": 64,
+    "lineBreaks": 0,
+    "line": 5,
+    "col": 12
+   }
+  },
+  {
+   "type": "dowhile_loop",
+   "expr": [
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "b",
+      "text": "b",
+      "offset": 122,
+      "lineBreaks": 0,
+      "line": 7,
+      "col": 52
+     },
+     "operator": {
+      "type": "operator",
+      "value": "==",
+      "text": "=",
+      "offset": 123,
+      "lineBreaks": 0,
+      "line": 7,
+      "col": 53
+     },
+     "right": [
+      {
+       "type": "number",
+       "value": "0",
+       "text": "0",
+       "offset": 124,
+       "lineBreaks": 0,
+       "line": 7,
+       "col": 54
+      }
+     ]
+    }
+   ],
+   "statements": [
+    {
+     "type": "cond",
+     "expr": [
+      {
+       "type": "operation",
+       "left": {
+        "type": "symbol",
+        "value": "b",
+        "text": "b",
+        "offset": 83,
+        "lineBreaks": 0,
+        "line": 7,
+        "col": 13
+       },
+       "operator": {
+        "type": "operator",
+        "value": "%",
+        "text": "mod",
+        "offset": 85,
+        "lineBreaks": 0,
+        "line": 7,
+        "col": 15
+       },
+       "right": [
+        {
+         "type": "number",
+         "value": "2",
+         "text": "2",
+         "offset": 89,
+         "lineBreaks": 0,
+         "line": 7,
+         "col": 19
+        }
+       ]
+      }
+     ],
+     "statements": [
+      {
+       "type": "assignment",
+       "symbol": {
+        "type": "symbol",
+        "value": "p",
+        "text": "p",
+        "offset": 96,
+        "lineBreaks": 0,
+        "line": 7,
+        "col": 26
+       },
+       "value": [
+        {
+         "type": "operation",
+         "left": {
+          "type": "symbol",
+          "value": "p",
+          "text": "p",
+          "offset": 99,
+          "lineBreaks": 0,
+          "line": 7,
+          "col": 29
+         },
+         "operator": {
+          "type": "operator",
+          "value": "^",
+          "text": "xor",
+          "offset": 101,
+          "lineBreaks": 0,
+          "line": 7,
+          "col": 31
+         },
+         "right": [
+          {
+           "type": "number",
+           "value": "1",
+           "text": "1",
+           "offset": 105,
+           "lineBreaks": 0,
+           "line": 7,
+           "col": 35
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "assignment",
+     "symbol": {
+      "type": "symbol",
+      "value": "b",
+      "text": "b",
+      "offset": 108,
+      "lineBreaks": 0,
+      "line": 7,
+      "col": 38
+     },
+     "value": [
+      {
+       "type": "operation",
+       "left": {
+        "type": "symbol",
+        "value": "b",
+        "text": "b",
+        "offset": 111,
+        "lineBreaks": 0,
+        "line": 7,
+        "col": 41
+       },
+       "operator": {
+        "type": "operator",
+        "value": "/",
+        "text": "/",
+        "offset": 112,
+        "lineBreaks": 0,
+        "line": 7,
+        "col": 42
+       },
+       "right": [
+        {
+         "type": "number",
+         "value": "2",
+         "text": "2",
+         "offset": 113,
+         "lineBreaks": 0,
+         "line": 7,
+         "col": 43
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 129,
+     "lineBreaks": 0,
+     "line": 8,
+     "col": 3
+    }
+   ]
+  },
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "write",
+     "text": "write",
+     "offset": 138,
+     "lineBreaks": 0,
+     "line": 8,
+     "col": 12
+    }
+   ],
+   "arg": [
+    {
+     "type": "string",
+     "value": "'  '",
+     "text": "'  '",
+     "offset": 144,
+     "lineBreaks": 0,
+     "line": 8,
+     "col": 18
+    }
+   ],
+   "specifier": null
+  },
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "write",
+     "text": "write",
+     "offset": 151,
+     "lineBreaks": 0,
+     "line": 8,
+     "col": 25
+    }
+   ],
+   "arg": [
+    {
+     "type": "symbol",
+     "value": "a",
+     "text": "a",
+     "offset": 157,
+     "lineBreaks": 0,
+     "line": 8,
+     "col": 31
+    }
+   ],
+   "specifier": null
+  },
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "write",
+     "text": "write",
+     "offset": 161,
+     "lineBreaks": 0,
+     "line": 8,
+     "col": 35
+    }
+   ],
+   "arg": [
+    {
+     "type": "string",
+     "value": "' '",
+     "text": "' '",
+     "offset": 167,
+     "lineBreaks": 0,
+     "line": 8,
+     "col": 41
+    }
+   ],
+   "specifier": null
+  },
+  {
+   "type": "fn_call",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "write",
+     "text": "write",
+     "offset": 173,
+     "lineBreaks": 0,
+     "line": 8,
+     "col": 47
+    }
+   ],
+   "arg": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "bin",
+       "text": "bin",
+       "offset": 179,
+       "lineBreaks": 0,
+       "line": 8,
+       "col": 53
+      }
+     ],
+     "arg": [
+      {
+       "type": "symbol",
+       "value": "a",
+       "text": "a",
+       "offset": 183,
+       "lineBreaks": 0,
+       "line": 8,
+       "col": 57
+      }
+     ],
+     "specifier": null
+    }
+   ],
+   "specifier": null
+  },
+  {
+   "type": "cond",
+   "expr": {
+    "type": "symbol",
+    "value": "p",
+    "text": "p",
+    "offset": 194,
+    "lineBreaks": 0,
+    "line": 9,
+    "col": 6
+   },
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 201,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 13
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'  licha parita'",
+       "text": "'  licha parita'",
+       "offset": 209,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 21
+      }
+     ],
+     "specifier": null
+    }
+   ],
+   "else_statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "writeln",
+       "text": "writeln",
+       "offset": 232,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 44
+      }
+     ],
+     "arg": [
+      {
+       "type": "string",
+       "value": "'  suda parita'",
+       "text": "'  suda parita'",
+       "offset": 240,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 52
+      }
+     ],
+     "specifier": null
+    }
+   ]
+  },
+  {
+   "type": "fn_call_no_args",
+   "fnName": [
+    {
+     "type": "symbol",
+     "value": "writeln",
+     "text": "writeln",
+     "offset": 263,
+     "lineBreaks": 0,
+     "line": 11,
+     "col": 3
+    }
+   ]
+  }
+ ]
+}

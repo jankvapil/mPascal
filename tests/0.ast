@@ -7,7 +7,7 @@
     "type": "symbol",
     "value": "x",
     "text": "x",
-    "offset": 10,
+    "offset": 9,
     "lineBreaks": 0,
     "line": 2,
     "col": 3
@@ -19,7 +19,7 @@
       "type": "number",
       "value": "4",
       "text": "4",
-      "offset": 13,
+      "offset": 12,
       "lineBreaks": 0,
       "line": 2,
       "col": 6
@@ -28,7 +28,7 @@
       "type": "operator",
       "value": "/",
       "text": "/",
-      "offset": 15,
+      "offset": 14,
       "lineBreaks": 0,
       "line": 2,
       "col": 8
@@ -38,7 +38,7 @@
        "type": "number",
        "value": "2",
        "text": "2",
-       "offset": 17,
+       "offset": 16,
        "lineBreaks": 0,
        "line": 2,
        "col": 10
@@ -53,7 +53,7 @@
     "type": "symbol",
     "value": "y",
     "text": "y",
-    "offset": 23,
+    "offset": 21,
     "lineBreaks": 0,
     "line": 3,
     "col": 3
@@ -65,7 +65,7 @@
       "type": "symbol",
       "value": "x",
       "text": "x",
-      "offset": 26,
+      "offset": 24,
       "lineBreaks": 0,
       "line": 3,
       "col": 6
@@ -74,7 +74,7 @@
       "type": "operator",
       "value": "%",
       "text": "mod",
-      "offset": 28,
+      "offset": 26,
       "lineBreaks": 0,
       "line": 3,
       "col": 8
@@ -84,7 +84,7 @@
        "type": "number",
        "value": "2",
        "text": "2",
-       "offset": 32,
+       "offset": 30,
        "lineBreaks": 0,
        "line": 3,
        "col": 12
@@ -99,7 +99,7 @@
     "type": "symbol",
     "value": "z",
     "text": "z",
-    "offset": 38,
+    "offset": 35,
     "lineBreaks": 0,
     "line": 4,
     "col": 3
@@ -111,7 +111,7 @@
       "type": "symbol",
       "value": "x",
       "text": "x",
-      "offset": 41,
+      "offset": 38,
       "lineBreaks": 0,
       "line": 4,
       "col": 6
@@ -120,7 +120,7 @@
       "type": "operator",
       "value": "+",
       "text": "+",
-      "offset": 42,
+      "offset": 39,
       "lineBreaks": 0,
       "line": 4,
       "col": 7
@@ -129,7 +129,7 @@
       "type": "symbol",
       "value": "y",
       "text": "y",
-      "offset": 43,
+      "offset": 40,
       "lineBreaks": 0,
       "line": 4,
       "col": 8
@@ -144,7 +144,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 49,
+     "offset": 45,
      "lineBreaks": 0,
      "line": 5,
      "col": 3
@@ -155,7 +155,7 @@
      "type": "symbol",
      "value": "z",
      "text": "z",
-     "offset": 57,
+     "offset": 53,
      "lineBreaks": 0,
      "line": 5,
      "col": 11
@@ -166,7 +166,7 @@
      "type": "colon",
      "value": ":",
      "text": ":",
-     "offset": 58,
+     "offset": 54,
      "lineBreaks": 0,
      "line": 5,
      "col": 12
@@ -175,7 +175,7 @@
      "type": "number",
      "value": "6",
      "text": "6",
-     "offset": 59,
+     "offset": 55,
      "lineBreaks": 0,
      "line": 5,
      "col": 13
@@ -188,7 +188,7 @@
     "type": "symbol",
     "value": "c",
     "text": "c",
-    "offset": 66,
+    "offset": 61,
     "lineBreaks": 0,
     "line": 6,
     "col": 3
@@ -198,7 +198,7 @@
      "type": "number",
      "value": "42",
      "text": "42",
-     "offset": 69,
+     "offset": 64,
      "lineBreaks": 0,
      "line": 6,
      "col": 6
@@ -212,7 +212,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 76,
+     "offset": 70,
      "lineBreaks": 0,
      "line": 7,
      "col": 3
@@ -223,7 +223,7 @@
      "type": "symbol",
      "value": "c",
      "text": "c",
-     "offset": 84,
+     "offset": 78,
      "lineBreaks": 0,
      "line": 7,
      "col": 11
@@ -237,7 +237,7 @@
     "type": "symbol",
     "value": "x",
     "text": "x",
-    "offset": 91,
+    "offset": 84,
     "lineBreaks": 0,
     "line": 8,
     "col": 3
@@ -249,7 +249,7 @@
       "type": "symbol",
       "value": "y",
       "text": "y",
-      "offset": 94,
+      "offset": 87,
       "lineBreaks": 0,
       "line": 8,
       "col": 6
@@ -258,7 +258,7 @@
       "type": "operator",
       "value": "+",
       "text": "+",
-      "offset": 95,
+      "offset": 88,
       "lineBreaks": 0,
       "line": 8,
       "col": 7
@@ -270,7 +270,7 @@
         "type": "symbol",
         "value": "z",
         "text": "z",
-        "offset": 96,
+        "offset": 89,
         "lineBreaks": 0,
         "line": 8,
         "col": 8
@@ -279,7 +279,7 @@
         "type": "operator",
         "value": "+",
         "text": "+",
-        "offset": 97,
+        "offset": 90,
         "lineBreaks": 0,
         "line": 8,
         "col": 9
@@ -288,7 +288,7 @@
         "type": "symbol",
         "value": "c",
         "text": "c",
-        "offset": 99,
+        "offset": 92,
         "lineBreaks": 0,
         "line": 8,
         "col": 11
@@ -305,7 +305,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 105,
+     "offset": 97,
      "lineBreaks": 0,
      "line": 9,
      "col": 3
@@ -316,7 +316,7 @@
      "type": "symbol",
      "value": "x",
      "text": "x",
-     "offset": 113,
+     "offset": 105,
      "lineBreaks": 0,
      "line": 9,
      "col": 11
@@ -330,7 +330,7 @@
     "type": "symbol",
     "value": "znak",
     "text": "znak",
-    "offset": 120,
+    "offset": 111,
     "lineBreaks": 0,
     "line": 10,
     "col": 3
@@ -342,7 +342,7 @@
       "type": "specFn",
       "value": "ord",
       "text": "ord",
-      "offset": 126,
+      "offset": 117,
       "lineBreaks": 0,
       "line": 10,
       "col": 9
@@ -353,7 +353,7 @@
       "type": "string",
       "value": "' '",
       "text": "' '",
-      "offset": 130,
+      "offset": 121,
       "lineBreaks": 0,
       "line": 10,
       "col": 13
@@ -369,7 +369,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 139,
+     "offset": 129,
      "lineBreaks": 0,
      "line": 11,
      "col": 3
@@ -380,7 +380,7 @@
      "type": "symbol",
      "value": "znak",
      "text": "znak",
-     "offset": 147,
+     "offset": 137,
      "lineBreaks": 0,
      "line": 11,
      "col": 11

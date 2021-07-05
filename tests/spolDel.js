@@ -23,6 +23,13 @@ function read() {
   throw Error("Function read is not implemented.");
 }
 
+// function read() {
+//   const ps = require('prompt-sync')
+//   const prompt = ps()
+//   let input = prompt("zadej..")
+//   return input
+// }
+
 function ord(str) {
   return str.charCodeAt(0);
 }
@@ -41,8 +48,8 @@ function chr(num) {
 
 write('Zadej 2 prirozena cisla: ')
 
-var a = 4;
-var b = 2;
+var a = 16;
+var b = 4;
 if(a<1||b<1) {
 writeln('  Chybna cisla')} else {
 do {

@@ -8,7 +8,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 9,
+     "offset": 8,
      "lineBreaks": 0,
      "line": 2,
      "col": 3
@@ -22,7 +22,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 18,
+     "offset": 17,
      "lineBreaks": 0,
      "line": 2,
      "col": 12
@@ -33,7 +33,7 @@
      "type": "string",
      "value": "'    Prvocisla do 1000'",
      "text": "'    Prvocisla do 1000'",
-     "offset": 26,
+     "offset": 25,
      "lineBreaks": 0,
      "line": 2,
      "col": 20
@@ -48,7 +48,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 59,
+     "offset": 56,
      "lineBreaks": 0,
      "line": 4,
      "col": 3
@@ -62,7 +62,7 @@
      "type": "symbol",
      "value": "write",
      "text": "write",
-     "offset": 68,
+     "offset": 65,
      "lineBreaks": 0,
      "line": 4,
      "col": 12
@@ -74,7 +74,7 @@
       "type": "number",
       "value": "2",
       "text": "2",
-      "offset": 74,
+      "offset": 71,
       "lineBreaks": 0,
       "line": 4,
       "col": 18
@@ -86,7 +86,7 @@
      "type": "colon",
      "value": ":",
      "text": ":",
-     "offset": 75,
+     "offset": 72,
      "lineBreaks": 0,
      "line": 4,
      "col": 19
@@ -95,7 +95,7 @@
      "type": "number",
      "value": "5",
      "text": "5",
-     "offset": 76,
+     "offset": 73,
      "lineBreaks": 0,
      "line": 4,
      "col": 20
@@ -108,7 +108,7 @@
     "type": "symbol",
     "value": "n",
     "text": "n",
-    "offset": 80,
+    "offset": 77,
     "lineBreaks": 0,
     "line": 4,
     "col": 24
@@ -118,7 +118,7 @@
      "type": "number",
      "value": "1",
      "text": "1",
-     "offset": 83,
+     "offset": 80,
      "lineBreaks": 0,
      "line": 4,
      "col": 27
@@ -131,7 +131,7 @@
     "type": "symbol",
     "value": "cislo",
     "text": "cislo",
-    "offset": 91,
+    "offset": 86,
     "lineBreaks": 0,
     "line": 6,
     "col": 3
@@ -141,7 +141,7 @@
      "type": "number",
      "value": "3",
      "text": "3",
-     "offset": 98,
+     "offset": 93,
      "lineBreaks": 0,
      "line": 6,
      "col": 10
@@ -157,7 +157,7 @@
       "type": "symbol",
       "value": "cislo",
       "text": "cislo",
-      "offset": 460,
+      "offset": 447,
       "lineBreaks": 0,
       "line": 14,
       "col": 9
@@ -166,7 +166,7 @@
       "type": "operator",
       "value": ">",
       "text": ">",
-      "offset": 465,
+      "offset": 452,
       "lineBreaks": 0,
       "line": 14,
       "col": 14
@@ -176,7 +176,7 @@
        "type": "number",
        "value": "1000",
        "text": "1000",
-       "offset": 466,
+       "offset": 453,
        "lineBreaks": 0,
        "line": 14,
        "col": 15
@@ -191,7 +191,7 @@
       "type": "symbol",
       "value": "prvocislo",
       "text": "prvocislo",
-      "offset": 111,
+      "offset": 105,
       "lineBreaks": 0,
       "line": 7,
       "col": 10
@@ -200,7 +200,7 @@
       "type": "bool",
       "value": "true",
       "text": "true",
-      "offset": 122,
+      "offset": 116,
       "lineBreaks": 0,
       "line": 7,
       "col": 21
@@ -212,7 +212,7 @@
       "type": "symbol",
       "value": "delitel",
       "text": "delitel",
-      "offset": 138,
+      "offset": 131,
       "lineBreaks": 0,
       "line": 8,
       "col": 10
@@ -222,7 +222,7 @@
        "type": "number",
        "value": "3",
        "text": "3",
-       "offset": 147,
+       "offset": 140,
        "lineBreaks": 0,
        "line": 8,
        "col": 19
@@ -238,7 +238,7 @@
         "type": "symbol",
         "value": "prvocislo",
         "text": "prvocislo",
-        "offset": 166,
+        "offset": 158,
         "lineBreaks": 0,
         "line": 9,
         "col": 16
@@ -247,7 +247,7 @@
         "type": "operator",
         "value": "&&",
         "text": "and",
-        "offset": 176,
+        "offset": 168,
         "lineBreaks": 0,
         "line": 9,
         "col": 26
@@ -259,7 +259,7 @@
           "type": "symbol",
           "value": "delitel",
           "text": "delitel",
-          "offset": 180,
+          "offset": 172,
           "lineBreaks": 0,
           "line": 9,
           "col": 30
@@ -268,7 +268,7 @@
           "type": "operator",
           "value": "*",
           "text": "*",
-          "offset": 187,
+          "offset": 179,
           "lineBreaks": 0,
           "line": 9,
           "col": 37
@@ -280,7 +280,7 @@
             "type": "symbol",
             "value": "delitel",
             "text": "delitel",
-            "offset": 188,
+            "offset": 180,
             "lineBreaks": 0,
             "line": 9,
             "col": 38
@@ -289,7 +289,7 @@
             "type": "operator",
             "value": "<=",
             "text": "<=",
-            "offset": 195,
+            "offset": 187,
             "lineBreaks": 0,
             "line": 9,
             "col": 45
@@ -298,7 +298,7 @@
             "type": "symbol",
             "value": "cislo",
             "text": "cislo",
-            "offset": 197,
+            "offset": 189,
             "lineBreaks": 0,
             "line": 9,
             "col": 47
@@ -322,7 +322,7 @@
             "type": "symbol",
             "value": "cislo",
             "text": "cislo",
-            "offset": 227,
+            "offset": 218,
             "lineBreaks": 0,
             "line": 10,
             "col": 21
@@ -331,7 +331,7 @@
             "type": "operator",
             "value": "%",
             "text": "mod",
-            "offset": 233,
+            "offset": 224,
             "lineBreaks": 0,
             "line": 10,
             "col": 27
@@ -343,7 +343,7 @@
               "type": "symbol",
               "value": "delitel",
               "text": "delitel",
-              "offset": 237,
+              "offset": 228,
               "lineBreaks": 0,
               "line": 10,
               "col": 31
@@ -352,7 +352,7 @@
               "type": "operator",
               "value": "==",
               "text": "=",
-              "offset": 245,
+              "offset": 236,
               "lineBreaks": 0,
               "line": 10,
               "col": 39
@@ -362,7 +362,7 @@
                "type": "number",
                "value": "0",
                "text": "0",
-               "offset": 247,
+               "offset": 238,
                "lineBreaks": 0,
                "line": 10,
                "col": 41
@@ -379,7 +379,7 @@
             "type": "symbol",
             "value": "prvocislo",
             "text": "prvocislo",
-            "offset": 254,
+            "offset": 245,
             "lineBreaks": 0,
             "line": 10,
             "col": 48
@@ -388,7 +388,7 @@
             "type": "bool",
             "value": "false",
             "text": "false",
-            "offset": 265,
+            "offset": 256,
             "lineBreaks": 0,
             "line": 10,
             "col": 59
@@ -402,7 +402,7 @@
             "type": "symbol",
             "value": "delitel",
             "text": "delitel",
-            "offset": 276,
+            "offset": 267,
             "lineBreaks": 0,
             "line": 10,
             "col": 70
@@ -414,7 +414,7 @@
               "type": "symbol",
               "value": "delitel",
               "text": "delitel",
-              "offset": 285,
+              "offset": 276,
               "lineBreaks": 0,
               "line": 10,
               "col": 79
@@ -423,7 +423,7 @@
               "type": "operator",
               "value": "+",
               "text": "+",
-              "offset": 292,
+              "offset": 283,
               "lineBreaks": 0,
               "line": 10,
               "col": 86
@@ -433,7 +433,7 @@
                "type": "number",
                "value": "2",
                "text": "2",
-               "offset": 293,
+               "offset": 284,
                "lineBreaks": 0,
                "line": 10,
                "col": 87
@@ -454,7 +454,7 @@
       "type": "symbol",
       "value": "prvocislo",
       "text": "prvocislo",
-      "offset": 313,
+      "offset": 303,
       "lineBreaks": 0,
       "line": 11,
       "col": 13
@@ -472,7 +472,7 @@
             "type": "symbol",
             "value": "n",
             "text": "n",
-            "offset": 337,
+            "offset": 327,
             "lineBreaks": 0,
             "line": 11,
             "col": 37
@@ -481,7 +481,7 @@
             "type": "operator",
             "value": "%",
             "text": "mod",
-            "offset": 339,
+            "offset": 329,
             "lineBreaks": 0,
             "line": 11,
             "col": 39
@@ -493,7 +493,7 @@
               "type": "number",
               "value": "10",
               "text": "10",
-              "offset": 343,
+              "offset": 333,
               "lineBreaks": 0,
               "line": 11,
               "col": 43
@@ -502,7 +502,7 @@
               "type": "operator",
               "value": "==",
               "text": "=",
-              "offset": 346,
+              "offset": 336,
               "lineBreaks": 0,
               "line": 11,
               "col": 46
@@ -512,7 +512,7 @@
                "type": "number",
                "value": "0",
                "text": "0",
-               "offset": 347,
+               "offset": 337,
                "lineBreaks": 0,
                "line": 11,
                "col": 47
@@ -530,7 +530,7 @@
              "type": "symbol",
              "value": "writeln",
              "text": "writeln",
-             "offset": 354,
+             "offset": 344,
              "lineBreaks": 0,
              "line": 11,
              "col": 54
@@ -546,7 +546,7 @@
            "type": "symbol",
            "value": "write",
            "text": "write",
-           "offset": 397,
+           "offset": 386,
            "lineBreaks": 0,
            "line": 12,
            "col": 34
@@ -557,7 +557,7 @@
            "type": "symbol",
            "value": "cislo",
            "text": "cislo",
-           "offset": 403,
+           "offset": 392,
            "lineBreaks": 0,
            "line": 12,
            "col": 40
@@ -568,7 +568,7 @@
            "type": "colon",
            "value": ":",
            "text": ":",
-           "offset": 408,
+           "offset": 397,
            "lineBreaks": 0,
            "line": 12,
            "col": 45
@@ -577,7 +577,7 @@
            "type": "number",
            "value": "5",
            "text": "5",
-           "offset": 409,
+           "offset": 398,
            "lineBreaks": 0,
            "line": 12,
            "col": 46
@@ -590,7 +590,7 @@
           "type": "symbol",
           "value": "n",
           "text": "n",
-          "offset": 413,
+          "offset": 402,
           "lineBreaks": 0,
           "line": 12,
           "col": 50
@@ -602,7 +602,7 @@
             "type": "symbol",
             "value": "n",
             "text": "n",
-            "offset": 416,
+            "offset": 405,
             "lineBreaks": 0,
             "line": 12,
             "col": 53
@@ -611,7 +611,7 @@
             "type": "operator",
             "value": "+",
             "text": "+",
-            "offset": 417,
+            "offset": 406,
             "lineBreaks": 0,
             "line": 12,
             "col": 54
@@ -621,7 +621,7 @@
              "type": "number",
              "value": "1",
              "text": "1",
-             "offset": 418,
+             "offset": 407,
              "lineBreaks": 0,
              "line": 12,
              "col": 55
@@ -640,7 +640,7 @@
       "type": "symbol",
       "value": "cislo",
       "text": "cislo",
-      "offset": 435,
+      "offset": 423,
       "lineBreaks": 0,
       "line": 13,
       "col": 10
@@ -652,7 +652,7 @@
         "type": "symbol",
         "value": "cislo",
         "text": "cislo",
-        "offset": 442,
+        "offset": 430,
         "lineBreaks": 0,
         "line": 13,
         "col": 17
@@ -661,7 +661,7 @@
         "type": "operator",
         "value": "+",
         "text": "+",
-        "offset": 447,
+        "offset": 435,
         "lineBreaks": 0,
         "line": 13,
         "col": 22
@@ -671,7 +671,7 @@
          "type": "number",
          "value": "2",
          "text": "2",
-         "offset": 448,
+         "offset": 436,
          "lineBreaks": 0,
          "line": 13,
          "col": 23
@@ -689,7 +689,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 477,
+     "offset": 462,
      "lineBreaks": 0,
      "line": 16,
      "col": 3
@@ -703,7 +703,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 486,
+     "offset": 471,
      "lineBreaks": 0,
      "line": 16,
      "col": 12

@@ -16,7 +16,7 @@
        "type": "symbol",
        "value": "writeln",
        "text": "writeln",
-       "offset": 30,
+       "offset": 28,
        "lineBreaks": 0,
        "line": 3,
        "col": 20
@@ -27,7 +27,7 @@
        "type": "string",
        "value": "'true'",
        "text": "'true'",
-       "offset": 38,
+       "offset": 36,
        "lineBreaks": 0,
        "line": 3,
        "col": 28

@@ -8,7 +8,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 9,
+     "offset": 8,
      "lineBreaks": 0,
      "line": 2,
      "col": 3
@@ -23,7 +23,7 @@
      "type": "symbol",
      "value": "i",
      "text": "i",
-     "offset": 27,
+     "offset": 24,
      "lineBreaks": 0,
      "line": 4,
      "col": 7
@@ -33,7 +33,7 @@
       "type": "number",
       "value": "0",
       "text": "0",
-      "offset": 30,
+      "offset": 27,
       "lineBreaks": 0,
       "line": 4,
       "col": 10
@@ -45,7 +45,7 @@
      "type": "number",
      "value": "15",
      "text": "15",
-     "offset": 35,
+     "offset": 32,
      "lineBreaks": 0,
      "line": 4,
      "col": 15
@@ -61,7 +61,7 @@
         "type": "symbol",
         "value": "b",
         "text": "b",
-        "offset": 47,
+        "offset": 44,
         "lineBreaks": 0,
         "line": 4,
         "col": 27
@@ -70,7 +70,7 @@
         "type": "symbol",
         "value": "i",
         "text": "i",
-        "offset": 50,
+        "offset": 47,
         "lineBreaks": 0,
         "line": 4,
         "col": 30
@@ -82,7 +82,7 @@
         "type": "symbol",
         "value": "a",
         "text": "a",
-        "offset": 53,
+        "offset": 50,
         "lineBreaks": 0,
         "line": 4,
         "col": 33
@@ -94,7 +94,7 @@
           "type": "symbol",
           "value": "i",
           "text": "i",
-          "offset": 56,
+          "offset": 53,
           "lineBreaks": 0,
           "line": 4,
           "col": 36
@@ -103,7 +103,7 @@
           "type": "operator",
           "value": "/",
           "text": "/",
-          "offset": 57,
+          "offset": 54,
           "lineBreaks": 0,
           "line": 4,
           "col": 37
@@ -113,7 +113,7 @@
            "type": "number",
            "value": "2",
            "text": "2",
-           "offset": 58,
+           "offset": 55,
            "lineBreaks": 0,
            "line": 4,
            "col": 38
@@ -128,7 +128,7 @@
         "type": "symbol",
         "value": "a",
         "text": "a",
-        "offset": 94,
+        "offset": 90,
         "lineBreaks": 0,
         "line": 5,
         "col": 33
@@ -143,7 +143,7 @@
             "type": "symbol",
             "value": "c",
             "text": "c",
-            "offset": 105,
+            "offset": 101,
             "lineBreaks": 0,
             "line": 5,
             "col": 44
@@ -152,7 +152,7 @@
             "type": "symbol",
             "value": "b",
             "text": "b",
-            "offset": 108,
+            "offset": 104,
             "lineBreaks": 0,
             "line": 5,
             "col": 47
@@ -164,7 +164,7 @@
             "type": "symbol",
             "value": "d",
             "text": "d",
-            "offset": 111,
+            "offset": 107,
             "lineBreaks": 0,
             "line": 5,
             "col": 50
@@ -173,7 +173,7 @@
             "type": "symbol",
             "value": "a",
             "text": "a",
-            "offset": 114,
+            "offset": 110,
             "lineBreaks": 0,
             "line": 5,
             "col": 53
@@ -185,7 +185,7 @@
             "type": "symbol",
             "value": "e",
             "text": "e",
-            "offset": 117,
+            "offset": 113,
             "lineBreaks": 0,
             "line": 5,
             "col": 56
@@ -195,7 +195,7 @@
              "type": "number",
              "value": "1",
              "text": "1",
-             "offset": 120,
+             "offset": 116,
              "lineBreaks": 0,
              "line": 5,
              "col": 59
@@ -208,7 +208,7 @@
             "type": "symbol",
             "value": "b",
             "text": "b",
-            "offset": 123,
+            "offset": 119,
             "lineBreaks": 0,
             "line": 5,
             "col": 62
@@ -218,7 +218,7 @@
              "type": "number",
              "value": "0",
              "text": "0",
-             "offset": 126,
+             "offset": 122,
              "lineBreaks": 0,
              "line": 5,
              "col": 65
@@ -231,7 +231,7 @@
             "type": "symbol",
             "value": "c",
             "text": "c",
-            "offset": 165,
+            "offset": 160,
             "lineBreaks": 0,
             "line": 6,
             "col": 35
@@ -249,7 +249,7 @@
                   "type": "symbol",
                   "value": "c",
                   "text": "c",
-                  "offset": 179,
+                  "offset": 174,
                   "lineBreaks": 0,
                   "line": 6,
                   "col": 49
@@ -258,7 +258,7 @@
                   "type": "operator",
                   "value": "%",
                   "text": "mod",
-                  "offset": 181,
+                  "offset": 176,
                   "lineBreaks": 0,
                   "line": 6,
                   "col": 51
@@ -270,7 +270,7 @@
                     "type": "number",
                     "value": "2",
                     "text": "2",
-                    "offset": 185,
+                    "offset": 180,
                     "lineBreaks": 0,
                     "line": 6,
                     "col": 55
@@ -279,7 +279,7 @@
                     "type": "operator",
                     "value": "^",
                     "text": "xor",
-                    "offset": 187,
+                    "offset": 182,
                     "lineBreaks": 0,
                     "line": 6,
                     "col": 57
@@ -291,7 +291,7 @@
                       "type": "symbol",
                       "value": "d",
                       "text": "d",
-                      "offset": 191,
+                      "offset": 186,
                       "lineBreaks": 0,
                       "line": 6,
                       "col": 61
@@ -300,7 +300,7 @@
                       "type": "operator",
                       "value": "%",
                       "text": "mod",
-                      "offset": 193,
+                      "offset": 188,
                       "lineBreaks": 0,
                       "line": 6,
                       "col": 63
@@ -310,7 +310,7 @@
                        "type": "number",
                        "value": "2",
                        "text": "2",
-                       "offset": 197,
+                       "offset": 192,
                        "lineBreaks": 0,
                        "line": 6,
                        "col": 67
@@ -329,7 +329,7 @@
                   "type": "symbol",
                   "value": "b",
                   "text": "b",
-                  "offset": 204,
+                  "offset": 199,
                   "lineBreaks": 0,
                   "line": 6,
                   "col": 74
@@ -341,7 +341,7 @@
                     "type": "symbol",
                     "value": "b",
                     "text": "b",
-                    "offset": 207,
+                    "offset": 202,
                     "lineBreaks": 0,
                     "line": 6,
                     "col": 77
@@ -350,7 +350,7 @@
                     "type": "operator",
                     "value": "+",
                     "text": "+",
-                    "offset": 208,
+                    "offset": 203,
                     "lineBreaks": 0,
                     "line": 6,
                     "col": 78
@@ -359,7 +359,7 @@
                     "type": "symbol",
                     "value": "e",
                     "text": "e",
-                    "offset": 209,
+                    "offset": 204,
                     "lineBreaks": 0,
                     "line": 6,
                     "col": 79
@@ -375,7 +375,7 @@
                 "type": "symbol",
                 "value": "c",
                 "text": "c",
-                "offset": 212,
+                "offset": 207,
                 "lineBreaks": 0,
                 "line": 6,
                 "col": 82
@@ -387,7 +387,7 @@
                   "type": "symbol",
                   "value": "c",
                   "text": "c",
-                  "offset": 215,
+                  "offset": 210,
                   "lineBreaks": 0,
                   "line": 6,
                   "col": 85
@@ -396,7 +396,7 @@
                   "type": "operator",
                   "value": "/",
                   "text": "/",
-                  "offset": 216,
+                  "offset": 211,
                   "lineBreaks": 0,
                   "line": 6,
                   "col": 86
@@ -406,7 +406,7 @@
                    "type": "number",
                    "value": "2",
                    "text": "2",
-                   "offset": 217,
+                   "offset": 212,
                    "lineBreaks": 0,
                    "line": 6,
                    "col": 87
@@ -421,7 +421,7 @@
                 "type": "symbol",
                 "value": "d",
                 "text": "d",
-                "offset": 220,
+                "offset": 215,
                 "lineBreaks": 0,
                 "line": 6,
                 "col": 90
@@ -433,7 +433,7 @@
                   "type": "symbol",
                   "value": "d",
                   "text": "d",
-                  "offset": 223,
+                  "offset": 218,
                   "lineBreaks": 0,
                   "line": 6,
                   "col": 93
@@ -442,7 +442,7 @@
                   "type": "operator",
                   "value": "/",
                   "text": "/",
-                  "offset": 224,
+                  "offset": 219,
                   "lineBreaks": 0,
                   "line": 6,
                   "col": 94
@@ -452,7 +452,7 @@
                    "type": "number",
                    "value": "2",
                    "text": "2",
-                   "offset": 225,
+                   "offset": 220,
                    "lineBreaks": 0,
                    "line": 6,
                    "col": 95
@@ -467,7 +467,7 @@
                 "type": "symbol",
                 "value": "e",
                 "text": "e",
-                "offset": 228,
+                "offset": 223,
                 "lineBreaks": 0,
                 "line": 6,
                 "col": 98
@@ -479,7 +479,7 @@
                   "type": "number",
                   "value": "2",
                   "text": "2",
-                  "offset": 231,
+                  "offset": 226,
                   "lineBreaks": 0,
                   "line": 6,
                   "col": 101
@@ -488,7 +488,7 @@
                   "type": "operator",
                   "value": "*",
                   "text": "*",
-                  "offset": 232,
+                  "offset": 227,
                   "lineBreaks": 0,
                   "line": 6,
                   "col": 102
@@ -497,7 +497,7 @@
                   "type": "symbol",
                   "value": "e",
                   "text": "e",
-                  "offset": 233,
+                  "offset": 228,
                   "lineBreaks": 0,
                   "line": 6,
                   "col": 103
@@ -515,7 +515,7 @@
             "type": "symbol",
             "value": "a",
             "text": "a",
-            "offset": 240,
+            "offset": 235,
             "lineBreaks": 0,
             "line": 6,
             "col": 110
@@ -527,7 +527,7 @@
               "type": "symbol",
               "value": "a",
               "text": "a",
-              "offset": 243,
+              "offset": 238,
               "lineBreaks": 0,
               "line": 6,
               "col": 113
@@ -536,7 +536,7 @@
               "type": "operator",
               "value": "/",
               "text": "/",
-              "offset": 244,
+              "offset": 239,
               "lineBreaks": 0,
               "line": 6,
               "col": 114
@@ -546,7 +546,7 @@
                "type": "number",
                "value": "2",
                "text": "2",
-               "offset": 245,
+               "offset": 240,
                "lineBreaks": 0,
                "line": 6,
                "col": 115
@@ -566,7 +566,7 @@
          "type": "symbol",
          "value": "write",
          "text": "write",
-         "offset": 290,
+         "offset": 283,
          "lineBreaks": 0,
          "line": 8,
          "col": 17
@@ -577,7 +577,7 @@
          "type": "string",
          "value": "'  '",
          "text": "'  '",
-         "offset": 296,
+         "offset": 289,
          "lineBreaks": 0,
          "line": 8,
          "col": 23
@@ -592,7 +592,7 @@
          "type": "symbol",
          "value": "write",
          "text": "write",
-         "offset": 303,
+         "offset": 296,
          "lineBreaks": 0,
          "line": 8,
          "col": 30
@@ -606,7 +606,7 @@
            "type": "symbol",
            "value": "bin",
            "text": "bin",
-           "offset": 309,
+           "offset": 302,
            "lineBreaks": 0,
            "line": 8,
            "col": 36
@@ -617,7 +617,7 @@
            "type": "symbol",
            "value": "i",
            "text": "i",
-           "offset": 313,
+           "offset": 306,
            "lineBreaks": 0,
            "line": 8,
            "col": 40
@@ -631,7 +631,7 @@
          "type": "colon",
          "value": ":",
          "text": ":",
-         "offset": 315,
+         "offset": 308,
          "lineBreaks": 0,
          "line": 8,
          "col": 42
@@ -640,7 +640,7 @@
          "type": "number",
          "value": "5",
          "text": "5",
-         "offset": 316,
+         "offset": 309,
          "lineBreaks": 0,
          "line": 8,
          "col": 43
@@ -654,7 +654,7 @@
          "type": "symbol",
          "value": "write",
          "text": "write",
-         "offset": 320,
+         "offset": 313,
          "lineBreaks": 0,
          "line": 8,
          "col": 47
@@ -665,7 +665,7 @@
          "type": "string",
          "value": "' '",
          "text": "' '",
-         "offset": 326,
+         "offset": 319,
          "lineBreaks": 0,
          "line": 8,
          "col": 53
@@ -680,7 +680,7 @@
          "type": "symbol",
          "value": "write",
          "text": "write",
-         "offset": 332,
+         "offset": 325,
          "lineBreaks": 0,
          "line": 8,
          "col": 59
@@ -694,7 +694,7 @@
            "type": "symbol",
            "value": "bin",
            "text": "bin",
-           "offset": 338,
+           "offset": 331,
            "lineBreaks": 0,
            "line": 8,
            "col": 65
@@ -705,7 +705,7 @@
            "type": "symbol",
            "value": "b",
            "text": "b",
-           "offset": 342,
+           "offset": 335,
            "lineBreaks": 0,
            "line": 8,
            "col": 69
@@ -719,7 +719,7 @@
          "type": "colon",
          "value": ":",
          "text": ":",
-         "offset": 344,
+         "offset": 337,
          "lineBreaks": 0,
          "line": 8,
          "col": 71
@@ -728,7 +728,7 @@
          "type": "number",
          "value": "5",
          "text": "5",
-         "offset": 345,
+         "offset": 338,
          "lineBreaks": 0,
          "line": 8,
          "col": 72
@@ -742,7 +742,7 @@
          "type": "symbol",
          "value": "write",
          "text": "write",
-         "offset": 349,
+         "offset": 342,
          "lineBreaks": 0,
          "line": 8,
          "col": 76
@@ -753,7 +753,7 @@
          "type": "symbol",
          "value": "b",
          "text": "b",
-         "offset": 355,
+         "offset": 348,
          "lineBreaks": 0,
          "line": 8,
          "col": 82
@@ -764,7 +764,7 @@
          "type": "colon",
          "value": ":",
          "text": ":",
-         "offset": 356,
+         "offset": 349,
          "lineBreaks": 0,
          "line": 8,
          "col": 83
@@ -773,7 +773,7 @@
          "type": "number",
          "value": "4",
          "text": "4",
-         "offset": 357,
+         "offset": 350,
          "lineBreaks": 0,
          "line": 8,
          "col": 84
@@ -786,7 +786,7 @@
         "type": "symbol",
         "value": "ii",
         "text": "ii",
-        "offset": 373,
+        "offset": 364,
         "lineBreaks": 0,
         "line": 10,
         "col": 10
@@ -798,7 +798,7 @@
           "type": "number",
           "value": "16",
           "text": "16",
-          "offset": 377,
+          "offset": 368,
           "lineBreaks": 0,
           "line": 10,
           "col": 14
@@ -807,7 +807,7 @@
           "type": "operator",
           "value": "+",
           "text": "+",
-          "offset": 379,
+          "offset": 370,
           "lineBreaks": 0,
           "line": 10,
           "col": 16
@@ -816,7 +816,7 @@
           "type": "symbol",
           "value": "i",
           "text": "i",
-          "offset": 380,
+          "offset": 371,
           "lineBreaks": 0,
           "line": 10,
           "col": 17
@@ -830,7 +830,7 @@
         "type": "symbol",
         "value": "b",
         "text": "b",
-        "offset": 383,
+        "offset": 374,
         "lineBreaks": 0,
         "line": 10,
         "col": 20
@@ -839,7 +839,7 @@
         "type": "symbol",
         "value": "ii",
         "text": "ii",
-        "offset": 386,
+        "offset": 377,
         "lineBreaks": 0,
         "line": 10,
         "col": 23
@@ -851,7 +851,7 @@
         "type": "symbol",
         "value": "a",
         "text": "a",
-        "offset": 390,
+        "offset": 381,
         "lineBreaks": 0,
         "line": 10,
         "col": 27
@@ -863,7 +863,7 @@
           "type": "symbol",
           "value": "ii",
           "text": "ii",
-          "offset": 393,
+          "offset": 384,
           "lineBreaks": 0,
           "line": 10,
           "col": 30
@@ -872,7 +872,7 @@
           "type": "operator",
           "value": "/",
           "text": "/",
-          "offset": 395,
+          "offset": 386,
           "lineBreaks": 0,
           "line": 10,
           "col": 32
@@ -882,7 +882,7 @@
            "type": "number",
            "value": "2",
            "text": "2",
-           "offset": 396,
+           "offset": 387,
            "lineBreaks": 0,
            "line": 10,
            "col": 33
@@ -897,7 +897,7 @@
         "type": "symbol",
         "value": "a",
         "text": "a",
-        "offset": 415,
+        "offset": 405,
         "lineBreaks": 0,
         "line": 11,
         "col": 16
@@ -912,7 +912,7 @@
             "type": "symbol",
             "value": "c",
             "text": "c",
-            "offset": 426,
+            "offset": 416,
             "lineBreaks": 0,
             "line": 11,
             "col": 27
@@ -921,7 +921,7 @@
             "type": "symbol",
             "value": "b",
             "text": "b",
-            "offset": 429,
+            "offset": 419,
             "lineBreaks": 0,
             "line": 11,
             "col": 30
@@ -933,7 +933,7 @@
             "type": "symbol",
             "value": "d",
             "text": "d",
-            "offset": 432,
+            "offset": 422,
             "lineBreaks": 0,
             "line": 11,
             "col": 33
@@ -942,7 +942,7 @@
             "type": "symbol",
             "value": "a",
             "text": "a",
-            "offset": 435,
+            "offset": 425,
             "lineBreaks": 0,
             "line": 11,
             "col": 36
@@ -954,7 +954,7 @@
             "type": "symbol",
             "value": "e",
             "text": "e",
-            "offset": 438,
+            "offset": 428,
             "lineBreaks": 0,
             "line": 11,
             "col": 39
@@ -964,7 +964,7 @@
              "type": "number",
              "value": "1",
              "text": "1",
-             "offset": 441,
+             "offset": 431,
              "lineBreaks": 0,
              "line": 11,
              "col": 42
@@ -977,7 +977,7 @@
             "type": "symbol",
             "value": "b",
             "text": "b",
-            "offset": 444,
+            "offset": 434,
             "lineBreaks": 0,
             "line": 11,
             "col": 45
@@ -987,7 +987,7 @@
              "type": "number",
              "value": "0",
              "text": "0",
-             "offset": 447,
+             "offset": 437,
              "lineBreaks": 0,
              "line": 11,
              "col": 48
@@ -1000,7 +1000,7 @@
             "type": "symbol",
             "value": "c",
             "text": "c",
-            "offset": 484,
+            "offset": 473,
             "lineBreaks": 0,
             "line": 12,
             "col": 33
@@ -1018,7 +1018,7 @@
                   "type": "symbol",
                   "value": "c",
                   "text": "c",
-                  "offset": 498,
+                  "offset": 487,
                   "lineBreaks": 0,
                   "line": 12,
                   "col": 47
@@ -1027,7 +1027,7 @@
                   "type": "operator",
                   "value": "%",
                   "text": "mod",
-                  "offset": 500,
+                  "offset": 489,
                   "lineBreaks": 0,
                   "line": 12,
                   "col": 49
@@ -1039,7 +1039,7 @@
                     "type": "number",
                     "value": "2",
                     "text": "2",
-                    "offset": 504,
+                    "offset": 493,
                     "lineBreaks": 0,
                     "line": 12,
                     "col": 53
@@ -1048,7 +1048,7 @@
                     "type": "operator",
                     "value": "^",
                     "text": "xor",
-                    "offset": 506,
+                    "offset": 495,
                     "lineBreaks": 0,
                     "line": 12,
                     "col": 55
@@ -1060,7 +1060,7 @@
                       "type": "symbol",
                       "value": "d",
                       "text": "d",
-                      "offset": 510,
+                      "offset": 499,
                       "lineBreaks": 0,
                       "line": 12,
                       "col": 59
@@ -1069,7 +1069,7 @@
                       "type": "operator",
                       "value": "%",
                       "text": "mod",
-                      "offset": 512,
+                      "offset": 501,
                       "lineBreaks": 0,
                       "line": 12,
                       "col": 61
@@ -1079,7 +1079,7 @@
                        "type": "number",
                        "value": "2",
                        "text": "2",
-                       "offset": 516,
+                       "offset": 505,
                        "lineBreaks": 0,
                        "line": 12,
                        "col": 65
@@ -1098,7 +1098,7 @@
                   "type": "symbol",
                   "value": "b",
                   "text": "b",
-                  "offset": 523,
+                  "offset": 512,
                   "lineBreaks": 0,
                   "line": 12,
                   "col": 72
@@ -1110,7 +1110,7 @@
                     "type": "symbol",
                     "value": "b",
                     "text": "b",
-                    "offset": 526,
+                    "offset": 515,
                     "lineBreaks": 0,
                     "line": 12,
                     "col": 75
@@ -1119,7 +1119,7 @@
                     "type": "operator",
                     "value": "+",
                     "text": "+",
-                    "offset": 527,
+                    "offset": 516,
                     "lineBreaks": 0,
                     "line": 12,
                     "col": 76
@@ -1128,7 +1128,7 @@
                     "type": "symbol",
                     "value": "e",
                     "text": "e",
-                    "offset": 528,
+                    "offset": 517,
                     "lineBreaks": 0,
                     "line": 12,
                     "col": 77
@@ -1144,7 +1144,7 @@
                 "type": "symbol",
                 "value": "c",
                 "text": "c",
-                "offset": 531,
+                "offset": 520,
                 "lineBreaks": 0,
                 "line": 12,
                 "col": 80
@@ -1156,7 +1156,7 @@
                   "type": "symbol",
                   "value": "c",
                   "text": "c",
-                  "offset": 534,
+                  "offset": 523,
                   "lineBreaks": 0,
                   "line": 12,
                   "col": 83
@@ -1165,7 +1165,7 @@
                   "type": "operator",
                   "value": "/",
                   "text": "/",
-                  "offset": 535,
+                  "offset": 524,
                   "lineBreaks": 0,
                   "line": 12,
                   "col": 84
@@ -1175,7 +1175,7 @@
                    "type": "number",
                    "value": "2",
                    "text": "2",
-                   "offset": 536,
+                   "offset": 525,
                    "lineBreaks": 0,
                    "line": 12,
                    "col": 85
@@ -1190,7 +1190,7 @@
                 "type": "symbol",
                 "value": "d",
                 "text": "d",
-                "offset": 539,
+                "offset": 528,
                 "lineBreaks": 0,
                 "line": 12,
                 "col": 88
@@ -1202,7 +1202,7 @@
                   "type": "symbol",
                   "value": "d",
                   "text": "d",
-                  "offset": 542,
+                  "offset": 531,
                   "lineBreaks": 0,
                   "line": 12,
                   "col": 91
@@ -1211,7 +1211,7 @@
                   "type": "operator",
                   "value": "/",
                   "text": "/",
-                  "offset": 543,
+                  "offset": 532,
                   "lineBreaks": 0,
                   "line": 12,
                   "col": 92
@@ -1221,7 +1221,7 @@
                    "type": "number",
                    "value": "2",
                    "text": "2",
-                   "offset": 544,
+                   "offset": 533,
                    "lineBreaks": 0,
                    "line": 12,
                    "col": 93
@@ -1236,7 +1236,7 @@
                 "type": "symbol",
                 "value": "e",
                 "text": "e",
-                "offset": 547,
+                "offset": 536,
                 "lineBreaks": 0,
                 "line": 12,
                 "col": 96
@@ -1248,7 +1248,7 @@
                   "type": "number",
                   "value": "2",
                   "text": "2",
-                  "offset": 550,
+                  "offset": 539,
                   "lineBreaks": 0,
                   "line": 12,
                   "col": 99
@@ -1257,7 +1257,7 @@
                   "type": "operator",
                   "value": "*",
                   "text": "*",
-                  "offset": 551,
+                  "offset": 540,
                   "lineBreaks": 0,
                   "line": 12,
                   "col": 100
@@ -1266,7 +1266,7 @@
                   "type": "symbol",
                   "value": "e",
                   "text": "e",
-                  "offset": 552,
+                  "offset": 541,
                   "lineBreaks": 0,
                   "line": 12,
                   "col": 101
@@ -1284,7 +1284,7 @@
             "type": "symbol",
             "value": "a",
             "text": "a",
-            "offset": 559,
+            "offset": 548,
             "lineBreaks": 0,
             "line": 12,
             "col": 108
@@ -1296,7 +1296,7 @@
               "type": "symbol",
               "value": "a",
               "text": "a",
-              "offset": 562,
+              "offset": 551,
               "lineBreaks": 0,
               "line": 12,
               "col": 111
@@ -1305,7 +1305,7 @@
               "type": "operator",
               "value": "/",
               "text": "/",
-              "offset": 563,
+              "offset": 552,
               "lineBreaks": 0,
               "line": 12,
               "col": 112
@@ -1315,7 +1315,7 @@
                "type": "number",
                "value": "2",
                "text": "2",
-               "offset": 564,
+               "offset": 553,
                "lineBreaks": 0,
                "line": 12,
                "col": 113
@@ -1335,7 +1335,7 @@
          "type": "symbol",
          "value": "write",
          "text": "write",
-         "offset": 605,
+         "offset": 592,
          "lineBreaks": 0,
          "line": 14,
          "col": 13
@@ -1346,7 +1346,7 @@
          "type": "string",
          "value": "'   '",
          "text": "'   '",
-         "offset": 611,
+         "offset": 598,
          "lineBreaks": 0,
          "line": 14,
          "col": 19
@@ -1361,7 +1361,7 @@
          "type": "symbol",
          "value": "write",
          "text": "write",
-         "offset": 619,
+         "offset": 606,
          "lineBreaks": 0,
          "line": 14,
          "col": 27
@@ -1375,7 +1375,7 @@
            "type": "symbol",
            "value": "bin",
            "text": "bin",
-           "offset": 625,
+           "offset": 612,
            "lineBreaks": 0,
            "line": 14,
            "col": 33
@@ -1386,7 +1386,7 @@
            "type": "symbol",
            "value": "ii",
            "text": "ii",
-           "offset": 629,
+           "offset": 616,
            "lineBreaks": 0,
            "line": 14,
            "col": 37
@@ -1400,7 +1400,7 @@
          "type": "colon",
          "value": ":",
          "text": ":",
-         "offset": 632,
+         "offset": 619,
          "lineBreaks": 0,
          "line": 14,
          "col": 40
@@ -1409,7 +1409,7 @@
          "type": "number",
          "value": "5",
          "text": "5",
-         "offset": 633,
+         "offset": 620,
          "lineBreaks": 0,
          "line": 14,
          "col": 41
@@ -1423,7 +1423,7 @@
          "type": "symbol",
          "value": "write",
          "text": "write",
-         "offset": 637,
+         "offset": 624,
          "lineBreaks": 0,
          "line": 14,
          "col": 45
@@ -1434,7 +1434,7 @@
          "type": "string",
          "value": "' '",
          "text": "' '",
-         "offset": 643,
+         "offset": 630,
          "lineBreaks": 0,
          "line": 14,
          "col": 51
@@ -1449,7 +1449,7 @@
          "type": "symbol",
          "value": "write",
          "text": "write",
-         "offset": 649,
+         "offset": 636,
          "lineBreaks": 0,
          "line": 14,
          "col": 57
@@ -1463,7 +1463,7 @@
            "type": "symbol",
            "value": "bin",
            "text": "bin",
-           "offset": 655,
+           "offset": 642,
            "lineBreaks": 0,
            "line": 14,
            "col": 63
@@ -1474,7 +1474,7 @@
            "type": "symbol",
            "value": "b",
            "text": "b",
-           "offset": 659,
+           "offset": 646,
            "lineBreaks": 0,
            "line": 14,
            "col": 67
@@ -1488,7 +1488,7 @@
          "type": "colon",
          "value": ":",
          "text": ":",
-         "offset": 661,
+         "offset": 648,
          "lineBreaks": 0,
          "line": 14,
          "col": 69
@@ -1497,7 +1497,7 @@
          "type": "number",
          "value": "5",
          "text": "5",
-         "offset": 662,
+         "offset": 649,
          "lineBreaks": 0,
          "line": 14,
          "col": 70
@@ -1511,7 +1511,7 @@
          "type": "symbol",
          "value": "writeln",
          "text": "writeln",
-         "offset": 666,
+         "offset": 653,
          "lineBreaks": 0,
          "line": 14,
          "col": 74
@@ -1522,7 +1522,7 @@
          "type": "symbol",
          "value": "b",
          "text": "b",
-         "offset": 674,
+         "offset": 661,
          "lineBreaks": 0,
          "line": 14,
          "col": 82
@@ -1533,7 +1533,7 @@
          "type": "colon",
          "value": ":",
          "text": ":",
-         "offset": 675,
+         "offset": 662,
          "lineBreaks": 0,
          "line": 14,
          "col": 83
@@ -1542,7 +1542,7 @@
          "type": "number",
          "value": "4",
          "text": "4",
-         "offset": 676,
+         "offset": 663,
          "lineBreaks": 0,
          "line": 14,
          "col": 84
@@ -1560,7 +1560,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 692,
+     "offset": 676,
      "lineBreaks": 0,
      "line": 17,
      "col": 3

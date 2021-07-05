@@ -9,7 +9,7 @@
      "type": "symbol",
      "value": "i",
      "text": "i",
-     "offset": 15,
+     "offset": 14,
      "lineBreaks": 0,
      "line": 2,
      "col": 9
@@ -19,7 +19,7 @@
       "type": "number",
       "value": "10",
       "text": "10",
-      "offset": 18,
+      "offset": 17,
       "lineBreaks": 0,
       "line": 2,
       "col": 12
@@ -31,7 +31,7 @@
      "type": "number",
      "value": "0",
      "text": "0",
-     "offset": 28,
+     "offset": 27,
      "lineBreaks": 0,
      "line": 2,
      "col": 22
@@ -45,7 +45,7 @@
        "type": "symbol",
        "value": "write",
        "text": "write",
-       "offset": 33,
+       "offset": 32,
        "lineBreaks": 0,
        "line": 2,
        "col": 27
@@ -56,7 +56,7 @@
        "type": "symbol",
        "value": "i",
        "text": "i",
-       "offset": 39,
+       "offset": 38,
        "lineBreaks": 0,
        "line": 2,
        "col": 33
@@ -73,7 +73,7 @@
      "type": "symbol",
      "value": "write",
      "text": "write",
-     "offset": 43,
+     "offset": 42,
      "lineBreaks": 0,
      "line": 2,
      "col": 37
@@ -84,7 +84,7 @@
      "type": "string",
      "value": "'.'",
      "text": "'.'",
-     "offset": 49,
+     "offset": 48,
      "lineBreaks": 0,
      "line": 2,
      "col": 43

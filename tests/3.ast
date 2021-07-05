@@ -7,7 +7,7 @@
     "type": "symbol",
     "value": "x",
     "text": "x",
-    "offset": 11,
+    "offset": 10,
     "lineBreaks": 0,
     "line": 2,
     "col": 5
@@ -17,7 +17,7 @@
      "type": "number",
      "value": "1",
      "text": "1",
-     "offset": 14,
+     "offset": 13,
      "lineBreaks": 0,
      "line": 2,
      "col": 8
@@ -33,7 +33,7 @@
       "type": "symbol",
       "value": "x",
       "text": "x",
-      "offset": 59,
+      "offset": 56,
       "lineBreaks": 0,
       "line": 4,
       "col": 11
@@ -42,7 +42,7 @@
       "type": "operator",
       "value": "==",
       "text": "=",
-      "offset": 60,
+      "offset": 57,
       "lineBreaks": 0,
       "line": 4,
       "col": 12
@@ -52,7 +52,7 @@
        "type": "number",
        "value": "10",
        "text": "10",
-       "offset": 61,
+       "offset": 58,
        "lineBreaks": 0,
        "line": 4,
        "col": 13
@@ -68,7 +68,7 @@
        "type": "symbol",
        "value": "write",
        "text": "write",
-       "offset": 29,
+       "offset": 27,
        "lineBreaks": 0,
        "line": 3,
        "col": 12
@@ -79,7 +79,7 @@
        "type": "symbol",
        "value": "x",
        "text": "x",
-       "offset": 35,
+       "offset": 33,
        "lineBreaks": 0,
        "line": 3,
        "col": 18
@@ -93,7 +93,7 @@
       "type": "symbol",
       "value": "x",
       "text": "x",
-      "offset": 39,
+      "offset": 37,
       "lineBreaks": 0,
       "line": 3,
       "col": 22
@@ -105,7 +105,7 @@
         "type": "symbol",
         "value": "x",
         "text": "x",
-        "offset": 42,
+        "offset": 40,
         "lineBreaks": 0,
         "line": 3,
         "col": 25
@@ -114,7 +114,7 @@
         "type": "operator",
         "value": "+",
         "text": "+",
-        "offset": 43,
+        "offset": 41,
         "lineBreaks": 0,
         "line": 3,
         "col": 26
@@ -124,7 +124,7 @@
          "type": "number",
          "value": "1",
          "text": "1",
-         "offset": 44,
+         "offset": 42,
          "lineBreaks": 0,
          "line": 3,
          "col": 27

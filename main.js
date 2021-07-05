@@ -30,13 +30,14 @@ const main = async () => {
     const outAstFilename = inFilename.replace(".mP", ".ast")
     const outJSFilename = outAstFilename.replace(".ast", ".js")
 
-    console.log(inFilename)
+    // console.log(inFilename)
+    
     // generates .ast file
     await execWithOutput(`node parser ${inFilename}`)
 
     // generates .js file
     if (fs.exists(outAstFilename)) { 
-        console.log(outAstFilename)
+        // console.log(outAstFilename)
         await execWithOutput(`node generator ${outAstFilename}`)
     }
     

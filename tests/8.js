@@ -39,27 +39,8 @@ function chr(num) {
   return String.fromCharCode(num);
 }
 
-writeln()
-writeln('    Prvocisla do 1000')
-writeln()
-write(2, 5)
-var n = undefined;
-var cislo = undefined;
-do {
+var cislo = 3;
 var prvocislo = true;
-var delitel = undefined;
-while(undefined){
-if(cislo%delitel==0) {
-var prvocislo = false;} else {
-var delitel = undefined;}
-}
-if(prvocislo) {
-if(n%10==0) {
-writeln()}
-write(cislo, 5)
-var n = undefined;}
-var cislo = undefined;}
-while(!(undefined));
-
-writeln()
-writeln()
+var delitel = 3;
+if(prvocislo&&(delitel*delitel>=cislo)) {
+write(cislo, 5)}

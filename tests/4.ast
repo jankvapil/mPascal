@@ -44,6 +44,7 @@
   {
    "type": "cond",
    "expr": [
+    null,
     {
      "type": "operation",
      "left": {
@@ -65,6 +66,7 @@
       "col": 7
      },
      "right": [
+      null,
       {
        "type": "number",
        "value": "2",
@@ -73,9 +75,11 @@
        "lineBreaks": 0,
        "line": 4,
        "col": 8
-      }
+      },
+      null
      ]
-    }
+    },
+    null
    ],
    "statements": [
     {

@@ -15,6 +15,7 @@
      "col": 9
     },
     "value": [
+     null,
      {
       "type": "number",
       "value": "10",
@@ -23,10 +24,12 @@
       "lineBreaks": 0,
       "line": 2,
       "col": 12
-     }
+     },
+     null
     ]
    },
    "downto": [
+    null,
     {
      "type": "number",
      "value": "0",
@@ -35,7 +38,8 @@
      "lineBreaks": 0,
      "line": 2,
      "col": 22
-    }
+    },
+    null
    ],
    "statements": [
     {

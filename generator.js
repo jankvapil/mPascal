@@ -1,14 +1,35 @@
 
 const fs = require("mz/fs")
 
+
+const generateMultipleExpr = (expr) => {
+    if (!expr.length) {
+        return generateJSExpr(expr)
+    } else {
+        const exprs = []
+        expr.forEach(e => {
+            if (e) {
+                const tmp = generateJSExpr(e)
+                exprs.push(tmp)
+            }
+        })
+        return exprs.join("")
+    }
+}
+
 ///
 /// Generete JS expression from AST node
 ///
 const generateJSExpr = (node) => {
-   
+
+    if (!node) return
+
+    // console.log(node)
     if (node.type === "cond") {
         // console.log(node)
-        const expr = generateJSExpr(node.expr[0] ? node.expr[0] : node.expr)
+        const expr = generateMultipleExpr(node.expr)
+      
+        // const expr = generateJSExpr(node.expr[0] ? node.expr[0] : node.expr)
         const statements = []
         node.statements.forEach(s => {
             const tmp = generateJSExpr(s)
@@ -29,7 +50,8 @@ const generateJSExpr = (node) => {
 
     else if (node.type === "dowhile_loop") {
         // console.log(node)
-        const expr = generateJSExpr(node.expr[0] ? node.expr[0] : node.expr)
+        // const expr = generateJSExpr(node.expr[0] ? node.expr[0] : node.expr)
+        const expr = generateMultipleExpr(node.expr)
         const statements = []
         node.statements.forEach(s => {
             const tmp = generateJSExpr(s)
@@ -40,7 +62,8 @@ const generateJSExpr = (node) => {
     
     else if (node.type === "while_loop") {
         // console.log(node) 
-        const expr = generateJSExpr(node.expr[0] ? node.expr[0] : node.expr)
+        // const expr = generateJSExpr(node.expr[0] ? node.expr[0] : node.expr)
+        const expr = generateMultipleExpr(node.expr)
         const statements = []
         node.statements.forEach(s => {
             const tmp = generateJSExpr(s)
@@ -58,10 +81,10 @@ const generateJSExpr = (node) => {
             statements.push(tmp)
         })
         if (node.to) {
-            const to = generateJSExpr(node.to[0])
+            const to = generateMultipleExpr(node.to)
             return `for(${assignment} ${symbol}<=${to}; ${symbol}++){${statements.join("\n")}}`
         } else if (node.downto) {
-            const downto = generateJSExpr(node.downto[0])
+            const downto = generateMultipleExpr(node.downto)
             return `for(${assignment} ${symbol}>=${downto}; ${symbol}--){${statements.join("\n")}}`
         }
     }
@@ -74,28 +97,50 @@ const generateJSExpr = (node) => {
     }
 
     else if (node.type === "operation") {
-        const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
+        
+        const left = generateMultipleExpr(node.left)
         const operator = generateJSExpr(node.operator)
-        const left = generateJSExpr(node.left)
+        const right = generateMultipleExpr(node.right)
         return `${left}${operator}${right}`
     }
 
     else if (node.type === "assignment") {
+        
         const symbolName = node.symbol.value
         let value
         
+        // console.log(node)
         if (node.value.type === "fn_call") {
             // console.log(node)
-            value = generateJSExpr(node.value.arg[0])
+            // const exprs = []
+            // node.value.arg[0].forEach(e => {
+            //     if (e) {
+            //         const tmp = generateJSExpr(e)
+            //         exprs.push(tmp)
+            //     }
+            // })
+            value = generateMultipleExpr(node.value.arg[0])
+            // value = generateJSExpr(node.value.arg[0])
             const fnName = node.value.fnName.value ? node.value.fnName.value : node.value.fnName[0].value
             return `var ${symbolName} = ${fnName}(${value});`
         } 
-        else if (node.value?.type === "operation" || node.value[0]?.type === "operation") {
+        else if ((
+          node.value && node.value.type === "operation") 
+          || (node.value[0] && node.value[0].type && node.value[0].type === "operation")) {
+
+            console.log(node)
             value = generateJSExpr(node.value[0] ? node.value[0] : node.value)
             return `var ${symbolName} = ${value};`
         } 
         else {
-            value = node.value[0]?.value ? node.value[0].value : node.value.value
+            // console.log(node)
+            value = generateMultipleExpr(node.value)
+            // if (node.value[1]) {
+            //   value = node.value[1].value
+            // } else {
+            //   value = node.value.value
+            // }
+            // value = node.value[0].value ? node.value[0].value : node.value.value
             return `var ${symbolName} = ${value};`
         }
     } 
@@ -103,7 +148,10 @@ const generateJSExpr = (node) => {
     else if (node.type === "fn_call") {
         // console.log(node.arg[0][0] ? node.arg[0][0] : node.arg[0])
         const fnName = node.fnName[0].value
-        const arg = generateJSExpr(node.arg[0][0] ? node.arg[0][0] : node.arg[0])
+        // let arg = generateJSExpr(node.arg[0][0] ? node.arg[0][0] : node.arg[0])
+        let arg = generateMultipleExpr(node.arg[0])
+       
+       
         if (node.specifier) {
             // console.log(node.specifier[1].value)
             const spec = node.specifier[1].value
@@ -129,12 +177,14 @@ const generateJSExpr = (node) => {
     } else if (node.type === "string") {
         return node.value
     } else if (node.type === "bool") {
-        // console.log(node)
         return node.value
     } else if (node.type === "symbol") {
-        // console.log(node)
         return node.value
     } else if (node.type === "operator") {
+        return node.value
+    }  else if (node.type === "lparen") {
+        return node.value
+    } else if (node.type === "rparen") {
         return node.value
     }
 }
@@ -172,7 +222,7 @@ const main = async () => {
     const jsCode = runtime + "\n" + generateJS(ast)
     const outFilename = inFilename.replace(".ast", ".js")
     
-    console.log(`Generating ${outFilename}...`)
+    // console.log(`Generating ${outFilename}...`)
     await fs.writeFile(outFilename, jsCode)
 }
 

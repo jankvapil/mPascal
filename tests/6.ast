@@ -13,6 +13,7 @@
     "col": 1
    },
    "value": [
+    null,
     {
      "type": "number",
      "value": "0",
@@ -21,12 +22,14 @@
      "lineBreaks": 0,
      "line": 3,
      "col": 4
-    }
+    },
+    null
    ]
   },
   {
    "type": "dowhile_loop",
    "expr": [
+    null,
     {
      "type": "operation",
      "left": {
@@ -48,6 +51,7 @@
       "col": 10
      },
      "right": [
+      null,
       {
        "type": "number",
        "value": "5",
@@ -56,9 +60,11 @@
        "lineBreaks": 0,
        "line": 6,
        "col": 11
-      }
+      },
+      null
      ]
-    }
+    },
+    null
    ],
    "statements": [
     {
@@ -73,6 +79,7 @@
       "col": 10
      },
      "value": [
+      null,
       {
        "type": "operation",
        "left": {
@@ -94,6 +101,7 @@
         "col": 14
        },
        "right": [
+        null,
         {
          "type": "number",
          "value": "1",
@@ -102,9 +110,11 @@
          "lineBreaks": 0,
          "line": 4,
          "col": 15
-        }
+        },
+        null
        ]
-      }
+      },
+      null
      ]
     },
     {
@@ -119,6 +129,7 @@
       "col": 18
      },
      "value": [
+      null,
       {
        "type": "operation",
        "left": {
@@ -140,6 +151,7 @@
         "col": 22
        },
        "right": [
+        null,
         {
          "type": "number",
          "value": "1",
@@ -148,9 +160,11 @@
          "lineBreaks": 0,
          "line": 4,
          "col": 23
-        }
+        },
+        null
        ]
-      }
+      },
+      null
      ]
     },
     {

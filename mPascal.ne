@@ -187,13 +187,16 @@ expr
     |   %symbol {% id %}
     |   %string {% id %}
     # |   %number {% id %}
-    |   num
+    |   lpar:? num rpar:?
    
     |   %bool   {% id %}
     |   fn_call {% id %}
     # |   operation {% id %}
     
 
+lpar -> %lparen {% id %}
+
+rpar -> %rparen {% id %}
 
 num 
     ->  %number {% id %}

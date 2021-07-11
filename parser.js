@@ -33,7 +33,7 @@ const main = async () => {
         const ast = parser.results[0]
         const outFilename = inFilename.replace(".mP", ".ast")
         
-        console.log(`Generating ${outFilename}...`)
+        // console.log(`Generating ${outFilename}...`)
         await fs.writeFile(outFilename, JSON.stringify(ast, null, " "))
     } else {
         console.error(`Parsing error! ${parser.results.length} possible interpretations of program.`)

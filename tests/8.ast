@@ -1,0 +1,226 @@
+{
+ "type": "program",
+ "statements": [
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "cislo",
+    "text": "cislo",
+    "offset": 13,
+    "lineBreaks": 0,
+    "line": 3,
+    "col": 5
+   },
+   "value": [
+    null,
+    {
+     "type": "number",
+     "value": "3",
+     "text": "3",
+     "offset": 20,
+     "lineBreaks": 0,
+     "line": 3,
+     "col": 12
+    },
+    null
+   ]
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "prvocislo",
+    "text": "prvocislo",
+    "offset": 28,
+    "lineBreaks": 0,
+    "line": 4,
+    "col": 5
+   },
+   "value": {
+    "type": "bool",
+    "value": "true",
+    "text": "true",
+    "offset": 39,
+    "lineBreaks": 0,
+    "line": 4,
+    "col": 16
+   }
+  },
+  {
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "delitel",
+    "text": "delitel",
+    "offset": 50,
+    "lineBreaks": 0,
+    "line": 5,
+    "col": 5
+   },
+   "value": [
+    null,
+    {
+     "type": "number",
+     "value": "3",
+     "text": "3",
+     "offset": 59,
+     "lineBreaks": 0,
+     "line": 5,
+     "col": 14
+    },
+    null
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    null,
+    {
+     "type": "operation",
+     "left": {
+      "type": "symbol",
+      "value": "prvocislo",
+      "text": "prvocislo",
+      "offset": 70,
+      "lineBreaks": 0,
+      "line": 6,
+      "col": 8
+     },
+     "operator": {
+      "type": "operator",
+      "value": "&&",
+      "text": "and",
+      "offset": 80,
+      "lineBreaks": 0,
+      "line": 6,
+      "col": 18
+     },
+     "right": [
+      {
+       "type": "lparen",
+       "value": "(",
+       "text": "(",
+       "offset": 84,
+       "lineBreaks": 0,
+       "line": 6,
+       "col": 22
+      },
+      {
+       "type": "operation",
+       "left": {
+        "type": "symbol",
+        "value": "delitel",
+        "text": "delitel",
+        "offset": 85,
+        "lineBreaks": 0,
+        "line": 6,
+        "col": 23
+       },
+       "operator": {
+        "type": "operator",
+        "value": "*",
+        "text": "*",
+        "offset": 92,
+        "lineBreaks": 0,
+        "line": 6,
+        "col": 30
+       },
+       "right": [
+        null,
+        {
+         "type": "operation",
+         "left": {
+          "type": "symbol",
+          "value": "delitel",
+          "text": "delitel",
+          "offset": 93,
+          "lineBreaks": 0,
+          "line": 6,
+          "col": 31
+         },
+         "operator": {
+          "type": "operator",
+          "value": ">=",
+          "text": ">=",
+          "offset": 100,
+          "lineBreaks": 0,
+          "line": 6,
+          "col": 38
+         },
+         "right": {
+          "type": "symbol",
+          "value": "cislo",
+          "text": "cislo",
+          "offset": 102,
+          "lineBreaks": 0,
+          "line": 6,
+          "col": 40
+         }
+        },
+        {
+         "type": "rparen",
+         "value": ")",
+         "text": ")",
+         "offset": 107,
+         "lineBreaks": 0,
+         "line": 6,
+         "col": 45
+        }
+       ]
+      },
+      null
+     ]
+    },
+    null
+   ],
+   "statements": [
+    {
+     "type": "fn_call",
+     "fnName": [
+      {
+       "type": "symbol",
+       "value": "write",
+       "text": "write",
+       "offset": 114,
+       "lineBreaks": 0,
+       "line": 6,
+       "col": 52
+      }
+     ],
+     "arg": [
+      {
+       "type": "symbol",
+       "value": "cislo",
+       "text": "cislo",
+       "offset": 120,
+       "lineBreaks": 0,
+       "line": 6,
+       "col": 58
+      }
+     ],
+     "specifier": [
+      {
+       "type": "colon",
+       "value": ":",
+       "text": ":",
+       "offset": 125,
+       "lineBreaks": 0,
+       "line": 6,
+       "col": 63
+      },
+      {
+       "type": "number",
+       "value": "5",
+       "text": "5",
+       "offset": 126,
+       "lineBreaks": 0,
+       "line": 6,
+       "col": 64
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

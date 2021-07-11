@@ -149,9 +149,15 @@ var grammar = {
         }) },
     {"name": "expr", "symbols": [(l.has("symbol") ? {type: "symbol"} : symbol)], "postprocess": id},
     {"name": "expr", "symbols": [(l.has("string") ? {type: "string"} : string)], "postprocess": id},
-    {"name": "expr", "symbols": ["num"]},
+    {"name": "expr$ebnf$1", "symbols": ["lpar"], "postprocess": id},
+    {"name": "expr$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "expr$ebnf$2", "symbols": ["rpar"], "postprocess": id},
+    {"name": "expr$ebnf$2", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "expr", "symbols": ["expr$ebnf$1", "num", "expr$ebnf$2"]},
     {"name": "expr", "symbols": [(l.has("bool") ? {type: "bool"} : bool)], "postprocess": id},
     {"name": "expr", "symbols": ["fn_call"], "postprocess": id},
+    {"name": "lpar", "symbols": [(l.has("lparen") ? {type: "lparen"} : lparen)], "postprocess": id},
+    {"name": "rpar", "symbols": [(l.has("rparen") ? {type: "rparen"} : rparen)], "postprocess": id},
     {"name": "num", "symbols": [(l.has("number") ? {type: "number"} : number)], "postprocess": id},
     {"name": "num", "symbols": [(l.has("number") ? {type: "number"} : number), "_", (l.has("operator") ? {type: "operator"} : operator), "_", "expr"], "postprocess":      
         (data) => {

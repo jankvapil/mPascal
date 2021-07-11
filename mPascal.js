@@ -7,16 +7,29 @@ function id(x) { return x[0]; }
 var grammar = {
     Lexer: l,
     ParserRules: [
-    {"name": "program", "symbols": [(l.has("begin") ? {type: "begin"} : begin), "__", "statements", "__", (l.has("end") ? {type: "end"} : end), "_"], "postprocess": 
+    {"name": "program$ebnf$1$subexpression$1", "symbols": ["fn_call_no_args"]},
+    {"name": "program$ebnf$1$subexpression$1", "symbols": ["fn_call"]},
+    {"name": "program$ebnf$1", "symbols": ["program$ebnf$1$subexpression$1"], "postprocess": id},
+    {"name": "program$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "program", "symbols": [(l.has("begin") ? {type: "begin"} : begin), "__", "statements", "__", "program$ebnf$1", "_", (l.has("end") ? {type: "end"} : end), "_"], "postprocess": 
         (data) => {  
              return {
                  type: "program",
-                 statements: data[2] 
+                 statements: data[2],
+                 lastFn: data[4] 
+             }
+         }
+                },
+    {"name": "program2", "symbols": [(l.has("begin") ? {type: "begin"} : begin), "__", "statements", "__", (l.has("end") ? {type: "end"} : end)], "postprocess": 
+        (data) => {  
+             return {
+                 type: "program",
+                 statements: data[2]
              }
          }
                 },
     {"name": "subprogram", "symbols": ["statement"]},
-    {"name": "subprogram", "symbols": ["program"]},
+    {"name": "subprogram", "symbols": ["program2"]},
     {"name": "statements$ebnf$1", "symbols": []},
     {"name": "statements$ebnf$1$subexpression$1", "symbols": ["__", "statement"]},
     {"name": "statements$ebnf$1", "symbols": ["statements$ebnf$1", "statements$ebnf$1$subexpression$1"], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
@@ -33,7 +46,9 @@ var grammar = {
     {"name": "statement$ebnf$2", "symbols": [{"literal":";"}], "postprocess": id},
     {"name": "statement$ebnf$2", "symbols": [], "postprocess": function(d) {return null;}},
     {"name": "statement", "symbols": ["fn_call", "statement$ebnf$2"], "postprocess": id},
-    {"name": "statement", "symbols": ["fn_call_no_args", "_", {"literal":";"}], "postprocess": id},
+    {"name": "statement$ebnf$3", "symbols": [{"literal":";"}], "postprocess": id},
+    {"name": "statement$ebnf$3", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "statement", "symbols": ["fn_call_no_args", "_", "statement$ebnf$3"], "postprocess": id},
     {"name": "statement", "symbols": ["for_loop"], "postprocess": id},
     {"name": "statement", "symbols": ["while_loop"], "postprocess": id},
     {"name": "statement", "symbols": ["cond"], "postprocess": id},
@@ -159,31 +174,43 @@ var grammar = {
     {"name": "lpar", "symbols": [(l.has("lparen") ? {type: "lparen"} : lparen)], "postprocess": id},
     {"name": "rpar", "symbols": [(l.has("rparen") ? {type: "rparen"} : rparen)], "postprocess": id},
     {"name": "num", "symbols": [(l.has("number") ? {type: "number"} : number)], "postprocess": id},
-    {"name": "num", "symbols": [(l.has("number") ? {type: "number"} : number), "_", (l.has("operator") ? {type: "operator"} : operator), "_", "expr"], "postprocess":      
+    {"name": "num$ebnf$1", "symbols": ["rpar"], "postprocess": id},
+    {"name": "num$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "num$ebnf$2", "symbols": ["lpar"], "postprocess": id},
+    {"name": "num$ebnf$2", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "num", "symbols": [(l.has("number") ? {type: "number"} : number), "_", "num$ebnf$1", "_", (l.has("operator") ? {type: "operator"} : operator), "_", "num$ebnf$2", "_", "expr"], "postprocess":      
         (data) => {
             return {
                 type: "operation",
                 left: data[0],
-                operator: data[2],
-                right: data[4]
+                operator: data[4],
+                right: data[8]
             }
         } },
-    {"name": "num", "symbols": [(l.has("symbol") ? {type: "symbol"} : symbol), "_", (l.has("operator") ? {type: "operator"} : operator), "_", "expr"], "postprocess":      
+    {"name": "num$ebnf$3", "symbols": ["rpar"], "postprocess": id},
+    {"name": "num$ebnf$3", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "num$ebnf$4", "symbols": ["lpar"], "postprocess": id},
+    {"name": "num$ebnf$4", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "num", "symbols": [(l.has("symbol") ? {type: "symbol"} : symbol), "_", "num$ebnf$3", "_", (l.has("operator") ? {type: "operator"} : operator), "_", "num$ebnf$4", "_", "expr"], "postprocess":      
         (data) => {
             return {
                 type: "operation",
                 left: data[0],
-                operator: data[2],
-                right: data[4]
+                operator: data[4],
+                right: data[8]
             }
         } },
-    {"name": "num", "symbols": [(l.has("not") ? {type: "not"} : not), "_", (l.has("symbol") ? {type: "symbol"} : symbol), "_", (l.has("operator") ? {type: "operator"} : operator), "_", "expr"], "postprocess":      
+    {"name": "num$ebnf$5", "symbols": ["rpar"], "postprocess": id},
+    {"name": "num$ebnf$5", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "num$ebnf$6", "symbols": ["lpar"], "postprocess": id},
+    {"name": "num$ebnf$6", "symbols": [], "postprocess": function(d) {return null;}},
+    {"name": "num", "symbols": [(l.has("not") ? {type: "not"} : not), "_", (l.has("symbol") ? {type: "symbol"} : symbol), "_", "num$ebnf$5", "_", (l.has("operator") ? {type: "operator"} : operator), "_", "num$ebnf$6", "_", "expr"], "postprocess":      
         (data) => {
             return {
                 type: "notOperation",
                 left: data[2],
-                operator: data[4],
-                right: data[6]
+                operator: data[6],
+                right: data[10]
             }
         } },
     {"name": "_$ebnf$1", "symbols": []},

@@ -209,5 +209,14 @@
     }
    ]
   }
- ]
+ ],
+ "lastFn": {
+  "type": "end",
+  "value": "end.",
+  "text": "end.",
+  "offset": 84,
+  "lineBreaks": 0,
+  "line": 9,
+  "col": 1
+ }
 }

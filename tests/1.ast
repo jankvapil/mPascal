@@ -37,5 +37,14 @@
     }
    ]
   }
- ]
+ ],
+ "lastFn": {
+  "type": "end",
+  "value": "end.",
+  "text": "end.",
+  "offset": 53,
+  "lineBreaks": 0,
+  "line": 5,
+  "col": 1
+ }
 }

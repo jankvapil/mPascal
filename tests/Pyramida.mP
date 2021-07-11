@@ -6,6 +6,5 @@ begin
                               writeln;
                               citac:=citac+2 end;
      
-  writeln;
-  
+  writeln
 end.

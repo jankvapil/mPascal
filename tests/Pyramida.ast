@@ -13,6 +13,7 @@
     "col": 3
    },
    "value": [
+    null,
     {
      "type": "number",
      "value": "0",
@@ -21,7 +22,8 @@
      "lineBreaks": 0,
      "line": 2,
      "col": 10
-    }
+    },
+    null
    ]
   },
   {
@@ -38,6 +40,7 @@
      "col": 7
     },
     "value": [
+     null,
      {
       "type": "number",
       "value": "0",
@@ -46,10 +49,12 @@
       "lineBreaks": 0,
       "line": 4,
       "col": 14
-     }
+     },
+     null
     ]
    },
    "to": [
+    null,
     {
      "type": "number",
      "value": "10",
@@ -58,7 +63,8 @@
      "lineBreaks": 0,
      "line": 4,
      "col": 19
-    }
+    },
+    null
    ],
    "statements": [
     {
@@ -88,6 +94,7 @@
         }
        },
        "to": [
+        null,
         {
          "type": "number",
          "value": "15",
@@ -96,7 +103,8 @@
          "lineBreaks": 0,
          "line": 4,
          "col": 54
-        }
+        },
+        null
        ],
        "statements": [
         {
@@ -141,6 +149,7 @@
          "col": 35
         },
         "value": [
+         null,
          {
           "type": "number",
           "value": "1",
@@ -149,10 +158,12 @@
           "lineBreaks": 0,
           "line": 5,
           "col": 46
-         }
+         },
+         null
         ]
        },
        "to": [
+        null,
         {
          "type": "operation",
          "left": {
@@ -174,6 +185,7 @@
           "col": 56
          },
          "right": [
+          null,
           {
            "type": "number",
            "value": "1",
@@ -182,9 +194,11 @@
            "lineBreaks": 0,
            "line": 5,
            "col": 57
-          }
+          },
+          null
          ]
-        }
+        },
+        null
        ],
        "statements": [
         {
@@ -241,6 +255,7 @@
         "col": 31
        },
        "value": [
+        null,
         {
          "type": "operation",
          "left": {
@@ -262,6 +277,7 @@
           "col": 43
          },
          "right": [
+          null,
           {
            "type": "number",
            "value": "2",
@@ -270,15 +286,19 @@
            "lineBreaks": 0,
            "line": 7,
            "col": 44
-          }
+          },
+          null
          ]
-        }
+        },
+        null
        ]
       }
      ]
     }
    ]
-  },
+  }
+ ],
+ "lastFn": [
   {
    "type": "fn_call_no_args",
    "fnName": [

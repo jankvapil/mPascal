@@ -29,6 +29,7 @@
      "col": 7
     },
     "value": [
+     null,
      {
       "type": "number",
       "value": "0",
@@ -37,10 +38,12 @@
       "lineBreaks": 0,
       "line": 4,
       "col": 10
-     }
+     },
+     null
     ]
    },
    "to": [
+    null,
     {
      "type": "number",
      "value": "15",
@@ -49,7 +52,8 @@
      "lineBreaks": 0,
      "line": 4,
      "col": 15
-    }
+    },
+    null
    ],
    "statements": [
     {
@@ -88,6 +92,7 @@
         "col": 33
        },
        "value": [
+        null,
         {
          "type": "operation",
          "left": {
@@ -109,6 +114,7 @@
           "col": 37
          },
          "right": [
+          null,
           {
            "type": "number",
            "value": "2",
@@ -117,9 +123,11 @@
            "lineBreaks": 0,
            "line": 4,
            "col": 38
-          }
+          },
+          null
          ]
-        }
+        },
+        null
        ]
       },
       {
@@ -191,6 +199,7 @@
             "col": 56
            },
            "value": [
+            null,
             {
              "type": "number",
              "value": "1",
@@ -199,7 +208,8 @@
              "lineBreaks": 0,
              "line": 5,
              "col": 59
-            }
+            },
+            null
            ]
           },
           {
@@ -214,6 +224,7 @@
             "col": 62
            },
            "value": [
+            null,
             {
              "type": "number",
              "value": "0",
@@ -222,7 +233,8 @@
              "lineBreaks": 0,
              "line": 5,
              "col": 65
-            }
+            },
+            null
            ]
           },
           {
@@ -243,6 +255,7 @@
               {
                "type": "cond",
                "expr": [
+                null,
                 {
                  "type": "operation",
                  "left": {
@@ -264,6 +277,7 @@
                   "col": 51
                  },
                  "right": [
+                  null,
                   {
                    "type": "operation",
                    "left": {
@@ -285,6 +299,7 @@
                     "col": 57
                    },
                    "right": [
+                    null,
                     {
                      "type": "operation",
                      "left": {
@@ -306,6 +321,7 @@
                       "col": 63
                      },
                      "right": [
+                      null,
                       {
                        "type": "number",
                        "value": "2",
@@ -314,13 +330,17 @@
                        "lineBreaks": 0,
                        "line": 6,
                        "col": 67
-                      }
+                      },
+                      null
                      ]
-                    }
+                    },
+                    null
                    ]
-                  }
+                  },
+                  null
                  ]
-                }
+                },
+                null
                ],
                "statements": [
                 {
@@ -335,6 +355,7 @@
                   "col": 74
                  },
                  "value": [
+                  null,
                   {
                    "type": "operation",
                    "left": {
@@ -364,7 +385,8 @@
                     "line": 6,
                     "col": 79
                    }
-                  }
+                  },
+                  null
                  ]
                 }
                ]
@@ -381,6 +403,7 @@
                 "col": 82
                },
                "value": [
+                null,
                 {
                  "type": "operation",
                  "left": {
@@ -402,6 +425,7 @@
                   "col": 86
                  },
                  "right": [
+                  null,
                   {
                    "type": "number",
                    "value": "2",
@@ -410,9 +434,11 @@
                    "lineBreaks": 0,
                    "line": 6,
                    "col": 87
-                  }
+                  },
+                  null
                  ]
-                }
+                },
+                null
                ]
               },
               {
@@ -427,6 +453,7 @@
                 "col": 90
                },
                "value": [
+                null,
                 {
                  "type": "operation",
                  "left": {
@@ -448,6 +475,7 @@
                   "col": 94
                  },
                  "right": [
+                  null,
                   {
                    "type": "number",
                    "value": "2",
@@ -456,9 +484,11 @@
                    "lineBreaks": 0,
                    "line": 6,
                    "col": 95
-                  }
+                  },
+                  null
                  ]
-                }
+                },
+                null
                ]
               },
               {
@@ -473,6 +503,7 @@
                 "col": 98
                },
                "value": [
+                null,
                 {
                  "type": "operation",
                  "left": {
@@ -502,7 +533,8 @@
                   "line": 6,
                   "col": 103
                  }
-                }
+                },
+                null
                ]
               }
              ]
@@ -521,6 +553,7 @@
             "col": 110
            },
            "value": [
+            null,
             {
              "type": "operation",
              "left": {
@@ -542,6 +575,7 @@
               "col": 114
              },
              "right": [
+              null,
               {
                "type": "number",
                "value": "2",
@@ -550,9 +584,11 @@
                "lineBreaks": 0,
                "line": 6,
                "col": 115
-              }
+              },
+              null
              ]
-            }
+            },
+            null
            ]
           }
          ]
@@ -792,6 +828,7 @@
         "col": 10
        },
        "value": [
+        null,
         {
          "type": "operation",
          "left": {
@@ -821,7 +858,8 @@
           "line": 10,
           "col": 17
          }
-        }
+        },
+        null
        ]
       },
       {
@@ -857,6 +895,7 @@
         "col": 27
        },
        "value": [
+        null,
         {
          "type": "operation",
          "left": {
@@ -878,6 +917,7 @@
           "col": 32
          },
          "right": [
+          null,
           {
            "type": "number",
            "value": "2",
@@ -886,9 +926,11 @@
            "lineBreaks": 0,
            "line": 10,
            "col": 33
-          }
+          },
+          null
          ]
-        }
+        },
+        null
        ]
       },
       {
@@ -960,6 +1002,7 @@
             "col": 39
            },
            "value": [
+            null,
             {
              "type": "number",
              "value": "1",
@@ -968,7 +1011,8 @@
              "lineBreaks": 0,
              "line": 11,
              "col": 42
-            }
+            },
+            null
            ]
           },
           {
@@ -983,6 +1027,7 @@
             "col": 45
            },
            "value": [
+            null,
             {
              "type": "number",
              "value": "0",
@@ -991,7 +1036,8 @@
              "lineBreaks": 0,
              "line": 11,
              "col": 48
-            }
+            },
+            null
            ]
           },
           {
@@ -1012,6 +1058,7 @@
               {
                "type": "cond",
                "expr": [
+                null,
                 {
                  "type": "operation",
                  "left": {
@@ -1033,6 +1080,7 @@
                   "col": 49
                  },
                  "right": [
+                  null,
                   {
                    "type": "operation",
                    "left": {
@@ -1054,6 +1102,7 @@
                     "col": 55
                    },
                    "right": [
+                    null,
                     {
                      "type": "operation",
                      "left": {
@@ -1075,6 +1124,7 @@
                       "col": 61
                      },
                      "right": [
+                      null,
                       {
                        "type": "number",
                        "value": "2",
@@ -1083,13 +1133,17 @@
                        "lineBreaks": 0,
                        "line": 12,
                        "col": 65
-                      }
+                      },
+                      null
                      ]
-                    }
+                    },
+                    null
                    ]
-                  }
+                  },
+                  null
                  ]
-                }
+                },
+                null
                ],
                "statements": [
                 {
@@ -1104,6 +1158,7 @@
                   "col": 72
                  },
                  "value": [
+                  null,
                   {
                    "type": "operation",
                    "left": {
@@ -1133,7 +1188,8 @@
                     "line": 12,
                     "col": 77
                    }
-                  }
+                  },
+                  null
                  ]
                 }
                ]
@@ -1150,6 +1206,7 @@
                 "col": 80
                },
                "value": [
+                null,
                 {
                  "type": "operation",
                  "left": {
@@ -1171,6 +1228,7 @@
                   "col": 84
                  },
                  "right": [
+                  null,
                   {
                    "type": "number",
                    "value": "2",
@@ -1179,9 +1237,11 @@
                    "lineBreaks": 0,
                    "line": 12,
                    "col": 85
-                  }
+                  },
+                  null
                  ]
-                }
+                },
+                null
                ]
               },
               {
@@ -1196,6 +1256,7 @@
                 "col": 88
                },
                "value": [
+                null,
                 {
                  "type": "operation",
                  "left": {
@@ -1217,6 +1278,7 @@
                   "col": 92
                  },
                  "right": [
+                  null,
                   {
                    "type": "number",
                    "value": "2",
@@ -1225,9 +1287,11 @@
                    "lineBreaks": 0,
                    "line": 12,
                    "col": 93
-                  }
+                  },
+                  null
                  ]
-                }
+                },
+                null
                ]
               },
               {
@@ -1242,6 +1306,7 @@
                 "col": 96
                },
                "value": [
+                null,
                 {
                  "type": "operation",
                  "left": {
@@ -1271,7 +1336,8 @@
                   "line": 12,
                   "col": 101
                  }
-                }
+                },
+                null
                ]
               }
              ]
@@ -1290,6 +1356,7 @@
             "col": 108
            },
            "value": [
+            null,
             {
              "type": "operation",
              "left": {
@@ -1311,6 +1378,7 @@
               "col": 112
              },
              "right": [
+              null,
               {
                "type": "number",
                "value": "2",
@@ -1319,9 +1387,11 @@
                "lineBreaks": 0,
                "line": 12,
                "col": 113
-              }
+              },
+              null
              ]
-            }
+            },
+            null
            ]
           }
          ]
@@ -1552,7 +1622,9 @@
      ]
     }
    ]
-  },
+  }
+ ],
+ "lastFn": [
   {
    "type": "fn_call_no_args",
    "fnName": [

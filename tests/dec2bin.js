@@ -46,7 +46,7 @@ writeln()
 if(a<0) {
 writeln('  Chybne cislo')} else {
 write(' binarni: ')
-writeln(bin(a), 12)
+writeln(bin(a))
 writeln()
 write(' hexadecimalni: ')
 writeln(hex(a))}

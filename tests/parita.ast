@@ -50,6 +50,7 @@
     "col": 3
    },
    "value": [
+    null,
     {
      "type": "number",
      "value": "4",
@@ -58,7 +59,8 @@
      "lineBreaks": 0,
      "line": 4,
      "col": 6
-    }
+    },
+    null
    ]
   },
   {
@@ -67,21 +69,23 @@
     "type": "symbol",
     "value": "p",
     "text": "p",
-    "offset": 59,
+    "offset": 60,
     "lineBreaks": 0,
     "line": 5,
     "col": 3
    },
    "value": [
+    null,
     {
      "type": "number",
      "value": "0",
      "text": "0",
-     "offset": 62,
+     "offset": 63,
      "lineBreaks": 0,
      "line": 5,
      "col": 6
-    }
+    },
+    null
    ]
   },
   {
@@ -90,7 +94,7 @@
     "type": "symbol",
     "value": "b",
     "text": "b",
-    "offset": 65,
+    "offset": 66,
     "lineBreaks": 0,
     "line": 5,
     "col": 9
@@ -99,7 +103,7 @@
     "type": "symbol",
     "value": "a",
     "text": "a",
-    "offset": 68,
+    "offset": 69,
     "lineBreaks": 0,
     "line": 5,
     "col": 12
@@ -108,13 +112,14 @@
   {
    "type": "dowhile_loop",
    "expr": [
+    null,
     {
      "type": "operation",
      "left": {
       "type": "symbol",
       "value": "b",
       "text": "b",
-      "offset": 128,
+      "offset": 129,
       "lineBreaks": 0,
       "line": 7,
       "col": 52
@@ -123,35 +128,39 @@
       "type": "operator",
       "value": "==",
       "text": "=",
-      "offset": 129,
+      "offset": 130,
       "lineBreaks": 0,
       "line": 7,
       "col": 53
      },
      "right": [
+      null,
       {
        "type": "number",
        "value": "0",
        "text": "0",
-       "offset": 130,
+       "offset": 131,
        "lineBreaks": 0,
        "line": 7,
        "col": 54
-      }
+      },
+      null
      ]
-    }
+    },
+    null
    ],
    "statements": [
     {
      "type": "cond",
      "expr": [
+      null,
       {
        "type": "operation",
        "left": {
         "type": "symbol",
         "value": "b",
         "text": "b",
-        "offset": 89,
+        "offset": 90,
         "lineBreaks": 0,
         "line": 7,
         "col": 13
@@ -160,23 +169,26 @@
         "type": "operator",
         "value": "%",
         "text": "mod",
-        "offset": 91,
+        "offset": 92,
         "lineBreaks": 0,
         "line": 7,
         "col": 15
        },
        "right": [
+        null,
         {
          "type": "number",
          "value": "2",
          "text": "2",
-         "offset": 95,
+         "offset": 96,
          "lineBreaks": 0,
          "line": 7,
          "col": 19
-        }
+        },
+        null
        ]
-      }
+      },
+      null
      ],
      "statements": [
       {
@@ -185,19 +197,20 @@
         "type": "symbol",
         "value": "p",
         "text": "p",
-        "offset": 102,
+        "offset": 103,
         "lineBreaks": 0,
         "line": 7,
         "col": 26
        },
        "value": [
+        null,
         {
          "type": "operation",
          "left": {
           "type": "symbol",
           "value": "p",
           "text": "p",
-          "offset": 105,
+          "offset": 106,
           "lineBreaks": 0,
           "line": 7,
           "col": 29
@@ -206,23 +219,26 @@
           "type": "operator",
           "value": "^",
           "text": "xor",
-          "offset": 107,
+          "offset": 108,
           "lineBreaks": 0,
           "line": 7,
           "col": 31
          },
          "right": [
+          null,
           {
            "type": "number",
            "value": "1",
            "text": "1",
-           "offset": 111,
+           "offset": 112,
            "lineBreaks": 0,
            "line": 7,
            "col": 35
-          }
+          },
+          null
          ]
-        }
+        },
+        null
        ]
       }
      ]
@@ -233,19 +249,20 @@
       "type": "symbol",
       "value": "b",
       "text": "b",
-      "offset": 114,
+      "offset": 115,
       "lineBreaks": 0,
       "line": 7,
       "col": 38
      },
      "value": [
+      null,
       {
        "type": "operation",
        "left": {
         "type": "symbol",
         "value": "b",
         "text": "b",
-        "offset": 117,
+        "offset": 118,
         "lineBreaks": 0,
         "line": 7,
         "col": 41
@@ -254,23 +271,26 @@
         "type": "operator",
         "value": "/",
         "text": "/",
-        "offset": 118,
+        "offset": 119,
         "lineBreaks": 0,
         "line": 7,
         "col": 42
        },
        "right": [
+        null,
         {
          "type": "number",
          "value": "2",
          "text": "2",
-         "offset": 119,
+         "offset": 120,
          "lineBreaks": 0,
          "line": 7,
          "col": 43
-        }
+        },
+        null
        ]
-      }
+      },
+      null
      ]
     }
    ]
@@ -282,7 +302,7 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 136,
+     "offset": 137,
      "lineBreaks": 0,
      "line": 8,
      "col": 3
@@ -296,7 +316,7 @@
      "type": "symbol",
      "value": "write",
      "text": "write",
-     "offset": 145,
+     "offset": 146,
      "lineBreaks": 0,
      "line": 8,
      "col": 12
@@ -307,7 +327,7 @@
      "type": "string",
      "value": "'  '",
      "text": "'  '",
-     "offset": 151,
+     "offset": 152,
      "lineBreaks": 0,
      "line": 8,
      "col": 18
@@ -322,7 +342,7 @@
      "type": "symbol",
      "value": "write",
      "text": "write",
-     "offset": 158,
+     "offset": 159,
      "lineBreaks": 0,
      "line": 8,
      "col": 25
@@ -333,7 +353,7 @@
      "type": "symbol",
      "value": "a",
      "text": "a",
-     "offset": 164,
+     "offset": 165,
      "lineBreaks": 0,
      "line": 8,
      "col": 31
@@ -348,7 +368,7 @@
      "type": "symbol",
      "value": "write",
      "text": "write",
-     "offset": 168,
+     "offset": 169,
      "lineBreaks": 0,
      "line": 8,
      "col": 35
@@ -359,7 +379,7 @@
      "type": "string",
      "value": "' '",
      "text": "' '",
-     "offset": 174,
+     "offset": 175,
      "lineBreaks": 0,
      "line": 8,
      "col": 41
@@ -374,7 +394,7 @@
      "type": "symbol",
      "value": "write",
      "text": "write",
-     "offset": 180,
+     "offset": 181,
      "lineBreaks": 0,
      "line": 8,
      "col": 47
@@ -388,7 +408,7 @@
        "type": "symbol",
        "value": "bin",
        "text": "bin",
-       "offset": 186,
+       "offset": 187,
        "lineBreaks": 0,
        "line": 8,
        "col": 53
@@ -399,7 +419,7 @@
        "type": "symbol",
        "value": "a",
        "text": "a",
-       "offset": 190,
+       "offset": 191,
        "lineBreaks": 0,
        "line": 8,
        "col": 57
@@ -416,7 +436,7 @@
     "type": "symbol",
     "value": "p",
     "text": "p",
-    "offset": 202,
+    "offset": 203,
     "lineBreaks": 0,
     "line": 9,
     "col": 6
@@ -429,7 +449,7 @@
        "type": "symbol",
        "value": "writeln",
        "text": "writeln",
-       "offset": 209,
+       "offset": 210,
        "lineBreaks": 0,
        "line": 9,
        "col": 13
@@ -440,7 +460,7 @@
        "type": "string",
        "value": "'  licha parita'",
        "text": "'  licha parita'",
-       "offset": 217,
+       "offset": 218,
        "lineBreaks": 0,
        "line": 9,
        "col": 21
@@ -457,7 +477,7 @@
        "type": "symbol",
        "value": "writeln",
        "text": "writeln",
-       "offset": 240,
+       "offset": 241,
        "lineBreaks": 0,
        "line": 9,
        "col": 44
@@ -468,7 +488,7 @@
        "type": "string",
        "value": "'  suda parita'",
        "text": "'  suda parita'",
-       "offset": 248,
+       "offset": 249,
        "lineBreaks": 0,
        "line": 9,
        "col": 52
@@ -485,12 +505,13 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 273,
+     "offset": 274,
      "lineBreaks": 0,
      "line": 11,
      "col": 3
     }
    ]
   }
- ]
+ ],
+ "lastFn": null
 }

@@ -9,12 +9,24 @@
 ####################
 
 program
-    ->  %begin __ statements __ %end _
+    ->  %begin __ statements __ (fn_call_no_args|fn_call):? _ %end _
         {%
            (data) => {  
                 return {
                     type: "program",
-                    statements: data[2] 
+                    statements: data[2],
+                    lastFn: data[4] 
+                }
+            }
+        %}
+
+program2
+    ->  %begin __ statements __ %end
+        {%
+           (data) => {  
+                return {
+                    type: "program",
+                    statements: data[2]
                 }
             }
         %}
@@ -22,7 +34,7 @@ program
 
 subprogram
     ->  statement
-    |   program
+    |   program2
 
 
 statements
@@ -41,7 +53,7 @@ statements
 statement
     ->  assignment ";":?        {% id %}
     |   fn_call ";":?           {% id %}
-    |   fn_call_no_args _ ";"   {% id %}
+    |   fn_call_no_args _ ";":?   {% id %}
     |   for_loop                {% id %}
     |   while_loop              {% id %}
     |   cond                    {% id %}
@@ -188,7 +200,7 @@ expr
     |   %string {% id %}
     # |   %number {% id %}
     |   lpar:? num rpar:?
-   
+    # |   num
     |   %bool   {% id %}
     |   fn_call {% id %}
     # |   operation {% id %}
@@ -200,34 +212,35 @@ rpar -> %rparen {% id %}
 
 num 
     ->  %number {% id %}
-    |   %number _ %operator _ expr
+    |   %number _ rpar:? _ %operator _ lpar:? _ expr
+    # |   %number _ %operator _ lpar:? _ expr
     {%             
         (data) => {
             return {
                 type: "operation",
                 left: data[0],
-                operator: data[2],
-                right: data[4]
+                operator: data[4],
+                right: data[8]
             }
         } %}
-    |   %symbol _ %operator _ expr
+    |   %symbol _ rpar:? _ %operator _ lpar:? _ expr
     {%             
         (data) => {
             return {
                 type: "operation",
                 left: data[0],
-                operator: data[2],
-                right: data[4]
+                operator: data[4],
+                right: data[8]
             }
         } %}
-    |   %not _ %symbol _ %operator _ expr
+    |   %not _ %symbol _ rpar:? _ %operator _ lpar:? _ expr
     {%             
         (data) => {
             return {
                 type: "notOperation",
                 left: data[2],
-                operator: data[4],
-                right: data[6]
+                operator: data[6],
+                right: data[10]
             }
         } %}
 

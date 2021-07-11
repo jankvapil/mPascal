@@ -18,8 +18,8 @@ const lexer = moo.compile({
     inlComment: /{(?:\\["\\]|[^\n"\\])*}/,
     lparen:     '(',
     rparen:     ')',
-    begin:      'begin',
-    end:        ['end;', 'end.'],
+    begin:      /[b|B][e|E][g|G][i|I][n|N]/,
+    end:        /[e|E][n|N][d|D][.|;]/,
     specFn:     ['ord'],
     operator:   ['<=', '>=', 
         { match: '=', value: (e) => '==' }, 
@@ -29,7 +29,8 @@ const lexer = moo.compile({
         { match: 'and', value: (e) => '&&' }, 
                 '<>', '<', '>', '+', '-', '*', '/'],
     symbol:     {
-        match: /[a-zA-Z][a-zA-Z_0-9]*/, value: (s) => s.toLowerCase(),
+        match: /[a-zA-Z][a-zA-Z_0-9]*/, 
+        value: (s) => s.toLowerCase(),
         type: caseInsensitiveKeywords({
             'kw_for': 'for',
             'kw_if': 'if',

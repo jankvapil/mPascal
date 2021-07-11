@@ -50,6 +50,7 @@
     "col": 3
    },
    "value": [
+    null,
     {
      "type": "number",
      "value": "42",
@@ -58,7 +59,8 @@
      "lineBreaks": 0,
      "line": 4,
      "col": 6
-    }
+    },
+    null
    ]
   },
   {
@@ -78,6 +80,7 @@
   {
    "type": "cond",
    "expr": [
+    null,
     {
      "type": "operation",
      "left": {
@@ -99,6 +102,7 @@
       "col": 7
      },
      "right": [
+      null,
       {
        "type": "number",
        "value": "0",
@@ -107,9 +111,11 @@
        "lineBreaks": 0,
        "line": 7,
        "col": 8
-      }
+      },
+      null
      ]
-    }
+    },
+    null
    ],
    "statements": [
     {
@@ -210,26 +216,7 @@
          "specifier": null
         }
        ],
-       "specifier": [
-        {
-         "type": "colon",
-         "value": ":",
-         "text": ":",
-         "offset": 174,
-         "lineBreaks": 0,
-         "line": 9,
-         "col": 49
-        },
-        {
-         "type": "number",
-         "value": "12",
-         "text": "12",
-         "offset": 175,
-         "lineBreaks": 0,
-         "line": 9,
-         "col": 50
-        }
-       ]
+       "specifier": null
       },
       {
        "type": "fn_call_no_args",
@@ -238,7 +225,7 @@
          "type": "symbol",
          "value": "writeln",
          "text": "writeln",
-         "offset": 194,
+         "offset": 191,
          "lineBreaks": 0,
          "line": 10,
          "col": 14
@@ -252,7 +239,7 @@
          "type": "symbol",
          "value": "write",
          "text": "write",
-         "offset": 203,
+         "offset": 200,
          "lineBreaks": 0,
          "line": 10,
          "col": 23
@@ -263,7 +250,7 @@
          "type": "string",
          "value": "' hexadecimalni: '",
          "text": "' hexadecimalni: '",
-         "offset": 209,
+         "offset": 206,
          "lineBreaks": 0,
          "line": 10,
          "col": 29
@@ -278,7 +265,7 @@
          "type": "symbol",
          "value": "writeln",
          "text": "writeln",
-         "offset": 230,
+         "offset": 227,
          "lineBreaks": 0,
          "line": 10,
          "col": 50
@@ -292,7 +279,7 @@
            "type": "symbol",
            "value": "hex",
            "text": "hex",
-           "offset": 238,
+           "offset": 235,
            "lineBreaks": 0,
            "line": 10,
            "col": 58
@@ -303,7 +290,7 @@
            "type": "symbol",
            "value": "a",
            "text": "a",
-           "offset": 242,
+           "offset": 239,
            "lineBreaks": 0,
            "line": 10,
            "col": 62
@@ -325,12 +312,13 @@
      "type": "symbol",
      "value": "writeln",
      "text": "writeln",
-     "offset": 261,
+     "offset": 258,
      "lineBreaks": 0,
      "line": 12,
      "col": 3
     }
    ]
   }
- ]
+ ],
+ "lastFn": null
 }

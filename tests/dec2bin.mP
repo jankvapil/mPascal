@@ -6,9 +6,9 @@ begin
 
   if a<0 then writeln('  Chybne cislo')
 
-  else begin write(' binarni: '); writeln(bin(a):12);
+  else begin write(' binarni: '); writeln(bin(a));
              writeln; write(' hexadecimalni: '); writeln(hex(a)); end;
 			 
-  writeln;
+  writeln
 
 end.

@@ -1,4 +1,4 @@
-begin
+Begin
   writeln;
 
   for I:=0 to 15 do begin a:=i; b:=i/2; c:=1; g:=0; 
@@ -10,5 +10,5 @@ begin
                write(j:5); write (' '); write(bin(j):5); write (' ');  writeln(bin(g):5)
     end;
 
-  writeln;
-end.
+  writeln
+End.

@@ -326,7 +326,16 @@
         }
        ]
       }
-     ]
+     ],
+     "lastFn": {
+      "type": "end",
+      "value": "end;",
+      "text": "end;",
+      "offset": 187,
+      "lineBreaks": 0,
+      "line": 11,
+      "col": 42
+     }
     }
    ],
    "else_statements": [
@@ -359,9 +368,27 @@
        ],
        "specifier": null
       }
-     ]
+     ],
+     "lastFn": {
+      "type": "end",
+      "value": "end;",
+      "text": "end;",
+      "offset": 227,
+      "lineBreaks": 0,
+      "line": 12,
+      "col": 35
+     }
     }
    ]
   }
- ]
+ ],
+ "lastFn": {
+  "type": "end",
+  "value": "end.",
+  "text": "end.",
+  "offset": 233,
+  "lineBreaks": 0,
+  "line": 13,
+  "col": 1
+ }
 }

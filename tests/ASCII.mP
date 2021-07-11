@@ -14,5 +14,5 @@ begin
 
   writeln; write('   '); for i:=0 to 34 do write('-');
 
-  writeln; writeln;
+  writeln; writeln
 end.

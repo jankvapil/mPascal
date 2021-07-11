@@ -21,15 +21,12 @@ const generateMultipleExpr = (expr) => {
 /// Generete JS expression from AST node
 ///
 const generateJSExpr = (node) => {
-
     if (!node) return
 
-    // console.log(node)
     if (node.type === "cond") {
+        // console.log('\n')
         // console.log(node)
         const expr = generateMultipleExpr(node.expr)
-      
-        // const expr = generateJSExpr(node.expr[0] ? node.expr[0] : node.expr)
         const statements = []
         node.statements.forEach(s => {
             const tmp = generateJSExpr(s)
@@ -49,8 +46,6 @@ const generateJSExpr = (node) => {
     }
 
     else if (node.type === "dowhile_loop") {
-        // console.log(node)
-        // const expr = generateJSExpr(node.expr[0] ? node.expr[0] : node.expr)
         const expr = generateMultipleExpr(node.expr)
         const statements = []
         node.statements.forEach(s => {
@@ -61,8 +56,6 @@ const generateJSExpr = (node) => {
     }
     
     else if (node.type === "while_loop") {
-        // console.log(node) 
-        // const expr = generateJSExpr(node.expr[0] ? node.expr[0] : node.expr)
         const expr = generateMultipleExpr(node.expr)
         const statements = []
         node.statements.forEach(s => {
@@ -97,7 +90,8 @@ const generateJSExpr = (node) => {
     }
 
     else if (node.type === "operation") {
-        
+        // console.log('\n')
+        // console.log(node)
         const left = generateMultipleExpr(node.left)
         const operator = generateJSExpr(node.operator)
         const right = generateMultipleExpr(node.right)
@@ -109,18 +103,8 @@ const generateJSExpr = (node) => {
         const symbolName = node.symbol.value
         let value
         
-        // console.log(node)
         if (node.value.type === "fn_call") {
-            // console.log(node)
-            // const exprs = []
-            // node.value.arg[0].forEach(e => {
-            //     if (e) {
-            //         const tmp = generateJSExpr(e)
-            //         exprs.push(tmp)
-            //     }
-            // })
             value = generateMultipleExpr(node.value.arg[0])
-            // value = generateJSExpr(node.value.arg[0])
             const fnName = node.value.fnName.value ? node.value.fnName.value : node.value.fnName[0].value
             return `var ${symbolName} = ${fnName}(${value});`
         } 
@@ -128,32 +112,20 @@ const generateJSExpr = (node) => {
           node.value && node.value.type === "operation") 
           || (node.value[0] && node.value[0].type && node.value[0].type === "operation")) {
 
-            console.log(node)
-            value = generateJSExpr(node.value[0] ? node.value[0] : node.value)
+            value = generateMultipleExpr(node.value)
             return `var ${symbolName} = ${value};`
         } 
         else {
-            // console.log(node)
             value = generateMultipleExpr(node.value)
-            // if (node.value[1]) {
-            //   value = node.value[1].value
-            // } else {
-            //   value = node.value.value
-            // }
-            // value = node.value[0].value ? node.value[0].value : node.value.value
             return `var ${symbolName} = ${value};`
         }
     } 
 
     else if (node.type === "fn_call") {
-        // console.log(node.arg[0][0] ? node.arg[0][0] : node.arg[0])
         const fnName = node.fnName[0].value
-        // let arg = generateJSExpr(node.arg[0][0] ? node.arg[0][0] : node.arg[0])
         let arg = generateMultipleExpr(node.arg[0])
        
-       
         if (node.specifier) {
-            // console.log(node.specifier[1].value)
             const spec = node.specifier[1].value
             return `${fnName}(${arg}, ${spec})`
         } else return `${fnName}(${arg})`
@@ -183,9 +155,13 @@ const generateJSExpr = (node) => {
     } else if (node.type === "operator") {
         return node.value
     }  else if (node.type === "lparen") {
-        return node.value
+        console.log('\n')
+        console.log(node)
+        // return node.value
     } else if (node.type === "rparen") {
-        return node.value
+        console.log('\n')
+        console.log(node)
+        // return node.value
     }
 }
 
@@ -194,6 +170,7 @@ const generateJSExpr = (node) => {
 /// Generates JS Code from Abstract Syntax Tree
 ///
 const generateJS = (ast) => {
+    // console.log(ast)
     const res = []
     if (ast.type === "program") {
         ast.statements.forEach(s => {
@@ -201,6 +178,10 @@ const generateJS = (ast) => {
             res.push(jsExpr)
         })
     } 
+    if (ast.lastFn) {
+        const jsExpr = generateJSExpr(ast.lastFn[0])
+        res.push(jsExpr)
+    }
     return res.join("\n")
 }
 

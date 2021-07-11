@@ -95,6 +95,7 @@
      "col": 22
     },
     "value": [
+     null,
      {
       "type": "number",
       "value": "0",
@@ -103,10 +104,12 @@
       "lineBreaks": 0,
       "line": 4,
       "col": 25
-     }
+     },
+     null
     ]
    },
    "to": [
+    null,
     {
      "type": "number",
      "value": "15",
@@ -115,7 +118,8 @@
      "lineBreaks": 0,
      "line": 4,
      "col": 30
-    }
+    },
+    null
    ],
    "statements": [
     {
@@ -248,6 +252,7 @@
      "col": 21
     },
     "value": [
+     null,
      {
       "type": "number",
       "value": "0",
@@ -256,10 +261,12 @@
       "lineBreaks": 0,
       "line": 5,
       "col": 24
-     }
+     },
+     null
     ]
    },
    "to": [
+    null,
     {
      "type": "number",
      "value": "34",
@@ -268,7 +275,8 @@
      "lineBreaks": 0,
      "line": 5,
      "col": 29
-    }
+    },
+    null
    ],
    "statements": [
     {
@@ -340,6 +348,7 @@
   {
    "type": "dowhile_loop",
    "expr": [
+    null,
     {
      "type": "operation",
      "left": {
@@ -361,6 +370,7 @@
       "col": 13
      },
      "right": [
+      null,
       {
        "type": "number",
        "value": "255",
@@ -369,9 +379,11 @@
        "lineBreaks": 0,
        "line": 13,
        "col": 14
-      }
+      },
+      null
      ]
-    }
+    },
+    null
    ],
    "statements": [
     {
@@ -516,6 +528,7 @@
        "col": 9
       },
       "value": [
+       null,
        {
         "type": "number",
         "value": "0",
@@ -524,10 +537,12 @@
         "lineBreaks": 0,
         "line": 10,
         "col": 12
-       }
+       },
+       null
       ]
      },
      "to": [
+      null,
       {
        "type": "number",
        "value": "15",
@@ -536,7 +551,8 @@
        "lineBreaks": 0,
        "line": 10,
        "col": 17
-      }
+      },
+      null
      ],
      "statements": [
       {
@@ -568,6 +584,7 @@
          ],
          "arg": [
           [
+           null,
            {
             "type": "operation",
             "left": {
@@ -597,7 +614,8 @@
              "line": 10,
              "col": 38
             }
-           }
+           },
+           null
           ]
          ],
          "specifier": null
@@ -664,6 +682,7 @@
       "col": 5
      },
      "value": [
+      null,
       {
        "type": "operation",
        "left": {
@@ -685,6 +704,7 @@
         "col": 15
        },
        "right": [
+        null,
         {
          "type": "number",
          "value": "16",
@@ -693,9 +713,11 @@
          "lineBreaks": 0,
          "line": 12,
          "col": 16
-        }
+        },
+        null
        ]
-      }
+      },
+      null
      ]
     }
    ]
@@ -754,6 +776,7 @@
      "col": 30
     },
     "value": [
+     null,
      {
       "type": "number",
       "value": "0",
@@ -762,10 +785,12 @@
       "lineBreaks": 0,
       "line": 15,
       "col": 33
-     }
+     },
+     null
     ]
    },
    "to": [
+    null,
     {
      "type": "number",
      "value": "34",
@@ -774,7 +799,8 @@
      "lineBreaks": 0,
      "line": 15,
      "col": 38
-    }
+    },
+    null
    ],
    "statements": [
     {
@@ -818,7 +844,9 @@
      "col": 3
     }
    ]
-  },
+  }
+ ],
+ "lastFn": [
   {
    "type": "fn_call_no_args",
    "fnName": [

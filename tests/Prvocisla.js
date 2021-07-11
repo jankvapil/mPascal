@@ -43,23 +43,23 @@ writeln()
 writeln('    Prvocisla do 1000')
 writeln()
 write(2, 5)
-var n = undefined;
-var cislo = undefined;
+var n = 1;
+var cislo = 3;
 do {
 var prvocislo = true;
-var delitel = undefined;
-while(undefined){
+var delitel = 3;
+while(prvocislo&&(delitel*delitel<=cislo)){
 if(cislo%delitel==0) {
 var prvocislo = false;} else {
-var delitel = undefined;}
+var delitel = delitel+2;}
 }
 if(prvocislo) {
 if(n%10==0) {
 writeln()}
 write(cislo, 5)
-var n = undefined;}
-var cislo = undefined;}
-while(!(undefined));
+var n = n+1;}
+var cislo = cislo+2;}
+while(!(cislo>1000));
 
 writeln()
 writeln()

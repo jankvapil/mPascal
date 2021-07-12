@@ -50,17 +50,19 @@
     "col": 5
    },
    "value": [
-    null,
-    {
-     "type": "number",
-     "value": "1",
-     "text": "1",
-     "offset": 83,
-     "lineBreaks": 0,
-     "line": 5,
-     "col": 8
-    },
-    null
+    [
+     [
+      {
+       "type": "number",
+       "value": "1",
+       "text": "1",
+       "offset": 83,
+       "lineBreaks": 0,
+       "line": 5,
+       "col": 8
+      }
+     ]
+    ]
    ]
   },
   {
@@ -75,17 +77,19 @@
     "col": 5
    },
    "value": [
-    null,
-    {
-     "type": "number",
-     "value": "1",
-     "text": "1",
-     "offset": 94,
-     "lineBreaks": 0,
-     "line": 6,
-     "col": 8
-    },
-    null
+    [
+     [
+      {
+       "type": "number",
+       "value": "1",
+       "text": "1",
+       "offset": 94,
+       "lineBreaks": 0,
+       "line": 6,
+       "col": 8
+      }
+     ]
+    ]
    ]
   },
   {
@@ -100,26 +104,26 @@
     "col": 5
    },
    "value": [
-    null,
-    {
-     "type": "number",
-     "value": "0",
-     "text": "0",
-     "offset": 105,
-     "lineBreaks": 0,
-     "line": 7,
-     "col": 8
-    },
-    null
+    [
+     [
+      {
+       "type": "number",
+       "value": "0",
+       "text": "0",
+       "offset": 105,
+       "lineBreaks": 0,
+       "line": 7,
+       "col": 8
+      }
+     ]
+    ]
    ]
   },
   {
    "type": "cond",
    "expr": [
-    null,
-    {
-     "type": "operation",
-     "left": {
+    [
+     {
       "type": "symbol",
       "value": "a",
       "text": "a",
@@ -128,7 +132,8 @@
       "line": 9,
       "col": 6
      },
-     "operator": {
+     null,
+     {
       "type": "operator",
       "value": ">",
       "text": ">",
@@ -137,71 +142,65 @@
       "line": 9,
       "col": 7
      },
-     "right": [
+     null,
+     [
+      {
+       "type": "number",
+       "value": "1",
+       "text": "1",
+       "offset": 120,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 8
+      },
       null,
       {
-       "type": "operation",
-       "left": {
-        "type": "number",
-        "value": "1",
-        "text": "1",
-        "offset": 120,
-        "lineBreaks": 0,
-        "line": 9,
-        "col": 8
-       },
-       "operator": {
-        "type": "operator",
-        "value": "||",
-        "text": "or",
-        "offset": 122,
-        "lineBreaks": 0,
-        "line": 9,
-        "col": 10
-       },
-       "right": [
-        null,
-        {
-         "type": "operation",
-         "left": {
-          "type": "symbol",
-          "value": "b",
-          "text": "b",
-          "offset": 125,
-          "lineBreaks": 0,
-          "line": 9,
-          "col": 13
-         },
-         "operator": {
-          "type": "operator",
-          "value": ">",
-          "text": ">",
-          "offset": 126,
-          "lineBreaks": 0,
-          "line": 9,
-          "col": 14
-         },
-         "right": [
-          null,
-          {
-           "type": "number",
-           "value": "1",
-           "text": "1",
-           "offset": 127,
-           "lineBreaks": 0,
-           "line": 9,
-           "col": 15
-          },
-          null
-         ]
-        },
-        null
-       ]
+       "type": "operator",
+       "value": "||",
+       "text": "or",
+       "offset": 122,
+       "lineBreaks": 0,
+       "line": 9,
+       "col": 10
       },
-      null
+      null,
+      [
+       {
+        "type": "symbol",
+        "value": "b",
+        "text": "b",
+        "offset": 125,
+        "lineBreaks": 0,
+        "line": 9,
+        "col": 13
+       },
+       null,
+       {
+        "type": "operator",
+        "value": ">",
+        "text": ">",
+        "offset": 126,
+        "lineBreaks": 0,
+        "line": 9,
+        "col": 14
+       },
+       null,
+       [
+        [
+         {
+          "type": "number",
+          "value": "1",
+          "text": "1",
+          "offset": 127,
+          "lineBreaks": 0,
+          "line": 9,
+          "col": 15
+         }
+        ]
+       ]
+      ]
      ]
-    },
-    null
+    ]
    ],
    "statements": [
     {
@@ -210,10 +209,8 @@
       {
        "type": "dowhile_loop",
        "expr": [
-        null,
-        {
-         "type": "operation",
-         "left": {
+        [
+         {
           "type": "symbol",
           "value": "x",
           "text": "x",
@@ -222,7 +219,8 @@
           "line": 11,
           "col": 36
          },
-         "operator": {
+         null,
+         {
           "type": "operator",
           "value": "==",
           "text": "=",
@@ -231,21 +229,21 @@
           "line": 11,
           "col": 37
          },
-         "right": [
-          null,
-          {
-           "type": "number",
-           "value": "10",
-           "text": "10",
-           "offset": 183,
-           "lineBreaks": 0,
-           "line": 11,
-           "col": 38
-          },
-          null
+         null,
+         [
+          [
+           {
+            "type": "number",
+            "value": "10",
+            "text": "10",
+            "offset": 183,
+            "lineBreaks": 0,
+            "line": 11,
+            "col": 38
+           }
+          ]
          ]
-        },
-        null
+        ]
        ],
        "statements": [
         {
@@ -263,17 +261,19 @@
          ],
          "arg": [
           [
-           null,
-           null,
-           {
-            "type": "symbol",
-            "value": "x",
-            "text": "x",
-            "offset": 163,
-            "lineBreaks": 0,
-            "line": 11,
-            "col": 18
-           }
+           [
+            [
+             {
+              "type": "symbol",
+              "value": "x",
+              "text": "x",
+              "offset": 163,
+              "lineBreaks": 0,
+              "line": 11,
+              "col": 18
+             }
+            ]
+           ]
           ]
          ],
          "specifier": null
@@ -290,10 +290,8 @@
           "col": 22
          },
          "value": [
-          null,
-          {
-           "type": "operation",
-           "left": {
+          [
+           {
             "type": "symbol",
             "value": "x",
             "text": "x",
@@ -302,7 +300,8 @@
             "line": 11,
             "col": 25
            },
-           "operator": {
+           null,
+           {
             "type": "operator",
             "value": "+",
             "text": "+",
@@ -311,21 +310,21 @@
             "line": 11,
             "col": 26
            },
-           "right": [
-            null,
-            {
-             "type": "number",
-             "value": "1",
-             "text": "1",
-             "offset": 172,
-             "lineBreaks": 0,
-             "line": 11,
-             "col": 27
-            },
-            null
+           null,
+           [
+            [
+             {
+              "type": "number",
+              "value": "1",
+              "text": "1",
+              "offset": 172,
+              "lineBreaks": 0,
+              "line": 11,
+              "col": 27
+             }
+            ]
            ]
-          },
-          null
+          ]
          ]
         }
        ]

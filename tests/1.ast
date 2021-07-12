@@ -32,15 +32,11 @@
    "type": "cond",
    "expr": [
     [
-     [
-      [
-       {
-        "type": "symbol",
-        "value": "!a",
-        "text": "!a"
-       }
-      ]
-     ],
+     {
+      "type": "symbol",
+      "value": "!a",
+      "text": "!a"
+     },
      null,
      {
       "type": "operator",
@@ -53,11 +49,13 @@
      },
      null,
      [
-      {
-       "type": "symbol",
-       "value": "!a",
-       "text": "!a"
-      }
+      [
+       {
+        "type": "symbol",
+        "value": "!a",
+        "text": "!a"
+       }
+      ]
      ]
     ]
    ],

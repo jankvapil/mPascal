@@ -13,26 +13,26 @@
     "col": 5
    },
    "value": [
-    null,
-    {
-     "type": "number",
-     "value": "1",
-     "text": "1",
-     "offset": 14,
-     "lineBreaks": 0,
-     "line": 2,
-     "col": 8
-    },
-    null
+    [
+     [
+      {
+       "type": "number",
+       "value": "1",
+       "text": "1",
+       "offset": 14,
+       "lineBreaks": 0,
+       "line": 2,
+       "col": 8
+      }
+     ]
+    ]
    ]
   },
   {
    "type": "dowhile_loop",
    "expr": [
-    null,
-    {
-     "type": "operation",
-     "left": {
+    [
+     {
       "type": "symbol",
       "value": "x",
       "text": "x",
@@ -41,7 +41,8 @@
       "line": 4,
       "col": 11
      },
-     "operator": {
+     null,
+     {
       "type": "operator",
       "value": "==",
       "text": "=",
@@ -50,21 +51,21 @@
       "line": 4,
       "col": 12
      },
-     "right": [
-      null,
-      {
-       "type": "number",
-       "value": "10",
-       "text": "10",
-       "offset": 61,
-       "lineBreaks": 0,
-       "line": 4,
-       "col": 13
-      },
-      null
+     null,
+     [
+      [
+       {
+        "type": "number",
+        "value": "10",
+        "text": "10",
+        "offset": 61,
+        "lineBreaks": 0,
+        "line": 4,
+        "col": 13
+       }
+      ]
      ]
-    },
-    null
+    ]
    ],
    "statements": [
     {
@@ -82,17 +83,19 @@
      ],
      "arg": [
       [
-       null,
-       null,
-       {
-        "type": "symbol",
-        "value": "x",
-        "text": "x",
-        "offset": 35,
-        "lineBreaks": 0,
-        "line": 3,
-        "col": 18
-       }
+       [
+        [
+         {
+          "type": "symbol",
+          "value": "x",
+          "text": "x",
+          "offset": 35,
+          "lineBreaks": 0,
+          "line": 3,
+          "col": 18
+         }
+        ]
+       ]
       ]
      ],
      "specifier": null
@@ -109,10 +112,8 @@
       "col": 22
      },
      "value": [
-      null,
-      {
-       "type": "operation",
-       "left": {
+      [
+       {
         "type": "symbol",
         "value": "x",
         "text": "x",
@@ -121,7 +122,8 @@
         "line": 3,
         "col": 25
        },
-       "operator": {
+       null,
+       {
         "type": "operator",
         "value": "+",
         "text": "+",
@@ -130,21 +132,21 @@
         "line": 3,
         "col": 26
        },
-       "right": [
-        null,
-        {
-         "type": "number",
-         "value": "1",
-         "text": "1",
-         "offset": 44,
-         "lineBreaks": 0,
-         "line": 3,
-         "col": 27
-        },
-        null
+       null,
+       [
+        [
+         {
+          "type": "number",
+          "value": "1",
+          "text": "1",
+          "offset": 44,
+          "lineBreaks": 0,
+          "line": 3,
+          "col": 27
+         }
+        ]
        ]
-      },
-      null
+      ]
      ]
     }
    ]

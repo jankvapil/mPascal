@@ -13,17 +13,19 @@
     "col": 3
    },
    "value": [
-    null,
-    {
-     "type": "number",
-     "value": "0",
-     "text": "0",
-     "offset": 16,
-     "lineBreaks": 0,
-     "line": 2,
-     "col": 10
-    },
-    null
+    [
+     [
+      {
+       "type": "number",
+       "value": "0",
+       "text": "0",
+       "offset": 16,
+       "lineBreaks": 0,
+       "line": 2,
+       "col": 10
+      }
+     ]
+    ]
    ]
   },
   {
@@ -40,31 +42,35 @@
      "col": 7
     },
     "value": [
-     null,
-     {
-      "type": "number",
-      "value": "0",
-      "text": "0",
-      "offset": 35,
-      "lineBreaks": 0,
-      "line": 4,
-      "col": 14
-     },
-     null
+     [
+      [
+       {
+        "type": "number",
+        "value": "0",
+        "text": "0",
+        "offset": 35,
+        "lineBreaks": 0,
+        "line": 4,
+        "col": 14
+       }
+      ]
+     ]
     ]
    },
    "to": [
-    null,
-    {
-     "type": "number",
-     "value": "10",
-     "text": "10",
-     "offset": 40,
-     "lineBreaks": 0,
-     "line": 4,
-     "col": 19
-    },
-    null
+    [
+     [
+      {
+       "type": "number",
+       "value": "10",
+       "text": "10",
+       "offset": 40,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 19
+      }
+     ]
+    ]
    ],
    "statements": [
     {
@@ -83,28 +89,36 @@
          "line": 4,
          "col": 35
         },
-        "value": {
-         "type": "symbol",
-         "value": "sirka",
-         "text": "sirka",
-         "offset": 66,
-         "lineBreaks": 0,
-         "line": 4,
-         "col": 45
-        }
+        "value": [
+         [
+          [
+           {
+            "type": "symbol",
+            "value": "sirka",
+            "text": "sirka",
+            "offset": 66,
+            "lineBreaks": 0,
+            "line": 4,
+            "col": 45
+           }
+          ]
+         ]
+        ]
        },
        "to": [
-        null,
-        {
-         "type": "number",
-         "value": "15",
-         "text": "15",
-         "offset": 75,
-         "lineBreaks": 0,
-         "line": 4,
-         "col": 54
-        },
-        null
+        [
+         [
+          {
+           "type": "number",
+           "value": "15",
+           "text": "15",
+           "offset": 75,
+           "lineBreaks": 0,
+           "line": 4,
+           "col": 54
+          }
+         ]
+        ]
        ],
        "statements": [
         {
@@ -149,33 +163,36 @@
          "col": 35
         },
         "value": [
-         null,
-         {
-          "type": "number",
-          "value": "1",
-          "text": "1",
-          "offset": 139,
-          "lineBreaks": 0,
-          "line": 5,
-          "col": 46
-         },
-         null
+         [
+          [
+           {
+            "type": "number",
+            "value": "1",
+            "text": "1",
+            "offset": 139,
+            "lineBreaks": 0,
+            "line": 5,
+            "col": 46
+           }
+          ]
+         ]
         ]
        },
        "to": [
-        null,
-        {
-         "type": "operation",
-         "left": {
-          "type": "symbol",
-          "value": "citac",
-          "text": "citac",
-          "offset": 144,
-          "lineBreaks": 0,
-          "line": 5,
-          "col": 51
-         },
-         "operator": {
+        [
+         [
+          {
+           "type": "symbol",
+           "value": "citac",
+           "text": "citac",
+           "offset": 144,
+           "lineBreaks": 0,
+           "line": 5,
+           "col": 51
+          }
+         ],
+         null,
+         {
           "type": "operator",
           "value": "-",
           "text": "-",
@@ -184,21 +201,21 @@
           "line": 5,
           "col": 56
          },
-         "right": [
-          null,
-          {
-           "type": "number",
-           "value": "1",
-           "text": "1",
-           "offset": 150,
-           "lineBreaks": 0,
-           "line": 5,
-           "col": 57
-          },
-          null
+         null,
+         [
+          [
+           {
+            "type": "number",
+            "value": "1",
+            "text": "1",
+            "offset": 150,
+            "lineBreaks": 0,
+            "line": 5,
+            "col": 57
+           }
+          ]
          ]
-        },
-        null
+        ]
        ],
        "statements": [
         {
@@ -255,19 +272,20 @@
         "col": 31
        },
        "value": [
-        null,
-        {
-         "type": "operation",
-         "left": {
-          "type": "symbol",
-          "value": "citac",
-          "text": "citac",
-          "offset": 263,
-          "lineBreaks": 0,
-          "line": 7,
-          "col": 38
-         },
-         "operator": {
+        [
+         [
+          {
+           "type": "symbol",
+           "value": "citac",
+           "text": "citac",
+           "offset": 263,
+           "lineBreaks": 0,
+           "line": 7,
+           "col": 38
+          }
+         ],
+         null,
+         {
           "type": "operator",
           "value": "+",
           "text": "+",
@@ -276,21 +294,21 @@
           "line": 7,
           "col": 43
          },
-         "right": [
-          null,
-          {
-           "type": "number",
-           "value": "2",
-           "text": "2",
-           "offset": 269,
-           "lineBreaks": 0,
-           "line": 7,
-           "col": 44
-          },
-          null
+         null,
+         [
+          [
+           {
+            "type": "number",
+            "value": "2",
+            "text": "2",
+            "offset": 269,
+            "lineBreaks": 0,
+            "line": 7,
+            "col": 44
+           }
+          ]
          ]
-        },
-        null
+        ]
        ]
       }
      ]

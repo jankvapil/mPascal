@@ -14,19 +14,15 @@
    },
    "value": [
     [
-     [
-      [
-       {
-        "type": "number",
-        "value": "4",
-        "text": "4",
-        "offset": 13,
-        "lineBreaks": 0,
-        "line": 2,
-        "col": 6
-       }
-      ]
-     ],
+     {
+      "type": "number",
+      "value": "4",
+      "text": "4",
+      "offset": 13,
+      "lineBreaks": 0,
+      "line": 2,
+      "col": 6
+     },
      null,
      {
       "type": "operator",
@@ -39,15 +35,17 @@
      },
      null,
      [
-      {
-       "type": "number",
-       "value": "2",
-       "text": "2",
-       "offset": 17,
-       "lineBreaks": 0,
-       "line": 2,
-       "col": 10
-      }
+      [
+       {
+        "type": "number",
+        "value": "2",
+        "text": "2",
+        "offset": 17,
+        "lineBreaks": 0,
+        "line": 2,
+        "col": 10
+       }
+      ]
      ]
     ]
    ]
@@ -65,19 +63,15 @@
    },
    "value": [
     [
-     [
-      [
-       {
-        "type": "symbol",
-        "value": "x",
-        "text": "x",
-        "offset": 26,
-        "lineBreaks": 0,
-        "line": 3,
-        "col": 6
-       }
-      ]
-     ],
+     {
+      "type": "symbol",
+      "value": "x",
+      "text": "x",
+      "offset": 26,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 6
+     },
      null,
      {
       "type": "operator",
@@ -90,15 +84,17 @@
      },
      null,
      [
-      {
-       "type": "number",
-       "value": "2",
-       "text": "2",
-       "offset": 32,
-       "lineBreaks": 0,
-       "line": 3,
-       "col": 12
-      }
+      [
+       {
+        "type": "number",
+        "value": "2",
+        "text": "2",
+        "offset": 32,
+        "lineBreaks": 0,
+        "line": 3,
+        "col": 12
+       }
+      ]
      ]
     ]
    ]
@@ -116,19 +112,15 @@
    },
    "value": [
     [
-     [
-      [
-       {
-        "type": "symbol",
-        "value": "x",
-        "text": "x",
-        "offset": 41,
-        "lineBreaks": 0,
-        "line": 4,
-        "col": 6
-       }
-      ]
-     ],
+     {
+      "type": "symbol",
+      "value": "x",
+      "text": "x",
+      "offset": 41,
+      "lineBreaks": 0,
+      "line": 4,
+      "col": 6
+     },
      null,
      {
       "type": "operator",
@@ -141,15 +133,17 @@
      },
      null,
      [
-      {
-       "type": "symbol",
-       "value": "y",
-       "text": "y",
-       "offset": 43,
-       "lineBreaks": 0,
-       "line": 4,
-       "col": 8
-      }
+      [
+       {
+        "type": "symbol",
+        "value": "y",
+        "text": "y",
+        "offset": 43,
+        "lineBreaks": 0,
+        "line": 4,
+        "col": 8
+       }
+      ]
      ]
     ]
    ]
@@ -277,64 +271,60 @@
    },
    "value": [
     [
-     [
-      [
-       [
-        {
-         "type": "symbol",
-         "value": "y",
-         "text": "y",
-         "offset": 94,
-         "lineBreaks": 0,
-         "line": 8,
-         "col": 6
-        }
-       ]
-      ],
-      null,
-      {
-       "type": "operator",
-       "value": "+",
-       "text": "+",
-       "offset": 95,
-       "lineBreaks": 0,
-       "line": 8,
-       "col": 7
-      },
-      null,
-      [
-       {
-        "type": "symbol",
-        "value": "z",
-        "text": "z",
-        "offset": 96,
-        "lineBreaks": 0,
-        "line": 8,
-        "col": 8
-       }
-      ]
-     ],
+     {
+      "type": "symbol",
+      "value": "y",
+      "text": "y",
+      "offset": 94,
+      "lineBreaks": 0,
+      "line": 8,
+      "col": 6
+     },
      null,
      {
       "type": "operator",
       "value": "+",
       "text": "+",
-      "offset": 97,
+      "offset": 95,
       "lineBreaks": 0,
       "line": 8,
-      "col": 9
+      "col": 7
      },
      null,
      [
       {
        "type": "symbol",
-       "value": "c",
-       "text": "c",
-       "offset": 99,
+       "value": "z",
+       "text": "z",
+       "offset": 96,
        "lineBreaks": 0,
        "line": 8,
-       "col": 11
-      }
+       "col": 8
+      },
+      null,
+      {
+       "type": "operator",
+       "value": "+",
+       "text": "+",
+       "offset": 97,
+       "lineBreaks": 0,
+       "line": 8,
+       "col": 9
+      },
+      null,
+      [
+       [
+        {
+         "type": "symbol",
+         "value": "c",
+         "text": "c",
+         "offset": 99,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 11
+        }
+       ]
+      ]
      ]
     ]
    ]

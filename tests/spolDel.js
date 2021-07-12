@@ -43,7 +43,7 @@ write('Zadej 2 prirozena cisla: ')
 
 var a = 16;
 var b = 4;
-if(a<1||b<1) {
+if((a<1)||(b<1)) {
 writeln('  Chybna cisla')} else {
 do {
 var zbytek = a%b;

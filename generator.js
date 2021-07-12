@@ -89,13 +89,13 @@ const generateJSExpr = (node) => {
         }
     }
 
-    else if (node.type === "notOperation") {
-        // console.log(node)
-        const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
-        const operator = generateJSExpr(node.operator)
-        const left = generateJSExpr(node.left)
-        return `!${left}${operator}${right}`
-    }
+    // else if (node.type === "notOperation") {
+    //     // console.log(node)
+    //     const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
+    //     const operator = generateJSExpr(node.operator)
+    //     const left = generateJSExpr(node.left)
+    //     return `!${left}${operator}${right}`
+    // }
 
     else if (node.type === "operation") {
         // console.log('\n')
@@ -118,17 +118,19 @@ const generateJSExpr = (node) => {
             const fnName = node.value.fnName.value ? node.value.fnName.value : node.value.fnName[0].value
             return `var ${symbolName} = ${fnName}(${value});`
         } 
-        else if ((
-          node.value && node.value.type === "operation") 
-          || (node.value[0] && node.value[0].type && node.value[0].type === "operation")) {
+        // else if ((
+        //   node.value && node.value.type === "operation") 
+        //   || (node.value[0] && node.value[0].type && node.value[0].type === "operation")) {
 
-            value = generateMultipleExpr(node.value)
-            return `var ${symbolName} = ${value};`
-        } 
+        //     console.log('\n')
+        //     console.log(node)
+        //     value = generateMultipleExpr(node.value)
+        //     return `var ${symbolName} = ${value};`
+        // } 
         else {
             // console.log('\n')
             // console.log(node.value)
-            value = generateMultipleExpr(node.value[0][0])
+            value = generateMultipleExpr(node.value[0])
             return `var ${symbolName} = ${value};`
         }
     } 

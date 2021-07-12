@@ -42,5 +42,5 @@ function chr(num) {
 var cislo = 3;
 var prvocislo = true;
 var delitel = 3;
-if(prvocislo&&delitel*delitel>=cislo) {
+if(prvocislo&&(delitel*delitel>=cislo)) {
 write(cislo, 5)}

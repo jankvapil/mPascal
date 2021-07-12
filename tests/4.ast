@@ -44,10 +44,8 @@
   {
    "type": "cond",
    "expr": [
-    null,
-    {
-     "type": "operation",
-     "left": {
+    [
+     {
       "type": "number",
       "value": "1",
       "text": "1",
@@ -56,7 +54,8 @@
       "line": 4,
       "col": 6
      },
-     "operator": {
+     null,
+     {
       "type": "operator",
       "value": ">",
       "text": ">",
@@ -65,21 +64,21 @@
       "line": 4,
       "col": 7
      },
-     "right": [
-      null,
-      {
-       "type": "number",
-       "value": "2",
-       "text": "2",
-       "offset": 52,
-       "lineBreaks": 0,
-       "line": 4,
-       "col": 8
-      },
-      null
+     null,
+     [
+      [
+       {
+        "type": "number",
+        "value": "2",
+        "text": "2",
+        "offset": 52,
+        "lineBreaks": 0,
+        "line": 4,
+        "col": 8
+       }
+      ]
      ]
-    },
-    null
+    ]
    ],
    "statements": [
     {

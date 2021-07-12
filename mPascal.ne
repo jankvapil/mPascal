@@ -190,10 +190,10 @@ expr
     |   operation
     
 operation
-    ->  operation _ %operator _ atomParen
+    ->  atomParen _ %operator _ operation
     |   atomParen
 
-atomParen -> %lparen _ atom _ %rparen
+atomParen -> %lparen _ operation _ %rparen
     | atom
 
 lpar -> %lparen {% id %}

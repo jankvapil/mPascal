@@ -4,17 +4,19 @@
   {
    "type": "cond",
    "expr": [
-    null,
-    null,
-    {
-     "type": "bool",
-     "value": "true",
-     "text": "true",
-     "offset": 16,
-     "lineBreaks": 0,
-     "line": 3,
-     "col": 6
-    }
+    [
+     [
+      {
+       "type": "bool",
+       "value": "true",
+       "text": "true",
+       "offset": 16,
+       "lineBreaks": 0,
+       "line": 3,
+       "col": 6
+      }
+     ]
+    ]
    ],
    "statements": [
     {

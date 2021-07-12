@@ -27,17 +27,19 @@
     "col": 3
    },
    "value": [
-    null,
-    {
-     "type": "number",
-     "value": "0",
-     "text": "0",
-     "offset": 26,
-     "lineBreaks": 0,
-     "line": 4,
-     "col": 6
-    },
-    null
+    [
+     [
+      {
+       "type": "number",
+       "value": "0",
+       "text": "0",
+       "offset": 26,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 6
+      }
+     ]
+    ]
    ]
   },
   {
@@ -52,17 +54,19 @@
     "col": 9
    },
    "value": [
-    null,
-    {
-     "type": "number",
-     "value": "1",
-     "text": "1",
-     "offset": 32,
-     "lineBreaks": 0,
-     "line": 4,
-     "col": 12
-    },
-    null
+    [
+     [
+      {
+       "type": "number",
+       "value": "1",
+       "text": "1",
+       "offset": 32,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 12
+      }
+     ]
+    ]
    ]
   },
   {
@@ -79,15 +83,21 @@
     }
    ],
    "arg": [
-    {
-     "type": "symbol",
-     "value": "b",
-     "text": "b",
-     "offset": 41,
-     "lineBreaks": 0,
-     "line": 4,
-     "col": 21
-    }
+    [
+     [
+      [
+       {
+        "type": "symbol",
+        "value": "b",
+        "text": "b",
+        "offset": 41,
+        "lineBreaks": 0,
+        "line": 4,
+        "col": 21
+       }
+      ]
+     ]
+    ]
    ],
    "specifier": [
     {
@@ -124,15 +134,21 @@
     }
    ],
    "arg": [
-    {
-     "type": "symbol",
-     "value": "a",
-     "text": "a",
-     "offset": 54,
-     "lineBreaks": 0,
-     "line": 4,
-     "col": 34
-    }
+    [
+     [
+      [
+       {
+        "type": "symbol",
+        "value": "a",
+        "text": "a",
+        "offset": 54,
+        "lineBreaks": 0,
+        "line": 4,
+        "col": 34
+       }
+      ]
+     ]
+    ]
    ],
    "specifier": [
     {
@@ -167,35 +183,38 @@
     "col": 41
    },
    "value": [
-    null,
-    {
-     "type": "number",
-     "value": "2",
-     "text": "2",
-     "offset": 64,
-     "lineBreaks": 0,
-     "line": 4,
-     "col": 44
-    },
-    null
+    [
+     [
+      {
+       "type": "number",
+       "value": "2",
+       "text": "2",
+       "offset": 64,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 44
+      }
+     ]
+    ]
    ]
   },
   {
    "type": "dowhile_loop",
    "expr": [
-    null,
-    {
-     "type": "operation",
-     "left": {
-      "type": "symbol",
-      "value": "n",
-      "text": "n",
-      "offset": 169,
-      "lineBreaks": 0,
-      "line": 8,
-      "col": 9
-     },
-     "operator": {
+    [
+     [
+      {
+       "type": "symbol",
+       "value": "n",
+       "text": "n",
+       "offset": 169,
+       "lineBreaks": 0,
+       "line": 8,
+       "col": 9
+      }
+     ],
+     null,
+     {
       "type": "operator",
       "value": "==",
       "text": "=",
@@ -204,21 +223,21 @@
       "line": 8,
       "col": 10
      },
-     "right": [
-      null,
-      {
-       "type": "number",
-       "value": "45",
-       "text": "45",
-       "offset": 171,
-       "lineBreaks": 0,
-       "line": 8,
-       "col": 11
-      },
-      null
+     null,
+     [
+      [
+       {
+        "type": "number",
+        "value": "45",
+        "text": "45",
+        "offset": 171,
+        "lineBreaks": 0,
+        "line": 8,
+        "col": 11
+       }
+      ]
      ]
-    },
-    null
+    ]
    ],
    "statements": [
     {
@@ -233,19 +252,20 @@
       "col": 10
      },
      "value": [
-      null,
-      {
-       "type": "operation",
-       "left": {
-        "type": "symbol",
-        "value": "a",
-        "text": "a",
-        "offset": 82,
-        "lineBreaks": 0,
-        "line": 6,
-        "col": 13
-       },
-       "operator": {
+      [
+       [
+        {
+         "type": "symbol",
+         "value": "a",
+         "text": "a",
+         "offset": 82,
+         "lineBreaks": 0,
+         "line": 6,
+         "col": 13
+        }
+       ],
+       null,
+       {
         "type": "operator",
         "value": "+",
         "text": "+",
@@ -254,17 +274,21 @@
         "line": 6,
         "col": 14
        },
-       "right": {
-        "type": "symbol",
-        "value": "b",
-        "text": "b",
-        "offset": 84,
-        "lineBreaks": 0,
-        "line": 6,
-        "col": 15
-       }
-      },
-      null
+       null,
+       [
+        [
+         {
+          "type": "symbol",
+          "value": "b",
+          "text": "b",
+          "offset": 84,
+          "lineBreaks": 0,
+          "line": 6,
+          "col": 15
+         }
+        ]
+       ]
+      ]
      ]
     },
     {
@@ -278,15 +302,21 @@
       "line": 6,
       "col": 18
      },
-     "value": {
-      "type": "symbol",
-      "value": "a",
-      "text": "a",
-      "offset": 90,
-      "lineBreaks": 0,
-      "line": 6,
-      "col": 21
-     }
+     "value": [
+      [
+       [
+        {
+         "type": "symbol",
+         "value": "a",
+         "text": "a",
+         "offset": 90,
+         "lineBreaks": 0,
+         "line": 6,
+         "col": 21
+        }
+       ]
+      ]
+     ]
     },
     {
      "type": "assignment",
@@ -299,32 +329,39 @@
       "line": 6,
       "col": 24
      },
-     "value": {
-      "type": "symbol",
-      "value": "c",
-      "text": "c",
-      "offset": 96,
-      "lineBreaks": 0,
-      "line": 6,
-      "col": 27
-     }
+     "value": [
+      [
+       [
+        {
+         "type": "symbol",
+         "value": "c",
+         "text": "c",
+         "offset": 96,
+         "lineBreaks": 0,
+         "line": 6,
+         "col": 27
+        }
+       ]
+      ]
+     ]
     },
     {
      "type": "cond",
      "expr": [
-      null,
-      {
-       "type": "operation",
-       "left": {
-        "type": "symbol",
-        "value": "n",
-        "text": "n",
-        "offset": 112,
-        "lineBreaks": 0,
-        "line": 7,
-        "col": 13
-       },
-       "operator": {
+      [
+       [
+        {
+         "type": "symbol",
+         "value": "n",
+         "text": "n",
+         "offset": 112,
+         "lineBreaks": 0,
+         "line": 7,
+         "col": 13
+        }
+       ],
+       null,
+       {
         "type": "operator",
         "value": "%",
         "text": "mod",
@@ -333,11 +370,10 @@
         "line": 7,
         "col": 15
        },
-       "right": [
-        null,
-        {
-         "type": "operation",
-         "left": {
+       null,
+       [
+        [
+         {
           "type": "number",
           "value": "10",
           "text": "10",
@@ -345,18 +381,21 @@
           "lineBreaks": 0,
           "line": 7,
           "col": 19
-         },
-         "operator": {
-          "type": "operator",
-          "value": "==",
-          "text": "=",
-          "offset": 121,
-          "lineBreaks": 0,
-          "line": 7,
-          "col": 22
-         },
-         "right": [
-          null,
+         }
+        ],
+        null,
+        {
+         "type": "operator",
+         "value": "==",
+         "text": "=",
+         "offset": 121,
+         "lineBreaks": 0,
+         "line": 7,
+         "col": 22
+        },
+        null,
+        [
+         [
           {
            "type": "number",
            "value": "0",
@@ -365,14 +404,11 @@
            "lineBreaks": 0,
            "line": 7,
            "col": 24
-          },
-          null
+          }
          ]
-        },
-        null
+        ]
        ]
-      },
-      null
+      ]
      ],
      "statements": [
       {
@@ -405,15 +441,21 @@
       }
      ],
      "arg": [
-      {
-       "type": "symbol",
-       "value": "a",
-       "text": "a",
-       "offset": 145,
-       "lineBreaks": 0,
-       "line": 7,
-       "col": 46
-      }
+      [
+       [
+        [
+         {
+          "type": "symbol",
+          "value": "a",
+          "text": "a",
+          "offset": 145,
+          "lineBreaks": 0,
+          "line": 7,
+          "col": 46
+         }
+        ]
+       ]
+      ]
      ],
      "specifier": [
       {
@@ -448,19 +490,20 @@
       "col": 53
      },
      "value": [
-      null,
-      {
-       "type": "operation",
-       "left": {
-        "type": "symbol",
-        "value": "n",
-        "text": "n",
-        "offset": 155,
-        "lineBreaks": 0,
-        "line": 7,
-        "col": 56
-       },
-       "operator": {
+      [
+       [
+        {
+         "type": "symbol",
+         "value": "n",
+         "text": "n",
+         "offset": 155,
+         "lineBreaks": 0,
+         "line": 7,
+         "col": 56
+        }
+       ],
+       null,
+       {
         "type": "operator",
         "value": "+",
         "text": "+",
@@ -469,21 +512,21 @@
         "line": 7,
         "col": 57
        },
-       "right": [
-        null,
-        {
-         "type": "number",
-         "value": "1",
-         "text": "1",
-         "offset": 157,
-         "lineBreaks": 0,
-         "line": 7,
-         "col": 58
-        },
-        null
+       null,
+       [
+        [
+         {
+          "type": "number",
+          "value": "1",
+          "text": "1",
+          "offset": 157,
+          "lineBreaks": 0,
+          "line": 7,
+          "col": 58
+         }
+        ]
        ]
-      },
-      null
+      ]
      ]
     }
    ]

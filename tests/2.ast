@@ -15,31 +15,35 @@
      "col": 9
     },
     "value": [
-     null,
-     {
-      "type": "number",
-      "value": "10",
-      "text": "10",
-      "offset": 18,
-      "lineBreaks": 0,
-      "line": 2,
-      "col": 12
-     },
-     null
+     [
+      [
+       {
+        "type": "number",
+        "value": "10",
+        "text": "10",
+        "offset": 18,
+        "lineBreaks": 0,
+        "line": 2,
+        "col": 12
+       }
+      ]
+     ]
     ]
    },
    "downto": [
-    null,
-    {
-     "type": "number",
-     "value": "0",
-     "text": "0",
-     "offset": 28,
-     "lineBreaks": 0,
-     "line": 2,
-     "col": 22
-    },
-    null
+    [
+     [
+      {
+       "type": "number",
+       "value": "0",
+       "text": "0",
+       "offset": 28,
+       "lineBreaks": 0,
+       "line": 2,
+       "col": 22
+      }
+     ]
+    ]
    ],
    "statements": [
     {
@@ -57,17 +61,19 @@
      ],
      "arg": [
       [
-       null,
-       null,
-       {
-        "type": "symbol",
-        "value": "i",
-        "text": "i",
-        "offset": 39,
-        "lineBreaks": 0,
-        "line": 2,
-        "col": 33
-       }
+       [
+        [
+         {
+          "type": "symbol",
+          "value": "i",
+          "text": "i",
+          "offset": 39,
+          "lineBreaks": 0,
+          "line": 2,
+          "col": 33
+         }
+        ]
+       ]
       ]
      ],
      "specifier": null

@@ -50,17 +50,19 @@
     "col": 3
    },
    "value": [
-    null,
-    {
-     "type": "number",
-     "value": "42",
-     "text": "42",
-     "offset": 65,
-     "lineBreaks": 0,
-     "line": 4,
-     "col": 6
-    },
-    null
+    [
+     [
+      {
+       "type": "number",
+       "value": "42",
+       "text": "42",
+       "offset": 65,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 6
+      }
+     ]
+    ]
    ]
   },
   {
@@ -80,19 +82,20 @@
   {
    "type": "cond",
    "expr": [
-    null,
-    {
-     "type": "operation",
-     "left": {
-      "type": "symbol",
-      "value": "a",
-      "text": "a",
-      "offset": 88,
-      "lineBreaks": 0,
-      "line": 7,
-      "col": 6
-     },
-     "operator": {
+    [
+     [
+      {
+       "type": "symbol",
+       "value": "a",
+       "text": "a",
+       "offset": 88,
+       "lineBreaks": 0,
+       "line": 7,
+       "col": 6
+      }
+     ],
+     null,
+     {
       "type": "operator",
       "value": "<",
       "text": "<",
@@ -101,21 +104,21 @@
       "line": 7,
       "col": 7
      },
-     "right": [
-      null,
-      {
-       "type": "number",
-       "value": "0",
-       "text": "0",
-       "offset": 90,
-       "lineBreaks": 0,
-       "line": 7,
-       "col": 8
-      },
-      null
+     null,
+     [
+      [
+       {
+        "type": "number",
+        "value": "0",
+        "text": "0",
+        "offset": 90,
+        "lineBreaks": 0,
+        "line": 7,
+        "col": 8
+       }
+      ]
      ]
-    },
-    null
+    ]
    ],
    "statements": [
     {
@@ -203,15 +206,21 @@
           }
          ],
          "arg": [
-          {
-           "type": "symbol",
-           "value": "a",
-           "text": "a",
-           "offset": 172,
-           "lineBreaks": 0,
-           "line": 9,
-           "col": 47
-          }
+          [
+           [
+            [
+             {
+              "type": "symbol",
+              "value": "a",
+              "text": "a",
+              "offset": 172,
+              "lineBreaks": 0,
+              "line": 9,
+              "col": 47
+             }
+            ]
+           ]
+          ]
          ],
          "specifier": null
         }
@@ -286,15 +295,21 @@
           }
          ],
          "arg": [
-          {
-           "type": "symbol",
-           "value": "a",
-           "text": "a",
-           "offset": 239,
-           "lineBreaks": 0,
-           "line": 10,
-           "col": 62
-          }
+          [
+           [
+            [
+             {
+              "type": "symbol",
+              "value": "a",
+              "text": "a",
+              "offset": 239,
+              "lineBreaks": 0,
+              "line": 10,
+              "col": 62
+             }
+            ]
+           ]
+          ]
          ],
          "specifier": null
         }

@@ -1,7 +1,9 @@
 
 const fs = require("mz/fs")
 
-
+///
+/// Recoursively generetes JS expression
+///
 const generateMultipleExpr = (expr) => {
     if (!expr.length) {
         return generateJSExpr(expr)
@@ -29,10 +31,6 @@ const generateJSExpr = (node) => {
     if (!node) return
 
     if (node.type === "cond") {
-        // console.log('\n')
-        // console.log(node)
-        // console.log('\n')
-        // console.log(node.expr[0])
         const expr = generateMultipleExpr(node.expr[0])
         const statements = []
         node.statements.forEach(s => {
@@ -89,17 +87,7 @@ const generateJSExpr = (node) => {
         }
     }
 
-    // else if (node.type === "notOperation") {
-    //     // console.log(node)
-    //     const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
-    //     const operator = generateJSExpr(node.operator)
-    //     const left = generateJSExpr(node.left)
-    //     return `!${left}${operator}${right}`
-    // }
-
     else if (node.type === "operation") {
-        // console.log('\n')
-        // console.log(node)
         const left = generateMultipleExpr(node.left)
         const operator = generateJSExpr(node.operator)
         const right = generateMultipleExpr(node.right)
@@ -107,9 +95,6 @@ const generateJSExpr = (node) => {
     }
 
     else if (node.type === "assignment") {
-        // console.log('\n')
-        // console.log(node)
-
         const symbolName = node.symbol.value
         let value
         
@@ -118,18 +103,7 @@ const generateJSExpr = (node) => {
             const fnName = node.value.fnName.value ? node.value.fnName.value : node.value.fnName[0].value
             return `var ${symbolName} = ${fnName}(${value});`
         } 
-        // else if ((
-        //   node.value && node.value.type === "operation") 
-        //   || (node.value[0] && node.value[0].type && node.value[0].type === "operation")) {
-
-        //     console.log('\n')
-        //     console.log(node)
-        //     value = generateMultipleExpr(node.value)
-        //     return `var ${symbolName} = ${value};`
-        // } 
         else {
-            // console.log('\n')
-            // console.log(node.value)
             value = generateMultipleExpr(node.value[0])
             return `var ${symbolName} = ${value};`
         }
@@ -164,27 +138,15 @@ const generateJSExpr = (node) => {
         return node.value
     } else if (node.type === "bool") {
         return node.value
-    // } else if (node.type === "notBool") {
-    //     return `!${node.value}`
-    // } else if (node.type === "notSymbol") {
-    //     console.log('\n')
-    //     console.log(node)
-    //     return `!${node.value}`
     } else if (node.type === "symbol") {
         return node.value
     } else if (node.type === "operator") {
         return node.value
     }  else if (node.type === "lparen") {
-        // console.log('\n')
-        // console.log(node)
         return node.value
     } else if (node.type === "rparen") {
-        // console.log('\n')
-        // console.log(node)
         return node.value
     } else if (node.type === "not") {
-        // console.log('\n')
-        // console.log(node)
         return "!"
     }
 }
@@ -194,7 +156,6 @@ const generateJSExpr = (node) => {
 /// Generates JS Code from Abstract Syntax Tree
 ///
 const generateJS = (ast) => {
-    // console.log(ast)
     const res = []
     if (ast.type === "program") {
         ast.statements.forEach(s => {
@@ -227,7 +188,6 @@ const main = async () => {
     const jsCode = runtime + "\n" + generateJS(ast)
     const outFilename = inFilename.replace(".ast", ".js")
     
-    // console.log(`Generating ${outFilename}...`)
     await fs.writeFile(outFilename, jsCode)
 }
 

@@ -39,13 +39,13 @@ function chr(num) {
   return String.fromCharCode(num);
 }
 
-var x = 4/2;
-var y = x%2;
-var z = x+y;
+var x = 4;
+var y = x;
+var z = x;
 writeln(z, 6)
 var c = 42;
 writeln(c)
-var x = y+z+c;
+var x = y+z;
 writeln(x)
 var znak = ord(' ');
 writeln(znak)

@@ -40,27 +40,27 @@ function chr(num) {
 }
 
 var a = 1;
-if(a) {
+if(a^a) {
 writeln('chybne')} else {
 writeln('spravne')}
-if(a) {
+if(!a^!a) {
 writeln('chybne')} else {
 writeln('spravne')}
-if(a) {
+if(a^!a) {
 writeln('spravne')} else {
 writeln('chybne')}
-if(a) {
+if(!a^a) {
 writeln('spravne')} else {
 writeln('chybne')}
-if(a) {
+if(a||a) {
 writeln('spravne')} else {
 writeln('chybne')}
-if(a) {
+if(!a||!a) {
 writeln('chybne')} else {
 writeln('spravne')}
-if(a) {
+if(a||!a) {
 writeln('spravne')} else {
 writeln('chybne')}
-if(a) {
+if(!a||a) {
 writeln('spravne')} else {
 writeln('chybne')}

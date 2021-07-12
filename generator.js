@@ -9,7 +9,12 @@ const generateMultipleExpr = (expr) => {
         const exprs = []
         expr.forEach(e => {
             if (e) {
-                const tmp = generateJSExpr(e)
+                let tmp
+                if (e.length) {
+                    tmp = generateMultipleExpr(e)
+                } else {
+                    tmp = generateJSExpr(e)
+                }
                 exprs.push(tmp)
             }
         })
@@ -24,9 +29,11 @@ const generateJSExpr = (node) => {
     if (!node) return
 
     if (node.type === "cond") {
-        console.log('\n')
-        console.log(node)
-        const expr = generateMultipleExpr(node.expr[0][0])
+        // console.log('\n')
+        // console.log(node)
+        // console.log('\n')
+        // console.log(node.expr[0])
+        const expr = generateMultipleExpr(node.expr[0])
         const statements = []
         node.statements.forEach(s => {
             const tmp = generateJSExpr(s)
@@ -100,8 +107,8 @@ const generateJSExpr = (node) => {
     }
 
     else if (node.type === "assignment") {
-        console.log('\n')
-        console.log(node)
+        // console.log('\n')
+        // console.log(node)
 
         const symbolName = node.symbol.value
         let value

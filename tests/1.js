@@ -40,5 +40,5 @@ function chr(num) {
 }
 
 var a = false;
-if() {
+if(!a&&!a) {
 writeln('true')}

@@ -189,13 +189,12 @@ expr
     |   fn_call {% id %}
     |   operation
     
-
-atomParen -> %lparen _ atom _ %rparen
-    | atom
-
 operation
     ->  operation _ %operator _ atomParen
     |   atomParen
+
+atomParen -> %lparen _ atom _ %rparen
+    | atom
 
 lpar -> %lparen {% id %}
 

@@ -180,69 +180,86 @@ cond
 
 
 expr 
-    ->  %not _ %symbol 
-        {% (data => {
-            return {
-                type: "symbol",
-                value: !data[2],
-                text: `${!data[2]}`
-            }
-        }) %}
-    |   %not _ %bool 
-        {% (data => {
-            return {
-                type: "bool",
-                value: !data[2],
-                text: `${!data[2]}`
-            }
-        }) %}
-    |   %symbol {% id %}
-    |   %string {% id %}
+    # ->  not:? _ %symbol
+    ->   %string {% id %}
     # |   %number {% id %}
-    |   lpar:? num rpar:?
+    # |   lpar:? num rpar:?
     # |   num
-    |   %bool   {% id %}
+    # |   not:? _ %bool
     |   fn_call {% id %}
-    # |   operation {% id %}
+    |   operation
     
+
+atomParen -> %lparen _ atom _ %rparen
+    | atom
+
+operation
+    ->  operation _ %operator _ atomParen
+    |   atomParen
 
 lpar -> %lparen {% id %}
 
 rpar -> %rparen {% id %}
 
-num 
-    ->  %number {% id %}
-    |   %number _ rpar:? _ %operator _ lpar:? _ expr
-    # |   %number _ %operator _ lpar:? _ expr
-    {%             
-        (data) => {
-            return {
-                type: "operation",
-                left: data[0],
-                operator: data[4],
-                right: data[8]
-            }
-        } %}
-    |   %symbol _ rpar:? _ %operator _ lpar:? _ expr
-    {%             
-        (data) => {
-            return {
-                type: "operation",
-                left: data[0],
-                operator: data[4],
-                right: data[8]
-            }
-        } %}
-    |   %not _ %symbol _ rpar:? _ %operator _ lpar:? _ expr
-    {%             
-        (data) => {
-            return {
-                type: "notOperation",
-                left: data[2],
-                operator: data[6],
-                right: data[10]
-            }
-        } %}
+# not -> %not {% id %}
+
+atom -> %number {% id %}
+    | %not _ %symbol
+        {%  
+            (data) => {
+                return {
+                    type: "symbol",
+                    value: `!${data[2]}`,
+                    text: `!${data[2]}`
+                }
+            } 
+        %}
+    | %symbol {% id %}
+    | %not _ %bool 
+        {%  
+            (data) => {
+                return {
+                    type: "bool",
+                    value: `!${data[2]}`,
+                    text: `!${data[2]}`
+                }
+            } 
+        %}
+    | %bool {% id %}
+
+# num 
+#     ->  %number {% id %}
+#     |   %number _ rpar:? _ %operator _ lpar:? _ expr
+#     # |   %number _ %operator _ lpar:? _ expr
+#     {%             
+#         (data) => {
+#             return {
+#                 type: "operation",
+#                 left: data[0],
+#                 operator: data[4],
+#                 right: data[8]
+#             }
+#         } %}
+#     |   %symbol _ rpar:? _ %operator _ lpar:? _ expr
+#     {%             
+#         (data) => {
+#             return {
+#                 type: "operation",
+#                 left: data[0],
+#                 operator: data[4],
+#                 right: data[8]
+#             }
+#         } %}
+#     |   %not _ %symbol _ rpar:? _ %operator _ lpar:? _ expr
+#     {%             
+#         (data) => {
+#             return {
+#                 type: "notOperation",
+#                 left: data[2],
+#                 operator: data[6],
+#                 right: data[10]
+#             }
+#         } %}
 
 # operator
 #     ->  %operator   {% id %}

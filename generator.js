@@ -24,9 +24,9 @@ const generateJSExpr = (node) => {
     if (!node) return
 
     if (node.type === "cond") {
-        // console.log('\n')
-        // console.log(node)
-        const expr = generateMultipleExpr(node.expr)
+        console.log('\n')
+        console.log(node)
+        const expr = generateMultipleExpr(node.expr[0][0])
         const statements = []
         node.statements.forEach(s => {
             const tmp = generateJSExpr(s)
@@ -83,6 +83,7 @@ const generateJSExpr = (node) => {
     }
 
     else if (node.type === "notOperation") {
+        // console.log(node)
         const right = generateJSExpr(node.right[0] ? node.right[0] : node.right)
         const operator = generateJSExpr(node.operator)
         const left = generateJSExpr(node.left)
@@ -99,7 +100,9 @@ const generateJSExpr = (node) => {
     }
 
     else if (node.type === "assignment") {
-        
+        console.log('\n')
+        console.log(node)
+
         const symbolName = node.symbol.value
         let value
         
@@ -116,7 +119,9 @@ const generateJSExpr = (node) => {
             return `var ${symbolName} = ${value};`
         } 
         else {
-            value = generateMultipleExpr(node.value)
+            // console.log('\n')
+            // console.log(node.value)
+            value = generateMultipleExpr(node.value[0][0])
             return `var ${symbolName} = ${value};`
         }
     } 
@@ -150,18 +155,28 @@ const generateJSExpr = (node) => {
         return node.value
     } else if (node.type === "bool") {
         return node.value
+    // } else if (node.type === "notBool") {
+    //     return `!${node.value}`
+    // } else if (node.type === "notSymbol") {
+    //     console.log('\n')
+    //     console.log(node)
+    //     return `!${node.value}`
     } else if (node.type === "symbol") {
         return node.value
     } else if (node.type === "operator") {
         return node.value
     }  else if (node.type === "lparen") {
-        console.log('\n')
-        console.log(node)
-        // return node.value
+        // console.log('\n')
+        // console.log(node)
+        return node.value
     } else if (node.type === "rparen") {
-        console.log('\n')
-        console.log(node)
-        // return node.value
+        // console.log('\n')
+        // console.log(node)
+        return node.value
+    } else if (node.type === "not") {
+        // console.log('\n')
+        // console.log(node)
+        return "!"
     }
 }
 

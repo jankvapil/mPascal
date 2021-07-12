@@ -37,15 +37,19 @@
     "line": 4,
     "col": 5
    },
-   "value": {
-    "type": "bool",
-    "value": "true",
-    "text": "true",
-    "offset": 39,
-    "lineBreaks": 0,
-    "line": 4,
-    "col": 16
-   }
+   "value": [
+    null,
+    null,
+    {
+     "type": "bool",
+     "value": "true",
+     "text": "true",
+     "offset": 39,
+     "lineBreaks": 0,
+     "line": 4,
+     "col": 16
+    }
+   ]
   },
   {
    "type": "assignment",
@@ -97,15 +101,7 @@
       "col": 18
      },
      "right": [
-      {
-       "type": "lparen",
-       "value": "(",
-       "text": "(",
-       "offset": 84,
-       "lineBreaks": 0,
-       "line": 6,
-       "col": 22
-      },
+      null,
       {
        "type": "operation",
        "left": {
@@ -148,15 +144,19 @@
           "line": 6,
           "col": 38
          },
-         "right": {
-          "type": "symbol",
-          "value": "cislo",
-          "text": "cislo",
-          "offset": 102,
-          "lineBreaks": 0,
-          "line": 6,
-          "col": 40
-         }
+         "right": [
+          null,
+          null,
+          {
+           "type": "symbol",
+           "value": "cislo",
+           "text": "cislo",
+           "offset": 102,
+           "lineBreaks": 0,
+           "line": 6,
+           "col": 40
+          }
+         ]
         },
         {
          "type": "rparen",
@@ -189,15 +189,19 @@
       }
      ],
      "arg": [
-      {
-       "type": "symbol",
-       "value": "cislo",
-       "text": "cislo",
-       "offset": 120,
-       "lineBreaks": 0,
-       "line": 6,
-       "col": 58
-      }
+      [
+       null,
+       null,
+       {
+        "type": "symbol",
+        "value": "cislo",
+        "text": "cislo",
+        "offset": 120,
+        "lineBreaks": 0,
+        "line": 6,
+        "col": 58
+       }
+      ]
      ],
      "specifier": [
       {
@@ -222,5 +226,6 @@
     }
    ]
   }
- ]
+ ],
+ "lastFn": null
 }

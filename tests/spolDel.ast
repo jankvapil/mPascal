@@ -308,15 +308,19 @@
             "line": 9,
             "col": 31
            },
-           "right": {
-            "type": "symbol",
-            "value": "b",
-            "text": "b",
-            "offset": 181,
-            "lineBreaks": 0,
-            "line": 9,
-            "col": 35
-           }
+           "right": [
+            null,
+            null,
+            {
+             "type": "symbol",
+             "value": "b",
+             "text": "b",
+             "offset": 181,
+             "lineBreaks": 0,
+             "line": 9,
+             "col": 35
+            }
+           ]
           },
           null
          ]
@@ -332,15 +336,19 @@
           "line": 9,
           "col": 38
          },
-         "value": {
-          "type": "symbol",
-          "value": "b",
-          "text": "b",
-          "offset": 187,
-          "lineBreaks": 0,
-          "line": 9,
-          "col": 41
-         }
+         "value": [
+          null,
+          null,
+          {
+           "type": "symbol",
+           "value": "b",
+           "text": "b",
+           "offset": 187,
+           "lineBreaks": 0,
+           "line": 9,
+           "col": 41
+          }
+         ]
         },
         {
          "type": "assignment",
@@ -353,15 +361,19 @@
           "line": 9,
           "col": 44
          },
-         "value": {
-          "type": "symbol",
-          "value": "zbytek",
-          "text": "zbytek",
-          "offset": 193,
-          "lineBreaks": 0,
-          "line": 9,
-          "col": 47
-         }
+         "value": [
+          null,
+          null,
+          {
+           "type": "symbol",
+           "value": "zbytek",
+           "text": "zbytek",
+           "offset": 193,
+           "lineBreaks": 0,
+           "line": 9,
+           "col": 47
+          }
+         ]
         }
        ]
       },
@@ -419,15 +431,19 @@
         }
        ],
        "arg": [
-        {
-         "type": "symbol",
-         "value": "a",
-         "text": "a",
-         "offset": 288,
-         "lineBreaks": 0,
-         "line": 10,
-         "col": 71
-        }
+        [
+         null,
+         null,
+         {
+          "type": "symbol",
+          "value": "a",
+          "text": "a",
+          "offset": 288,
+          "lineBreaks": 0,
+          "line": 10,
+          "col": 71
+         }
+        ]
        ],
        "specifier": null
       }

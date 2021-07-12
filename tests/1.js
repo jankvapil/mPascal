@@ -39,5 +39,6 @@ function chr(num) {
   return String.fromCharCode(num);
 }
 
-if(false) {
+var a = false;
+if() {
 writeln('true')}

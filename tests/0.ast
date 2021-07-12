@@ -134,15 +134,19 @@
       "line": 4,
       "col": 7
      },
-     "right": {
-      "type": "symbol",
-      "value": "y",
-      "text": "y",
-      "offset": 43,
-      "lineBreaks": 0,
-      "line": 4,
-      "col": 8
-     }
+     "right": [
+      null,
+      null,
+      {
+       "type": "symbol",
+       "value": "y",
+       "text": "y",
+       "offset": 43,
+       "lineBreaks": 0,
+       "line": 4,
+       "col": 8
+      }
+     ]
     },
     null
    ]
@@ -161,15 +165,19 @@
     }
    ],
    "arg": [
-    {
-     "type": "symbol",
-     "value": "z",
-     "text": "z",
-     "offset": 57,
-     "lineBreaks": 0,
-     "line": 5,
-     "col": 11
-    }
+    [
+     null,
+     null,
+     {
+      "type": "symbol",
+      "value": "z",
+      "text": "z",
+      "offset": 57,
+      "lineBreaks": 0,
+      "line": 5,
+      "col": 11
+     }
+    ]
    ],
    "specifier": [
     {
@@ -231,15 +239,19 @@
     }
    ],
    "arg": [
-    {
-     "type": "symbol",
-     "value": "c",
-     "text": "c",
-     "offset": 84,
-     "lineBreaks": 0,
-     "line": 7,
-     "col": 11
-    }
+    [
+     null,
+     null,
+     {
+      "type": "symbol",
+      "value": "c",
+      "text": "c",
+      "offset": 84,
+      "lineBreaks": 0,
+      "line": 7,
+      "col": 11
+     }
+    ]
    ],
    "specifier": null
   },
@@ -298,15 +310,19 @@
         "line": 8,
         "col": 9
        },
-       "right": {
-        "type": "symbol",
-        "value": "c",
-        "text": "c",
-        "offset": 99,
-        "lineBreaks": 0,
-        "line": 8,
-        "col": 11
-       }
+       "right": [
+        null,
+        null,
+        {
+         "type": "symbol",
+         "value": "c",
+         "text": "c",
+         "offset": 99,
+         "lineBreaks": 0,
+         "line": 8,
+         "col": 11
+        }
+       ]
       },
       null
      ]
@@ -328,15 +344,19 @@
     }
    ],
    "arg": [
-    {
-     "type": "symbol",
-     "value": "x",
-     "text": "x",
-     "offset": 113,
-     "lineBreaks": 0,
-     "line": 9,
-     "col": 11
-    }
+    [
+     null,
+     null,
+     {
+      "type": "symbol",
+      "value": "x",
+      "text": "x",
+      "offset": 113,
+      "lineBreaks": 0,
+      "line": 9,
+      "col": 11
+     }
+    ]
    ],
    "specifier": null
   },
@@ -392,26 +412,22 @@
     }
    ],
    "arg": [
-    {
-     "type": "symbol",
-     "value": "znak",
-     "text": "znak",
-     "offset": 147,
-     "lineBreaks": 0,
-     "line": 11,
-     "col": 11
-    }
+    [
+     null,
+     null,
+     {
+      "type": "symbol",
+      "value": "znak",
+      "text": "znak",
+      "offset": 147,
+      "lineBreaks": 0,
+      "line": 11,
+      "col": 11
+     }
+    ]
    ],
    "specifier": null
   }
  ],
- "lastFn": {
-  "type": "end",
-  "value": "end.",
-  "text": "end.",
-  "offset": 155,
-  "lineBreaks": 0,
-  "line": 12,
-  "col": 1
- }
+ "lastFn": null
 }

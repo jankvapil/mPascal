@@ -65,15 +65,19 @@
     }
    ],
    "arg": [
-    {
-     "type": "symbol",
-     "value": "n",
-     "text": "n",
-     "offset": 36,
-     "lineBreaks": 0,
-     "line": 3,
-     "col": 13
-    }
+    [
+     null,
+     null,
+     {
+      "type": "symbol",
+      "value": "n",
+      "text": "n",
+      "offset": 36,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 13
+     }
+    ]
    ],
    "specifier": null
   },
@@ -175,13 +179,5 @@
    ]
   }
  ],
- "lastFn": {
-  "type": "end",
-  "value": "end.",
-  "text": "end.",
-  "offset": 102,
-  "lineBreaks": 0,
-  "line": 6,
-  "col": 1
- }
+ "lastFn": null
 }

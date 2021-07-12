@@ -2,12 +2,65 @@
  "type": "program",
  "statements": [
   {
-   "type": "cond",
-   "expr": {
-    "type": "bool",
-    "value": false,
-    "text": "false"
+   "type": "assignment",
+   "symbol": {
+    "type": "symbol",
+    "value": "a",
+    "text": "a",
+    "offset": 9,
+    "lineBreaks": 0,
+    "line": 2,
+    "col": 3
    },
+   "value": [
+    [
+     [
+      {
+       "type": "bool",
+       "value": "false",
+       "text": "false",
+       "offset": 12,
+       "lineBreaks": 0,
+       "line": 2,
+       "col": 6
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "cond",
+   "expr": [
+    [
+     [
+      [
+       {
+        "type": "symbol",
+        "value": "!a",
+        "text": "!a"
+       }
+      ]
+     ],
+     null,
+     {
+      "type": "operator",
+      "value": "&&",
+      "text": "and",
+      "offset": 31,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 12
+     },
+     null,
+     [
+      {
+       "type": "symbol",
+       "value": "!a",
+       "text": "!a"
+      }
+     ]
+    ]
+   ],
    "statements": [
     {
      "type": "fn_call",
@@ -16,10 +69,10 @@
        "type": "symbol",
        "value": "writeln",
        "text": "writeln",
-       "offset": 30,
+       "offset": 46,
        "lineBreaks": 0,
        "line": 3,
-       "col": 20
+       "col": 27
       }
      ],
      "arg": [
@@ -27,10 +80,10 @@
        "type": "string",
        "value": "'true'",
        "text": "'true'",
-       "offset": 38,
+       "offset": 54,
        "lineBreaks": 0,
        "line": 3,
-       "col": 28
+       "col": 35
       }
      ],
      "specifier": null
@@ -38,13 +91,5 @@
    ]
   }
  ],
- "lastFn": {
-  "type": "end",
-  "value": "end.",
-  "text": "end.",
-  "offset": 53,
-  "lineBreaks": 0,
-  "line": 5,
-  "col": 1
- }
+ "lastFn": null
 }

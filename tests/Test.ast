@@ -3,15 +3,19 @@
  "statements": [
   {
    "type": "cond",
-   "expr": {
-    "type": "bool",
-    "value": "true",
-    "text": "true",
-    "offset": 16,
-    "lineBreaks": 0,
-    "line": 3,
-    "col": 6
-   },
+   "expr": [
+    null,
+    null,
+    {
+     "type": "bool",
+     "value": "true",
+     "text": "true",
+     "offset": 16,
+     "lineBreaks": 0,
+     "line": 3,
+     "col": 6
+    }
+   ],
    "statements": [
     {
      "type": "fn_call",
@@ -91,5 +95,6 @@
     "col": 4
    }
   ]
- ]
+ ],
+ "lastFn": null
 }

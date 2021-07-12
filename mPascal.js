@@ -148,71 +148,36 @@ var grammar = {
             }
         }
                 },
-    {"name": "expr", "symbols": [(l.has("not") ? {type: "not"} : not), "_", (l.has("symbol") ? {type: "symbol"} : symbol)], "postprocess":  (data => {
-            return {
-                type: "symbol",
-                value: !data[2],
-                text: `${!data[2]}`
-            }
-        }) },
-    {"name": "expr", "symbols": [(l.has("not") ? {type: "not"} : not), "_", (l.has("bool") ? {type: "bool"} : bool)], "postprocess":  (data => {
-            return {
-                type: "bool",
-                value: !data[2],
-                text: `${!data[2]}`
-            }
-        }) },
-    {"name": "expr", "symbols": [(l.has("symbol") ? {type: "symbol"} : symbol)], "postprocess": id},
     {"name": "expr", "symbols": [(l.has("string") ? {type: "string"} : string)], "postprocess": id},
-    {"name": "expr$ebnf$1", "symbols": ["lpar"], "postprocess": id},
-    {"name": "expr$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
-    {"name": "expr$ebnf$2", "symbols": ["rpar"], "postprocess": id},
-    {"name": "expr$ebnf$2", "symbols": [], "postprocess": function(d) {return null;}},
-    {"name": "expr", "symbols": ["expr$ebnf$1", "num", "expr$ebnf$2"]},
-    {"name": "expr", "symbols": [(l.has("bool") ? {type: "bool"} : bool)], "postprocess": id},
     {"name": "expr", "symbols": ["fn_call"], "postprocess": id},
+    {"name": "expr", "symbols": ["operation"]},
+    {"name": "atomParen", "symbols": [(l.has("lparen") ? {type: "lparen"} : lparen), "_", "atom", "_", (l.has("rparen") ? {type: "rparen"} : rparen)]},
+    {"name": "atomParen", "symbols": ["atom"]},
+    {"name": "operation", "symbols": ["operation", "_", (l.has("operator") ? {type: "operator"} : operator), "_", "atomParen"]},
+    {"name": "operation", "symbols": ["atomParen"]},
     {"name": "lpar", "symbols": [(l.has("lparen") ? {type: "lparen"} : lparen)], "postprocess": id},
     {"name": "rpar", "symbols": [(l.has("rparen") ? {type: "rparen"} : rparen)], "postprocess": id},
-    {"name": "num", "symbols": [(l.has("number") ? {type: "number"} : number)], "postprocess": id},
-    {"name": "num$ebnf$1", "symbols": ["rpar"], "postprocess": id},
-    {"name": "num$ebnf$1", "symbols": [], "postprocess": function(d) {return null;}},
-    {"name": "num$ebnf$2", "symbols": ["lpar"], "postprocess": id},
-    {"name": "num$ebnf$2", "symbols": [], "postprocess": function(d) {return null;}},
-    {"name": "num", "symbols": [(l.has("number") ? {type: "number"} : number), "_", "num$ebnf$1", "_", (l.has("operator") ? {type: "operator"} : operator), "_", "num$ebnf$2", "_", "expr"], "postprocess":      
+    {"name": "atom", "symbols": [(l.has("number") ? {type: "number"} : number)], "postprocess": id},
+    {"name": "atom", "symbols": [(l.has("not") ? {type: "not"} : not), "_", (l.has("symbol") ? {type: "symbol"} : symbol)], "postprocess":   
         (data) => {
             return {
-                type: "operation",
-                left: data[0],
-                operator: data[4],
-                right: data[8]
+                type: "symbol",
+                value: `!${data[2]}`,
+                text: `!${data[2]}`
             }
-        } },
-    {"name": "num$ebnf$3", "symbols": ["rpar"], "postprocess": id},
-    {"name": "num$ebnf$3", "symbols": [], "postprocess": function(d) {return null;}},
-    {"name": "num$ebnf$4", "symbols": ["lpar"], "postprocess": id},
-    {"name": "num$ebnf$4", "symbols": [], "postprocess": function(d) {return null;}},
-    {"name": "num", "symbols": [(l.has("symbol") ? {type: "symbol"} : symbol), "_", "num$ebnf$3", "_", (l.has("operator") ? {type: "operator"} : operator), "_", "num$ebnf$4", "_", "expr"], "postprocess":      
+        } 
+                },
+    {"name": "atom", "symbols": [(l.has("symbol") ? {type: "symbol"} : symbol)], "postprocess": id},
+    {"name": "atom", "symbols": [(l.has("not") ? {type: "not"} : not), "_", (l.has("bool") ? {type: "bool"} : bool)], "postprocess":   
         (data) => {
             return {
-                type: "operation",
-                left: data[0],
-                operator: data[4],
-                right: data[8]
+                type: "bool",
+                value: `!${data[2]}`,
+                text: `!${data[2]}`
             }
-        } },
-    {"name": "num$ebnf$5", "symbols": ["rpar"], "postprocess": id},
-    {"name": "num$ebnf$5", "symbols": [], "postprocess": function(d) {return null;}},
-    {"name": "num$ebnf$6", "symbols": ["lpar"], "postprocess": id},
-    {"name": "num$ebnf$6", "symbols": [], "postprocess": function(d) {return null;}},
-    {"name": "num", "symbols": [(l.has("not") ? {type: "not"} : not), "_", (l.has("symbol") ? {type: "symbol"} : symbol), "_", "num$ebnf$5", "_", (l.has("operator") ? {type: "operator"} : operator), "_", "num$ebnf$6", "_", "expr"], "postprocess":      
-        (data) => {
-            return {
-                type: "notOperation",
-                left: data[2],
-                operator: data[6],
-                right: data[10]
-            }
-        } },
+        } 
+                },
+    {"name": "atom", "symbols": [(l.has("bool") ? {type: "bool"} : bool)], "postprocess": id},
     {"name": "_$ebnf$1", "symbols": []},
     {"name": "_$ebnf$1$subexpression$1", "symbols": [(l.has("WS") ? {type: "WS"} : WS)]},
     {"name": "_$ebnf$1$subexpression$1", "symbols": [(l.has("NL") ? {type: "NL"} : NL)]},
